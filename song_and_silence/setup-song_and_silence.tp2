@@ -10,7 +10,7 @@ ALWAYS
 
   // Borrowed from Edwin Romance: convert strings to UTF-8 for BGEE/BG2EE
   ACTION_DEFINE_ARRAY cdnoconvert BEGIN END
-  ACTION_DEFINE_ARRAY cdreload BEGIN ~setup.tra~ END
+  ACTION_DEFINE_ARRAY cdreload BEGIN ~setup~ END
   LAF HANDLE_CHARSETS
     INT_VAR
       infer_charset = 1
