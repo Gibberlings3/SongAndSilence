@@ -1,7 +1,7 @@
 # Song and Silence: A Mod for Bards and Thieves
 [A Gibberlings Three Mod][Gibberlings Three]
 
-**Authors**: [Andyr], [Grim Squeaker], and [NiGHTMARE]
+**Authors**: [Andyr], [Grim Squeaker], and [NiGHTMARE]  
 **On the Web**: [Home page] and [discussion forum]
 
 **Languages**: English, French, German, Polish, Russian, and Spanish  
