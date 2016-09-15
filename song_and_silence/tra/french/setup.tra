@@ -23,7 +23,7 @@ Bien que ces armes n'infligent que peu de dégâts, la vitesse à laquelle elles pe
 
 Celle-ci a été enchantée afin d'être plus efficace, probablement sur ordre d'une guilde de voleurs. Cependant, aucune marque n'aide à son identification. Des procédés magiques ont renforcé la puissance de ses attaques, et - peut-être plus appréciable encore - il suffit d'une simple pensée de son propriétaire pour qu'elle lui revienne, ce qui lui garantit d'être toujours armé lors d'un combat.
 
-PARAMETRES :
+PARAMÈTRES :
 
 TAC0 : +1
 Dégâts : 1D4 +1
@@ -40,7 +40,7 @@ Inutilisable par :
 
 Cette fiole contient suffisamment de poison pour une seule application.
 
-PARAMETRES :
+PARAMÈTRES :
 
 Spécial :
  Peut être utilisé une unique fois pour enduire une arme de poison, à l'instar de la capacité spéciale de l'assassin. Le prochain coup porté avec l'arme instillera le poison dans l'organisme de la cible, infligeant 1 point de dégât par seconde sur un total de 24 (3 points de dégâts pendant les 6 premières secondes). Un jet de sauvegarde contre le poison limite les dégâts à un total de 12 points de vie.
@@ -53,13 +53,13 @@ Utilisable par :
 
 Utilisable par :
  Voleurs~
-@16   = ~Alathis Hurbleton fut l'un des nombreux halfelings à choisir une profession qui ne s'évoque pas dans une conversation polie. Il eut une carrière rentable à Luskan, jusqu'à ce que certains évènements malvenus ne le conduisent à s'éloigner par prudence.
+@16   = ~Alathis Hurbleton fut l'une des nombreuses petites-personnes à choisir une profession qui ne s'évoque pas dans une conversation polie. Il eut une carrière rentable à Luskan, jusqu'à ce que certains évènements malvenus ne le conduisent à s'éloigner par prudence.
 
 Installé dans l'agglomération urbaine d'Eauprofonde, il y continua son petit commerce. Préférer opérer en solo signifie attirer le courrroux de guildes locales telles que les infâmes Masques de la Nuit, si bien que, sur sa demande, un mage enchanta son capuchon, afin de le protéger des fréquentes tentatives d'assassinat sur sa personne.
 
 Devenu présomptueux et certain de son invincibilité, il cafouilla cependant lors d'un cambriolage particulièrement difficile et fut attrapé par les gardes. Le capuchon, malheureusement, ne le sauva pas de la corde du bourreau.
 
-PARAMETRES :
+PARAMÈTRES :
 
 Spécial :
  Immunité aux attaques sournoises et au poison si équipé.
@@ -77,7 +77,7 @@ Hélas, comme c'est souvent le cas avec ce genre de choses, le protégé n'était pa
 
 La façon dont ce gourdin est tombé entre vos mains est probablement un récit que vous préférez ignorer.
 
-PARAMETRES :
+PARAMÈTRES :
 
 TAC0 : +2
 Dégâts : 1D6 +2
@@ -99,7 +99,7 @@ Bien que ce héros anonyme et Jessecyl soient décédés depuis longtemps, le vérita
 
 La boucle doit être portée visiblement pour faire son effet. Elle est équipée comme bouclier.
 
-PARAMETRES :
+PARAMÈTRES :
 
 Lorsqu'elle est portée par un personnage, le groupe acquiert un bonus de +2 aux jets de sauvegarde contre la mort.
 
@@ -113,7 +113,7 @@ Utilisable par :
 
 Il est probable qu'elle ait appartenu à un barde relativement renommé, si l'on en croit la présence d'un enchantement offrant une meilleure protection ainsi qu'une certaine résistance aux morsures du froid hivernal.
 
-PARAMETRES :
+PARAMÈTRES :
 
 Bonus à la CA : +2
 Spécial :
@@ -130,7 +130,7 @@ Inutilisable par :
 
 Tous les plus grands aventuriers doivent pourtant mourir, et Grefyn tomba contre des prêtres aventuriers de Waukyne à la suite d'un 'désaccord' sur une propriété de l'Eglise. L'épée demeura bien de l'Eglise durant des siècles, pour être finalement perdue dans des combats contre les orcs, lors du Temps des Troubles ; son emplacement depuis lors était un mystère.
 
-PARAMETRES :
+PARAMÈTRES :
 
 TAC0 : +2
 Dégâts : 1D6 +2
@@ -151,7 +151,7 @@ Inutilisable par :
 
 Cette tenue, légère et bien ouvrée, ne gênera pas un lanceur de sorts profanes s'il l'équipe. De notoriété commune, les armures possédant de telles propriétés sont généralement l'oeuvre des elfes, étant destinées à protéger leurs élégants guerriers-mages et chantelames dans les combats. Les secrets elfiques sont jalousement gardés, ce qui fait de cet équivalent de facture humaine une véritable rareté. Cela ne vous surprendrait guère que le forgeron responsable de sa fabrication ait été traqué et 'persuadé' de ne pas recommencer.
 
-PARAMETRES :
+PARAMÈTRES :
 
 Classe d'armure : 5
 Poids : 30
@@ -165,7 +165,7 @@ Inutilisable par :
 
 Cette tenue, légère et bien ouvrée, ne gênera pas un lanceur de sorts profane s'il l'équipe. Bien que façonnée plus particulièrement pour les bardes, l'armure peut être portée et utilisée pour lancer des sorts profanes sans malus par tout personnage auquel le port de la besantine est autorisé.
 
-PARAMETRES :
+PARAMÈTRES :
 
 Classe d'armure : 7
 Poids : 15
@@ -177,7 +177,7 @@ Inutilisable par :
 
 Cette tenue, légère et bien ouvrée, ne gênera pas un lanceur de sorts si équipée. Bien que façonnée pour les bardes, l'armure peut être portée et utilisée pour lancer des sorts sans malus par tout personnage auquel le port de la besantine est autorisé.
 
-PARAMETRES :
+PARAMÈTRES :
 
 Classe d'armure : 7
 Poids : 10
@@ -188,7 +188,7 @@ Inutilisable par :
 
 Cette tenue, légère et bien ouvrée, ne gênera pas un lanceur de sorts si équipée. Bien que façonnée pour les bardes, l'armure peut être portée et utilisée pour lancer des sorts sans malus par tout personnage auquel le port de la besantine est autorisé.
 
-PARAMETRES :
+PARAMÈTRES :
 
 Classe d'armure : 6
 Poids : 10
@@ -200,7 +200,7 @@ Inutilisable par :
 
 Une fois la phrase lue, la magie du parchemin se dissipe ; même si le conte, lui, reste bien assez noir pour hanter les rêves d'un auditeur pour un long moment...
 
-PARAMETRES :
+PARAMÈTRES :
 
 Peut être utilisé pour lancer 'Sort de Mort' une seule fois
 
@@ -211,7 +211,7 @@ Utilisable par :
 
 Après lecture, la magie du parchemin se dissipe ; même si l'auditeur ressentira certainement un léger frisson lui parcourir la nuque quand il sera seul, la nuit.
 
-PARAMETRES :
+PARAMÈTRES :
 
 Peut être utilisé pour lancer 'Horreur' une seule fois
 
@@ -222,7 +222,7 @@ Utilisable par :
 
 Après lecture, la magie du parchemin se dissipe ; l'histoire elle-même, cela dit, sera toujours bonne à écouter.
 
-PARAMETRES :
+PARAMÈTRES :
 
 Peut être utilisé pour lancer 'Résistance à la peur' une seule fois
 
@@ -503,3 +503,99 @@ Capacités :
 Restrictions :
 - Ne peut pas poser de pièges.
 - Ne dispose que de 15 points de compétences à répartir à chaque niveau.~
+@104 = ~Ce composant n'est pas disponible pour votre jeu.~
+
+
+// WeiDU prompts
+@-1000= "Le mod %TP2_FILE_NAME% contient"
+@-1001= "composants optionnels distincts.
+Pour gagner du temps, vous pouvez choisir ce que vous souhaitez faire d'eux
+au niveau general plutot que de repondre aux questions pour chacun.
+"
+@-1002= "Que faut-il faire de tous les composants qui NE sont PAS ENCORE installes ?
+Les [I]nstaller, les [S]auter, dem[A]nder pour chacun ? "
+@-1003= "Que faut-il faire de tous les composants qui sont DEJA installes ?
+Les [R]einstaller, les s[U]pprimer, les [S]auter, dem[A]nder pour chacun ? "
+
+@-1004= "S'IL VOUS PLAIT, envoyez par e-mail le fichier"
+@-1005= "a"
+
+@-1006= "Installer le composant ["
+@-1007= "] ?
+[R]einstaller, co[N]server, s[U]pprimer ou [Q]uitter ? "
+@-1008= "] ?
+[I]nstaller, [N]e pas installer ou [Q]uitter ? "
+
+@-1009= "Entrez une partie du nom du module : "
+
+@-1010= "Reinstallation du composant ["
+@-1011= "] "
+@-1012= "Reinstallation dans la langue"
+
+@-1013= "Suppression de l'ancienne installation de ["
+@-1014= "] au prealable..."
+@-1015= "SUPPRESSION REUSSIE DE L'ANCIEN"
+
+@-1016= "Installation en cours"
+@-1017= "ERREUR pendant l'installation de ["
+@-1018= "], retour a l'etat anterieur"
+@-1019= "INSTALLATION REUSSIE"
+@-1020= "Saute"
+@-1021= "Suppression de ["
+@-1022= "] (composant #"
+@-1023= ")"
+@-1024= "SUPPRESSION REUSSIE DE ["
+
+@-1025= "] ?
+[R]einstaller, co[N]server, s[U]pprimer, [Q]uitter ou choisir un parmi :"
+@-1026= "] ?
+[N]e pas installer, [Q]uitter ou choisir un parmi :"
+@-1027= " (installe actuellement)"
+
+@-1028= "Souhaitez-vous afficher les composants de ["
+@-1029= "] ?
+[Y]Oui, [N]on ? "
+
+@-1030= "] ?
+choisir un parmi :"
+@-1031= "] ?
+[R]einstaller, co[N]server, [Q]uitter ou choisir un parmi :"
+@-1032= "INSTALLATION ECHOUEE A CAUSE D'ERREURS"
+@-1033= "INSTALLATION AVEC DES ALERTES"
+@-1034= "Souhaitez-vous afficher les instructions (ReadMe) ? [Y]Oui [N]on"
+@-1035= "Dans la langue"
+
+@-1036= "Saute le GROUPE ["
+@-1037= "] pour cause d'absence des pre-requis."
+
+@-1038= "dem[A]nder pour chaque composant, tout [S]auter, ou choisir une selection pre-definie :"
+@-1039= "dem[A]nder pour chaque composant, [R]einstaller la configuration courante, tout s[U]pprimer, tout [S]auter, ou choisir une selection pre-definie :"
+
+@-1040= "
+Veuillez choisir la langue dans laquelle vous souhaitez jouer au jeu.
+Si par la suite vous desirez jouer au jeu dans une langue differente, il vous
+faudra editer le fichier weidu.conf et reinstaller vos mods.
+"
+@-1041= "Tcheque"
+@-1042= "Allemand"
+@-1043= "Anglais"
+@-1044= "Espagnol"
+@-1045= "Francais"
+@-1046= "Italien"
+@-1047= "Polonais"
+@-1048= "Portugais"
+@-1049= "Turc"
+@-1050= "Japonais"
+@-1051= "Coreen"
+@-1052= "Chinois simplifie"
+@-1053= "Russe"
+@-1054= "Ukrainien"
+
+@-1060= "
+Ce jeu est disponible en plusieurs langues mais WeiDU ne sait pas laquelle a ete choisie quand ce mod a ete installe.
+
+Veuillez indiquer quelle langue du jeu a ete utilisee quand vous avez installe ce mod. Votre choix servira jusqu'a ce que WeiDU s'arrete mais ne sera pas memorise.
+"
+@-1061= "
+Utilisation de"
+@-1062= " et "
