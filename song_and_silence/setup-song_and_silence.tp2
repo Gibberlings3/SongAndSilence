@@ -15,6 +15,7 @@ ALWAYS
     INT_VAR
       infer_charset = 1
     STR_VAR
+      default_language = ~english~ // specifying default_language is mandatory since english is used as fallback in LANGUAGE statement in case of missing string in a language
       tra_path = EVAL ~%MOD_FOLDER%/tra~
       // charset_table = cdcharsets // Included for illustrative purposes.
       noconvert_array = cdnoconvert
@@ -22,6 +23,8 @@ ALWAYS
   END
 
   ACTION_IF GAME_IS ~bgee bg2ee~ THEN BEGIN
+    // Load English first in case some entries not available in the chosen language (as in LANGUAGE for setup.tra)
+    LOAD_TRA ~song_and_silence/tra/english/setup_ee.tra~
     LOAD_TRA ~song_and_silence/tra/%LANGUAGE%/setup_ee.tra~
   END
 
