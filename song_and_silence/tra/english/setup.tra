@@ -159,7 +159,7 @@ Not Usable By:
  Druid
  Mage
  Thief~
-@31   = ~Bardic leathers~
+@31   = ~Bardic Leathers~
 @32   = ~Studded leather armor has little in common with normal leather armor.  Instead of a hardened shell, studded leather offers hundreds of metal rivets affixed to a supple backing.  The numerous studs form a flexible coat of metal that helps to turn aside slashing and cutting attacks, while the leather is little more than a means of securing the rivets in place.  
 
 This suit is particularly light and well-crafted, allowing the casting of arcane spells while worn. Although designed for bards in particular, it can be worn and used to cast arcane spells without penalty by anyone normally able to use studded leather armor.
@@ -171,7 +171,7 @@ Weight: 15
 Requires: 6 Strength
 Not Usable By:
  Mage~
-@33   = ~Bardic leathers +1~
+@33   = ~Bardic Leathers +1~
 @34   = ~Studded leather armor has little in common with normal leather armor.  Instead of a hardened shell, studded leather offers hundreds of metal rivets affixed to a supple backing.  The numerous studs form a flexible coat of metal that helps to turn aside slashing and cutting attacks, while the leather is little more than a means of securing the rivets in place.
 
 This suit is particularly light and well-crafted, allowing the casting of arcane spells while worn. Although designed for bards in particular, it can be worn and used to cast arcane spells without penalty by anyone normally able to use studded leather armor.
@@ -239,7 +239,7 @@ Advantages:
 -  May place up to 2 proficiency points in slings, darts and daggers
 
 Disadvantages:
--  May only place proficiency points in weapons a Thief can use
+-  May only place proficiency points in weapons a thief can use
 -  May not wear armor heavier than Studded Leather
 -  Only has one-half normal lore value~
 @47   = ~Install Chorister bard kit~
@@ -381,11 +381,11 @@ Disadvantages:
 @63   = ~Install Dirgesinger bard kit~
 @64   = ~dirgesinger~
 @65   = ~Dirgesinger~
-@66   = ~DIRGESINGER: Dirgesingers voice melodies not of celebration and joy, but of sorrow and grief. They seek to spread this melancoly outlook far and wide, believing that only those who give in to their sadness can truly understand the world.
+@66   = ~DIRGESINGER: Dirgesingers voice melodies not of celebration and joy, but of sorrow and grief. They seek to spread this melancholy outlook far and wide, believing that only those who give in to their sadness can truly understand the world.
 
 These sad wanderers seek to express their grief through songs that teach the hearts of their listeners the meaning of true sorrow. Some of these fallen bards want nothing more than for others to understand the depths of their loss. A few are sinister creatures who believe that, since joy has been extinguished for them, they must in turn extinguish the joy of others by using their powers to teach the folly of love, the futility of hope, and the finality of the grave. Dirgesingers of this last sort often associate themselves with powerful undead; serving in the courts of vampire lords or lich-kings.
 
-Dirgesingers are limited to nongood alignments.
+Dirgesingers are limited to non-good alignments.
 
 Advantages:
 -  Song Curses enemies, giving them a -1 penalty to saves and THAC0. At level 10 the penalty becomes -2, at level 20 -3 and level 30 -4.
@@ -407,7 +407,7 @@ Disadvantages:
 Gypsies are often misunderstood by others, who classify them as thieves, beggars, carnival people, nomads, or any number of other erroneous names.  They are also very open and welcoming to those who seek to learn their ways and join them in their wandering, garnering for them a reputation for stealing children in the night and then spiriting them off into the wilderness.  It should be noted that not all Gypsies are bards or have bardic abilities; Gypsy bards, known among Gypsy clans as "rawuns," function as the chief storytellers, lore-keepers, fortune tellers, and spiritual advisers of their Gypsy clans.
 
 Advantages:
--  Song charms enemies unless they save vs. spells with at +2, with a -1 penalty per 5 levels of the bard
+-  Song charms enemies unless they save vs. spells at +2, with a -1 penalty per 5 levels of the bard
 -  Has a +1 bonus to saves vs. spells per 8 levels
 -  Can cast Curse once per day. The opposite of a Bless spell, this gives foes a -1 penalty to THAC0 and saves
 
@@ -449,20 +449,20 @@ Disadvantages:
 @86   = ~Install Soulknife thief kit~
 @87   = ~soulknife~
 @88   = ~Soulknife~
-@89   = ~SOULKNIFE:This sort of thief, a being possessed of potent psionic power, recognises his or her own mind as the most beautiful and deadly thing in all creation. With practice, they have learned to forge their mental strength into a semisolid blade of pure psychic energy. This weapon, known as a mind blade, means that even when unarmed the soulknife is but a thought away from a deadly strike.
+@89   = ~SOULKNIFE: This sort of thief, a being possessed of potent psionic power, recognises his or her own mind as the most beautiful and deadly thing in all creation. With practice, they have learned to forge their mental strength into a semisolid blade of pure psychic energy. This weapon, known as a mind blade, means that even when unarmed the soulknife is but a thought away from a deadly strike.
 
 Advantages:
 -  Can achieve Mastery in short swords
--  Can manifest a Mind Blade once per day per 10 levels. This short sword is a psionic weapon that lasts for 1 round/level, and counts as being of enchantment 1 higher than it is when determining what it can hit, to a maximum of +5. Each hit heals the Soulknife 1HP. THAC0 bonus and damage improve by 1 per 5 levels, to a maximum of +5 at level 25. Range improves by 10 every 5 levels to a maximum of 50 at level 25.
+-  Can manifest a Mind Blade once per day per 10 levels. This short sword is a psionic weapon that lasts for 1 round/level, and counts as being of enchantment 1 higher than it is when determining what it can hit, to a maximum of +5. Each hit heals the Soulknife 1 hit point. THAC0 bonus and damage improve by 1 per 5 levels, to a maximum of +5 at level 25. Range improves by 10 every 5 levels to a maximum of 50 at level 25.
 
 Disadvantages:
 -  Cannot set traps
 -  Only gets 15 skill points per level~
-@90   = ~SOULKNIFE:This sort of thief, a being possessed of potent psionic power, recognises his or her own mind as the most beautiful and deadly thing in all creation. With practice, they have learned to forge their mental strength into a semisolid blade of pure psychic energy. This weapon, known as a mind blade, means that even when unarmed the soulknife is but a thought away from a deadly strike.
+@90   = ~SOULKNIFE: This sort of thief, a being possessed of potent psionic power, recognises his or her own mind as the most beautiful and deadly thing in all creation. With practice, they have learned to forge their mental strength into a semisolid blade of pure psychic energy. This weapon, known as a mind blade, means that even when unarmed the soulknife is but a thought away from a deadly strike.
 
 Advantages:
 -  Can achieve Mastery in short swords
--  Can manifest a Mind Blade once per day per 10 levels. This short sword is a psionic weapon that lasts for 1 round/level, and counts as being of enchantment 1 higher than it is when determining what it can hit, to a maximum of +5. Each hit heals the Soulknife 1HP. THAC0 bonus and damage improve by 1 per 5 levels, to a maximum of +5 at level 25. Range improves by 5 every 5 levels to a maximum of 25 at level 25.
+-  Can manifest a Mind Blade once per day per 10 levels. This short sword is a psionic weapon that lasts for 1 round/level, and counts as being of enchantment 1 higher than it is when determining what it can hit, to a maximum of +5. Each hit heals the Soulknife 1 hit point. THAC0 bonus and damage improve by 1 per 5 levels, to a maximum of +5 at level 25. Range improves by 5 every 5 levels to a maximum of 25 at level 25.
 
 Disadvantages:
 -  Cannot set traps
