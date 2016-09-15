@@ -7,27 +7,23 @@ README ~song_and_silence/readme-song_and_silence.html~
 ALWAYS
   INCLUDE ~%MOD_FOLDER%/lib/fl#add_kit_ee.tpa~
   INCLUDE ~%MOD_FOLDER%/lib/functions.tpa~ // misc s&s functions
-
-  // Borrowed from Edwin Romance: convert strings to UTF-8 for BGEE/BG2EE
-  ACTION_DEFINE_ARRAY cdnoconvert BEGIN END
-  ACTION_DEFINE_ARRAY cdreload BEGIN ~setup~ END
-  LAF HANDLE_CHARSETS
-    INT_VAR
-      infer_charset = 1
-    STR_VAR
-      default_language = ~english~ // specifying default_language is mandatory since english is used as fallback in LANGUAGE statement in case of missing string in a language
-      tra_path = EVAL ~%MOD_FOLDER%/tra~
-      // charset_table = cdcharsets // Included for illustrative purposes.
-      noconvert_array = cdnoconvert
-      reload_array = cdreload
+  
+  ACTION_IF NOT VARIABLE_IS_SET cd_always THEN BEGIN
+    OUTER_SET cd_always = 1
+    
+    ACTION_DEFINE_ARRAY cdnoconvert BEGIN END // List of tra files that contain ONLY strings for the WeiDU installer and NOT game content
+    ACTION_DEFINE_ARRAY cdreload BEGIN ~setup~ END  // List of tra files that need to be reloaded after conversion because they were previously loaded in the LANGUAGE section
+    
+    // On EE games, convert game content tra files to utf-8 so that games don't crash when encountering international characters.
+    LAF HANDLE_CHARSETS INT_VAR infer_charset = 1 STR_VAR default_language = ~english~ tra_path = EVAL ~%MOD_FOLDER%/tra~ noconvert_array = cdnoconvert reload_array = cdreload END
+    
+    // Load EE-specific text (usability section removed from item descriptions)
+    ACTION_IF GAME_IS ~bgee bg2ee~ THEN BEGIN
+      // Load English first in case some entries not available in the chosen language (as in LANGUAGE for setup.tra)
+      LOAD_TRA ~song_and_silence/tra/english/setup_ee.tra~
+      LOAD_TRA ~song_and_silence/tra/%LANGUAGE%/setup_ee.tra~
+    END
   END
-
-  ACTION_IF GAME_IS ~bgee bg2ee~ THEN BEGIN
-    // Load English first in case some entries not available in the chosen language (as in LANGUAGE for setup.tra)
-    LOAD_TRA ~song_and_silence/tra/english/setup_ee.tra~
-    LOAD_TRA ~song_and_silence/tra/%LANGUAGE%/setup_ee.tra~
-  END
-
 END
 
 /* Language Settings */
