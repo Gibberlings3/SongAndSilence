@@ -22,7 +22,7 @@ REM /* the mod_readme link should point to the online readme and work fine as-is
 set ico_folder=%mod_folder%\style
 set audio_folder=%mod_folder%\audio
 set tispack_folder=%mod_folder%\tiz
-set iconv_folder=%mod_folder%\languages\iconv
+set iconv_folder=%mod_folder%\tra\iconv
 set mod_readme=http://www.gibberlings3.net/readmes/readme-%mod_folder%.html
 
 REM /* MODIFY: if you don't need to build a specific package, you can disable it by setting the appropriate variable below to 0 */
