@@ -1,0 +1,7 @@
+IF
+Global("A!RaoulSpawn","MYAREA",0)
+THEN
+RESPONSE #100
+CreateCreature("A!Raoul",[3100.2080],1)
+SetGlobal("A!RaoulSpawn","MYAREA",1)
+END

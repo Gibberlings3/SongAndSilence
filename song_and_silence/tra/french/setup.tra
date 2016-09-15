@@ -1,0 +1,505 @@
+@0    = ~Changements concernant les bardes et voleurs purs, ainsi que les kits originaux du jeu (necessaire pour les autres composants)~
+@1    = ~BRETTEUR : Ce roublard est à la fois un acrobate, une fine lame et une personne d'esprit. Il incarne le charme et la grâce.
+
+Capacités :
+-  Bonus de +1 à la CA.
+-  Il reçoit un bonus de +1 à la CA tous les 5 niveaux.
+-  Il reçoit un bonus de +1 au toucher et aux dégâts tous les 5 niveaux.
+-  Il peut se spécialiser dans les armes de mêlée accessibles au voleur.
+
+Restrictions :
+-  Ne peut pas effectuer d'attaques sournoises.~
+@2    = ~Ajout d'une echoppe pour bardes et voleurs~
+@3    = ~Raoul~
+@4    = ~Oooooaaaagggh !~ [A!RA01]
+@5    = ~Salutations ! J'suis Raoul, et toué ?~ [A!RA02]
+@6    = ~Ho là, mes bons amis !~ [A!RA03]
+@7    = ~Z'êtes ici pour les marchandises de Raoul ?~ [A!RA04]
+@8    = ~Le Bazar de Raoul~
+@9    = ~Dague de jet boomerang +1~
+@10   = ~Arme de nombreux guerriers rapides et agiles, la dague de jet est légère et facilement cachée.
+
+Bien que ces armes n'infligent que peu de dégâts, la vitesse à laquelle elles peuvent être lancées leur donne un avantage certain sur d'autres armes plus encombrantes.
+
+Celle-ci a été enchantée afin d'être plus efficace, probablement sur ordre d'une guilde de voleurs. Cependant, aucune marque n'aide à son identification. Des procédés magiques ont renforcé la puissance de ses attaques, et - peut-être plus appréciable encore - il suffit d'une simple pensée de son propriétaire pour qu'elle lui revienne, ce qui lui garantit d'être toujours armé lors d'un combat.
+
+PARAMETRES :
+
+TAC0 : +1
+Dégâts : 1D4 +1
+Type de dégâts : missile (perforant)
+Poids : 1
+Facteur de vitesse : 1
+Type de compétence : dague
+Type : &rme à 1 main
+Force nécessaire : 3
+Inutilisable par :
+ Clerc~
+@11   = ~Fiole de poison~
+@12   = ~Lorsque la roue tourne du mauvais côté, le poison reste la solution choyée par la plupart des personnes louches. Un utilisateur habile peut de manière efficace appliquer du poison sur son arme, transformant ainsi l'éraflure de la plus minuscule des dagues en une blessure parfois plus mortelle qu'un coup de hache.
+
+Cette fiole contient suffisamment de poison pour une seule application.
+
+PARAMETRES :
+
+Spécial :
+ Peut être utilisé une unique fois pour enduire une arme de poison, à l'instar de la capacité spéciale de l'assassin. Le prochain coup porté avec l'arme instillera le poison dans l'organisme de la cible, infligeant 1 point de dégât par seconde sur un total de 24 (3 points de dégâts pendant les 6 premières secondes). Un jet de sauvegarde contre le poison limite les dégâts à un total de 12 points de vie.
+Poids : 1
+Utilisable par :
+ Voleurs~
+@13   = ~Capuche de voleur~
+@14   = ~Garde d'Alathis~
+@15   = ~Bien que ce capuchon n'apporte rien de bien remarquable à son porteur, il semble qu'une magie résiduelle l'entoure.
+
+Utilisable par :
+ Voleurs~
+@16   = ~Alathis Hurbleton fut l'un des nombreux halfelings à choisir une profession qui ne s'évoque pas dans une conversation polie. Il eut une carrière rentable à Luskan, jusqu'à ce que certains évènements malvenus ne le conduisent à s'éloigner par prudence.
+
+Installé dans l'agglomération urbaine d'Eauprofonde, il y continua son petit commerce. Préférer opérer en solo signifie attirer le courrroux de guildes locales telles que les infâmes Masques de la Nuit, si bien que, sur sa demande, un mage enchanta son capuchon, afin de le protéger des fréquentes tentatives d'assassinat sur sa personne.
+
+Devenu présomptueux et certain de son invincibilité, il cafouilla cependant lors d'un cambriolage particulièrement difficile et fut attrapé par les gardes. Le capuchon, malheureusement, ne le sauva pas de la corde du bourreau.
+
+PARAMETRES :
+
+Spécial :
+ Immunité aux attaques sournoises et au poison si équipé.
+
+Poids : 2
+Utilisable par :
+ Voleurs~
+@17   = ~Gourdin~
+@18   = ~Extinction des feux~
+@19   = ~A première vue il semble s'agir d'un gourdin ordinaire, mais en l'observant de plus près, un oeil averti peut déceler la présence d'une série de runes discrètes dessinées le long du manche. Un voleur noterait aussi l'excellent équilibre de l'arme.
+
+Le gourdin fut enchanté il y a bien longtemps par un maître de guilde des Voleurs de l'Ombre pour l'un des ses plus loyaux - et prolifiques - protégés. En plus d'être une arme puissante, il semblait assourdir les bruits environnants le voleur pendant qu'il s'approchait de sa cible afin de l'assommer. La dernière chose que bien des adversaires auraient entendu avant de tomber inconscients serait le léger sifflement du gourdin s'élevant à l'arrière de leur tête, ce qui lui gagna rapidement le surnom d'"Extinction des feux".
+
+Hélas, comme c'est souvent le cas avec ce genre de choses, le protégé n'était pas aussi loyal que son maître de guilde l'avait espéré, et, par une nuit tranquille, cette arme fut utilisée pour frapper à mort ledit maître de guilde dans son propre lit. Sa femme dormant à ses côtés n'entendit rien.
+
+La façon dont ce gourdin est tombé entre vos mains est probablement un récit que vous préférez ignorer.
+
+PARAMETRES :
+
+TAC0 : +2
+Dégâts : 1D6 +2
+Spécial :
+ 10 % de bonus à la furtivité si équipé
+Type de dégâts : contondant
+Poids : 3
+Facteur de vitesse : 4
+Type de compétence : gourdin
+Type : arme à 1 main
+Force nécessaire : 5
+Inutilisable par :
+ Mage~
+@20   = ~Boucle de Jessecyl~
+@21   = ~C'est une boucle de cheveux, plutôt belle si l'on s'en tient aux cheveux.~
+@22   = ~Les légendes font part de la beauté de Jessecyl comme de l'une des plus grandes chez les jeunes demi-elfes. Avant une bataille, elle accorda une faveur à son amant : une mèche de ses cheveux. Ce héros valeureux se lança dans la bataille contre des créatures féroces, et la force de l'amour qui l'unissait à Jessecyl les protégea, lui et ses compagnons, de nombreux dangers.
+
+Bien que ce héros anonyme et Jessecyl soient décédés depuis longtemps, le véritable amour est éternel. Il est possible que certaines personnes, d'état d'esprit particulièrement romantique, puissent remarquer que, d'une certaine manière, la magie persiste.
+
+La boucle doit être portée visiblement pour faire son effet. Elle est équipée comme bouclier.
+
+PARAMETRES :
+
+Lorsqu'elle est portée par un personnage, le groupe acquiert un bonus de +2 aux jets de sauvegarde contre la mort.
+
+Poids : 0
+Utilisable par :
+ Barde
+ Paladin~
+@23   = ~Targe~
+@24   = ~Targe de scalde cabossée~
+@25   = ~Cette petite targe, abîmée au combat, a autrefois appartenu aux scaldes, des bardes nordiques appartenant aux tribus du Val de Bise. D'une façon ou d'une autre, elle s'est frayée un chemin vers le sud, jusqu'à vous, sans aucun doute en tant que trophée de guerre après quelque invasion depuis longtemps oubliée.
+
+Il est probable qu'elle ait appartenu à un barde relativement renommé, si l'on en croit la présence d'un enchantement offrant une meilleure protection ainsi qu'une certaine résistance aux morsures du froid hivernal.
+
+PARAMETRES :
+
+Bonus à la CA : +2
+Spécial :
+ Pas de protection contre les missiles et attaques perforantes.
+ Accorde un bonus de 10% de résistance au froid.
+Poids : 2
+Force nécessaire : 4
+Inutilisable par :
+ Personnages Loyaux
+ Mage~
+@26   = ~Epée courte~
+@27   = ~Gardienne du son~
+@28   = ~Gardienne du son fut forgée il y a de cela des années à la demande du barde et aventurier Grefyn, un nom désormais oublié par les plus érudits. Les puissants enchantements de la lame lui permirent de pourfendre de nombreux ennemis tout en se protégeant. Ce fait, combiné au faible bourdonnement de l'arme quand on la dresse, lui gagnèrent ce surnom de "Gardienne du son".
+
+Tous les plus grands aventuriers doivent pourtant mourir, et Grefyn tomba contre des prêtres aventuriers de Waukyne à la suite d'un 'désaccord' sur une propriété de l'Eglise. L'épée demeura bien de l'Eglise durant des siècles, pour être finalement perdue dans des combats contre les orcs, lors du Temps des Troubles ; son emplacement depuis lors était un mystère.
+
+PARAMETRES :
+
+TAC0 : +2
+Dégâts : 1D6 +2
+Spécial :
+ Le porteur reçoit un bonus de +1 à la CA et aux jets de sauvegarde contre la mort.
+Type de dégâts : perforant
+Facteur de vitesse : 1
+Poids : 2
+Type de compétence : épée courte
+Type : arme à 1 main
+Force nécessaire : 5
+Inutilisable par :
+ Druide
+ Clerc
+ Mage~
+@29   = ~Mailles du profane~
+@30   = ~La cotte de mailles est constituée d'anneaux métalliques imbriqués les uns dans les autres. Elle est toujours portée par-dessus une couche de tissu matelassé ou de cuir souple pour empêcher le frottement et réduire l'impact des chocs. 
+
+Cette tenue, légère et bien ouvrée, ne gênera pas un lanceur de sorts profanes s'il l'équipe. De notoriété commune, les armures possédant de telles propriétés sont généralement l'oeuvre des elfes, étant destinées à protéger leurs élégants guerriers-mages et chantelames dans les combats. Les secrets elfiques sont jalousement gardés, ce qui fait de cet équivalent de facture humaine une véritable rareté. Cela ne vous surprendrait guère que le forgeron responsable de sa fabrication ait été traqué et 'persuadé' de ne pas recommencer.
+
+PARAMETRES :
+
+Classe d'armure : 5
+Poids : 30
+Force nécessaire : 8
+Inutilisable par :
+ Druide
+ Mage
+ Voleur~
+@31   = ~Cuir de barde~
+@32   = ~La besantine a peu de choses en commun avec une armure de cuir normale. Alors que l'armure de cuir est une coque durcie, la besantine est souple et comporte des centaines de rivets. Ces derniers sont tellement rapprochés qu'ils forment une couche flexible de métal dur qui aide à détourner toute attaque perforante ou tranchante. Le renforcement de cuir souple n'est rien de plus qu'un moyen de maintenir les rivets en place.
+
+Cette tenue, légère et bien ouvrée, ne gênera pas un lanceur de sorts profane s'il l'équipe. Bien que façonnée plus particulièrement pour les bardes, l'armure peut être portée et utilisée pour lancer des sorts profanes sans malus par tout personnage auquel le port de la besantine est autorisé.
+
+PARAMETRES :
+
+Classe d'armure : 7
+Poids : 15
+Force nécessaire : 6
+Inutilisable par :
+ Mage~
+@33   = ~Cuir de barde +1~
+@34   = ~La besantine a peu de choses en commun avec une armure de cuir normale. Alors que l'armure de cuir est une coque durcie, la besantine est souple et comporte des centaines de rivets. Ces derniers sont tellement rapprochés qu'ils forment une couche flexible de métal dur qui aide à détourner toute attaque perforante ou tranchante. Le renforcement de cuir souple n'est rien de plus qu'un moyen de maintenir les rivets en place.
+
+Cette tenue, légère et bien ouvrée, ne gênera pas un lanceur de sorts si équipée. Bien que façonnée pour les bardes, l'armure peut être portée et utilisée pour lancer des sorts sans malus par tout personnage auquel le port de la besantine est autorisé.
+
+PARAMETRES :
+
+Classe d'armure : 7
+Poids : 10
+Force nécessaire : 6
+Inutilisable par :
+ Mage~
+@35   = ~La besantine a peu de choses en commun avec une armure de cuir normale. Alors que l'armure de cuir est une coque durcie, la besantine est souple et comporte des centaines de rivets. Ces derniers sont tellement rapprochés qu'ils forment une couche flexible de métal dur qui aide à détourner toute attaque perforante ou tranchante. Le renforcement de cuir souple n'est rien de plus qu'un moyen de maintenir les rivets en place.
+
+Cette tenue, légère et bien ouvrée, ne gênera pas un lanceur de sorts si équipée. Bien que façonnée pour les bardes, l'armure peut être portée et utilisée pour lancer des sorts sans malus par tout personnage auquel le port de la besantine est autorisé.
+
+PARAMETRES :
+
+Classe d'armure : 6
+Poids : 10
+Force nécessaire : 6
+Inutilisable par :
+ Mage~
+@36   = ~Conte du Mal Spectral~
+@37   = ~Un conte est inscrit sur ce rouleau. On y fait allusion à des actes terribles et à un mal si sombre que la simple lecture de la dernière phrase peut provoquer une mort horrible et douloureuse.
+
+Une fois la phrase lue, la magie du parchemin se dissipe ; même si le conte, lui, reste bien assez noir pour hanter les rêves d'un auditeur pour un long moment...
+
+PARAMETRES :
+
+Peut être utilisé pour lancer 'Sort de Mort' une seule fois
+
+Utilisable par :
+ Barde~
+@38   = ~Conte des Morts Effrayants~
+@39   = ~Un conte est inscrit sur ce rouleau. L'écriture est tremblante et relate l'existence de morts terrifiants qui rôdent la nuit. Le parchemin est enchanté, si bien qu'en lire certains passages peut inquiéter les plus braves.
+
+Après lecture, la magie du parchemin se dissipe ; même si l'auditeur ressentira certainement un léger frisson lui parcourir la nuque quand il sera seul, la nuit.
+
+PARAMETRES :
+
+Peut être utilisé pour lancer 'Horreur' une seule fois
+
+Utilisable par :
+ Barde~
+@40   = ~Conte du Vrai Brave~
+@41   = ~Cette page est noircie d'histoires contant la gloire de héros vaillants, triomphant contre toute attente ; combattant des hordes d'orcs, mettant en déroute démons féroces et dragons malveillants dans leurs tanières. La lecture d'un passage imprègnera le personnage d'un sens du courage si fort qu'il pourra surmonter toutes ses peurs.
+
+Après lecture, la magie du parchemin se dissipe ; l'histoire elle-même, cela dit, sera toujours bonne à écouter.
+
+PARAMETRES :
+
+Peut être utilisé pour lancer 'Résistance à la peur' une seule fois
+
+Utilisable par :
+ Barde~
+@42   = ~Installer l'Acrobate (kit de barde)~
+@43   = ~Vous devez avoir installe le premier composant pour installer celui-ci~
+@44   = ~acrobate~
+@45   = ~Acrobate~
+@46   = ~ACROBATE : En tant qu'artistes, la plupart des acrobates peuvent être trouvés accompagnant des cirques ou des carnavals, bien qu'une troupe d'acrobates puisse proposer à elle seule un remarquable spectacle. Il est commun de les voir dans de grandes tavernes ou dans des clubs, user de leur talent afin d'attirer et captiver la foule suffisamment longtemps pour que le propriétaire draine les bourses alentours. Les acrobates aiment être vus et montrer leur talent. Quoi qu'ils fassent, sens du style et de la théâtralité sont au rendez-vous. Les acrobates deviennent parfois d'incroyables monte-en-l'air, et peuvent aussi être des alliés utiles pour les aventuriers, car ils sont capables de rejoindre des espaces que d'autres ne peuvent atteindre sans l'aide de la magie. En outre, leur talent pour éviter pièges et autres dangers font d'eux d'excellents éclaireurs.
+
+Capacités :
+- Bonus de +1 à la CA
+- Bonus de +1 à la CA contre les missiles tous les 8 niveaux
+- Peut placer jusqu'à deux points de compétence en frondes, fléchettes et dagues
+
+Restrictions :
+- Ne peut utiliser d'autres armes que celles utilisables par un voleur.
+- Ne peut porter d'armure plus lourde que la besantine
+- Connaissances divisées par 2~
+@47   = ~Installer le Choriste (kit de barde)~
+@48   = ~Armure de la foi (Abjuration)
+Niveau : 1
+Portée : 0
+Durée : 3 rounds + 1 round par niveau
+Temps d'incantation : 1
+Zone d'effet : Lanceur
+Jet de sauvegarde : Non
+
+Ce sort procure une protection contre les attaques de mêlée et les attaques magiques. Cette armure d'énergie magique absorbe une partie des dégâts destinés au lanceur. Au premier niveau, cette protection est de 5%, et se renforce de 5% tous les cinq niveaux. Un prêtre de niveau 20 verrait donc 25% des dégâts absorbés quand il est protégé par ce sort.~
+@49   = ~Soin des blessures légères (Nécromancie)
+Niveau : 1
+Portée : Toucher
+Durée : Permanente
+Temps d'incantation : 5
+Zone d'effet : Créature touchée
+Jet de sauvegarde : Non
+
+Lorsque le prêtre jette ce sort et pose sa main sur une créature, il soigne 1D8 points de blessures ou autres dégâts infligés au corps de la créature touchée. Cette guérison n'affecte pas les créatures dépourvues d'enveloppe corporelle, ni les blessures des créatures mort-vivantes ou originaires d'outreplan.
+La guérison n'est définitive que dans la mesure où la créature ne subit pas d'autres dégâts ; les blessures provoquées se cicatriseront (ou peuvent être soignées) comme n'importe quelle blessure normale.~
+@50   = ~Fatalité (Altération)
+Niveau : 1 
+Portée : Champ visuel du lanceur de sort
+Durée : 1 tour
+Temps d'incantation : 1 round
+Zone d'effet : 1 créature
+Jet de sauvegarde : Non
+
+Ce sort transmet à sa victime une sensation de catastrophe imminente. Pendant toute la durée de ce sort, la cible reçoit une pénalité de -2 à tous ses jets, y compris au TAC0 et aux jets de sauvegarde. On ne peut se protéger de ce sort par un jet de sauvegarde. En cas de lancers multiples, les effets de ce sort ne sont pas cumulatifs.~
+@51   = ~Cantique (Conjuration/Convocation) 
+Niveau : 2
+Portée : 0 
+Durée : 1 tour 
+Temps d'incantation : 1 round 
+Zone d'effet : Rayon de 9 mètres
+Jet de sauvegarde : Non
+
+Avec le sort de cantique, le prêtre attire une faveur spéciale sur lui-même et sur son groupe, et inflige des dégâts à ses ennemis. Lorsque l'incantation est achevée, tous les jets d'attaque et de dégâts, ainsi que les jets de sauvegarde effectués par les alliés du prêtre situés dans la zone d'effet, reçoivent un bonus de +1, alors que les ennemis du prêtre écopent d'un malus de -1. Les cantiques multiples ne sont pas cumulatifs.~
+@52   = ~Ralentissement du poison (Nécromancie) 
+Niveau : 2 
+Portée : toucher 
+Durée : Instantanée
+Temps d'incantation : 1 
+Zone d'effet : Créature touchée 
+Jet de sauvegarde : Non
+
+Lorsque ce sort est jeté sur un individu empoisonné, il ralentit beaucoup l'effet du venin, ce qui peut le neutraliser dans un grand nombre de cas.~
+@53   = ~Puiser dans la puissance divine (Invocation) 
+Niveau : 2
+Portée : 0 
+Durée : 1 tour 
+Temps d'incantation : 2
+Zone d'effet : Lanceur de sorts
+Jet de sauvegarde : Non
+
+Le prêtre sollicite son dieu pour que ce dernier lui accorde son pouvoir pendant une courte durée. Sa force, sa constitution et sa dextérité gagnent alors de 1 point par tranche de 3 niveaux du lanceur de sorts. Un prêtre du 3ème niveau verra ainsi ses caractéristiques augmenter de 1 point, et un prêtre du 12ème niveau les verra augmenter de 4.~
+@54   = ~Glyphe de garde (Abjuration, Evocation) 
+Niveau : 3
+Portée : 18 m
+Durée : Permanente jusqu'à son déchargement
+Temps d'incantation : Spécial 
+Zone d'effet : 9 m de rayon
+Jet de sauvegarde : Spécial 
+
+Un glyphe de garde est une inscription magique puissante destinée à empêcher les créatures non autorisées ou hostiles de pénétrer dans une zone, de franchir une porte ou un passage donné. Il peut servir à protéger un petit pont, à garder une entrée ou comme piège sur un coffre ou une boîte.
+Toute créature violant la zone gardée subit la magie qu'il renferme. Un jet de sauvegarde réussi contre les sorts permet à la créature d'échapper aux effets du glyphe. On ne peut pas placer plusieurs glyphes dans la même zone ; mais si une commode a trois tiroirs, il est possible de placer un glyphe sur chacun d'entre eux. 
+Grâce à ce sort, le prêtre tisse un réseau de lignes légèrement phosphorescentes autour du symbole de garde. Lorsque le glyphe est activé, il inflige à la victime entre 1 et 4 points de dégâts électriques par niveau du lanceur de sorts.~
+@55   = ~Soins des blessures moyennes (Nécromancie)
+Niveau : 3
+Portée : Contact
+Durée : Permanente
+Temps d'incantation : 5
+Zone d'effet : Créature touchée
+Jet de sauvegarde : Non
+
+Lorsqu'il lance ce sort et appose ses mains sur une créature, le prêtre restaure 14 points de vie, qu'il s'agisse de blessures de combat ou d'autres types de dégâts. Cette guérison ne s'applique pas aux créatures dénuées d'enveloppes corporelles, ni aux dégâts reçus par des créatures mort-vivantes ou d'origine extraplanaire. 
+La guérison est permanente tant que la cible ne reçoit pas de nouvelles blessures, qui devront être guéries comme n'importe quels autres sévices.~
+@56   = ~Harmonie défensive (Enchantement/Charme)
+Niveau : 4
+Portée : Lanceur
+Durée : 6 rounds
+Temps d'incantation : 1
+Zone d'effet : Rayon de 3 m
+Jet de Sauvegarde : Non
+
+Ce sort confère aux créatures affectées un bonus défensif en permettant une extrême coordination de leurs mouvements et attaques. Cela permet à un groupe d'agir comme une seule entité le temps d'une bataille ou d'une rencontre. L'effet est toujours centré sur le lanceur, mais affecte tous ceux présents dans un rayon de 3 m. Un individu affecté par le sort peut ensuite sortir de la zone en conservant les bonus. Tant que le sort est actif, toute créature affectée reçoit un bonus de +2 à sa Classe d'armure, pour une durée de 6 rounds ou jusqu'à dissipation.~
+@57   = ~Puissance sacrée (Evocation)
+Niveau : 4
+Portée : Aucune
+Durée : 1 round / niveau
+Zone d'effet : Lanceur 
+Jet de sauvegarde : Non
+
+Grâce à ce sort, le lanceur acquiert la force et les talents d'un guerrier de même niveau. La force du prêtre passe à 18/00, même si elle est d'habitude plus élevée, son TAC0 devient celui d'un guerrier de même niveau et il obtient 1 point de vie temporaire supplémentaire par niveau. Ces effets se prolongent pendant toute la durée du sort ou jusqu'à ce qu'ils soient dissipés magiquement.~
+@58   = ~Guérison de masse (Nécromancie)
+Niveau : 5
+Portée : Champ visuel du lanceur
+Durée : Permanente
+Temps d'incantation : 5
+Zone d'effet : Rayon de 9 m
+Jet de sauvegarde : Non
+
+Lorsqu'il lance ce sort, le prêtre doit se concentrer sur les visages de ses compagnons et sur l'unité du groupe. Une fois l'incantation achevée, tous les membres du groupe dans un rayon de 9 m sont soignés de 1D8 points de vie +1 / niveau. La guérison est permanente, du moins tant que la créature ciblée ne reçoit pas de nouveaux dégâts ; les blessures ainsi causées devront être soignées comme toute autre blessure normale.~
+@59   = ~Rayon divin (Invocation/Evocation)
+Niveau : 6
+Portée : 18 mètres
+Durée : Instantanée
+Temps d'incantation : 9
+Zone d'effet : Créature visée
+Jet de sauvegarde : Non
+
+Avec ce sort, le magicien canalise un rayon d'énergie divine contre une créature. Aucun jet d'attaque n'est nécessaire. Les créatures frappées subissent des dégâts divers, en fonction de leur plan d'existence.
+
+Type de créature / Dégâts
+ Plan primaire / 6D6
+ Elémentaire / 3D4
+ Mort-vivant / 8D6
+ Démon / 10D6~
+@60   = ~Choriste~
+@61   = ~choriste~
+@62   = ~CHORISTE : La musique, que ce soit hymne, symphonie ou sombre cantique, joue un rôle important dans les services dédiés à la majorité des dieux. Que cela soit pour aider dans l'accomplissement d'un rituel ou permettre l'avancement d'un fidèle dans sa croyance, la plupart des lieux sacrés comptent au moins un barde, connu sous le nom de Choriste.
+
+Les choristes ne sont néanmoins pas seulement trouvés au milieu de saints murs ; beaucoup de fois les utilisent comme missionnaires chargés d'attirer de nouveaux fidèles. Des bardes aventuriers, liés à une certaine déité finissent aussi souvent par devenir choristes, trouvant alors des réponses aux  prières qu'ils adressent à leur divinité.
+
+Capacités :
+- A accès à plusieurs sorts divins dont la mémorisation passe par les sorts de mage :
+Niveau 1 : Armure de la Foi, Soin des Blessures Légères, Fatalité
+Niveau 2 : Cantique, Puiser dans la Puissance Divine, Ralentissement du Poison
+Niveau 3 : Soin des Blessures Moyennes, Glyphe de Garde
+Niveau 4 : Harmonie Défensive, Puissance sacrée
+Niveau 5 : Guérison de Masse
+Niveau 6 : Rayon Divin
+
+Restrictions :
+- Connaissances divisées par 2
+- Pourcentage de Vol à la Tire divisé par 2~
+@63   = ~Installer le Chanteur Funebre (kit de barde)~
+@64   = ~chanteur funèbre~
+@65   = ~Chanteur funèbre~
+@66   = ~CHANTEUR FUNEBRE : Les chanteurs funèbres prêtent leur voix, non pas à des mélodies joyeuses ou festives, mais à des mélodies morbides et mélancoliques. Ils cherchent à répandre cette mélancolie partout, persuadés que seules les personnes capables de s'absorber dans leur tristesse sont capables d'appréhender correctement le monde.
+
+Ces tristes vagabonds savent instiller dans le coeur de ceux qui les écoutent le sens de l'amertume. Un certain nombre de ces bardes déchus tentent simplement de faire comprendre aux autres leur déchéance personnelle. D'autres, moins nombreux, sont de sinistres créatures qui pensent que, puisque la joie est éteinte en eux, ils doivent à leur tour éteindre celle des autres, utilisant leurs dons de musiciens pour enseigner la sottise de l'amour, la futilité de l'espoir et la fatalité de la mort. Ces derniers s'associent souvent à de puissants mort-vivants ; servant ainsi dans l'entourage de seigneurs vampires ou de roi-liches.
+
+Les chanteurs funèbres sont limités aux alignements neutre ou mauvais.
+
+Capacités :
+- Le Chant de Barde maudit les adversaires, leur donnant un malus de -1 aux jets de sauvegarde et au TAC0. Au niveau 10, le malus passe à -2, au niveau 20 à -3 et au niveau 30 à -4.
+- A partir du niveau 5, le chanteur funèbre peut utiliser 'Chant d'Horreur' 1/jour. Il a le même effet que le sort de mage de niveau 2 'Horreur'.
+- A partir du niveau 7, il peut utiliser 'Chant Mélancolique' 1/jour. Même effet que le sort de mage de niveau 4 'Confusion'.
+- A partir du niveau 9, il peut utiliser 'Chant d'Eveil' 1/jour. Même effet que le sort de mage de niveau 5 'Animation des Morts'.
+
+Restrictions :
+- Connaissances divisées par 2~
+@67   = ~Chant d'Horreur~
+@68   = ~Chant Mélancolique~
+@69   = ~Chant d'Eveil~
+@70   = ~Installer le Gitan (kit de barde)~
+@71   = ~Malédiction~
+@72   = ~gitan~
+@73   = ~Gitan~
+@74   = ~GITAN : On appelle souvent les gitans "gens du voyage" ou "nomades de la forêt" ; typiquement, ils parcourent les terres sous forme de caravanes composées de carrioles et de wagons bariolés. Ces gens sont bien connus pour leur musique et leur danse étranges ; tout en menant leur mode de vie nomade, ils survivent généralement grâce aux bénéfices tirés des représentations données dans les villages qu'ils traversent. Les gitans arpentent la campagne, menant une vie au jour le jour. Ils voyagent jusqu'à trouver quelque chose d'intéressant, auquel cas ils dressent un camp temporaire, et y demeurent jusqu'à ce que le besoin de voir du pays surpasse à nouveau leur désir de rester. Les gitans aventuriers sont souvent à la recherche d'un lieu ou d'un objet unique, ou bien ils prennent simplement plaisir à voir les grandes merveilles que le monde offre sur le chemin de l'aventure.
+
+Ils sont souvent incompris des autres qui les classifient comme voleurs, mendiants, carnavalesques, nomades ou les qualifient de bien d'autres noms erronés. Ils sont aussi très ouverts et accueillants envers ceux qui souhaitent découvrir leurs coutumes ou rejoindre leur vie de vagabonds, s'attirant une réputation de voleurs d'enfants qu'ils feraient ensuite disparaître dans les étendues sauvages. Il est important de noter que tous les gitans n'ont pas un don pour la musique et par conséquent ne sont pas tous bardes ; Les bardes gitans, connus dans leur clan sous le noms de "rawuns", y assument les rôles de conteur, gardien du savoir, diseurs de bonne aventure et conseillers spirituels de leurs clans.
+
+Capacités :
+- Le Chant de Barde charme les adversaires à moins qu'ils ne réussissent un jet de sauvegarde contre les sorts à +2, avec un malus de -1 tous les 5 niveaux de barde.
+- Se voit accorder un bonus de +1 à ses jets de sauvegardre contre les sorts tous les 8 niveaux.
+- Peut lancer le sort 'Malédiction' 1/jour. A l'inverse du sort 'Bénédiction', il donne aux adversaires un malus de -1 aux jets de sauvegarde et au TAC0.
+
+Restrictions :
+- Ne peuvent pas mémoriser les sorts des écoles de Conjuration, Invocation et Transmutation.~
+@75   = ~Installer l'Aventurier (kit de voleur)~
+@76   = ~aventurier~
+@77   = ~Aventurier~
+@78   = ~AVENTURIER : L'aventurier est une personne polyvalente, pas tant voleur dans l'âme que quelqu'un qui tire partie des talents du voleur classique dans ses aventures. Un aventurier est préféré  aux autres voleurs par beaucoup de groupes, car il est bien moins susceptible de voler ou de trahir ses équipiers. Un aventurier qui a réussi connaît les notions de confiance et de travail de groupe, tandis que les habituels "voleurs des rues" ont évolué dans la duplicité et (parfois littéralement) les coups par derrière.
+
+Capacités :
+- Chaque niveau ajoute un bonus de 5% au crochetage et au désamorçage des pièges.
+- Bonus de +1 à tous les jets de sauvegarde aux niveaux 1, 8 et 14.
+
+Restrictions :
+- Ne peut pas effectuer d'attaques sournoises.~
+@79   = ~AVENTURIER : L'aventurier est une personne polyvalente, pas tant voleur dans l'âme que quelqu'un qui tire partie des talents du voleur classique dans ses aventures. Un aventurier est préféré  aux autres voleurs par beaucoup de groupes, car il est bien moins susceptible de voler ou de trahir ses équipiers. Un aventurier qui a réussi connaît les notions de confiance et de travail de groupe, tandis que les habituels "voleurs des rues" ont évolué dans la duplicité et (parfois littéralement) les coups par derrière.
+
+Capacités :
+- Chaque niveau ajoute un bonus de 5% au crochetage et au désamorçage des pièges.
+- Bonus de +1 à tous les jets de sauvegarde aux niveaux 1, 8 et 14.
+
+Restrictions :
+- Ne peut pas effectuer d'attaques sournoises.~
+@80   = ~Mise à jour du kit d'aventurier assigne à Imoen par le mod NPC Kitpack vers celui de S&S~
+@81   = ~Mise à jour du kit d'aventurier assigne à Nalia par le mod NPC Kitpack vers celui de S&S~
+@82   = ~Installer le Cambrioleur (kit de voleur)~
+@83   = ~cambrioleur~
+@84   = ~Cambrioleur~
+@85   = ~CAMBRIOLEUR : Ce type de voleur est le parfait Cambrioleur. Il est expert dans l'infiltration des bâtisses les plus inaccesssibles, contournant murs, serrures, pièges et gardiens, faisant mainmise sur le meilleur butin et repartant aussi discrètement qu'il est entré.
+
+Capacités :
+- Bonus de 10% au Crochetage, au Camouflage dans l'ombre, à la Furtivité et à la Détection des pièges.
+- Peut se spécialiser en Dagues, Frondes ou Fléchettes.
+
+Restrictions :
+- Malus de -20% au Vol à la Tire et en Pose de pièges.
+- Gagne des pièges supplémentaires deux fois moins rapidement qu'un voleur classique.~
+@86   = ~Installer le Lamesprit (kit de voleur)~
+@87   = ~lamesprit~
+@88   = ~Lamesprit~
+@89   = ~LAMESPRIT : Ce type de voleur, disposant de pouvoirs psioniques, considère son esprit comme la plus belle et plus mortelle création de tous les temps. Avec le temps, les lamesprits ont appris à matérialiser leur force mentale en une lame semi-solide faite de pure énergie psychique. Cette arme, connue sous le nom de Lame-Esprit, signifie que même désarmé, le Lamesprit n'est qu'à une pensée du coup fatal.
+
+Capacités :
+- Peut être maître en épée courte
+- Peut créer une Lame-Esprit 1 fois/jour tous les 10 niveaux. Cette épée courte est une arme psionique ayant une durée d'1 round/niveau, et est enchantée à +1 pour déterminer ce qu'elle peut toucher jusqu'à un maximum de +5 au niveau 25. Chaque coup guérit le Lamesprit de 1 point de vie. Le bonus au TAC0 et aux dégâts augmente de 1 tous les 5 niveaux pour un maximum de 5 au niveau 25. La portée est augmentée de 5 tous les 5 niveaux jusqu'à un maximum de 25 au niveau 25.
+
+Restrictions :
+- Ne peut pas poser de pièges
+- Ne dispose que de 15 points à répartir à chaque niveau.~
+@90   = ~LAMESPRIT : Ce type de voleur, disposant de pouvoirs psioniques, considère son esprit comme la plus belle et plus mortelle création de tous les temps. Avec le temps, les lamesprits ont appris à matérialiser leur force mentale en une lame faite de pure énergie psychique. Cette arme, connue sous le nom de Lame-Esprit, signifie que même désarmé, le Lamesprit est à une pensée du coup fatal.
+
+Capacités :
+- Peut être maître en épée courte
+- Peut créer une Lame-Esprit 1 fois/jour tous les 10 niveaux. Cette épée courte est une arme psionique ayant une durée d'1 round/niveau, et est enchantée à +1 pour déterminer ce qu'elle peut toucher jusqu'à un maximumu de +5. Chaque coup guérit le Lamesprit de 1 point de vie. Le bonus au TAC0 et aux dégâts augmente de +1 tous les 5 niveaux pour un maximum de +5 au niveau 25. La portée est augmentée de 5 tous les 5 niveaux jusqu'à un maximum de 25 au niveau 25.
+
+Restrictions :
+- Ne peut pas poser de pièges
+- Ne dispose que de 15 points de compétences à répartir à chaque niveau.~
+@91   = ~Créer Lame-Esprit~
+@92   = ~Lame-Esprit~
+@93   = ~Installer le Tireur d'Elite (kit de voleur)~
+@94   = ~tireur d'élite~
+@95   = ~Tireur d'élite~
+@96   = ~TIREUR D'ELITE : Ce type de voleur aime rester discret, aussi préfère-t-il engager un combat à distance à l'arc ou à l'arbalète que de se retrouver dans un combat au corps à corps bien plus dangereux. A l'inverse du rôdeur, les tireurs d'élite utilisent leurs dons dans le cadre d'activités douteuses impliquant les biens et les vies d'autrui plutôt que pour la protection des grands espaces.
+
+Bien que très doués dans le maniement des armes de trait, ils ne sont pas aussi efficaces qu'un guerrier classique et leur propension à privilégier les armes à distance ne leur offre pas la possibilité d'effectuer des attaques sournoises, habituelle signature des roublards. Cependant, ils n'y voient pas un désavantage, car ils préfèrent frapper depuis les ombres grâce à un projectile bien placé, ou si nécessaire placer un piège mortel pour leurs éventuels poursuivants.
+
+Capacités :
+- Peut atteindre la Grande Maîtrise dans les armes de trait accessibles aux voleurs
+- Peut enduire son arme de poison 1 fois/jour tous les 4 niveaux. Les attaques réalisées avec cette arme au round suivant injecteront le poison dans l'organisme de la victime en infligeant 1 point de dégât/seconde pendant 24 secondes (3 points de dégâts lors des 6 premières secondes). Un jet de sauvegarde contre le poison limite les dégâts à 12 points de vie perdus.
+
+Restrictions :
+- Ne peut porter d'attaques sournoises.~
+@97   = ~Installer le Danseur de l'Ombre (kit de voleur)~
+
+@99   = ~Invoquer Ombre~
+@100  = ~Ombre~
+@101  = ~danseur de l'ombre~
+@102  = ~Danseur de l'ombre~
+@103  = ~DANSEUR DE L'OMBRE : Opérant à la limite située entre la lumière et les ténèbres, les Danseurs de l'ombre sont d'agiles maîtres de l'illusion. Mystérieux, méconnus, on ne leur accorde jamais une entière confiance mais toujours une certaine admiration lors d'une première rencontre. Malgré leur lien avec les ombres et l'art de la tromperie, les Danseurs de l'ombre peuvent aussi bien être bons que mauvais. Ils utilisent leurs incroyables dons comme ils le souhaitent.
+
+Ils travaillent souvent en groupe, évitant de rester en un même lieu trop longtemps. Certains utilisent leurs pouvoirs pour distraire. D'autres opèrent comme voleurs, usant de leurs dons pour pénétrer des bâtisses et leurrer leurs gardiens. Tous les Danseurs de l'ombre conservent une aura de mystère au sein du peuple, qui ne sait jamais quoi penser d'eux.
+
+Capacités :
+- Bonus de +5% en Furtivité et au Camouflage dans l'ombre tous les 2 niveaux
+- Infravision permanente
+- Peut lancer le sort 'Image réfléchie' 1 fois par jour
+- A partir du niveau 5, peut invoquer une Ombre par jour. L'Ombre s'aligne sur les niveaux du Danseur de l'ombre, dispose de techniques de dissimulation, et est invoquée pour 8 heures.
+- A partir du niveau 8, peut lancer 'Porte d'Ombre' 1 fois par jour. D'autres utilisations sont gagnées aux niveaux 14 et 20.
+
+Restrictions :
+- Ne peut pas poser de pièges.
+- Ne dispose que de 15 points de compétences à répartir à chaque niveau.~

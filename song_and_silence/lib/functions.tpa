@@ -1,0 +1,615 @@
+// there's a lot of this, so we're going to save on parsing time
+DEFINE_PATCH_MACRO andyr_spell_to_innate BEGIN
+
+  LOCAL_SET bam = 0
+  LOCAL_SET ho  = 0
+  LOCAL_SET hc  = 0
+  WRITE_SHORT  0x1c 4                        // sets spell type to innate (4)
+  WRITE_LONG   0x34 1                        // sets spell level to 1 to avoid scripting issues
+  WRITE_LONG   0x50 ` 0
+  WRITE_LONG   0x54 ` 0
+  READ_LONG    0x64 ho
+  READ_ASCII   ho + 0x04 bam                 // reads the bam filename from ability
+  WRITE_ASCIIE 0x3a ~%bam%~ #8               // writes the bam filename from abilities to spell icon
+  FOR (READ_SHORT 0x68 hc; hc; hc -= 0x01) BEGIN // loops once for every ability
+    WRITE_SHORT ho + 0x28 * hc - 0x26 0x04   // changes ability icon location to innate (4)
+  END
+
+END
+
+// fully extensible
+DEFINE_ACTION_MACRO andyr_cinders_of_ashes_of_embers BEGIN
+
+  ACTION_IF FILE_EXISTS_IN_GAME j#aoev22.txt BEGIN
+
+    COPY_EXISTING weapprof.2da override
+      COUNT_2DA_COLS cols
+      READ_2DA_ENTRIES_NOW rows cols - 1
+      SPRINT int_name null
+      FOR (i_0 = 20; i_0 < cols - 1 && ~%int_name%~ STRING_COMPARE_CASE ~%match%~; i_0 += 1) BEGIN
+        READ_2DA_ENTRY_FORMER rows 0 i_0 int_name
+        PATCH_IF ~%int_name%~ STRING_EQUAL_CASE ~%match%~ BEGIN
+          FOR (i_1 = 9; i_1 < 29; i_1 += 1) BEGIN
+            READ_2DA_ENTRY_FORMER rows i_1 i_0 + 1 entry
+            PATCH_IF entry = 0 BEGIN
+              SET_2DA_ENTRY_LATER set i_1 i_0 + 1 1
+            END
+          END
+          PATCH_IF ~%match%~ STRING_EQUAL_CASE ~A!SHARPSHOOTER~ BEGIN // sharpshooters can put 5 stars in ranged weapons
+            SET_2DA_ENTRY_LATER set 25 i_0 + 1 5 // and they now have access to longbows
+          END
+          SET_2DA_ENTRIES_NOW set cols - 1
+          PRETTY_PRINT_2DA
+        END
+      END
+    BUT_ONLY
+
+  END
+  
+END
+
+  /*
+ * fl#add_kit_ee - An ADD_KIT supplement for EE-type games
+ * Author: Fredrik Lindgren, a.k.a., Wisp
+ * Licence: public domain
+ * Date: 2014-09-07
+ */
+
+OUTER_SPRINT fl#add_kit_ee#version "1.0.4"
+
+DEFINE_ACTION_FUNCTION fl#add_kit_ee#get_row
+  STR_VAR
+    file = ""
+    row_rame = ""
+    column = 0
+  RET
+    row
+BEGIN
+  COPY_EXISTING "%file%.2da" override
+    COUNT_2DA_COLS num_col
+    READ_2DA_ENTRIES_NOW file num_col
+    SPRINT row ""
+    FOR (i = 0; i < file; ++i) BEGIN
+      READ_2DA_ENTRY_FORMER file i column label
+      PATCH_IF "%label%" STRING_EQUAL_CASE "%row_name%" BEGIN
+        FOR (j = 1; j < num_col; ++j) BEGIN
+          READ_2DA_ENTRY_FORMER file i j item
+          SPRINT row "%row% %item%"
+        END
+      END
+    END
+  BUT_ONLY
+END
+
+DEFINE_ACTION_FUNCTION fl#add_kit_ee#get_column
+  STR_VAR
+    file = ""
+    column_name = ""
+  RET
+    column
+BEGIN
+  COPY_EXISTING "%file%.2da" override
+    COUNT_2DA_COLS num_col
+    READ_2DA_ENTRIES_NOW file num_col - 1
+    SPRINT column ""
+    FOR (i = 0; i < num_col - 1; ++i) BEGIN
+      READ_2DA_ENTRY_FORMER file 0 i label
+      PATCH_IF "%label%" STRING_EQUAL_CASE "%column_name%" BEGIN
+        FOR (j = 1; j < file; ++j) BEGIN
+          READ_2DA_ENTRY_FORMER file j i + 1 item
+          SPRINT column "%column% %item%"
+        END
+      END
+    END
+  BUT_ONLY
+END
+
+DEFINE_ACTION_FUNCTION fl#add_kit_ee#add_row
+  STR_VAR
+    kit_name = ""
+    input = ""
+    file = ""
+    clone = ""
+BEGIN
+  ACTION_IF "%input%" STR_CMP "" BEGIN
+    OUTER_SPRINT append "%kit_name% %input%"
+    APPEND "%file%.2da" "%append%" UNLESS "%kit_name%"
+  END ELSE ACTION_IF "%clone%" STR_CMP "" BEGIN
+    LAF fl#add_kit_ee#get_row
+      STR_VAR
+        file
+        row_name = EVAL "%clone%"
+      RET
+        row
+    END
+    OUTER_SPRINT append "%kit_name% %row%"
+    APPEND "%file%.2da" "%append%" UNLESS "%kit_name%"
+  END
+END
+
+DEFINE_ACTION_FUNCTION fl#add_kit_ee#add_column
+  STR_VAR
+    kit_name = ""
+    input = ""
+    file = ""
+    clone = ""
+BEGIN
+  ACTION_IF "%input%" STR_CMP "" BEGIN
+    OUTER_SPRINT append "$ $ %kit_name% %input%"
+    APPEND_COL "%file%.2da" "%append%" UNLESS "%kit_name%"
+  END ELSE ACTION_IF "%clone%" STR_CMP "" BEGIN
+    LAF fl#add_kit_ee#get_column
+      STR_VAR
+        file
+        column_name = EVAL "%clone%"
+      RET
+        column
+    END
+    OUTER_SPRINT append "$ $ %kit_name% %column%"
+    APPEND_COL "%file%.2da" "%append%" UNLESS "%kit_name%"
+  END
+END
+
+DEFINE_ACTION_FUNCTION fl#add_kit_ee#validate
+  INT_VAR
+    kit_number = 0
+    kit_class = 0
+  STR_VAR
+    kit_name = ""
+    backstab = ""
+    clswpbon = ""
+    hpclass = ""
+    numwslot = ""
+    thiefskl = ""
+    traplimt = ""
+    clascolr = ""
+    clasiskl = ""
+    clasthac = ""
+    thiefscl = ""
+  RET
+    backstab
+    thiefskl
+    traplimt
+BEGIN
+  ACTION_IF kit_class != 4 AND ("%backstab%" STR_CMP "" OR
+                                "%thiefskl%" STR_CMP "" OR
+                                "%traplimt%" STR_CMP "")
+  BEGIN
+    WARN ~WARNING: the arguments backstab, thiefskl and traplimt should only be provided for thief kits~
+    OUTER_SPRINT backstab ""
+    OUTER_SPRINT thiefskl ""
+    OUTER_SPRINT traplimt ""
+  END
+END
+
+DEFINE_PATCH_FUNCTION fl#add_kit_ee#get_2da_value
+  STR_VAR
+    row = ""
+    column = ""
+    req_column_count = 2
+    value = "0"
+  RET
+    value
+BEGIN
+  COUNT_2DA_COLS num_col
+  READ_2DA_ENTRIES_NOW file req_column_count
+  FOR (i = 0; i < file; ++i) BEGIN
+    READ_2DA_ENTRY_FORMER file i 0 row_label
+    PATCH_IF "%row_label%" STRING_EQUAL_CASE "%row%" BEGIN
+      // We assume the top row is off by one
+      FOR (j = 0; j < num_col - 1; ++j) BEGIN
+        READ_2DA_ENTRY_FORMER file 0 j col_label
+        PATCH_IF "%col_label%" STRING_EQUAL_CASE "%column%" BEGIN
+          READ_2DA_ENTRY_FORMER file i j + 1 value
+          i = file
+          j = num_col
+        END
+      END
+    END
+  END
+END
+
+DEFINE_ACTION_FUNCTION fl#add_kit_ee
+  INT_VAR
+    biography = "-2"
+    fallen = 0
+    briefdesc = "-2"
+    fallen_notice = "-2"
+  STR_VAR
+    kit_name = ""
+    backstab = ""
+    clsrcreq = ""
+    clswpbon = ""
+    hpclass = ""
+    numwslot = ""
+    thiefskl = ""
+    traplimt = ""
+    clascolr = ""
+    clasiskl = ""
+    clasthac = ""
+    thiefscl = ""
+BEGIN
+  ACTION_IF GAME_IS ~bgee bg2ee~ BEGIN
+    PRINT "Doing EE-type kit extensions for kit %kit_name%"
+
+    OUTER_SET kit_number = "-1"
+
+    COPY_EXISTING kitlist.2da override
+      READ_2DA_ENTRIES_NOW kitlist 9
+      FOR (i = 0; i < kitlist; ++i) BEGIN
+        READ_2DA_ENTRY_FORMER kitlist i 1 k
+        PATCH_IF "%k%" STRING_EQUAL_CASE "%kit_name%" BEGIN
+          READ_2DA_ENTRY_FORMER kitlist i 0 kit_number
+          READ_2DA_ENTRY_FORMER kitlist i 2 kit_lower
+          READ_2DA_ENTRY_FORMER kitlist i 3 kit_mixed
+          READ_2DA_ENTRY_FORMER kitlist i 4 kit_desc
+          READ_2DA_ENTRY_FORMER kitlist i 8 kit_class
+        END
+      END
+    BUT_ONLY
+
+    ACTION_IF kit_number < 0 BEGIN
+      FAIL ~ERROR: the kit %kit_name% was not found in kitlist.2da~
+    END
+
+    LAF fl#add_kit_ee#validate
+      INT_VAR
+        kit_number
+        kit_class
+      STR_VAR
+        kit_name
+        backstab
+        clsrcreq
+        clswpbon
+        hpclass
+        numwslot
+        thiefskl
+        traplimt
+        clascolr
+        clasiskl
+        clasthac
+        thiefscl
+      RET
+        backstab
+        thiefskl
+        traplimt
+    END
+
+    COPY_EXISTING kitlist.2da override
+      INNER_ACTION BEGIN
+        COPY_EXISTING kit.ids override
+          READ_2DA_ENTRIES_NOW file 2
+          FOR (i = file - 1; i >= 0; --i) BEGIN
+            READ_2DA_ENTRY_FORMER file i 1 k
+            PATCH_IF "%k%" STRING_EQUAL_CASE "%kit_name%" BEGIN
+              READ_2DA_ENTRY_FORMER file i 0 number
+            END
+          END
+        BUT_ONLY
+      END
+      INNER_PATCH_SAVE kitids "%number%" BEGIN
+        REPLACE_TEXTUALLY "0x\([0-9]+\)" "0x0000\1"
+      END
+      SPRINT w "[ %TAB%]+"
+      SPRINT ow "[ %TAB%]*"
+      SPRINT d "[0-9]+"
+      SPRINT h "[0-9x]+"
+      REPLACE_TEXTUALLY ~\(%d%%w%%kit_name%%w%%d%%w%%d%%w%%d%%w%.+%w%%d%%w%%h%%w%%d%%ow%$\)~ ~\1 %kitids%~
+    BUT_ONLY
+
+    OUTER_PATCH 0 BEGIN
+      LOOKUP_IDS_SYMBOL_OF_INT class class kit_class
+    END
+
+    ACTION_IF biography < "-1" OR briefdesc < "-1" OR fallen_notice < "-1" BEGIN
+      COPY_EXISTING clastext.2da override
+        PATCH_FOR_EACH column IN biography briefdesc fallen_notice BEGIN
+          PATCH_IF EVAL "%column%" < "-1" BEGIN
+            LPF fl#add_kit_ee#get_2da_value
+              STR_VAR
+                row = EVAL "%class%"
+                column
+                req_column_count = 8
+              RET
+                value
+            END
+            PATCH_IF (IS_AN_INT "%value%") BEGIN
+              SET EVAL "%column%" = value
+            END ELSE BEGIN
+              SET EVAL "%column%" = 0
+            END
+          END
+        END
+      BUT_ONLY
+    END
+
+    OUTER_SPRINT clastext "%kit_name% %kit_class% %kit_number% %kit_lower% %kit_desc% %kit_mixed% %biography% %fallen% %briefdesc%"
+
+    ACTION_IF FILE_CONTAINS_EVALUATED (clastext.2da "FALLEN_NOTICE") BEGIN
+      OUTER_SPRINT clastext "%clastext% %fallen_notice%"
+    END
+
+    APPEND clastext.2da "%clastext%" UNLESS "%kit_name%"
+
+    ACTION_FOR_EACH item IN
+                    backstab
+                    clsrcreq
+                    clswpbon
+                    hpclass
+                    numwslot
+                    thiefskl
+                    traplimt
+    BEGIN
+      ACTION_IF FILE_CONTAINS_EVALUATED ("%item%.2da" "^[ %TAB%]*%class%[ %TAB%]+") BEGIN
+        OUTER_SPRINT clone "%class%"
+      END ELSE BEGIN
+        OUTER_SPRINT clone ""
+      END
+      LAF fl#add_kit_ee#add_row
+        STR_VAR
+          kit_name
+          input = EVAL EVAL "%%item%%"
+          file = EVAL "%item%"
+          clone
+      END
+    END
+
+    ACTION_FOR_EACH item IN
+                    clascolr
+                    clasiskl
+                    clasthac
+                    thiefscl
+    BEGIN
+      LAF fl#add_kit_ee#add_column
+        STR_VAR
+          kit_name
+          input = EVAL EVAL "%%item%%"
+          file = EVAL "%item%"
+          clone = EVAL "%class%"
+      END
+    END
+
+    ACTION_FOR_EACH file IN
+                    backstab
+                    clascolr
+                    clasiskl
+                    clastext
+                    clasthac
+                    clsrcreq
+                    clswpbon
+                    hpclass
+                    numwslot
+                    thiefscl
+                    thiefskl
+                    traplimt
+                    kitlist
+    BEGIN
+      COPY_EXISTING "%file%.2da" override
+        PRETTY_PRINT_2DA
+      BUT_ONLY
+    END
+  END
+END
+
+
+OUTER_SET fl#HANDLE_CHARSETS#VERSION = 1
+
+DEFINE_ACTION_FUNCTION fl#HANDLE_CHARSETS#WHICH#INFER
+  RET
+    charset
+BEGIN
+  ACTION_MATCH "%LANGUAGE%" WITH
+    ".*schinese.*"
+    BEGIN
+      OUTER_SPRINT charset "CP936"
+    END
+
+    /* Doubts remain about whether CP950 is the correct charset for
+     * Traditional Chinese, mainly due to the translation of the
+     * BG2 Fixpack, which does not appear to be perfectly represented
+     * by CP950.
+     * Possible other alternatives include something involving the
+     * Hong Kong Supplementary Character Set (HKSCS) or Windows'
+     * non-standard CP950+CP951 hack (which appears to be unavailable
+     * outside of Traditionally Chinese Windows).
+     * Cf. Wikipedia on Big5.
+     */
+    ".*tchinese.*"
+    BEGIN
+      OUTER_SPRINT charset "CP950"
+    END
+
+    ".*czech.*"
+    BEGIN
+      OUTER_SPRINT charset "CP1250"
+    END
+
+    ".*english.*" ".*american.*"
+    BEGIN
+      OUTER_SPRINT charset "CP1252"
+    END
+
+    ".*french.*"
+    BEGIN
+      OUTER_SPRINT charset "CP1252"
+    END
+
+    ".*german.*"
+    BEGIN
+      OUTER_SPRINT charset "CP1252"
+    END
+
+    ".*italian.*"
+    BEGIN
+      OUTER_SPRINT charset "CP1252"
+    END
+
+    ".*japanese.*"
+    BEGIN
+      OUTER_SPRINT charset "CP932"
+    END
+
+    ".*korean.*"
+    BEGIN
+      OUTER_SPRINT charset "CP949"
+    END
+
+    ".*polish.*" ".*polski.*"
+    BEGIN
+      OUTER_SPRINT charset "CP1250"
+    END
+
+    ".*russian.*"
+    BEGIN
+      OUTER_SPRINT charset "CP1251"
+    END
+
+    ".*spanish.*" ".*castilian.*"
+    BEGIN
+      OUTER_SPRINT charset "CP1252"
+    END
+
+    DEFAULT
+      FAIL "ERROR: charset could not be inferred for language %LANGUAGE%"
+  END
+END
+
+DEFINE_ACTION_FUNCTION fl#HANDLE_CHARSETS#WHICH
+  INT_VAR
+    infer_charset = 0
+  STR_VAR
+    charset_table = ~~
+  RET
+    charset
+BEGIN
+  ACTION_IF infer_charset BEGIN
+    LAF fl#HANDLE_CHARSETS#WHICH#INFER RET charset END
+  END ELSE BEGIN
+    OUTER_SPRINT lang "%LANGUAGE%"
+    ACTION_TO_LOWER lang
+    ACTION_IF VARIABLE_IS_SET $charset_table("%lang%") BEGIN
+      OUTER_SPRINT charset $charset_table("%lang%")
+    END ELSE BEGIN
+      FAIL "ERROR: no tabulated charset could be found for language %lang%"
+    END
+  END
+END
+
+DEFINE_ACTION_FUNCTION fl#HANDLE_CHARSETS#CONVERT
+  INT_VAR
+    fail_on_errors = 1
+  STR_VAR
+    iconv = ~iconv~
+    quote = ~"~
+    path = ~~
+    file = ~~
+    from_charset = ~123fakecharset~
+    to_charset = ~UTF-8~
+BEGIN
+  ACTION_IF fail_on_errors BEGIN
+    OUTER_SPRINT c_option ""
+  END ELSE BEGIN
+    OUTER_SPRINT c_option "-c"
+  END
+  OUTER_SPRINT infile ~%path%/%file%~
+  OUTER_SPRINT outfile ~%path%/fl#utf8_%file%~
+  ACTION_TRY
+    COPY "%infile%" "%outfile%"
+    /*
+     * The -o option does not appear to be supported by all implementations
+     */
+    AT_NOW ~%iconv% %c_option% -f %from_charset% -t %to_charset% %quote%%infile%%quote% > %quote%%outfile%%quote%~
+    COPY "%outfile%" "%infile%"
+  WITH
+    DEFAULT
+      PRINT "ERROR: unable to convert %infile% from %from_charset% into %to_charset%"
+      ACTION_RERAISE
+  END
+END
+
+DEFINE_ACTION_FUNCTION HANDLE_CHARSETS
+  INT_VAR
+    infer_charset = 0
+    fail_on_errors = 1
+  STR_VAR
+    tra_path = ~~
+    iconv_path = EVAL ~%tra_path%/iconv~
+    charset_table = ~~
+    convert_array = ~~
+    noconvert_array = ~~
+    reload_array = ~~
+BEGIN
+  ACTION_IF ENGINE_IS ~bgee bg2ee~ AND !FILE_EXISTS ~%tra_path%/%LANGUAGE%/fl#utf8.mrk~ BEGIN
+    ACTION_MATCH ~%WEIDU_OS%~ WITH
+      win32
+      BEGIN
+        OUTER_SPRINT iconv ~%iconv_path%/iconv.exe~
+        OUTER_SPRINT quote ~"~
+      END
+
+      osx unix
+      BEGIN
+        OUTER_SPRINT iconv ~iconv~
+        OUTER_SPRINT quote ~'~
+      END
+
+      DEFAULT
+    END
+    LAF fl#HANDLE_CHARSETS#WHICH
+      INT_VAR
+        infer_charset
+      STR_VAR
+        charset_table
+      RET
+        from_charset = charset
+    END
+    ACTION_IF ("%WEIDU_OS%" STRING_EQUAL_CASE "win32" AND FILE_EXISTS "%iconv%") OR
+              ("%WEIDU_OS%" STRING_EQUAL_CASE "osx" OR "%WEIDU_OS%" STRING_EQUAL_CASE "unix")
+    BEGIN
+      ACTION_IF VARIABLE_IS_SET $EVAL "%convert_array%"(0) BEGIN
+        ACTION_PHP_EACH "%convert_array%" AS _ => filename BEGIN
+          LAF fl#HANDLE_CHARSETS#CONVERT
+            INT_VAR
+              fail_on_errors
+            STR_VAR
+              iconv
+              quote
+              path = EVAL ~%tra_path%/%LANGUAGE%~
+              file = EVAL ~%filename%.tra~
+              from_charset
+          END
+        END
+      END ELSE BEGIN
+        ACTION_BASH_FOR ~%tra_path%/%LANGUAGE%~ ~.+\.tra$~ BEGIN
+          OUTER_SET convert = 1
+          /* This makes for a more consistent interface, albeit slightly
+           * messier code. noconvert_array is very likely to be short.
+           */
+          ACTION_PHP_EACH "%noconvert_array%" AS _ => filename BEGIN
+            ACTION_IF "%filename%" STRING_EQUAL_CASE "%BASH_FOR_RES%" BEGIN
+              OUTER_SET convert = 0
+            END
+          END
+          ACTION_IF convert BEGIN
+            LAF fl#HANDLE_CHARSETS#CONVERT
+              INT_VAR
+                fail_on_errors
+              STR_VAR
+                iconv
+                quote
+                path = EVAL "%BASH_FOR_DIRECTORY%"
+                file = EVAL "%BASH_FOR_FILE%"
+                from_charset
+            END
+          END
+        END
+      END
+      ACTION_PHP_EACH "%reload_array%" AS _ => file BEGIN
+        LOAD_TRA ~%tra_path%/%LANGUAGE%/%file%.tra~
+      END
+      COPY_EXISTING sw1h01.itm ~%tra_path%/%LANGUAGE%/fl#utf8.mrk~
+    END ELSE BEGIN
+      FAIL "ERROR: charsets were not converted because iconv could not be found in %iconv_path%"
+    END
+  END
+END

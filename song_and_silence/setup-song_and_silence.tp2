@@ -1,0 +1,1010 @@
+BACKUP ~song_and_silence/backup~
+AUTHOR ~andyr@gibberlings3.net~
+
+VERSION ~v6~
+README ~song_and_silence/readme-song_and_silence.html~
+
+ALWAYS
+
+  // Borrowed from Edwin Romance: convert strings to UTF-8 for BGEE/BG2EE
+  INCLUDE ~%MOD_FOLDER%/lib/functions.tpa~ // handle_charsets, fl#add_kit_ee, misc s&s functions
+  ACTION_DEFINE_ARRAY cdnoconvert BEGIN END
+  ACTION_DEFINE_ARRAY cdreload BEGIN
+    ~a!raoul.tra~ ~a#sdshad.tra~ ~setup.tra~ ~setup_ee.tra~ END
+  LAF HANDLE_CHARSETS
+    INT_VAR
+      infer_charset = 1
+    STR_VAR
+      tra_path = EVAL ~%MOD_FOLDER%/tra~
+      // charset_table = cdcharsets // Included for illustrative purposes.
+      noconvert_array = cdnoconvert
+      reload_array = cdreload
+  END
+
+  ACTION_IF GAME_IS ~bgee bg2ee~ THEN BEGIN
+//    ACTION_IF FILE_EXISTS ~song_and_silence/tra/%LANGUAGE%/fl#utf8_setup_ee.tra~ THEN BEGIN
+    ACTION_IF ((FILE_EXISTS ~song_and_silence/tra/%LANGUAGE%/fl#utf8_setup_ee.tra~) AND ("%LANGUAGE%" STRING_COMPARE_CASE "english")) THEN BEGIN
+      LOAD_TRA ~song_and_silence/tra/%LANGUAGE%/fl#utf8_setup_ee.tra~
+      PRINT ~utf8 tra~
+    END ELSE BEGIN
+      LOAD_TRA ~song_and_silence/tra/%LANGUAGE%/setup_ee.tra~
+    END
+  END
+
+END
+
+/* Language Settings */
+AUTO_TRA ~song_and_silence/tra/%s~
+LANGUAGE 
+  ~English~ 
+  ~english~
+  ~song_and_silence/tra/english/setup.tra~
+LANGUAGE 
+  ~Francais (translated by Zayn and Lothringen of the d'Oghmatiques)~ 
+  ~french~
+  ~song_and_silence/tra/english/setup.tra~
+  ~song_and_silence/tra/french/setup.tra~
+LANGUAGE 
+  ~Polish (translated by Yarpen)~ 
+  ~polish~
+  ~song_and_silence/tra/english/setup.tra~
+  ~song_and_silence/tra/polish/setup.tra~
+LANGUAGE 
+  ~German (translated by Roter Berserker)~
+  ~german~
+  ~song_and_silence/tra/english/setup.tra~
+  ~song_and_silence/tra/german/setup.tra~
+
+//////////////////////
+//Vanilla game stuff//
+//////////////////////
+
+BEGIN @0
+DESIGNATED 0
+
+//Spell progression (NiGHTMARE)
+COPY_EXISTING mxsplbrd.2da override
+  COUNT_2DA_COLS cols
+  PATCH_IF cols < 8 BEGIN
+    READ_2DA_ENTRIES_NOW rows cols
+    SPRINT new ~~
+    READ_2DA_ENTRY 0 cols - 2 cols - 1 new_level
+    FOR (i_0 = cols; i_0 < 8; i_0 += 1) BEGIN
+      SPRINT new ~%new%   0~
+      SPRINT new_level ~%new_level%   %i_0%~
+    END
+    FOR (i_0 = 0; i_0 < rows; i_0 += 1) BEGIN
+      READ_2DA_ENTRY_FORMER rows i_0 cols - 1 old
+      SET_2DA_ENTRY_LATER mxsplbrd_set i_0 cols - 1 ~%old%   %new%~
+    END
+    SET_2DA_ENTRIES_NOW mxsplbrd_set cols
+    SET_2DA_ENTRY 0 cols - 2 cols - 1 ~%new_level%~
+    SET cols = 8
+  END
+  READ_2DA_ENTRIES_NOW rows cols
+  SET $level(8) = 0
+  SET $level(9) = 0
+  FOR (i_0 = 0; i_0 < rows; i_0 += 1) BEGIN
+    READ_2DA_ENTRY_FORMER rows i_0 0 level
+    SET $level(1) = level < 2  ? 0 : level < 3  ? 1 : level < 5  ? 2 : level < 16 ? 3 : level < 21 ? 4 : level < 28 ? 5 : level < 36 ? 6 : 7
+    SET $level(2) = level < 4  ? 0 : level < 6  ? 1 : level < 8  ? 2 : level < 17 ? 3 : level < 22 ? 4 : level < 29 ? 5 : level < 37 ? 6 : 7
+    SET $level(3) = level < 7  ? 0 : level < 9  ? 1 : level < 11 ? 2 : level < 18 ? 3 : level < 23 ? 4 : level < 30 ? 5 : level < 38 ? 6 : 7
+    SET $level(4) = level < 10 ? 0 : level < 12 ? 1 : level < 14 ? 2 : level < 19 ? 3 : level < 24 ? 4 : level < 32 ? 5 : level < 39 ? 6 : 7
+    SET $level(5) = level < 13 ? 0 : level < 15 ? 1 : level < 16 ? 2 : level < 20 ? 3 : level < 26 ? 4 : level < 34 ? 5 : 6
+    SET $level(6) = level < 16 ? 0 : level < 18 ? 1 : level < 20 ? 2 : level < 23 ? 3 : level < 27 ? 4 : level < 33 ? 5 : 6
+    SET $level(7) = level < 25 ? 0 : level < 31 ? 1 : level < 38 ? 2 : 3
+    FOR (i_1 = 1; i_1 < cols; i_1 += 1) BEGIN
+      SET_2DA_ENTRY_LATER mxsplbrd_set i_0 i_1 $level(~%i_1%~)
+    END
+  END
+  SET_2DA_ENTRIES_NOW mxsplbrd_set cols
+  PRETTY_PRINT_2DA
+  WHILE level < 50 BEGIN
+    REPLACE_EVALUATE ~^\(%level%\)\(.+\)~ BEGIN
+      SET level += 1
+    END              ~\1\2%LNL%%level%\2~
+  END
+BUT_ONLY
+
+// unecessary if Fixpack
+ACTION_IF ((NOT MOD_IS_INSTALLED setup-bg2fixpack.tp2 0) AND (NOT GAME_IS ~BGEE BG2EE~)) THEN BEGIN // fixed in EE, vBG2 w/ Fixpack
+
+  // Fix Blade's pick pockets skill
+  COPY ~song_and_silence/chorister/a!pp2.spl~  override
+  COPY ~song_and_silence/chorister/a!pp3.spl~  override
+  COPY ~song_and_silence/chorister/a!pp13.spl~ override
+
+  COPY_EXISTING clabba02.2da override
+    COUNT_2DA_COLS cols
+    READ_2DA_ENTRIES_NOW rows cols
+    SPRINT entry null
+    FOR (i_0 = 0; i_0 < rows && ~%entry%~ STRING_MATCHES_REGEXP ~\*+~; i_0 += 1) BEGIN
+      READ_2DA_ENTRY_FORMER rows i_0 1 entry
+      PATCH_IF NOT ~%entry%~ STRING_MATCHES_REGEXP ~\*+~ BEGIN
+        SET_2DA_ENTRY_LATER clabba02_set i_0 1 ~AP_A!PP13~
+      END
+    END
+    FOR (i_0 = 2; i_0 < cols && i_0 < 16; i_0 += 2) BEGIN
+      SPRINT entry null
+      FOR (i_1 = 0; i_1 < rows && ~%entry%~ STRING_MATCHES_REGEXP ~\*+~; i_1 += 1) BEGIN
+        READ_2DA_ENTRY_FORMER rows i_1 i_0 entry
+        PATCH_IF NOT ~%entry%~ STRING_MATCHES_REGEXP ~\*+~ BEGIN
+          PATCH_IF 2 * (i_0 / 2) = i_0 BEGIN
+            SET_2DA_ENTRY_LATER clabba02_set i_1 i_0 ~AP_A!PP2~
+          END ELSE BEGIN
+            SET_2DA_ENTRY_LATER clabba02_set i_1 i_0 ~AP_A!PP3~
+          END
+        END
+      END
+    END
+    SET_2DA_ENTRIES_NOW clabba02_set cols
+    PRETTY_PRINT_2DA
+  BUT_ONLY
+  UNLESS ~AP_CDBLPP~
+
+  // Fix Skald's lack of THAC0 bonus
+  COPY_EXISTING 
+  spcl421.spl  override
+  spcl541.spl  override
+    PATCH_IF SOURCE_SIZE > 0x71 BEGIN
+      READ_LONG   0x64 ho
+      READ_SHORT  0x68 hc
+      READ_LONG   0x6a eo
+      FOR (i_0 = 0; i_0 < hc; i_0 += 1) BEGIN
+        READ_SHORT  ho + 0x28 * i_0 + 0x1e ec
+        READ_SHORT  ho + 0x28 * i_0 + 0x20 ei
+        FOR (i_1 = 0 op = 0xffff; i_1 < ec && op != 0xb1; i_1 += 1) BEGIN
+          READ_SHORT eo + 0x30 * (i_1 + ei) + 0x00 op
+          PATCH_IF op = 0xb1 BEGIN
+            WRITE_SHORT  eo + 0x30 * (i_1 + ei) + 0x00 0x116
+            WRITE_LONG   eo + 0x30 * (i_1 + ei) + 0x04 0x01
+            WRITE_LONG   eo + 0x30 * (i_1 + ei) + 0x08 0x00
+            WRITE_ASCII  eo + 0x30 * (i_1 + ei) + 0x14 ~~ #8
+          END
+        END
+      END 
+    END
+  BUT_ONLY
+
+END
+
+// Allow thieves 3 points in dual wielding + fix Swashbuckler broken profs
+COPY_EXISTING weapprof.2da override
+  COUNT_2DA_COLS cols
+  // 3 points in dual-wielding for thieves
+  SET_2DA_ENTRY_LATER weapprof 31 7  ~3~ // Thief
+  SET_2DA_ENTRY_LATER weapprof 31 14 ~3~ // Fighter/Thief (just in case)
+  SET_2DA_ENTRY_LATER weapprof 31 15 ~3~ // Fighter/Mage/Thief (just in case)
+  SET_2DA_ENTRY_LATER weapprof 31 16 ~3~ // Mage/Thief
+  SET_2DA_ENTRY_LATER weapprof 31 18 ~3~ // Cleric/Thief
+  SET_2DA_ENTRY_LATER weapprof 31 39 ~3~ // Assassin
+  SET_2DA_ENTRY_LATER weapprof 31 40 ~3~ // Bounty Hunter
+  SET_2DA_ENTRY_LATER weapprof 31 41 ~3~ // Swashbuckler
+  
+  // fix swashbuckler profs
+  SET_2DA_ENTRY_LATER weapprof 13 41 ~2~ // Swashbucklers, katanas
+  SET_2DA_ENTRY_LATER weapprof 23 41 ~1~ // Swashbucklers, crossbows
+  SET_2DA_ENTRY_LATER weapprof 25 41 ~1~ // Swashbucklers, short bows
+  SET_2DA_ENTRY_LATER weapprof 27 41 ~1~ // Swashbucklers, slings
+  SET_2DA_ENTRIES_NOW weapprof cols
+  PRETTY_PRINT_2DA
+BUT_ONLY
+
+// Swashbuckler description change
+ACTION_IF NOT FILE_EXISTS_IN_GAME rr#tsb01.spl THEN BEGIN
+  ACTION_IF GAME_IS ~bgee~ THEN BEGIN
+    STRING_SET 24303 @1
+  END ELSE BEGIN
+    STRING_SET 25216 @1
+  END
+END
+
+// Alignment changes
+COPY_EXISTING alignmnt.2da override
+  PATCH_FOR_EACH kit IN 3 35 36 37 BEGIN
+    SET_2DA_ENTRY_LATER set kit 1 1 // Thief & kits
+  END
+  PATCH_FOR_EACH alignment IN 1 2 3 4 5 6 7 8 9 BEGIN
+    SET_2DA_ENTRY_LATER set 4 alignment 1 // Bard
+  END
+  PATCH_FOR_EACH kit IN 10 11 12 14 BEGIN
+    PATCH_FOR_EACH alignment IN 1 2 3 BEGIN
+      SET_2DA_ENTRY_LATER set kit alignment 1 // Multiclasses
+    END
+  END
+  PATCH_FOR_EACH alignment IN 1 2 3 4 5 6 7 8 9 BEGIN
+    SET_2DA_ENTRY_LATER set 38 alignment 1 // Blade
+  END
+  PATCH_FOR_EACH kit IN 39 40 BEGIN
+    PATCH_FOR_EACH alignment IN 1 2 3 BEGIN
+      SET_2DA_ENTRY_LATER set kit alignment 0 // Forbid Lawful Jesters and Skalds
+    END
+    PATCH_FOR_EACH alignment IN 4 5 6 7 8 9 BEGIN
+      SET_2DA_ENTRY_LATER set kit alignment 1 // Allow non-Lawful Jesters and Skalds
+    END
+  END
+  SET_2DA_ENTRIES_NOW set 10
+  PRETTY_PRINT_2DA
+BUT_ONLY
+/*
+ACTION_IF GAME_IS ~tob~ THEN BEGIN
+  COPY_EXISTING ~luabbr.2da~ ~override/luabbr.2da~
+    SET_2DA_ENTRY 38 1 2 ~A!1~//Blade
+    SET_2DA_ENTRY 39 1 2 ~A!2~//Jester
+    SET_2DA_ENTRY 40 1 2 ~A!3~//Skald
+  // Kitless HLA changes
+  COPY ~song_and_silence/vanilla/luba0.2da~ ~override/luba0.2da~
+  // Blade HLA changes
+  COPY ~song_and_silence/vanilla/lua!1.2da~ ~override/lua!1.2da~
+  // Jester HLA changes
+  COPY ~song_and_silence/vanilla/lua!2.2da~ ~override/lua!2.2da~
+  // Skald HLA changes
+  COPY ~song_and_silence/vanilla/lua!3.2da~ ~override/lua!3.2da~
+END 
+*/
+
+//////////////////
+//Item component//
+//////////////////
+
+BEGIN @2
+DESIGNATED 1
+
+LAF HANDLE_AUDIO END
+
+// Raoul
+COPY ~song_and_silence/items/a!raoul.cre~ override
+  SAY NAME1 @3
+  SAY NAME2 @3
+  SAY DAMAGE @4
+  SAY DYING @4
+  SAY SELECT_COMMON1 @5
+  SAY SELECT_COMMON2 @6
+  SAY SELECT_COMMON3 @7
+  SAY SELECT_COMMON4 @5
+  SAY SELECT_COMMON5 @6
+  SAY SELECT_COMMON6 @7
+  WRITE_ASCII SCRIPT_OVERRIDE ~a!raoul~
+  WRITE_ASCII DIALOG ~a!raoul~
+  WRITE_ASCII 0x434 ~a!bleat2~
+
+COPY ~song_and_silence/items/a!raoul.sto~ ~override~
+     ~song_and_silence/items/a!raoul.sto~ ~override/a!raoul2.sto~
+  SAY STORE_NAME @8
+  ADD_STORE_ITEM "a!brsb"   #1 #0 #0 IDENTIFIED #1 // Skald's Battered Buckler
+  ADD_STORE_ITEM "a!brsd"   #1 #0 #0 IDENTIFIED #1 // Sound Defense
+  ADD_STORE_ITEM "a!bleat1" #1 #0 #0 IDENTIFIED #1 // Bardic Leathers
+  ADD_STORE_ITEM "a!bleat2" #1 #0 #0 IDENTIFIED #1 // Bardic Leathers +1
+  ADD_STORE_ITEM "a!bchan1" #1 #0 #0 IDENTIFIED #1 // Caster's Chain
+  ADD_STORE_ITEM "a!brds"   #1 #0 #0 IDENTIFIED #1 // Tale of Ghastly Evil
+  ADD_STORE_ITEM "a!brhr"   #1 #0 #0 IDENTIFIED #3 // Tale of the Horiffic Dead
+  ADD_STORE_ITEM "a!brrf"   #1 #0 #0 IDENTIFIED #3 // Tale of True Bravery
+  ADD_STORE_ITEM "a!brtr"   #1 #0 #0 IDENTIFIED #3 // Tress of Jessecyl
+
+COMPILE ~song_and_silence/items/a!raoul.d~ // dialogue
+
+// spawn raoul in bridge district
+ACTION_IF GAME_IS ~bgt soa tob bg2ee~ THEN BEGIN
+
+  EXTEND_BOTTOM ar0500.bcs ~song_and_silence/items/ar0500.baf~
+  
+END
+
+// spawn raoul at nashkel carnival
+ACTION_IF GAME_IS ~bgt tutu tutu_totsc bgee~ THEN BEGIN
+
+  ACTION_IF GAME_IS ~tutu tutu_totsc~ THEN BEGIN
+    OUTER_SPRINT nashkel_carnival fw4900
+    OUTER_SPRINT script_check _ar4900
+  END ELSE BEGIN
+    ACTION_IF GAME_IS ~bgt~ THEN BEGIN
+      OUTER_SPRINT nashkel_carnival ar3800
+      OUTER_SPRINT script_check ar3800
+    END ELSE BEGIN
+      OUTER_SPRINT nashkel_carnival ar4900
+      OUTER_SPRINT script_check ar4900
+    END
+  END
+
+  // check if area already has script; if not assign default
+  COPY_EXISTING ~%nashkel_carnival%.are~ ~override~
+    READ_ASCII  0x94 script
+    PATCH_IF NOT FILE_EXISTS_IN_GAME ~%script%.bcs~ BEGIN
+      WRITE_ASCIIE 0x94 ~%script_check%~ #8
+      READ_ASCII  0x94 script
+    END
+    BUT_ONLY
+
+  EXTEND_BOTTOM ~%script%.bcs~ ~song_and_silence/items/_ar4900.baf~ // extend script
+
+END
+
+ACTION_FOR_EACH store IN _toblack stoblack roger BEGIN
+
+  ACTION_IF FILE_EXISTS_IN_GAME ~%store%.sto~ THEN BEGIN
+
+    COPY_EXISTING ~%store%.sto~ ~override~
+      ADD_STORE_ITEM "a!thpo" #1 #0 #0 IDENTIFIED #5 // Phial of Poison
+      ADD_STORE_ITEM "a!thh1" #1 #0 #0 IDENTIFIED #1 // Alathis' Guard
+      ADD_STORE_ITEM "a!thcl" #1 #0 #0 IDENTIFIED #1 // Lights Out
+      ADD_STORE_ITEM "a!thtd" #1 #0 #0 IDENTIFIED #1 // Returning Throwing Daggers +1
+
+  END
+
+END
+
+COPY ~song_and_silence/items/a!ithtd.bam~ override // Returning Throwing Daggers +1
+COPY ~song_and_silence/items/a!thtd.itm~  override
+  SAY NAME2 @9
+  WRITE_ASCII 0x3a ~a!ithtd~
+  SAY IDENTIFIED_DESC @10
+  WRITE_ASCII 0x76 ~a!ithtd~
+
+COPY ~song_and_silence/items/a!ithpo.bam~ override // Phial of Poison
+COPY ~song_and_silence/items/a!thpo.itm~  override
+  SAY NAME2 @11
+  SAY IDENTIFIED_DESC @12
+
+COPY ~song_and_silence/items/a!ithh1.bam~ override // Alathis' Guard
+COPY ~song_and_silence/items/a!cthh1.bam~ override
+COPY ~song_and_silence/items/a!thh1.itm~  override
+  SAY NAME1 @13
+  SAY NAME2 @14
+  SAY UNIDENTIFIED_DESC @15
+  SAY IDENTIFIED_DESC @16
+
+COPY ~song_and_silence/items/a!ithcl.bam~ override // Lights Out
+COPY ~song_and_silence/items/a!thcl.itm~  override
+  SAY NAME1 @17
+  SAY NAME2 @18
+  SAY IDENTIFIED_DESC @19
+
+COPY ~song_and_silence/items/a!ibrtr.bam~ override // Tress of Jessecyl
+COPY ~song_and_silence/items/a!cbrtr.bam~ override
+COPY ~song_and_silence/items/a!brtr.itm~  override
+  SAY NAME1 @20
+  SAY NAME2 @20
+  SAY UNIDENTIFIED_DESC @21
+  SAY IDENTIFIED_DESC @22
+
+COPY ~song_and_silence/items/a!ibrsb.bam~ override // Skald's Battered Buckler
+COPY ~song_and_silence/items/a!cbrsb.bam~ override
+COPY ~song_and_silence/items/a!brsb.itm~  override
+  SAY NAME1 @23
+  SAY NAME2 @24
+  SAY IDENTIFIED_DESC @25
+
+COPY ~song_and_silence/items/a!ibrsd.bam~ override // Sound Defense
+COPY ~song_and_silence/items/a!brsd.itm~  override
+  WRITE_ASCII 0x3a ~a!ibrsd~
+  SAY NAME1 @26
+  SAY NAME2 @27
+  SAY IDENTIFIED_DESC @28
+
+COPY ~song_and_silence/items/a!ichan1.bam~ override // Caster's Chain
+COPY ~song_and_silence/items/a!bchan1.itm~ override
+  WRITE_ASCII 0x3a ~a!ichan1~
+  SAY NAME1 @29
+  SAY NAME2 @29
+  SAY UNIDENTIFIED_DESC @30
+
+COPY ~song_and_silence/items/a!ileat1.bam~ override // Bardic Leathers
+COPY ~song_and_silence/items/a!bleat1.itm~ override
+  WRITE_ASCII 0x3a ~a!ileat1~
+  SAY NAME1 @31
+  SAY NAME2 @31
+  SAY UNIDENTIFIED_DESC @32
+
+COPY ~song_and_silence/items/a!ileat2.bam~ override // Bardic Leathers +1
+COPY ~song_and_silence/items/a!bleat2.itm~ override
+  WRITE_ASCII 0x3a ~a!ileat2~
+  SAY NAME1 @33
+  SAY NAME2 @33
+  SAY UNIDENTIFIED_DESC @34
+  SAY IDENTIFIED_DESC @35
+
+COPY ~song_and_silence/items/a!brds.itm~ override // Tale of Ghastly Evil
+  SAY NAME1 @36
+  SAY NAME2 @36
+  SAY IDENTIFIED_DESC @37
+
+COPY ~song_and_silence/items/a!brhr.itm~ override // Tale of the Horiffic Dead
+  SAY NAME1 @38
+  SAY NAME2 @38
+  SAY IDENTIFIED_DESC @39
+
+COPY ~song_and_silence/items/a!brrf.itm~ override // Tale of True Bravery
+  SAY NAME1 @40
+  SAY NAME2 @40
+  SAY IDENTIFIED_DESC @41
+
+
+////////////////////////////
+//Install Acrobat bard kit//
+////////////////////////////
+
+BEGIN @42
+DESIGNATED 2
+REQUIRE_COMPONENT ~setup-song_and_silence.tp2~ ~0~ @43
+
+/*
+ACTION_IF GAME_IS ~tob~ THEN BEGIN
+  COPY ~song_and_silence/acrobat/lua!a.2da~ ~override/lua!a.2da~
+END 
+*/
+
+ADD_KIT ~A!ACROBAT~
+~A!ACROBAT                 1           1           1           1           1           0           0           0~
+~A!ACROBAT 0 1 0 0 1 0 0 1 0 1 1 0 0 1 1 2 0 1 0 0 0 0 1 1 0 1 2 2 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0~
+~A!ACROBAT	0	12	0	13	0	15~
+~A!ACROBAT		0	0	0	0	0	0~
+~A!ACROBAT		0	0	0	0	0	0~
+~A!ACROBAT		0	0	0	0	0	0~
+~A!ACROBAT		1	1	1	1	1	1	1	1	1~
+~A!ACROBAT		0	0	0	0	0	0~
+~song_and_silence/acrobat/a!acro.2da~
+~K_B_H    K_B_D   K_B_G   K_B_E   K_B_HE   K_B_HL   K_B_HO~
+~0x00010000	5~
+~ba0~
+~CHAN09 * HELM07 BAG20 RING06 RING21 * BOOT01 AMUL20 BRAC10 BELT06 AROW11,40 BULL03,40 BOLT06,40 POTN52,5 POTN04,2 POTN14,5 HAMM07 SW1H27 STAF08~
+SAY @44
+SAY @45
+SAY @46
+OUTER_SPRINT match ~A!ACROBAT~
+LAUNCH_ACTION_MACRO andyr_cinders_of_ashes_of_embers
+LAF fl#add_kit_ee STR_VAR kit_name = ~A!ACROBAT~ END // nothing special for acrobat
+
+//Spell for missile AC bonus
+COPY ~song_and_silence/acrobat/a!acro1.spl~ ~override/a!acro1.spl~
+//Spell for half lore
+COPY ~song_and_silence/acrobat/a!acro2.spl~ ~override/a!acro2.spl~
+
+//Correct usability flags so Acrobats can use these items
+ACTION_FOR_EACH item IN
+  ~cbphysc1~
+  ~dgi009~
+  ~fwbrac05~
+  ~fwstaf04~
+  ~fwsw1h16~
+  ~phylact1~
+  ~phylact2~
+  ~potn56~
+  ~potx02~
+  ~ras~
+  ~ringgr06~
+  ~sgring1~
+  ~sgring3~
+  ~sgring4~
+  ~soaitm19~
+  ~u!scrl02~
+  ~u!scrl03~
+  ~scrl1w~
+  ~scrl2b~
+  ~scrl5t~
+  ~scrl9a~
+BEGIN
+  ACTION_IF (FILE_EXISTS_IN_GAME ~%item%.itm~) BEGIN
+    COPY_EXISTING ~%item%.itm~ ~override~
+      PATCH_IF (SOURCE_SIZE > 0x71) BEGIN
+        READ_BYTE  0x2b kit_usability2
+        WRITE_BYTE 0x2b (kit_usability2 BAND 0b11111110) // make usable by Stalkers
+      END
+      BUT_ONLY
+  END
+END
+
+//////////////////////////////
+//Install Chorister bard kit//
+//////////////////////////////
+
+BEGIN @47
+DESIGNATED 3
+REQUIRE_COMPONENT ~setup-song_and_silence.tp2~ ~0~ @43
+
+/*
+ACTION_IF GAME_IS ~tob~ FILE_EXISTS ~override/LUABBR.2DA~ THEN BEGIN
+  COPY ~song_and_silence/chorister/LUA!C.2DA~ ~override/LUA!C.2DA~
+END 
+*/
+
+ADD_KIT ~A!CHORISTER~
+~A!CHORISTER                 1           1           1           1           1           0           0           0~
+~A!CHORISTER 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0~
+~A!CHORISTER	0	12	0	13	0	15~
+~A!CHORISTER		0	0	0	0	0	0~
+~A!CHORISTER		0	0	0	0	0	0~
+~A!CHORISTER		0	0	0	0	0	0~
+~A!CHORISTER		1	1	1	1	1	1	1	1	1~
+~A!CHORISTER		0	0	0	0	0	0~
+~song_and_silence/chorister/a!chor.2da~
+~K_B_H    K_B_D   K_B_G   K_B_E   K_B_HE   K_B_HL   K_B_HO~
+~0x00004000	5~
+~ba0~
+~CHAN09 * HELM07 BAG20 RING06 RING21 * BOOT01 AMUL20 BRAC10 BELT06 AROW11,40 BULL03,40 BOLT06,40 POTN52,5 POTN04,2 POTN14,5 HAMM07 SW1H27 STAF08~
+SAY @60
+SAY @61
+SAY @62
+OUTER_SPRINT match ~A!CHORISTER~
+LAUNCH_ACTION_MACRO andyr_cinders_of_ashes_of_embers
+LAF fl#add_kit_ee STR_VAR kit_name = ~A!CHORISTER~ END // nothing special for chorister
+
+// Spell for half lore
+COPY ~song_and_silence/acrobat/a!acro2.spl~ override
+// Pick Pockets spells
+ACTION_IF NOT FILE_EXISTS_IN_GAME ~a!pp2.spl~ THEN BEGIN
+  COPY ~song_and_silence/chorister/a!pp2.spl~  override
+  COPY ~song_and_silence/chorister/a!pp3.spl~  override
+  COPY ~song_and_silence/chorister/a!pp13.spl~ override
+END
+// Armor of Faith
+COPY_EXISTING sppr111.spl ~override/a!ch11.spl~
+  WRITE_SHORT 0x1c 1 // sets spell type to Wizard (1)
+  SAY 0x50 @48
+// Cure Light Wounds
+COPY_EXISTING sppr103.spl ~override/a!ch12.spl~
+  WRITE_SHORT 0x1c 1 // sets spell type to Wizard (1)
+  SAY 0x50 @49
+// Doom
+COPY_EXISTING sppr113.spl ~override/a!ch13.spl~
+  WRITE_SHORT 0x1c 1 // sets spell type to Wizard (1)
+  SAY 0x50 @50
+// Chant
+COPY_EXISTING sppr203.spl ~override/a!ch21.spl~
+  WRITE_SHORT 0x1c 1 // sets spell type to Wizard (1)
+  SAY 0x50 @51
+// Slow Poison
+COPY_EXISTING sppr212.spl ~override/a!ch22.spl~
+  WRITE_SHORT 0x1c 1 // sets spell type to Wizard (1)
+  SAY 0x50 @52
+// Draw Upon Holy Might
+COPY_EXISTING sppr214.spl ~override/a!ch23.spl~
+  WRITE_SHORT 0x1c 1 // sets spell type to Wizard (1)
+  SAY 0x50 @53
+// Glyph of Warding
+COPY_EXISTING sppr304.spl ~override/a!ch31.spl~
+  WRITE_SHORT 0x1c 1 // sets spell type to Wizard (1)
+  SAY 0x50 @54
+// Cure Medium Wounds
+COPY_EXISTING sppr315.spl ~override/a!ch32.spl~
+  WRITE_SHORT 0x1c 1 // sets spell type to Wizard (1)
+  SAY 0x50 @55
+// Defensive Harmony
+COPY_EXISTING sppr406.spl ~override/a!ch41.spl~
+  WRITE_SHORT 0x1c 1 // sets spell type to Wizard (1)
+  SAY 0x50 @56
+// Holy Power
+COPY_EXISTING sppr412.spl ~override/a!ch42.spl~
+  WRITE_SHORT 0x1c 1 // sets spell type to Wizard (1)
+  SAY 0x50 @57
+// Mass Cure
+COPY_EXISTING sppr514.spl ~override/a!ch51.spl~
+  WRITE_SHORT 0x1c 1 // sets spell type to Wizard (1)
+  SAY 0x50 @58
+// Bolt of Glory
+COPY_EXISTING sppr612.spl ~override/a!ch61.spl~
+  WRITE_SHORT 0x1c 1 // sets spell type to Wizard (1)
+  SAY 0x50 @59
+
+
+////////////////////////////////
+//Install Dirgesinger bard kit//
+////////////////////////////////
+
+BEGIN @63
+DESIGNATED 4
+REQUIRE_COMPONENT ~setup-song_and_silence.tp2~ ~0~ @43
+
+/*
+ACTION_IF GAME_IS ~tob~ FILE_EXISTS ~override/luabbr.2da~ THEN BEGIN
+  COPY ~song_and_silence/dirgesinger/lua!d.2da~ ~override/lua!d.2da~
+END 
+*/
+
+ADD_KIT ~A!DIRGESINGER~
+~A!DIRGESINGER                 1           1           1           1           1           0           0           0~
+~A!DIRGESINGER 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0~
+~A!DIRGESINGER	0	12	0	13	0	15~
+~A!DIRGESINGER		0	0	0	0	0	0~
+~A!DIRGESINGER		0	0	0	0	0	0~
+~A!DIRGESINGER		0	0	0	0	0	0~
+~A!DIRGESINGER		0	1	1	0	1	1	0	1	1~
+~A!DIRGESINGER		0	0	0	0	0	0~
+~song_and_silence/dirgesinger/a!dirge.2da~
+~K_B_H    K_B_D   K_B_G   K_B_E   K_B_HE   K_B_HL   K_B_HO~
+~0x00004000	5~
+~ba0~
+~CHAN09 * HELM07 BAG20 RING06 RING21 * BOOT01 AMUL20 BRAC10 BELT06 AROW11,40 BULL03,40 BOLT06,40 POTN52,5 POTN04,2 POTN14,5 HAMM07 SW1H27 STAF08~
+SAY @64
+SAY @65
+SAY @66
+OUTER_SPRINT match ~A!DIRGESINGER~
+LAUNCH_ACTION_MACRO andyr_cinders_of_ashes_of_embers
+LAF fl#add_kit_ee STR_VAR kit_name = ~A!DIRGESINGER~ END // nothing special
+
+//
+COPY_EXISTING ~spcl751.spl~ ~override/a!ds1.spl~
+  WRITE_ASCII 0xae ~a!dssong~
+// cursey song
+COPY ~song_and_silence/dirgesinger/a!dssong.spl~ override
+  WRITE_LONG NAME1 ` 0
+  WRITE_LONG NAME2 ` 0
+  WRITE_LONG 0x050 ` 0
+  WRITE_LONG 0x054 ` 0
+// Spell for half lore
+COPY ~song_and_silence/acrobat/a!acro2.spl~ ~override/a!dsl.spl~
+// Horror
+COPY_EXISTING ~spwi205.spl~ ~override/a!ds5.spl~
+  SAY NAME1 @67
+  SAY NAME2 @67
+  LAUNCH_PATCH_MACRO andyr_spell_to_innate
+// Confusion
+COPY_EXISTING ~spwi401.spl~ ~override/a!ds7.spl~
+  SAY NAME1 @68
+  SAY NAME2 @68
+  LAUNCH_PATCH_MACRO andyr_spell_to_innate
+// Animate Dead
+COPY_EXISTING ~spwi501.spl~ ~override/a!ds9.spl~
+  SAY NAME1 @69
+  SAY NAME2 @69
+  LAUNCH_PATCH_MACRO andyr_spell_to_innate
+
+
+//////////////////////////
+//Install Gypsy bard kit//
+//////////////////////////
+
+BEGIN @70
+DESIGNATED 5
+REQUIRE_COMPONENT ~Setup-song_and_silence.tp2~ ~0~ @43
+
+/*
+ACTION_IF GAME_IS ~tob~ THEN BEGIN
+  COPY ~song_and_silence/gypsy/lua!g.2da~ ~override/lua!g.2da~
+END 
+*/
+
+ADD_KIT ~A!GYPSY~
+~A!GYPSY                 1           1           1           1           1           0           0           0~
+~A!GYPSY 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0~
+~A!GYPSY	0	12	0	13	0	15~
+~A!GYPSY		0	0	0	0	0	0~
+~A!GYPSY		0	0	0	0	0	0~
+~A!GYPSY		0	0	0	0	0	0~
+~A!GYPSY		1	1	1	1	1	1	1	1	1~
+~A!GYPSY		0	0	0	0	0	0~
+~song_and_silence/gypsy/a!gyp.2da~
+~K_B_H    K_B_D   K_B_G   K_B_E   K_B_HE   K_B_HL   K_B_HO~
+~0x00000340	5~
+~ba0~
+~CHAN09 * HELM07 BAG20 RING06 RING21 * BOOT01 AMUL20 BRAC10 BELT06 AROW11,40 BULL03,40 BOLT06,40 POTN52,5 POTN04,2 POTN14,5 HAMM07 SW1H27 STAF08~
+SAY @72
+SAY @73
+SAY @74
+OUTER_SPRINT match ~A!GYPSY~
+LAUNCH_ACTION_MACRO andyr_cinders_of_ashes_of_embers
+LAF fl#add_kit_ee STR_VAR kit_name = ~A!GYPSY~ END // nothing special
+
+//
+COPY_EXISTING ~spcl751.spl~ ~override/a!gyp1.spl~
+  WRITE_ASCII 0xae ~a!gyps~ #8
+// Save bonus
+COPY ~song_and_silence/gypsy/a!gyp01.spl~ ~override/a!gyp01.spl~
+// Song
+COPY ~song_and_silence/gypsy/a!gyps.spl~ ~override/a!gyps.spl~
+  WRITE_LONG NAME1 ` 0
+  WRITE_LONG NAME2 ` 0
+// Curse from Cam's spell
+COPY ~song_and_silence/gypsy/cdcursea.bam~ ~override/cdcursea.bam~
+COPY ~song_and_silence/gypsy/cdcurseb.bam~ ~override/cdcurseb.bam~
+COPY ~song_and_silence/gypsy/cdcursec.bam~ ~override/cdcursec.bam~
+// Changing the name of Cam's projectile from CD to A! in case CR is installed; BAM filenames may as well stay the same
+COPY ~song_and_silence/gypsy/a!curse.pro~ ~override/a!curse.pro~
+ADD_PROJECTILE ~song_and_silence/gypsy/a!curse.pro~
+//
+COPY ~song_and_silence/gypsy/cdcurse.spl~ ~override/a!gypc.spl~
+  SAY NAME1 @71
+  SAY NAME2 @71
+  LAUNCH_PATCH_MACRO andyr_spell_to_innate
+  WRITE_SHORT 0x98 "%a!curse%" //Writes the projectile into the file
+
+
+////////////////////////////////
+//Install Adventurer thief kit//
+////////////////////////////////
+
+BEGIN @75
+DESIGNATED 6
+REQUIRE_COMPONENT ~setup-song_and_silence.tp2~ ~0~ @43
+
+ADD_KIT ~A!ADVENTURER~
+~A!ADVENTURER                 0           0           0           0           0           0           0           0~
+~A!ADVENTURER 0 1 0 0 1 0 0 1 0 1 1 0 0 1 1 1 0 1 0 0 0 0 1 1 0 1 1 1 1 1 1 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0~
+~A!ADVENTURER	0	9	0	0	0	0~
+~A!ADVENTURER		0	0	0	0	0	0~
+~A!ADVENTURER		0	17	0	0	0	0~
+~A!ADVENTURER		0	5	0	0	0	0~
+~A!ADVENTURER		1	1	1	1	1	1	1	1	1~
+~A!ADVENTURER		1	1	1	0	0	0~
+~song_and_silence/adventurer/a!av.2da~
+~K_T_D K_T_E K_T_G K_T_H K_T_HE K_T_HL K_T_HO~
+~0x00004000 4~
+~th0~
+~CHAN09 * HELM07 BAG20 RING06 RING21 * BOOT01 AMUL20 BRAC10 BELT06 AROW11,40 BULL03,40 BOLT06,40 POTN52,5 POTN04,2 POTN14,5 HAMM07 SW1H27 STAF08~
+SAY @76
+SAY @77
+SAY @79
+OUTER_SPRINT match ~A!ADVENTURER~
+LAUNCH_ACTION_MACRO andyr_cinders_of_ashes_of_embers
+LAF fl#add_kit_ee STR_VAR backstab = ~1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1~ kit_name = ~A!ADVENTURER~ END // for ee games, give no backstab multiplier
+
+ACTION_IF NOT GAME_IS ~bgee bg2ee~ THEN BEGIN // if non-ee game, have to use swash usability flag to prevent backstabbing
+
+  COPY_EXISTING ~kitlist.2da~ ~override~
+    REPLACE_TEXTUALLY ~\([ %TAB%]a!av[ %TAB%]+[0-9]+[ %TAB%]+\)0x0*4000~ ~\10x00100000~
+    BUT_ONLY
+
+END
+
+
+// +5% Open Locks & Find/Remove Traps
+COPY ~song_and_silence/adventurer/adventurer1.spl~ ~override/a!av1.spl~
+
+// Save bonus
+COPY ~song_and_silence/adventurer/a!av3.spl~ ~override/a!av3.spl~
+
+// This means that if Idobek's Kitpack is installed, Nalia and Imoen will get this version of the Adventurer.
+ACTION_IF MOD_IS_INSTALLED npckit.tp2 1400 || MOD_IS_INSTALLED npckit.tp2 2500 THEN BEGIN
+  COPY_EXISTING_REGEXP GLOB ~^.+\.cre$~ override
+    PATCH_IF SOURCE_SIZE > 0x2d3 BEGIN
+    READ_ASCII DEATHVAR dv
+      PATCH_IF (("%dv%" STRING_MATCHES_REGEXP ~^imoen2?$~) == 0) && (MOD_IS_INSTALLED npckit.tp2 1400) BEGIN
+        PATCH_PRINT @80
+        WRITE_SHORT 0x244 0x0000
+        WRITE_BYTE  0x246 %A!ADVENTURER%
+        WRITE_BYTE  0x247 0x40
+      END ELSE 
+	PATCH_IF (("%dv%" STRING_MATCHES_REGEXP ~^nalia$~) == 0) && (MOD_IS_INSTALLED npckit.tp2 2500) BEGIN
+        PATCH_PRINT @81
+        WRITE_SHORT 0x244 0x0000
+        WRITE_BYTE  0x246 %A!ADVENTURER%
+        WRITE_BYTE  0x247 0x40
+      END
+    END
+  BUT_ONLY_IF_IT_CHANGES
+END
+
+
+/////////////////////////////
+//Install Burglar thief kit//
+/////////////////////////////
+
+BEGIN @82
+DESIGNATED 7
+REQUIRE_COMPONENT ~setup-song_and_silence.tp2~ ~0~ @43
+
+ADD_KIT ~A!BURGLAR~
+~A!BURGLAR                  1           1           1           1           1           0           0           0~
+~A!BURGLAR 0 1 0 0 1 0 0 1 0 1 1 0 0 1 1 2 0 1 0 0 0 0 1 1 0 1 2 2 1 1 1 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0~
+~A!BURGLAR	0	9	0	0	0	0~
+~A!BURGLAR		0	0	0	0	0	0~
+~A!BURGLAR		0	17	0	0	0	0~
+~A!BURGLAR		0	15	0	0	0	0~
+~A!BURGLAR		1	1	1	1	1	1	1	1	1~
+~A!BURGLAR		1	1	1	0	0	0~
+~song_and_silence/burglar/a!burg.2da~
+~K_T_H    K_T_D   K_T_G   K_T_E   K_T_HE   K_T_HL   K_T_HO~
+~0x00004000	4~
+~th0~
+~CHAN09 * HELM07 BAG20 RING06 RING21 * BOOT01 AMUL20 BRAC10 BELT06 AROW11,40 BULL03,40 BOLT06,40 POTN52,5 POTN04,2 POTN14,5 HAMM07 SW1H27 STAF08~
+SAY @83
+SAY @84
+SAY @85
+OUTER_SPRINT match ~A!BURGLAR~
+LAUNCH_ACTION_MACRO andyr_cinders_of_ashes_of_embers
+LAF fl#add_kit_ee STR_VAR kit_name = ~A!BURGLAR~ END // nothing special
+
+// Skill boni
+COPY ~song_and_silence/burglar/a!burg1.spl~ ~override/a!burg1.spl~
+
+///////////////////////////////
+//Install Soulknife thief kit//
+///////////////////////////////
+
+BEGIN @86
+DESIGNATED 8
+REQUIRE_COMPONENT ~setup-song_and_silence.tp2~ ~0~ @43
+
+ADD_KIT ~A!SOULKNIFE~
+~A!SOULKNIFE                  1           1           1           1           1           0           0           0~
+~A!SOULKNIFE 0 1 0 0 1 0 0 1 0 1 3 0 0 1 1 1 0 1 0 0 0 0 1 1 0 1 1 1 1 1 1 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0~
+~A!SOULKNIFE	0	9	0	0	0	0~
+~A!SOULKNIFE		0	0	0	0	0	0~
+~A!SOULKNIFE		0	17	0	0	0	0~
+~A!SOULKNIFE		0	15	0	0	0	0~
+~A!SOULKNIFE		1	1	1	1	1	1	1	1	1~
+~A!SOULKNIFE		1	1	1	0	0	0~
+~song_and_silence/soulknife/a!soul.2da~
+~K_T_H    K_T_D   K_T_G   K_T_E   K_T_HE   K_T_HL   K_T_HO~
+~0x0004000	4~
+~th0~
+~CHAN09 * HELM07 BAG20 RING06 RING21 * BOOT01 AMUL20 BRAC10 BELT06 AROW11,40 BULL03,40 BOLT06,40 POTN52,5 POTN04,2 POTN14,5 HAMM07 SW1H27 STAF08~
+SAY @87
+SAY @88
+SAY @90
+OUTER_SPRINT match ~A!SOULKNIFE~
+LAUNCH_ACTION_MACRO andyr_cinders_of_ashes_of_embers
+LAF fl#add_kit_ee STR_VAR thiefskl = ~40 15~ kit_name = ~A!SOULKNIFE~ END // for ee games, use table to designate only 15 points/level
+
+ACTION_IF NOT GAME_IS ~bgee bg2ee~ THEN BEGIN // if non-ee game, have to use assassin usability flag for thieving points
+
+  COPY_EXISTING ~kitlist.2da~ ~override~
+    REPLACE_TEXTUALLY ~\([ %TAB%]a!soul[ %TAB%]+[0-9]+[ %TAB%]+\)0x0*4000~ ~\10x00040000~
+    BUT_ONLY
+
+END
+
+//
+COPY ~song_and_silence/soulknife/a!soulkn.spl~ ~override/a!soulkn.spl~
+  SAY NAME1 @91
+  SAY NAME2 @91
+//
+COPY ~song_and_silence/soulknife/a!soul.bam~ ~override/a#soul.bam~
+//
+ACTION_FOR_EACH e IN 0 1 2 3 4 5 BEGIN
+  COPY ~song_and_silence/soulknife/a!soul0.itm~ ~override/a#soul%e%.itm~
+    SAY         NAME1 @92
+    SAY         NAME2 @92
+    WRITE_LONG  0x60  e + 1 < 5 ? e + 1 : 5 // Enchantment
+    WRITE_SHORT 0x80  e * 5                // Range
+    WRITE_SHORT 0x86  e                    // To Hit bonus
+    WRITE_SHORT 0x8c  e + 1                // Damage bonus
+END
+
+
+//////////////////////////////////
+//Install Sharpshooter thief kit//
+//////////////////////////////////
+
+BEGIN @93
+DESIGNATED 9
+REQUIRE_COMPONENT ~Setup-song_and_silence.tp2~ ~0~ @43
+
+ADD_KIT ~A!SHARPSHOOTER~
+~A!SHARPSHOOTER                 1           1           1           1           1           0           0           0~
+~A!SHARPSHOOTER 0 1 0 0 1 0 0 5 0 1 1 0 0 1 1 1 0 1 0 0 0 0 1 5 0 5 5 5 1 1 1 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0~
+~A!SHARPSHOOTER	0	9	0	0	0	0~
+~A!SHARPSHOOTER		0	0	0	0	0	0~
+~A!SHARPSHOOTER		0	17	0	0	0	0~
+~A!SHARPSHOOTER		0	15	0	0	0	0~
+~A!SHARPSHOOTER		1	1	1	1	1	1	1	1	1~
+~A!SHARPSHOOTER		1	1	1	0	0	0~
+~song_and_silence/sharpshooter/a!sharp.2da~
+~K_T_H    K_T_D   K_T_G   K_T_E   K_T_HE   K_T_HL   K_T_HO~
+~0x00100000	4~
+~th0~
+~CHAN09 * HELM07 BAG20 RING06 RING21 * BOOT01 AMUL20 BRAC10 BELT06 AROW11,40 BULL03,40 BOLT06,40 POTN52,5 POTN04,2 POTN14,5 HAMM07 SW1H27 STAF08~
+SAY @94
+SAY @95
+SAY @96
+OUTER_SPRINT match ~A!SHARPSHOOTER~
+LAUNCH_ACTION_MACRO andyr_cinders_of_ashes_of_embers
+LAF fl#add_kit_ee STR_VAR backstab = ~1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1~ kit_name = ~A!SHARPSHOOTER~ END // for ee games, give no backstab multiplier
+
+ACTION_IF NOT GAME_IS ~bgee bg2ee~ THEN BEGIN // if non-ee game, have to use swash usability flag to prevent backstabbing
+
+  COPY_EXISTING ~kitlist.2da~ ~override~
+    REPLACE_TEXTUALLY ~\([ %TAB%]a!sharp[ %TAB%]+[0-9]+[ %TAB%]+\)0x0*4000~ ~\10x00100000~
+    BUT_ONLY
+
+END
+
+//Duplicate Assassin's Poison Weapon ability, removing effects on melee weapons
+COPY_EXISTING ~spcl423.spl~ ~override/a!ss01.spl~
+  READ_LONG  0x64 "abil_off" ELSE 0
+  READ_SHORT 0x68 "abil_num" ELSE 0
+  READ_LONG  0x6a "fx_off" ELSE 0
+  FOR (index = 0; index < abil_num; index = index + 1) BEGIN
+    READ_SHORT ("%abil_off%" + 0x1e + (0x28 * "%index%")) "abil_fx_num"
+    READ_SHORT ("%abil_off%" + 0x20 + (0x28 * "%index%")) "abil_fx_idx"
+    FOR (index2 = 0; index2 < abil_fx_num; index2 = index2 + 1) BEGIN
+      READ_SHORT ("%fx_off%" +        (("%abil_fx_idx%" + "%index2%") * 0x30)) "opcode"
+      PATCH_IF ("%opcode%" = "248") BEGIN  // opcode #248 (Set Melee Effect)
+        WRITE_BYTE ("%fx_off%" + 0x12 + (("%index2%" + "%abil_fx_idx%") * 0x30)) "0" // probability1: 0
+      END
+    END
+  END
+
+//////////////////////////////////
+//Install Shadowdancer thief kit//
+//////////////////////////////////
+
+BEGIN @97
+DESIGNATED 10
+REQUIRE_PREDICATE NOT GAME_IS ~bgee bg2ee~ @104
+REQUIRE_COMPONENT ~setup-song_and_silence.tp2~ ~0~ @43
+
+ADD_KIT ~A#SHADOWDANCER~
+~A#SHADOWDANCER                  1           1           1           1           1           0           0           0~
+~A#SHADOWDANCER 0 1 0 0 1 0 0 1 0 1 1 0 0 1 1 1 0 1 0 0 0 0 1 1 0 1 1 1 1 1 1 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0~
+~A#SHADOWDANCER	0	9	0	0	0	0~
+~A#SHADOWDANCER		0	0	0	0	0	0~
+~A#SHADOWDANCER		0	0	0	0	0	0~
+~A#SHADOWDANCER		0	0	0	0	0	0~
+~A#SHADOWDANCER		1	1	1	1	1	1	1	1	1~
+~A#SHADOWDANCER		0	0	0	0	0	0~
+~song_and_silence/shadowdancer/a#shad.2da~
+~K_T_H    K_T_D   K_T_G   K_T_E   K_T_HE   K_T_HL   K_T_HO~
+~0x00040000	4~
+~th0~
+~CHAN09 * HELM07 BAG20 RING06 RING21 * BOOT01 AMUL20 BRAC10 BELT06 AROW11,40 BULL03,40 BOLT06,40 POTN52,5 POTN04,2 POTN14,5 HAMM07 SW1H27 STAF08~
+SAY @101
+SAY @102
+SAY @103
+OUTER_SPRINT match A#SHADOWDANCER
+LAUNCH_ACTION_MACRO andyr_cinders_of_ashes_of_embers
+//LAF fl#add_kit_ee STR_VAR kit_name = ~A!SHADOWDANCER~ END // not available for ee anyway
+
+// Hide in Shadows/Move Silently boni
+COPY ~song_and_silence/shadowdancer/a#sd1.spl~ ~override/a#sd1.spl~
+// Permanent Infravision
+COPY ~song_and_silence/shadowdancer/a#sd2.spl~ ~override/a#sd2.spl~
+  WRITE_LONG NAME1 ` 0
+  WRITE_LONG NAME2 ` 0
+// Reflected Image innate
+COPY_EXISTING ~spwi120.spl~ ~override/a#sd3.spl~
+  LAUNCH_PATCH_MACRO andyr_spell_to_innate
+// Shadow Door innate
+COPY_EXISTING ~spwi505.spl~ ~override/a#sd5.spl~
+  LAUNCH_PATCH_MACRO andyr_spell_to_innate
+// Summon Shadow
+COPY ~song_and_silence/shadowdancer/a#sd4.spl~ ~override/a#shad4.spl~
+  SAY NAME1 @99
+  SAY NAME2 @99
+ACTION_FOR_EACH e IN 1 2 3 4 BEGIN
+  // CRE files
+  COPY ~song_and_silence/shadowdancer/a#shado1.cre~ ~override/a#sdsha%e%.cre~
+    WRITE_LONG  0x014 0x00
+    SAY         NAME1 @100
+    SAY         NAME2 @100
+    WRITE_BYTE  0x053 e           // Number of attacks
+    WRITE_SHORT 0x024 30 + e * 10 // Current HP
+    WRITE_SHORT 0x026 30 + e * 10 // Max HP
+    WRITE_BYTE  0x046 8  - e * 3  // Natural AC
+    WRITE_BYTE  0x048 8  - e * 3  // Effective AC
+    WRITE_BYTE  0x052 18 - e * 3  // THAC0
+    WRITE_BYTE  0x054 19 - e * 3  // Save vs death
+    WRITE_BYTE  0x055 21 - e * 3  // Save vs wands
+    WRITE_BYTE  0x056 20 - e * 3  // Save vs poly
+    WRITE_BYTE  0x057 22 - e * 3  // Save vs breath
+    WRITE_BYTE  0x058 22 - e * 3  // Save vs spell
+    WRITE_BYTE  0x234 e * 5       // Level
+    WRITE_ASCII 0x248 ~a#sdshad~  // Override script
+    WRITE_ASCII 0x280 ~a#sdshad~  // Death Variable
+  // EFF files
+  COPY ~song_and_silence/shadowdancer/a#shade.eff~ ~override/a#sdsha%e%.eff~
+    WRITE_ASCIIE 0x30 ~a#sdsha%e%~ // Resource
+    WRITE_ASCII 0x70 ~spportal~      // VVC
+END
+// BCS
+<<<<<<<< .../song_and_silence/inlined/a#sdshad.baf
+IF
+  !GlobalTimerNotExpired("A#Protect","LOCALS")
+  See(NearestEnemyOf(Myself))
+THEN
+  RESPONSE #50
+     ReallyForceSpell(Myself,WIZARD_MIRROR_IMAGE)
+     SetGlobalTimer("A#Protect","LOCALS",60)
+  RESPONSE #50
+     ReallyForceSpell(Myself,WIZARD_BLUR)
+     SetGlobalTimer("A#Protect","LOCALS",60)
+END
+IF
+  See(NearestEnemyOf(Myself))
+THEN
+  RESPONSE #100
+    Attack(NearestEnemyOf(Myself))
+END
+>>>>>>>>
+COMPILE ~.../song_and_silence/inlined/a#sdshad.baf~
+
+
