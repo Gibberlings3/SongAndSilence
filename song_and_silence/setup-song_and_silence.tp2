@@ -27,7 +27,7 @@ ALWAYS
 END
 
 /* Language Settings */
-AUTO_TRA ~song_and_silence/tra/%s~
+AUTO_TRA ~song_and_silence/tra/%s~ //~%~
 LANGUAGE 
   ~English~ 
   ~english~
