@@ -9,8 +9,7 @@ ALWAYS
   // Borrowed from Edwin Romance: convert strings to UTF-8 for BGEE/BG2EE
   INCLUDE ~%MOD_FOLDER%/lib/functions.tpa~ // handle_charsets, fl#add_kit_ee, misc s&s functions
   ACTION_DEFINE_ARRAY cdnoconvert BEGIN END
-  ACTION_DEFINE_ARRAY cdreload BEGIN
-    ~a!raoul.tra~ ~a#sdshad.tra~ ~setup.tra~ ~setup_ee.tra~ END
+  ACTION_DEFINE_ARRAY cdreload BEGIN ~setup.tra~ END
   LAF HANDLE_CHARSETS
     INT_VAR
       infer_charset = 1
