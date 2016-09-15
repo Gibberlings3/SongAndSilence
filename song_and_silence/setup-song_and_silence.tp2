@@ -5,9 +5,10 @@ VERSION ~v6~
 README ~song_and_silence/readme-song_and_silence.html~
 
 ALWAYS
+  INCLUDE ~%MOD_FOLDER%/lib/fl#add_kit_ee.tpa~
+  INCLUDE ~%MOD_FOLDER%/lib/functions.tpa~ // misc s&s functions
 
   // Borrowed from Edwin Romance: convert strings to UTF-8 for BGEE/BG2EE
-  INCLUDE ~%MOD_FOLDER%/lib/functions.tpa~ // fl#add_kit_ee and misc s&s functions
   ACTION_DEFINE_ARRAY cdnoconvert BEGIN END
   ACTION_DEFINE_ARRAY cdreload BEGIN ~setup.tra~ END
   LAF HANDLE_CHARSETS
