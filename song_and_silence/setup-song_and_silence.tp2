@@ -22,13 +22,7 @@ ALWAYS
   END
 
   ACTION_IF GAME_IS ~bgee bg2ee~ THEN BEGIN
-//    ACTION_IF FILE_EXISTS ~song_and_silence/tra/%LANGUAGE%/fl#utf8_setup_ee.tra~ THEN BEGIN
-    ACTION_IF ((FILE_EXISTS ~song_and_silence/tra/%LANGUAGE%/fl#utf8_setup_ee.tra~) AND ("%LANGUAGE%" STRING_COMPARE_CASE "english")) THEN BEGIN
-      LOAD_TRA ~song_and_silence/tra/%LANGUAGE%/fl#utf8_setup_ee.tra~
-      PRINT ~utf8 tra~
-    END ELSE BEGIN
-      LOAD_TRA ~song_and_silence/tra/%LANGUAGE%/setup_ee.tra~
-    END
+    LOAD_TRA ~song_and_silence/tra/%LANGUAGE%/setup_ee.tra~
   END
 
 END
