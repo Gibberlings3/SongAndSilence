@@ -92,11 +92,11 @@ Nie mo¿e u¿ywaæ:
  Mag~
 @20   = ~Podarunek Jessecyl~
 @21   = ~Jest to kosmyk w³osów. Uwa¿niej siê przygl¹daj¹c, dochodzisz do wniosku, ¿e jest to ³adny przedmiot - na tyle, na ile ³adne mog¹ byæ kosmyki w³osów.~
-@22   = ~Legendy mówi¹, i¿ Jessecyl by³a najpiêkniejsz¹ pó³-elfi¹ dziewic¹, jaka kiedykolwiek st¹pa³a po Faerunie. Przed wielk¹ bitw¹, obdarowa³a swego ukochanego tym¿e oto podarunkiem; kosmykiem swych w³osów. Potem bohater ten rzuci³ siê w wojenn¹ zawieruchê, jednak si³a mi³oœci zaklêta w tym kosmyku (mówi siê, i¿ zosta³ zaklêty przez Sune) wiele razy uratowa³a go przed œmierci¹ i k³opotami.
+@22   = ~Legendy mówi¹, i¿ Jessecyl by³a najpiêkniejsz¹ pó³elfi¹ dziewic¹, jaka kiedykolwiek st¹pa³a po Faerunie. Przed wielk¹ bitw¹, obdarowa³a swego ukochanego tym¿e oto podarunkiem; kosmykiem swych w³osów. Potem bohater ten rzuci³ siê w wojenn¹ zawieruchê, jednak si³a mi³oœci zaklêta w tym kosmyku (mówi siê, i¿ zosta³ zaklêty przez Sune) wiele razy uratowa³a go przed œmierci¹ i k³opotami.
 
-Opowieœæ o tyn bezimiennym bohaterze i Jessecyl œwiadczy o tym, ¿e mi³oœæ jest wieczna. Oprócz tej niezwykle epickiej i romantycznej historii, jak¹ mo¿na poznaæ dziêki temu kosmykowi, sam przedmiot jest zaklêty - nie wiadomo, czy spowodowane jest to si³¹ mi³oœci, czy te¿ jakimiœ potê¿nymi zaklêciami.. 
+Opowieœæ o tyn bezimiennym bohaterze i Jessecyl œwiadczy o tym, ¿e mi³oœæ jest wieczna. Oprócz tej niezwykle epickiej i romantycznej historii, jak¹ mo¿na poznaæ dziêki temu kosmykowi, sam przedmiot jest zaklêty - nie wiadomo, czy spowodowane jest to si³¹ mi³oœci, czy te¿ jakimiœ potê¿nymi zaklêciami. 
 
-Przedmiot ten musi byæ trzymany, aby dzia³aæ. Zajmuje on miejsce tarczy
+Przedmiot ten musi byæ trzymany, aby dzia³aæ. Zajmuje on miejsce tarczy.
 
 PARAMETRY:
 
@@ -107,7 +107,7 @@ Mo¿e u¿ywaæ:
  Bard
  Paladyn~
 @23   = ~Puklerz~
-@24   = ~Wzmocniony puklerz Skalda~
+@24   = ~Wzmocniony puklerz skalda~
 @25   = ~Wzmocniony puklerz skalda
 Ma³a, wzmacniana tarcza tego typu, jest czêsto spotykan¹ obron¹ wœród Skaldów - bardów pochodz¹cych z mroŸnych ziem Doliny Lodowego Wichru. Zosta³ on wykonany dla jakiegoœ barda, zapewne przed jak¹œ inwazj¹ lub plemienn¹ wojn¹.
 
@@ -120,7 +120,7 @@ Specjalne:
  Nie chroni przed broñmi k³utymi i pociskami
  Gwarantuje premiê +10% do odpornoœci na ch³ód, gdy jest noszony
 Waga: 2
-Wymagane: 4 si³y
+Wymagana si³a: 4
 Nie mo¿e u¿ywaæ:
  Praworz¹dna postaæ
  Mag~
@@ -140,8 +140,8 @@ Rodzaj obra¿eñ: k³ute
 OpóŸnienie: 1
 Waga: 2
 Rodzaj bieg³oœci: krótki miecz
-Typ: 1-rêczna
-Wymagane: 5 si³y
+Typ broni: 1-rêczna
+Wymagana si³a: 5
 Nie mo¿e u¿ywaæ:
  Druid
  Kap³an 
@@ -153,9 +153,9 @@ Kolczuga ta jest o wiele l¿ejsza i lepiej wykonana ni¿ standardowe egzemplarze t
 
 PARAMETRY:
 
-Klasa pancerza: 5
+Klasa Pancerza: 5
 Waga: 30
-Wymaganie: 8 si³y
+Wymagana si³a: 8
 Nie mo¿e u¿ywaæ:
  Druid
  Mag
@@ -163,25 +163,25 @@ Nie mo¿e u¿ywaæ:
 @31   = ~Zbroja barda~
 @32   = ~Zbroja skórzana æwiekowana ma niewiele wspólnego ze zwyk³¹ zbroj¹ skórzan¹. Podczas gdy zbroja skórzana jest utwardzan¹ skorup¹, zbroja æwiekowana jest miêkka i wzmocniona setkami, nabitych w niewielkich odleg³oœciach nitów. Znajduj¹ siê one tak blisko siebie, ¿e tworz¹ trudn¹ do przebicia metalow¹ zaporê, która œwietnie powstrzymuje sieczne i k³ute ataki. Miêkkie skórzane podbicie s³u¿y jedynie do utrzymania nitów w miejscu.  
 
-Ten egzemplarz jest o wiele l¿ejszy i lepiej wykonany ni¿ standardowe pancerze tego typu, które spotyka³eœ na swej drodze. Pozwala ona na swobodne poruszanie siê i rzucanie zaklêæ bez nara¿enie siê na jakiekolwiek kary
+Ten egzemplarz jest o wiele l¿ejszy i lepiej wykonany ni¿ standardowe pancerze tego typu, które spotyka³eœ na swej drodze. Pozwala ona na swobodne poruszanie siê i rzucanie zaklêæ bez nara¿enie siê na jakiekolwiek kary.
 
 PARAMETRY:
 
-Klasa pancerza: 7
+Klasa Pancerza: 7
 Waga: 15
-Wymagane: 6 si³y
+Wymagana si³a: 6
 Nie mo¿e u¿ywaæ:
  Mag~
 @33   = ~Zbroja barda +1~
 @34   = ~Zbroja skórzana æwiekowana ma niewiele wspólnego ze zwyk³¹ zbroj¹ skórzan¹. Podczas gdy zbroja skórzana jest utwardzan¹ skorup¹, zbroja æwiekowana jest miêkka i wzmocniona setkami, nabitych w niewielkich odleg³oœciach nitów. Znajduj¹ siê one tak blisko siebie, ¿e tworz¹ trudn¹ do przebicia metalow¹ zaporê, która œwietnie powstrzymuje sieczne i k³ute ataki. Miêkkie skórzane podbicie s³u¿y jedynie do utrzymania nitów w miejscu.  
 
-Ten egzemplarz jest o wiele l¿ejszy i lepiej wykonany ni¿ standardowe pancerze tego typu, które spotyka³eœ na swej drodze. Pozwala ona na swobodne poruszanie siê i rzucanie zaklêæ bez nara¿enie siê na jakiekolwiek kary
+Ten egzemplarz jest o wiele l¿ejszy i lepiej wykonany ni¿ standardowe pancerze tego typu, które spotyka³eœ na swej drodze. Pozwala ona na swobodne poruszanie siê i rzucanie zaklêæ bez nara¿enie siê na jakiekolwiek kary.
 
 PARAMETRY:
 
-Klasa pancerza: 7
+Klasa Pancerza: 7
 Waga: 15
-Wymagane: 6 si³y
+Wymagana si³a: 6
 Nie mo¿e u¿ywaæ:
  Mag~
 @35   = ~Zbroja skórzana æwiekowana ma niewiele wspólnego ze zwyk³¹ zbroj¹ skórzan¹. Podczas gdy zbroja skórzana jest utwardzan¹ skorup¹, zbroja æwiekowana jest miêkka i wzmocniona setkami, nabitych w niewielkich odleg³oœciach nitów. Znajduj¹ siê one tak blisko siebie, ¿e tworz¹ trudn¹ do przebicia metalow¹ zaporê, która œwietnie powstrzymuje sieczne i k³ute ataki. Miêkkie skórzane podbicie s³u¿y jedynie do utrzymania nitów w miejscu.  
@@ -190,9 +190,9 @@ Ten egzemplarz jest o wiele l¿ejszy i lepiej wykonany ni¿ standardowe pancerze t
 
 PARAMETRY:
 
-Klasa pancerza: 6
+Klasa Pancerza: 6
 Waga: 10
-Wymagane: 6 si³y
+Wymagana si³a: 6
 Nie mo¿e u¿ywaæ:
  Mag~
 @36   = ~Opowieœæ o Nieprzenikliwym Mroku~
@@ -203,7 +203,7 @@ Chocia¿ magia znika ze zwoju w chwili jego odczytania, to opowieœæ jest tak plug
 PARAMETRY:
 
 Specjalne:
- Pozwala na jednorazowe rzucenie czaru "Zaklêcie Œmierci"
+ Pozwala na jednorazowe rzucenie czaru „Zaklêcie Œmierci”
 Mo¿e u¿ywaæ tylko:
  Bard~
 @38   = ~Opowieœæ o Przera¿aj¹cej Œmierci~
@@ -214,7 +214,7 @@ Chocia¿ po przeczytaniu magia powinna ulecieæ ze zwoju to i tak za ka¿dym razem 
 PARAMETRY:
 
 Specjalne:
- Pozwala na jednorazowe rzucenie czaru "Horror"
+ Pozwala na jednorazowe rzucenie czaru „Groza”
 Mo¿e u¿ywaæ tylko:
  Bard~
 @40   = ~Opowieœæ o Prawdziwym Mêstwie~
@@ -225,11 +225,11 @@ Po przeczytaniu zwoju, jego magia znika raz na zawsze. Mimo to ciekawa opowieœæ 
 PARAMETRY:
 
 Specjalne:
- Pozwala na jednorazowe rzucenie czaru "Odpornoœæ na strach"
+ Pozwala na jednorazowe rzucenie czaru „Odpornoœæ na strach”
 Mo¿e u¿ywaæ tylko:
  Bard~
 
-@42   = ~Nowa podklasa barda - Akrobata~
+@42   = ~Zainstaluj nowa podklase barda - Akrobate~
 @43   = ~Przed instalacja tego komponentu nalezy zainstalowac pierwszy, wymagany komponent~
 @44   = ~Akrobata~
 @45   = ~Akrobata~
@@ -245,7 +245,7 @@ Wady:
 - Nie korzysta z œrednich ani ciê¿kich pancerzy
 - Otrzymuje tylko po³owê wiedzy przys³uguj¹cej bardowi~
 
-@47   = ~Nowa podklasa barda - Chórzysta~
+@47   = ~Zainstaluj nowa podklase barda - Chorzyste~
 @48   = ~Zbroja wiary (Odrzucanie)
 Poziom: 1
 Sfera: Ochrona
@@ -255,7 +255,7 @@ Czas rzucania: 1
 Obszar dzia³ania: rzucaj¹cy czar
 Rzut obronny: brak
 
-Osoba, która rzuci to zaklêcie otrzymuje znacz¹c¹ ochronê przed zwyk³ymi i magicznymi atakami. Ta magiczna zbroja to pole energetyczne, które wch³ania czêœæ obra¿eñ, jakie mia³a otrzymaæ osoba rzucaj¹ca czar. Na pierwszym poziomie ochrona wynosi 5% i co piêæ kolejnych poziomów doœwiadczenia zwiêksza siê o kolejne 5%. Na 20 poziomie doœwiadczenia, 25% obra¿eñ zadawanych Chórzyœcie mo¿e byæ absorbowane przez to zaklêcie.~
+Osoba, która rzuci to zaklêcie, otrzymuje znacz¹c¹ ochronê przed zwyk³ymi i magicznymi atakami. Ta magiczna zbroja to pole energetyczne, które wch³ania czêœæ obra¿eñ, jakie mia³a otrzymaæ osoba rzucaj¹ca czar. Na pierwszym poziomie ochrona wynosi 5% i co piêæ kolejnych poziomów doœwiadczenia zwiêksza siê o kolejne 5%. Na 20 poziomie doœwiadczenia, 25% obra¿eñ zadawanych Chórzyœcie mo¿e byæ absorbowane przez to zaklêcie.~
 @49   = ~Leczenie lekkich ran (Nekromancja)
 Poziom: 1
 Sfera: Leczenie
@@ -393,7 +393,7 @@ Zalety:
 Wady:
 - Otrzymuje tylko po³owê wiedzy przys³uguj¹cej bardowi
 - Otrzymuje tylko po³owê wartoœci Kradzie¿y kieszonkowej~
-@63   = ~Nowa podklasa barda - Ponury bard~
+@63   = ~Zainstaluj nowa podklase barda - Ponury bard~
 @64   = ~Ponury bard~
 @65   = ~Ponury bard~
 @66   = ~PONURY BARD: Melodie tego barda nie maj¹ na celu bawiæ czy cieszyæ, lecz wzbudzaæ smutek, ¿al i wprowadzaæ w zadumê. Wed³ug Upad³ego Pieœniarza tylko dziêki zrozumieniu cierpienia, ¿alu czy te¿ œmierci, mo¿na zrozumieæ sens istnienia. Bard ten wyra¿a swój ¿al przez muzykê, uczy s³uchaczy prawid³owego rozumienia smutku i melancholi. Upadli Pieœniarze stali siê zgorzkniali, zupe³nie wyt³umili w sobie uczucia takie jak radoœæ czy szczêœcie. Zaczêli nie rozumieæ tego u innych ludzi, a co z tym idzie - nienawidzieæ. Przez to, przez sw¹ muzykê która niesie ze sob¹ ogrom smutku, rozpaczy i ¿alu, staraj¹ siê zasadziæ ziarnko goryczy w sercach innych. Jednak zdarzaj¹ siê poœród nich i chocia¿ troche lepsze jednostki, które staraj¹ siê byæ ostrze¿eniem dla innych, i chc¹ ukazaæ innym g³êbie swego upadku.
@@ -411,45 +411,47 @@ Zalety:
 Wady:
 - Otrzymuje tylko po³owê wartoœci wiedzy barda~
 @67   = ~Pieœñ o przera¿eniu~
-@68   = ~Pieœn o strachu~
+@68   = ~Pieœn o ¿alu~
 @69   = ~Pieœñ o przebudzeniu~
 
-@70   = ~Nowa podklasa barda - Cygan~
+@70   = ~Zainstaluj nowa podklase barda - Cygan~
 @71   = ~Kl¹twa~
 @72   = ~Cygan~
 @73   = ~Cygan~
 @74   = ~CYGAN: Cygani zwani tak¿e wêdrownymi ludŸmi lub leœnymi nomadami, zwykle pojawiaj¹ siê w rozmaitych krainach, podró¿uj¹c w swych charakterystycznych karawanach z³o¿onych z ró¿nokolorowych, jaskrawych wozów. Ludzie ci znani s¹ z zachowania swych oryginalnych tradycji muzycznych, tanecznych, wytrwa³oœci w koczowniczym trybie ¿ycia i ogromnego zami³owania do uczucia wolnoœci. W sercu Cygana przez ca³e ¿ycie p³onie pragnienie poznania nowych, niewidzianych jeszcze ziem i prze¿ycia kolejnych doznañ. To w³aœnie chêæ oddychania pe³n¹ piersi¹ pcha go wci¹¿ naprzód - ku kolejnym przygodom, miejscom, ludziom czy doœwiadczeniom. Podró¿uj¹ dopóki nie znajd¹ czegoœ co ich zaciekawi lub zaintryguje - wtedy rozbijaj¹ obóz, jednak zew eksploratora i tak po pewnym czasie zew traktu bêdzie zbyt mocny, i cygan znów trafi na drogi Krain. Cyganie - poszukiwacze przygód najczêœciej maj¹ wyznaczone zadanie lub wyj¹tkowe miejsce do zwiedzenia, które musz¹ osi¹gn¹æ.
 
-Advantages:
+Cyganie s¹ czêsto nierozumiani przez innych, bêd¹c nies³usznie uznawani za z³odziei, ¿ebraków, kuglarzy czy nomadów. S¹ zazwyczaj bardzo otwarci dla ka¿dego, kto chc¹ poznaæ ich styl bycia i podró¿owaæ wraz z nimi, zyskuj¹c reputacjê tych, którzy porywaj¹ nocami dzieci, porzucaj¹c je póŸniej w g³uszy. Warto zauwa¿yæ, ¿e nie wszyscy cyganie s¹ bardami lub posiadaj¹ charakterystyczne dla tej profesji zdolnoœci. Cyganie bêd¹cy bardami, s¹ przez cz³onków cygañskich klanów nazywani „rawunami” i pe³ni¹ funkcjê naczelnych gawêdziarzy, stra¿ników wiedzy, wró¿bitów, czy duchowych doradców. 
+
+Zalety:
 - Pieœñ zaurocza przeciwników którzy nie wykonaj¹ rzutu obronnego przeciw czarom z modyfikatorem +2 (modyfikator zmniejsza siê o 1 na ka¿de 5 poziomów Cygana)
-- Premia +1 do rzutów obronnych przeciw czarom na ka¿de 8 poziomów doœwiadczenia
-- Raz dziennie mo¿e rzuciæ Kl¹twê. Jest to zaklêcie przeciwne do B³ogos³awieñstwa: nak³ada na wrogów karê -1 do trafienia i rzutów obronnych
+- Premia +1 do rzutów obronnych przeciw czarom na ka¿de 8 poziomów doœwiadczenia.
+- Raz dziennie mo¿e rzuciæ Kl¹twê. Jest to zaklêcie przeciwne do B³ogos³awieñstwa: nak³ada na wrogów karê -1 do trafienia i rzutów obronnych.
 
 Wady:
-- Nie mo¿e korzystaæ z zaklêæ ze szkó³: Przemiany, Inwokacji/Wywo³añ i Sprowadzañ/Przywo³ywania~
-@75   = ~Nowa podklasa z³odzieja - Poszukiwacz przygód~
-@76   = ~adventurer~
-@77   = ~Adventurer~
-@78   = ~POSZUKIWACZ PRZYGÓD: To z³odziej, który umiejêtnie rozwija w sobie wiêkszoœæ zdolnoœci potrzebnych mu na trakcie. Jest on wybierany za kompana chêtniej ni¿ zwykli z³odzieje, gdy¿ nie ma on w zwyczaju okradania œpi¹cej dru¿yny i uciekania z ca³ym dobytkiem. Prawdziwy Poszukiwacz Przygód zna cenê zaufania i wspó³pracy, i w przeciwieñstwie do "ulicznych z³odziei" nigdy nie zada on ciosu w plecy (zarówno dos³ownie jak i w przenoœni) swym towarzyszom.
+- Nie mo¿e korzystaæ z zaklêæ ze szkó³: Przemiany, Inwokacji/Wywo³añ i Sprowadzañ/Przywo³ywania.~
+@75   = ~Zainstaluj nowa podklase zlodzieja - Poszukiwacz przygod~
+@76   = ~Poszukiwacz przygód~
+@77   = ~Poszukiwacz przygód~
+@78   = ~POSZUKIWACZ PRZYGÓD: To z³odziej, który umiejêtnie rozwija w sobie wiêkszoœæ zdolnoœci potrzebnych mu na trakcie. Jest on wybierany za kompana chêtniej ni¿ zwykli z³odzieje, gdy¿ nie ma on w zwyczaju okradania œpi¹cej dru¿yny i uciekania z ca³ym dobytkiem. Prawdziwy Poszukiwacz Przygód zna cenê zaufania i wspó³pracy, i w przeciwieñstwie do „ulicznych z³odziei” nigdy nie zada on ciosu w plecy (zarówno dos³ownie jak i w przenoœni) swym towarzyszom.
 
 Zalety:
 - Co poziom otrzymuje premiê +5% do otwierania zamków i wykrywania pu³apek
 - Na poziomach 1, 8 i 14 otrzymuje premiê +1 do wszystkich rzutów obronnych
 
 Wady:
-- Brak zwiêkszonych obra¿eñ przy sztyletowaniu~
-@79   = ~POSZUKIWACZ PRZYGÓD: To z³odziej, który umiejêtnie rozwija w sobie wiêkszoœæ zdolnoœci potrzebnych mu na trakcie. Jest on wybierany za kompana chêtniej ni¿ zwykli z³odzieje, gdy¿ nie ma on w zwyczaju okradania œpi¹cej dru¿yny i uciekania z ca³ym dobytkiem. Prawdziwy Poszukiwacz Przygód zna cenê zaufania i wspó³pracy, i w przeciwieñstwie do "ulicznych z³odziei" nigdy nie zada on ciosu w plecy (zarówno dos³ownie jak i w przenoœni) swym towarzyszom.
+- Brak zwiêkszonych obra¿eñ przy sztyletowaniu.~
+@79   = ~POSZUKIWACZ PRZYGÓD: To z³odziej, który umiejêtnie rozwija w sobie wiêkszoœæ zdolnoœci potrzebnych mu na trakcie. Jest on wybierany za kompana chêtniej ni¿ zwykli z³odzieje, gdy¿ nie ma on w zwyczaju okradania œpi¹cej dru¿yny i uciekania z ca³ym dobytkiem. Prawdziwy Poszukiwacz Przygód zna cenê zaufania i wspó³pracy, i w przeciwieñstwie do „ulicznych z³odziei” nigdy nie zada on ciosu w plecy (zarówno dos³ownie jak i w przenoœni) swym towarzyszom.
 
 Zalety:
 - Co poziom otrzymuje premiê +5% do otwierania zamków i wykrywania pu³apek
 - Na poziomach 1, 8 i 14 otrzymuje premiê +1 do wszystkich rzutów obronnych
 
 Wady:
-- Brak zwiêkszonych obra¿eñ przy sztyletowaniu~
+- Brak zwiêkszonych obra¿eñ przy sztyletowaniu.~
 @80   = ~Aktualizacja podklasy Poszukiwacza Przygod nadanej Imoen przez NPC Kitpack ta z Piesni i Ciszy~
 @81   = ~Aktualizacja podklasy Poszukiwacza Przygod nadanej Nalii przez NPC Kitpack ta z Piesni i Ciszy~
 
-@82   = ~Nowa podklasa zlodzieja - Wlamywacz~
+@82   = ~Zainstaluj nowa podklase zlodzieja - Wlamywacz~
 @83   = ~W³amywacz~
 @84   = ~W³amywacz~
 @85   = ~W£AMYWACZ: Jest to specjalista od wkradania siê do budynków niezauwa¿ony przez stra¿ników, prze³amywania wszelkich zabezpieczeñ i pu³apek, kradniêcia co cenniejszych skarbów i ucieczki równie dyskretnej co przybycie.
@@ -462,23 +464,23 @@ Wady:
 - Otrzymuje karê -20% do kradzie¿y kieszonkowej i zak³adania pu³apek
 - Otrzymuje o po³owê mniej pu³apek do wykorzystania dziennie ni¿ zwyk³y z³odziej~
 
-@86   = ~Nowa podklasa zlodzieja - Ostrze umyslu~
-@87   = ~Ostrze umys³u~
-@88   = ~Ostrze umys³u~
-@89   = ~OSTRZE DUSZY: To ³otr, który dziêki znacznej mocy psionicznej swój umys³ przekszta³ci³ w piêkny i zabójczy orê¿. W praktyce, potrafi ukszta³towaæ moc psioniczn¹ tak, by powsta³o z niej pó³-p³ynne ostrze z czystej energi psi. Miecz ten znany jest jako Ostrze umys³u.
+@86   = ~Zainstaluj nowa podklase zlodzieja - Ostrze duszy~
+@87   = ~Ostrze duszy~
+@88   = ~Ostrze duszy~
+@89   = ~OSTRZE DUSZY: To ³otr, który dziêki znacznej mocy psionicznej swój umys³ przekszta³ci³ w piêkny i zabójczy orê¿. W praktyce, potrafi ukszta³towaæ moc psioniczn¹ tak, by powsta³o z niej pó³p³ynne ostrze z czystej energi psi. Miecz ten znany jest jako Ostrze umys³u i sprawia, ¿e ostrze duszy jest jest zabójczo groŸny nawet nie nosz¹c przy sobie broni.
 
 Zalety:
-- Mo¿e uzyskaæ mistrzostwo (3 punkty bieg³oœci) w krótkich mieczach
-- Raz dziennie na ka¿de 10 poziomów mo¿e zmanifestowaæ Ostrze Myœli. Ten krótki miecz to psioniczna broñ utrzymuj¹ca siê przez rundê na poziom doœwiadczenia z³odzieja, i zaczyna z umagicznieniem +1. Trafienie, obra¿enia i umagicznienie zwiêkszaj¹ siê o 1 równie¿ na ka¿de 5 poziomów doœwiadczenia, do maksimum premii +5 do trafienia i obra¿eñ oraz umagicznieniu +6 na 25 poziomie. Ka¿dy trafiony nim cios przywraca ³otrowi 1 punkt ¿ycia. Zasiêg zostaje zwiêkszony o 10 na ka¿de 5 poziomów doœwiadczenia do maksimum 50 na 25 poziomie.
+- Mo¿e uzyskaæ Mistrzostwo (3 punkty bieg³oœci) w krótkich mieczach
+- Raz dziennie na ka¿de 10 poziomów mo¿e zmanifestowaæ Ostrze Myœli. Ten krótki miecz to psioniczna broñ utrzymuj¹ca siê przez rundê na poziom doœwiadczenia z³odzieja, i zaczyna z umagicznieniem +1. Trafienie, obra¿enia i umagicznienie zwiêkszaj¹ siê o 1 równie¿ na ka¿de 5 poziomów doœwiadczenia, do maksimum premii +5 do trafienia i obra¿eñ oraz umagicznieniu +5 na 25. poziomie. Ka¿dy trafiony nim cios przywraca ³otrowi 1 punkt ¿ycia. Zasiêg zostaje zwiêkszony o 5 na ka¿de 5 poziomów doœwiadczenia do maksimum 25 na 25. poziomie.
 
 Wady:
 - Nie mo¿e zastawiaæ pu³apek
 - Otrzymuje tylko 15% umiejêtnoœci z³odziejskich na poziom~
-@90   = ~OSTRZE UMYS£U: To ³otr, który dziêki znacznej mocy psionicznej swój umys³ przekszta³ci³ w piêkny i zabójczy orê¿. W praktyce, potrafi ukszta³towaæ moc psioniczn¹ tak, by powsta³o z niej pó³-p³ynne ostrze z czystej energi psi. Miecz ten znany jest jako Ostrze myœli.
+@90   = ~OSTRZE DUSZY: To ³otr, który dziêki znacznej mocy psionicznej swój umys³ przekszta³ci³ w piêkny i zabójczy orê¿. W praktyce, potrafi ukszta³towaæ moc psioniczn¹ tak, by powsta³o z niej pó³p³ynne ostrze z czystej energii psi. Miecz ten znany jest jako Ostrze umys³u i sprawia, ¿e ostrze duszy jest jest zabójczo groŸny nawet nie nosz¹c przy sobie broni.
 
 Zalety:
 - Mo¿e uzyskaæ mistrzostwo (3 punkty bieg³oœci) w krótkich mieczach
-- Raz dziennie na ka¿de 10 poziomów mo¿e zmanifestowaæ Ostrze Myœli. Miecz ten to psioniczna broñ utrzymuj¹ca siê przez rundê na poziom doœwiadczenia z³odzieja, i zaczyna z umagicznieniem +1. Trafienie, obra¿enia i umagicznienie zwiêkszaj¹ siê o 1 równie¿ na ka¿de 5 poziomów doœwiadczenia, do maksimum premii +5 do trafienia i obra¿eñ oraz umagicznieniu +6 na 25 poziomie. Ka¿dy trafiony nim cios przywraca ³otrowi 1 punkt ¿ycia. Zasiêg zostaje zwiêkszony o 10 na ka¿de 5 poziomów doœwiadczenia do maksimum 25 na 25 poziomie.
+- Raz dziennie na ka¿de 10 poziomów mo¿e zamanifestowaæ Ostrze Myœli. Miecz ten to psioniczna broñ utrzymuj¹ca siê przez rundê na poziom doœwiadczenia z³odzieja, i zaczyna z umagicznieniem +1. Trafienie, obra¿enia i umagicznienie zwiêkszaj¹ siê o 1 równie¿ na ka¿de 5 poziomów doœwiadczenia, do maksimum premii +5 do trafienia i obra¿eñ oraz umagicznieniu +6 na 25 poziomie. Ka¿dy trafiony nim cios przywraca ³otrowi 1 punkt ¿ycia. Zasiêg zostaje zwiêkszony o 10 na ka¿de 5 poziomów doœwiadczenia do maksimum 25 na 25. poziomie.
 
 Wady:
 - Nie mo¿e zastawiaæ pu³apek
@@ -486,12 +488,12 @@ Wady:
 @91   = ~Manifestacja ostrza myœli~
 @92   = ~Ostrze myœli~
 
-@93   = ~Nowa podklasa zlodzieja - Strzelec~
+@93   = ~Zainstaluj nowa podklase zlodzieja - Strzelec~
 @94   = ~Strzelec~
 @95   = ~Strzelec~
 @96   = ~STRZELEC: Jest to z³odziej, który dziêki d³ugiemu treningowi sta³ siê bardzo wprawnym ³ucznikiem lub kusznikiem. Jednak w przeciwieñstwie do ³owców, którzy swych umiejêtnoœci strzeleckich u¿ywaj¹ do ochrony lasów i puszcz, Strzelcy - z³odzieje paraj¹ siê w¹tpliw¹ moralnie prac¹.
 
-Strzelec jest mistrzem w korzystaniu z broni dystansowej, jednak nie rozwija³ w sobie talentów do zadawania ciosów w plecy. Ale ¿aden z nich nie postrzega tego jako znacznej wady, gdy¿ nad sztych z bliska, po którym ma siê nik³e szanse na ucieczkê, preferuj¹ celny strza³ z dystansu i zabezpieczenie siê pu³apk¹, dziêki czemu ¿aden ochronia¿ ani stra¿nik nie przeszkodzi im w zabiciu celu. 
+Strzelec jest mistrzem w korzystaniu z broni dystansowej, jednak nie rozwija³ w sobie talentów do zadawania ciosów w plecy. Ale ¿aden z nich nie postrzega tego jako znacznej wady, gdy¿ nad sztych z bliska, po którym ma siê nik³e szanse na ucieczkê, preferuj¹ celny strza³ z dystansu i zabezpieczenie siê pu³apk¹, dziêki czemu ¿aden ochroniarz ani stra¿nik nie przeszkodzi im w zabiciu celu. 
 
 Zalety:
 - Mo¿e uzyskaæ wielkie mistrzostwo (5 punktów bieg³oœci) w ka¿dej broni dystansowej z jakiej mo¿e korzystaæ z³odziej
@@ -500,12 +502,12 @@ Zalety:
 Wady:
 - Brak zwiêkszonych obra¿eñ przy sztyletowaniu~
 
-@97   = ~Nowa podklasa zlodzieja - Tancerz Cienia~
+@97   = ~Zainstaluj nowa podklase zlodzieja - Tancerz cienia~
 @99   = ~Przyzwanie cienia~
 @100  = ~Cieñ~
-@101  = ~Tancerz Cienia~
-@102  = ~Tancerz Cienia~
-@103  = ~TANCERZ CIENIA: Tancerz cieni dzia³a na granicy œwiat³ocienia, nic wiêc dziwnego, ¿e jest mistrzem podstêpu. To tajemniczy osobnik, któremu nikt w pe³ni nie ufa. Mimo to, zawsze wprawia w zachwyt swoimi umiejêtnoœciami.
+@101  = ~Tancerz cienia~
+@102  = ~Tancerz cienia~
+@103  = ~TANCERZ CIENIA: Tancerz cienia dzia³a na granicy œwiat³ocienia, nic wiêc dziwnego, ¿e jest mistrzem podstêpu. To tajemniczy osobnik, któremu nikt w pe³ni nie ufa. Mimo to zawsze wprawia w zachwyt swoimi umiejêtnoœciami.
 
 Tancerze cieni czêsto ³¹cz¹ siê w grupy. Nigdy nie pozostaj¹ d³ugo w jednym miejscu. Niektórzy wykorzystuj¹ swe zdolnoœci, by zabawiaæ pospólstwo i nie tylko. Inni s¹ z³odziejami, którym niezwyk³e moce u³atwiaj¹ pokonywanie zabezpieczeñ i omamianie stra¿ników. Warto pamiêtaæ, ¿e ka¿d¹ grupkê tancerzy cieni otacza wywo³uj¹ca niepokój aura tajemniczoœci, gdy¿ nikt nie wie, czy nale¿y o nich myœleæ dobrze czy Ÿle.
 
