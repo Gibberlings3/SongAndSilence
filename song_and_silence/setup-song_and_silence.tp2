@@ -18,7 +18,7 @@ ALWAYS
     LAF HANDLE_CHARSETS INT_VAR infer_charset = 1 STR_VAR default_language = ~english~ tra_path = EVAL ~%MOD_FOLDER%/tra~ noconvert_array = cdnoconvert reload_array = cdreload END
     
     // Load EE-specific text (usability section removed from item descriptions)
-    ACTION_IF GAME_IS ~bgee bg2ee~ THEN BEGIN
+    ACTION_IF ENGINE_IS ~bgee bg2ee~ THEN BEGIN
       // Load English first in case some entries not available in the chosen language (as in LANGUAGE for setup.tra)
       LOAD_TRA ~song_and_silence/tra/english/setup_ee.tra~
       LOAD_TRA ~song_and_silence/tra/%LANGUAGE%/setup_ee.tra~
@@ -99,8 +99,8 @@ COPY_EXISTING mxsplbrd.2da override
   END
 BUT_ONLY
 
-// unecessary if Fixpack
-ACTION_IF ((NOT MOD_IS_INSTALLED setup-bg2fixpack.tp2 0) AND (NOT GAME_IS ~BGEE BG2EE~)) THEN BEGIN // fixed in EE, vBG2 w/ Fixpack
+// unnecessary if Fixpack
+ACTION_IF ((NOT MOD_IS_INSTALLED setup-bg2fixpack.tp2 0) AND (NOT ENGINE_IS ~BGEE BG2EE~)) THEN BEGIN // fixed in EE, vBG2 w/ Fixpack
 
   // Fix Blade's pick pockets skill
   COPY ~song_and_silence/chorister/a!pp2.spl~  override
@@ -284,19 +284,20 @@ ACTION_IF GAME_IS ~bgt soa tob bg2ee~ THEN BEGIN
 END
 
 // spawn raoul at nashkel carnival
-ACTION_IF GAME_IS ~bgt tutu tutu_totsc bgee~ THEN BEGIN
+ACTION_IF GAME_IS ~bgt tutu tutu_totsc bgee eet~ THEN BEGIN
 
   ACTION_IF GAME_IS ~tutu tutu_totsc~ THEN BEGIN
     OUTER_SPRINT nashkel_carnival fw4900
     OUTER_SPRINT script_check _ar4900
+  END ELSE ACTION_IF GAME_IS ~bgt~ THEN BEGIN
+    OUTER_SPRINT nashkel_carnival ar3800
+    OUTER_SPRINT script_check ar3800
+  END ELSE ACTION_IF GAME_IS ~eet~ THEN BEGIN
+    OUTER_SPRINT nashkel_carnival bg4900
+    OUTER_SPRINT script_check bg4900
   END ELSE BEGIN
-    ACTION_IF GAME_IS ~bgt~ THEN BEGIN
-      OUTER_SPRINT nashkel_carnival ar3800
-      OUTER_SPRINT script_check ar3800
-    END ELSE BEGIN
-      OUTER_SPRINT nashkel_carnival ar4900
-      OUTER_SPRINT script_check ar4900
-    END
+    OUTER_SPRINT nashkel_carnival ar4900
+    OUTER_SPRINT script_check ar4900
   END
 
   // check if area already has script; if not assign default
@@ -730,7 +731,7 @@ OUTER_SPRINT match ~A!ADVENTURER~
 LAUNCH_ACTION_MACRO andyr_cinders_of_ashes_of_embers
 LAF fl#add_kit_ee STR_VAR backstab = ~1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1~ kit_name = ~A!ADVENTURER~ END // for ee games, give no backstab multiplier
 
-ACTION_IF NOT GAME_IS ~bgee bg2ee~ THEN BEGIN // if non-ee game, have to use swash usability flag to prevent backstabbing
+ACTION_IF NOT ENGINE_IS ~bgee bg2ee~ THEN BEGIN // if non-ee game, have to use swash usability flag to prevent backstabbing
 
   COPY_EXISTING ~kitlist.2da~ ~override~
     REPLACE_TEXTUALLY ~\([ %TAB%]a!av[ %TAB%]+[0-9]+[ %TAB%]+\)0x0*4000~ ~\10x00100000~
@@ -828,7 +829,7 @@ OUTER_SPRINT match ~A!SOULKNIFE~
 LAUNCH_ACTION_MACRO andyr_cinders_of_ashes_of_embers
 LAF fl#add_kit_ee STR_VAR thiefskl = ~40 15~ kit_name = ~A!SOULKNIFE~ END // for ee games, use table to designate only 15 points/level
 
-ACTION_IF NOT GAME_IS ~bgee bg2ee~ THEN BEGIN // if non-ee game, have to use assassin usability flag for thieving points
+ACTION_IF NOT ENGINE_IS ~bgee bg2ee~ THEN BEGIN // if non-ee game, have to use assassin usability flag for thieving points
 
   COPY_EXISTING ~kitlist.2da~ ~override~
     REPLACE_TEXTUALLY ~\([ %TAB%]a!soul[ %TAB%]+[0-9]+[ %TAB%]+\)0x0*4000~ ~\10x00040000~
@@ -883,7 +884,7 @@ OUTER_SPRINT match ~A!SHARPSHOOTER~
 LAUNCH_ACTION_MACRO andyr_cinders_of_ashes_of_embers
 LAF fl#add_kit_ee STR_VAR backstab = ~1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1~ kit_name = ~A!SHARPSHOOTER~ END // for ee games, give no backstab multiplier
 
-ACTION_IF NOT GAME_IS ~bgee bg2ee~ THEN BEGIN // if non-ee game, have to use swash usability flag to prevent backstabbing
+ACTION_IF NOT ENGINE_IS ~bgee bg2ee~ THEN BEGIN // if non-ee game, have to use swash usability flag to prevent backstabbing
 
   COPY_EXISTING ~kitlist.2da~ ~override~
     REPLACE_TEXTUALLY ~\([ %TAB%]a!sharp[ %TAB%]+[0-9]+[ %TAB%]+\)0x0*4000~ ~\10x00100000~
@@ -913,7 +914,7 @@ COPY_EXISTING ~spcl423.spl~ ~override/a!ss01.spl~
 
 BEGIN @97
 DESIGNATED 10
-REQUIRE_PREDICATE NOT GAME_IS ~bgee bg2ee~ @104
+REQUIRE_PREDICATE NOT ENGINE_IS ~bgee bg2ee~ @104
 REQUIRE_COMPONENT ~setup-song_and_silence.tp2~ ~0~ @43
 
 ADD_KIT ~A#SHADOWDANCER~
