@@ -1,5 +1,16 @@
 # Change Log
 
+## Version 8 - October 3, 2016
+### Added
+- EET compatibility
+
+### Fixed
+- EE item description formatting (en dash prefix in lists)
+
+### Updated
+- Updated WeiDU to v240
+- Updated Polish translation (thanks Cahir)
+
 ## Version 7 - September 15, 2016
 ### Fixed
 - Updated to latest version of fl#add_kit_ee function for compatibility with EE 2.0
