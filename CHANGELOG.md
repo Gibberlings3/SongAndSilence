@@ -1,5 +1,14 @@
 # Change Log
 
+## Version 9 - August 27, 2018
+### Added
+- Added compatibility for IWDEE
+- Fixed bug where Nalia and Imoen would not get the S&S version of the Adventurer kit when used in conjunction with NPC Kitpack
+- The bard songs of the Gypsy and Dirgesinger have had their areas of effect upped to match the bardsong of Jesters (15' radius)
+- The curse spell of the Gypsy no longer reports 'Bless' on its target
+- The Gypsy bardsong can now be resisted by elven sleep/charm resistance (if installed from Fixpack or the EEs); the spell will also no longer apply effects or require saving throws from non-humanoids
+
+
 ## Version 8 - October 3, 2016
 ### Added
 - EET compatibility
