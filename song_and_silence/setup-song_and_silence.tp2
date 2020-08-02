@@ -1,7 +1,7 @@
 BACKUP ~song_and_silence/backup~
 SUPPORT ~http://gibberlings3.net/forums/index.php?showforum=72~
 
-VERSION ~v9~
+VERSION ~v10~
 README ~song_and_silence/readme-song_and_silence.html~
 
 ALWAYS
@@ -57,6 +57,11 @@ LANGUAGE
   ~german~
   ~song_and_silence/tra/english/setup.tra~
   ~song_and_silence/tra/german/setup.tra~
+LANGUAGE 
+  ~Russian (translated by SubZero400 & yota13)~
+  ~Russian~
+  ~song_and_silence/tra/english/setup.tra~
+  ~song_and_silence/tra/russian/setup.tra~
 
 //////////////////////
 //Vanilla game stuff//
