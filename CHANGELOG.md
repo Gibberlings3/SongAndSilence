@@ -1,5 +1,9 @@
 # Change Log
 
+## Version 10 - August 3, 2020
+### Added
+- Russian translation (thanks SubZero400 and yota13)
+
 ## Version 9 - August 27, 2018
 ### Added
 - Added compatibility for IWDEE
@@ -7,7 +11,6 @@
 - The bard songs of the Gypsy and Dirgesinger have had their areas of effect upped to match the bardsong of Jesters (15' radius)
 - The curse spell of the Gypsy no longer reports 'Bless' on its target
 - The Gypsy bardsong can now be resisted by elven sleep/charm resistance (if installed from Fixpack or the EEs); the spell will also no longer apply effects or require saving throws from non-humanoids
-
 
 ## Version 8 - October 3, 2016
 ### Added
