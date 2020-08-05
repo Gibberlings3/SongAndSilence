@@ -4,7 +4,7 @@
 **Authors**: [Andyr], [Grim Squeaker], and [NiGHTMARE]  
 **On the Web**: [Home page] and [discussion forum]
 
-**Languages**: English, French, German, Polish, Russian, and Spanish  
+**Languages**: English, French, German, Polish, and Russian
 **Platforms**: Windows, Mac OS X, and Linux
 
 ## Overview
@@ -180,7 +180,7 @@ Since BGEE/BGIIEE already have their own Shadowdancer, this kit is only availabl
 
 ## Credits and Copyright Information
 
-This mod may not be sold, published, compiled or redistributed in any form without the consent of its authors. The Song and Silence mod is ©2004-2016, Andyr, Grim Squeaker, and NiGHTMARE.
+This mod may not be sold, published, compiled or redistributed in any form without the consent of its authors. The Song and Silence mod is ©2004-2020, Andyr, Grim Squeaker, and NiGHTMARE.
 
 ## Further Reading
 
