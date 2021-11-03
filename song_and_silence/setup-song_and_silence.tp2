@@ -73,48 +73,52 @@ DESIGNATED 0
 LABEL ~a!_sns_base_component~
 
 //Spell progression (NiGHTMARE)
-COPY_EXISTING mxsplbrd.2da override
-  COUNT_2DA_COLS cols
-  PATCH_IF cols < 8 BEGIN
-    READ_2DA_ENTRIES_NOW rows cols
-    SPRINT new ~~
-    READ_2DA_ENTRY 0 cols - 2 cols - 1 new_level
-    FOR (i_0 = cols; i_0 < 8; i_0 += 1) BEGIN
-      SPRINT new ~%new%   0~
-      SPRINT new_level ~%new_level%   %i_0%~
+ACTION_IF (!(FILE_EXISTS_IN_GAME "RR#PPBRD.RR") AND !(MOD_IS_INSTALLED "setup-IWDification.tp2" "150") AND !(MOD_IS_INSTALLED "setup-cdtweak.tp2" "2270") AND !(MOD_IS_INSTALLED "setup-cdtweak.tp2" "2271")) THEN BEGIN // RR,IWDification and Tweak anthology compatibility
+
+  COPY_EXISTING mxsplbrd.2da override
+    COUNT_2DA_COLS cols
+    PATCH_IF cols < 8 BEGIN
+      READ_2DA_ENTRIES_NOW rows cols
+      SPRINT new ~~
+      READ_2DA_ENTRY 0 cols - 2 cols - 1 new_level
+      FOR (i_0 = cols; i_0 < 8; i_0 += 1) BEGIN
+        SPRINT new ~%new%   0~
+        SPRINT new_level ~%new_level%   %i_0%~
+      END
+      FOR (i_0 = 0; i_0 < rows; i_0 += 1) BEGIN
+        READ_2DA_ENTRY_FORMER rows i_0 cols - 1 old
+        SET_2DA_ENTRY_LATER mxsplbrd_set i_0 cols - 1 ~%old%   %new%~
+      END
+      SET_2DA_ENTRIES_NOW mxsplbrd_set cols
+      SET_2DA_ENTRY 0 cols - 2 cols - 1 ~%new_level%~
+      SET cols = 8
     END
+    READ_2DA_ENTRIES_NOW rows cols
+    SET $level(8) = 0
+    SET $level(9) = 0
     FOR (i_0 = 0; i_0 < rows; i_0 += 1) BEGIN
-      READ_2DA_ENTRY_FORMER rows i_0 cols - 1 old
-      SET_2DA_ENTRY_LATER mxsplbrd_set i_0 cols - 1 ~%old%   %new%~
+      READ_2DA_ENTRY_FORMER rows i_0 0 level
+      SET $level(1) = level < 2  ? 0 : level < 3  ? 1 : level < 5  ? 2 : level < 16 ? 3 : level < 21 ? 4 : level < 28 ? 5 : level < 36 ? 6 : 7
+      SET $level(2) = level < 4  ? 0 : level < 6  ? 1 : level < 8  ? 2 : level < 17 ? 3 : level < 22 ? 4 : level < 29 ? 5 : level < 37 ? 6 : 7
+      SET $level(3) = level < 7  ? 0 : level < 9  ? 1 : level < 11 ? 2 : level < 18 ? 3 : level < 23 ? 4 : level < 30 ? 5 : level < 38 ? 6 : 7
+      SET $level(4) = level < 10 ? 0 : level < 12 ? 1 : level < 14 ? 2 : level < 19 ? 3 : level < 24 ? 4 : level < 32 ? 5 : level < 39 ? 6 : 7
+      SET $level(5) = level < 13 ? 0 : level < 15 ? 1 : level < 16 ? 2 : level < 20 ? 3 : level < 26 ? 4 : level < 34 ? 5 : 6
+      SET $level(6) = level < 16 ? 0 : level < 18 ? 1 : level < 20 ? 2 : level < 23 ? 3 : level < 27 ? 4 : level < 33 ? 5 : 6
+      SET $level(7) = level < 25 ? 0 : level < 31 ? 1 : level < 38 ? 2 : 3
+      FOR (i_1 = 1; i_1 < cols; i_1 += 1) BEGIN
+        SET_2DA_ENTRY_LATER mxsplbrd_set i_0 i_1 $level(~%i_1%~)
+      END
     END
     SET_2DA_ENTRIES_NOW mxsplbrd_set cols
-    SET_2DA_ENTRY 0 cols - 2 cols - 1 ~%new_level%~
-    SET cols = 8
-  END
-  READ_2DA_ENTRIES_NOW rows cols
-  SET $level(8) = 0
-  SET $level(9) = 0
-  FOR (i_0 = 0; i_0 < rows; i_0 += 1) BEGIN
-    READ_2DA_ENTRY_FORMER rows i_0 0 level
-    SET $level(1) = level < 2  ? 0 : level < 3  ? 1 : level < 5  ? 2 : level < 16 ? 3 : level < 21 ? 4 : level < 28 ? 5 : level < 36 ? 6 : 7
-    SET $level(2) = level < 4  ? 0 : level < 6  ? 1 : level < 8  ? 2 : level < 17 ? 3 : level < 22 ? 4 : level < 29 ? 5 : level < 37 ? 6 : 7
-    SET $level(3) = level < 7  ? 0 : level < 9  ? 1 : level < 11 ? 2 : level < 18 ? 3 : level < 23 ? 4 : level < 30 ? 5 : level < 38 ? 6 : 7
-    SET $level(4) = level < 10 ? 0 : level < 12 ? 1 : level < 14 ? 2 : level < 19 ? 3 : level < 24 ? 4 : level < 32 ? 5 : level < 39 ? 6 : 7
-    SET $level(5) = level < 13 ? 0 : level < 15 ? 1 : level < 16 ? 2 : level < 20 ? 3 : level < 26 ? 4 : level < 34 ? 5 : 6
-    SET $level(6) = level < 16 ? 0 : level < 18 ? 1 : level < 20 ? 2 : level < 23 ? 3 : level < 27 ? 4 : level < 33 ? 5 : 6
-    SET $level(7) = level < 25 ? 0 : level < 31 ? 1 : level < 38 ? 2 : 3
-    FOR (i_1 = 1; i_1 < cols; i_1 += 1) BEGIN
-      SET_2DA_ENTRY_LATER mxsplbrd_set i_0 i_1 $level(~%i_1%~)
+    PRETTY_PRINT_2DA
+    WHILE level < 50 BEGIN
+      REPLACE_EVALUATE ~^\(%level%\)\(.+\)~ BEGIN
+        SET level += 1
+      END              ~\1\2%LNL%%level%\2~
     END
-  END
-  SET_2DA_ENTRIES_NOW mxsplbrd_set cols
-  PRETTY_PRINT_2DA
-  WHILE level < 50 BEGIN
-    REPLACE_EVALUATE ~^\(%level%\)\(.+\)~ BEGIN
-      SET level += 1
-    END              ~\1\2%LNL%%level%\2~
-  END
-BUT_ONLY
+    BUT_ONLY
+  
+END
 
 // unnecessary if Fixpack
 ACTION_IF ((NOT MOD_IS_INSTALLED setup-bg2fixpack.tp2 0) AND (!ee_game)) THEN BEGIN // fixed in EE, vBG2 w/ Fixpack
@@ -179,84 +183,89 @@ ACTION_IF ((NOT MOD_IS_INSTALLED setup-bg2fixpack.tp2 0) AND (!ee_game)) THEN BE
 END
 
 // Allow thieves 3 points in dual wielding + fix Swashbuckler broken profs
-COPY_EXISTING weapprof.2da override
-  COUNT_2DA_COLS cols
-  // 3 points in dual-wielding for thieves
-  SET_2DA_ENTRY_LATER weapprof 31 7  ~3~ // Thief
-  SET_2DA_ENTRY_LATER weapprof 31 14 ~3~ // Fighter/Thief (just in case)
-  SET_2DA_ENTRY_LATER weapprof 31 15 ~3~ // Fighter/Mage/Thief (just in case)
-  SET_2DA_ENTRY_LATER weapprof 31 16 ~3~ // Mage/Thief
-  SET_2DA_ENTRY_LATER weapprof 31 18 ~3~ // Cleric/Thief
-  SET_2DA_ENTRY_LATER weapprof 31 39 ~3~ // Assassin
-  SET_2DA_ENTRY_LATER weapprof 31 40 ~3~ // Bounty Hunter
-  SET_2DA_ENTRY_LATER weapprof 31 41 ~3~ // Swashbuckler
+ACTION_IF !(FILE_EXISTS_IN_GAME "RR#DWF.RR") BEGIN
+
+  COPY_EXISTING weapprof.2da override
+    COUNT_2DA_COLS cols
+    // 3 points in dual-wielding for thieves
+    SET_2DA_ENTRY_LATER weapprof 31 7  ~3~ // Thief
+    SET_2DA_ENTRY_LATER weapprof 31 14 ~3~ // Fighter/Thief (just in case)
+    SET_2DA_ENTRY_LATER weapprof 31 15 ~3~ // Fighter/Mage/Thief (just in case)
+    SET_2DA_ENTRY_LATER weapprof 31 16 ~3~ // Mage/Thief
+    SET_2DA_ENTRY_LATER weapprof 31 18 ~3~ // Cleric/Thief
+    SET_2DA_ENTRY_LATER weapprof 31 39 ~3~ // Assassin
+    SET_2DA_ENTRY_LATER weapprof 31 40 ~3~ // Bounty Hunter
+    SET_2DA_ENTRY_LATER weapprof 31 41 ~3~ // Swashbuckler
+    
+    // fix swashbuckler profs
+    SET_2DA_ENTRY_LATER weapprof 13 41 ~2~ // Swashbucklers, katanas
+    SET_2DA_ENTRY_LATER weapprof 23 41 ~1~ // Swashbucklers, crossbows
+    SET_2DA_ENTRY_LATER weapprof 25 41 ~1~ // Swashbucklers, short bows
+    SET_2DA_ENTRY_LATER weapprof 27 41 ~1~ // Swashbucklers, slings
+    SET_2DA_ENTRIES_NOW weapprof cols
+    PRETTY_PRINT_2DA
+    BUT_ONLY
+
+  // Swashbuckler description change
+  ACTION_IF NOT FILE_EXISTS_IN_GAME rr#tsb01.spl THEN BEGIN
+
+    ACTION_IF GAME_IS ~bgee~ THEN BEGIN
+      STRING_SET 24303 @1
+    END ELSE BEGIN
+      ACTION_IF GAME_IS ~iwdee~ THEN BEGIN
+        STRING_SET 37230 @1
+      END ELSE BEGIN // everything else
+        STRING_SET 25216 @1
+      END  
+    END
+  END
+
+  // Alignment changes
+  COPY_EXISTING alignmnt.2da override
+    PATCH_FOR_EACH kit IN 3 35 36 37 BEGIN
+      SET_2DA_ENTRY_LATER set kit 1 1 // Thief & kits
+    END
+    PATCH_FOR_EACH alignment IN 1 2 3 4 5 6 7 8 9 BEGIN
+      SET_2DA_ENTRY_LATER set 4 alignment 1 // Bard
+    END
+    PATCH_FOR_EACH kit IN 10 11 12 14 BEGIN
+      PATCH_FOR_EACH alignment IN 1 2 3 BEGIN
+        SET_2DA_ENTRY_LATER set kit alignment 1 // Multiclasses
+      END
+    END
+    PATCH_FOR_EACH alignment IN 1 2 3 4 5 6 7 8 9 BEGIN
+      SET_2DA_ENTRY_LATER set 38 alignment 1 // Blade
+    END
+    PATCH_FOR_EACH kit IN 39 40 BEGIN
+      PATCH_FOR_EACH alignment IN 1 2 3 BEGIN
+        SET_2DA_ENTRY_LATER set kit alignment 0 // Forbid Lawful Jesters and Skalds
+      END
+      PATCH_FOR_EACH alignment IN 4 5 6 7 8 9 BEGIN
+        SET_2DA_ENTRY_LATER set kit alignment 1 // Allow non-Lawful Jesters and Skalds
+      END
+    END
+    SET_2DA_ENTRIES_NOW set 10
+    PRETTY_PRINT_2DA
+    BUT_ONLY
   
-  // fix swashbuckler profs
-  SET_2DA_ENTRY_LATER weapprof 13 41 ~2~ // Swashbucklers, katanas
-  SET_2DA_ENTRY_LATER weapprof 23 41 ~1~ // Swashbucklers, crossbows
-  SET_2DA_ENTRY_LATER weapprof 25 41 ~1~ // Swashbucklers, short bows
-  SET_2DA_ENTRY_LATER weapprof 27 41 ~1~ // Swashbucklers, slings
-  SET_2DA_ENTRIES_NOW weapprof cols
-  PRETTY_PRINT_2DA
-BUT_ONLY
-
-// Swashbuckler description change
-ACTION_IF NOT FILE_EXISTS_IN_GAME rr#tsb01.spl THEN BEGIN
-
-  ACTION_IF GAME_IS ~bgee~ THEN BEGIN
-    STRING_SET 24303 @1
-  END ELSE BEGIN
-    ACTION_IF GAME_IS ~iwdee~ THEN BEGIN
-      STRING_SET 37230 @1
-	END ELSE BEGIN // everything else
-      STRING_SET 25216 @1
-	END  
-  END
-END
-
-// Alignment changes
-COPY_EXISTING alignmnt.2da override
-  PATCH_FOR_EACH kit IN 3 35 36 37 BEGIN
-    SET_2DA_ENTRY_LATER set kit 1 1 // Thief & kits
-  END
-  PATCH_FOR_EACH alignment IN 1 2 3 4 5 6 7 8 9 BEGIN
-    SET_2DA_ENTRY_LATER set 4 alignment 1 // Bard
-  END
-  PATCH_FOR_EACH kit IN 10 11 12 14 BEGIN
-    PATCH_FOR_EACH alignment IN 1 2 3 BEGIN
-      SET_2DA_ENTRY_LATER set kit alignment 1 // Multiclasses
-    END
-  END
-  PATCH_FOR_EACH alignment IN 1 2 3 4 5 6 7 8 9 BEGIN
-    SET_2DA_ENTRY_LATER set 38 alignment 1 // Blade
-  END
-  PATCH_FOR_EACH kit IN 39 40 BEGIN
-    PATCH_FOR_EACH alignment IN 1 2 3 BEGIN
-      SET_2DA_ENTRY_LATER set kit alignment 0 // Forbid Lawful Jesters and Skalds
-    END
-    PATCH_FOR_EACH alignment IN 4 5 6 7 8 9 BEGIN
-      SET_2DA_ENTRY_LATER set kit alignment 1 // Allow non-Lawful Jesters and Skalds
-    END
-  END
-  SET_2DA_ENTRIES_NOW set 10
-  PRETTY_PRINT_2DA
-BUT_ONLY
 /*
-ACTION_IF GAME_IS ~tob~ THEN BEGIN
-  COPY_EXISTING ~luabbr.2da~ ~override/luabbr.2da~
-    SET_2DA_ENTRY 38 1 2 ~A!1~//Blade
-    SET_2DA_ENTRY 39 1 2 ~A!2~//Jester
-    SET_2DA_ENTRY 40 1 2 ~A!3~//Skald
-  // Kitless HLA changes
-  COPY ~song_and_silence/vanilla/luba0.2da~ ~override/luba0.2da~
-  // Blade HLA changes
-  COPY ~song_and_silence/vanilla/lua!1.2da~ ~override/lua!1.2da~
-  // Jester HLA changes
-  COPY ~song_and_silence/vanilla/lua!2.2da~ ~override/lua!2.2da~
-  // Skald HLA changes
-  COPY ~song_and_silence/vanilla/lua!3.2da~ ~override/lua!3.2da~
-END 
+  ACTION_IF GAME_IS ~tob~ THEN BEGIN
+    COPY_EXISTING ~luabbr.2da~ ~override/luabbr.2da~
+      SET_2DA_ENTRY 38 1 2 ~A!1~//Blade
+      SET_2DA_ENTRY 39 1 2 ~A!2~//Jester
+      SET_2DA_ENTRY 40 1 2 ~A!3~//Skald
+    // Kitless HLA changes
+    COPY ~song_and_silence/vanilla/luba0.2da~ ~override/luba0.2da~
+    // Blade HLA changes
+    COPY ~song_and_silence/vanilla/lua!1.2da~ ~override/lua!1.2da~
+    // Jester HLA changes
+    COPY ~song_and_silence/vanilla/lua!2.2da~ ~override/lua!2.2da~
+    // Skald HLA changes
+    COPY ~song_and_silence/vanilla/lua!3.2da~ ~override/lua!3.2da~
+  END 
 */
+
+END // end rr check
 
 //////////////////
 //Item component//
