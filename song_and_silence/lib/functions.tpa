@@ -6,8 +6,8 @@ DEFINE_PATCH_MACRO andyr_spell_to_innate BEGIN
   LOCAL_SET hc  = 0
   WRITE_SHORT  0x1c 4                        // sets spell type to innate (4)
   WRITE_LONG   0x34 1                        // sets spell level to 1 to avoid scripting issues
-  WRITE_LONG   0x50 ` 0
-  WRITE_LONG   0x54 ` 0
+//  WRITE_LONG   0x50 ` 0 // these are actually used by EEs, so keep
+//  WRITE_LONG   0x54 ` 0
   READ_LONG    0x64 ho
   READ_ASCII   ho + 0x04 bam                 // reads the bam filename from ability
   WRITE_ASCIIE 0x3a ~%bam%~ #8               // writes the bam filename from abilities to spell icon
@@ -46,4 +46,87 @@ DEFINE_ACTION_MACRO andyr_cinders_of_ashes_of_embers BEGIN
 
   END
   
+END
+
+/////                                                  \\\\\
+///// CD_CONVERT_9_255                                 \\\\\
+/////                                                  \\\\\
+
+// borrowed from IWDification
+DEFINE_PATCH_FUNCTION CD_CONVERT_9_255 BEGIN // actually convert 8 and 9
+
+  READ_ASCII 0x00 sig (3)
+  SET abil_length = 0x28
+  PATCH_IF ("%sig%" STRING_COMPARE_CASE "ITM" = 0) BEGIN
+    SET abil_length = 0x38
+  END
+  READ_LONG  0x64 abil_off ELSE 0
+  READ_SHORT 0x68 abil_num ELSE 0
+  READ_LONG  0x6a fx_off   ELSE 0
+  SET fx_delta = 0
+  FOR (index = 0 ; index < abil_num ; ++index) BEGIN // start iterating through abilities
+    WRITE_SHORT (abil_off + 0x20 + (abil_length * index)) (THIS + fx_delta)
+    READ_SHORT  (abil_off + 0x1e + (abil_length * index)) abil_fx_num
+    READ_SHORT  (abil_off + 0x20 + (abil_length * index)) abil_fx_idx
+    FOR (index2 = 0 ; index2 < abil_fx_num ; ++index2) BEGIN
+      READ_SHORT (fx_off +        (0x30 * (abil_fx_idx + index2))) opcode
+      PATCH_IF ((opcode = 8) OR (opcode = 9)) BEGIN
+        READ_SHORT (fx_off + 0x08 + (0x30 * (abil_fx_idx + index2))) loc
+        PATCH_IF loc = 255 BEGIN
+          WRITE_SHORT (fx_off + 0x08 + (0x30 * (abil_fx_idx + index2))) 6
+          READ_ASCII (fx_off +        (0x30 * (abil_fx_idx + index2))) clone (48)
+          FOR (index3 = 0 ; index3 < 6 ; ++index3) BEGIN
+            INSERT_BYTES (fx_off +        (0x30 * (abil_fx_idx + index2))) 0x30
+            WRITE_ASCIIE (fx_off +        (0x30 * (abil_fx_idx + index2))) ~%clone%~
+            WRITE_SHORT  (fx_off + 0x08 + (0x30 * (abil_fx_idx + index2))) index3
+          END
+          SET fx_delta += 6
+          SET index2 += 6
+          SET abil_fx_num += 6
+        END
+      END
+    END
+    WRITE_SHORT  (abil_off + 0x1e + (abil_length * index)) abil_fx_num
+  END
+
+END
+
+/////                                                  \\\\\
+///// CD_CONVERT_325                                   \\\\\
+/////                                                  \\\\\
+
+// borrowed from IWDification
+DEFINE_PATCH_FUNCTION CD_CONVERT_325 BEGIN
+
+  READ_ASCII 0x00 sig (3)
+  SET abil_length = 0x28
+  PATCH_IF ("%sig%" STRING_COMPARE_CASE "ITM" = 0) BEGIN
+    SET abil_length = 0x38
+  END
+  READ_LONG  0x64 abil_off ELSE 0
+  READ_SHORT 0x68 abil_num ELSE 0
+  READ_LONG  0x6a fx_off   ELSE 0
+  SET fx_delta = 0
+  FOR (index = 0 ; index < abil_num ; ++index) BEGIN // start iterating through abilities
+    WRITE_SHORT (abil_off + 0x20 + (abil_length * index)) (THIS + fx_delta)
+    READ_SHORT  (abil_off + 0x1e + (abil_length * index)) abil_fx_num
+    READ_SHORT  (abil_off + 0x20 + (abil_length * index)) abil_fx_idx
+    FOR (index2 = 0 ; index2 < abil_fx_num ; ++index2) BEGIN
+      READ_SHORT (fx_off +        (0x30 * (abil_fx_idx + index2))) opcode
+      PATCH_IF (opcode = 325) BEGIN
+        WRITE_SHORT (fx_off +        (0x30 * (abil_fx_idx + index2))) 33 // change to brief color pulse
+        READ_ASCII (fx_off +        (0x30 * (abil_fx_idx + index2))) clone (48)
+        FOR (index3 = 34 ; index3 < 38 ; ++index3) BEGIN
+          INSERT_BYTES (fx_off +        (0x30 * (abil_fx_idx + index2))) 0x30
+          WRITE_ASCIIE (fx_off +        (0x30 * (abil_fx_idx + index2))) ~%clone%~
+          WRITE_SHORT  (fx_off +        (0x30 * (abil_fx_idx + index2))) index3 // vycle through individual save bonuses
+        END
+        SET fx_delta += 4
+        SET index2 += 4
+        SET abil_fx_num += 4
+      END
+    END
+    WRITE_SHORT  (abil_off + 0x1e + (abil_length * index)) abil_fx_num
+  END
+
 END

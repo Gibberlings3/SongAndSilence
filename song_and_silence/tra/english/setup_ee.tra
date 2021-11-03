@@ -37,8 +37,8 @@ Overconfident and sure of his invulnerability, however, he slipped up on a parti
 STATISTICS:
 
 Equipped abilities:
-– Immunity to backstab
-– Immunity to poison
+â€“ Immunity to backstab
+â€“ Immunity to poison
 
 Weight: 2~
 @19   = ~At first glance this appears to be an ordinary cudgel, but closer inspection by a well-trained eye reveals a series of discrete runes traced along the grip. A thief would also remark on the weapon's fine balance.
@@ -52,7 +52,7 @@ How the weapon has since found its way into your hands is probably a tale you do
 STATISTICS:
 
 Equipped abilities:
-– Move Silently: +10%
+â€“ Move Silently: +10%
 
 THAC0: +2
 Damage:  1D6+2 (crushing)
@@ -75,7 +75,7 @@ The item must be held on display to have its effects; it is equipped in the Shie
 STATISTICS:
 
 Equipped abilities:
-– Party receives +2 bonus to saving throw vs. death
+â€“ Party receives +2 bonus to saving throw vs. death
 
 Weight: 0~
 @25   = ~This small, battered shield belonged at one point to the skalds, the bardic members of barbarian tribes of Icewind Dale. It somehow made its way South to you, doubtless as the spoils of war after some long-forgotten invasion.
@@ -85,9 +85,9 @@ It is likely it belonged to a renowned bard at one point, as it has been enchant
 STATISTICS:
 
 Equipped abilities:
-– Armor Class: +2
-– No protection against missile and piercing attacks
-– Cold Resistance: +10%
+â€“ Armor Class: +2
+â€“ No protection against missile and piercing attacks
+â€“ Cold Resistance: +10%
 Requires:
  4 Strength
 
@@ -99,12 +99,12 @@ All great heroes must die, though, and eventually Grefyn was killed by some adve
 STATISTICS:
 
 Equipped abilities:
-– Saving throw vs. death: +1
+â€“ Saving throw vs. death: +1
 
 THAC0: +2
 Damage: 1d6+2 (piercing)
 Speed Factor: 1
-Proficiency Type: Dagger
+Proficiency Type: Short Sword
 Type: One-handed
 Requires:
  5 Strength

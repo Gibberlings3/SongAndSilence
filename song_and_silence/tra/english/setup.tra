@@ -398,13 +398,11 @@ Disadvantages:
 @67   = ~Song of Horror~
 @68   = ~Song of Grief~
 @69   = ~Song of Awakening~
-@70   = ~Install Gypsy bard kit~
+@70   = ~Install Luring Piper bard kit~
 @71   = ~Curse~
-@72   = ~gypsy~
-@73   = ~Gypsy~
-@74   = ~GYPSY: Gypsies are often called "travelling people" or "forest nomads," typically wandering the lands in caravans comprising of brightly painted carts or wagons.  These people are well-known for their strange music and dances, typically surviving in their wandering lifestyle by entertaining villagers and folk in the places they roam.  Gypsies wander the land, experiencing life as they go.  They travel until they find something of interest, where they establish a temporary camp and remain until the urge to see more of the world overpowers their desire to stay.  Adventuring gypsies may be on a personal quest to locate some unique place or thing or may simply be out to experience the great wonders that appear along the adventuring path.
-
-Gypsies are often misunderstood by others, who classify them as thieves, beggars, carnival people, nomads, or any number of other erroneous names.  They are also very open and welcoming to those who seek to learn their ways and join them in their wandering, garnering for them a reputation for stealing children in the night and then spiriting them off into the wilderness.  It should be noted that not all Gypsies are bards or have bardic abilities; Gypsy bards, known among Gypsy clans as "rawuns," function as the chief storytellers, lore-keepers, fortune tellers, and spiritual advisers of their Gypsy clans.
+@72   = ~luring piper~
+@73   = ~Luring Piper~
+@74   = ~LURING PIPER: Luring Pipers are often employed as rat-catchers or similar vermin control specialists by townsfolk or farmers. By using their enchanting song they are able to charm their foes into traps or away from the town or farmland. However it unwise to cross a luring piper as their song can affect more than just vermin.
 
 Advantages:
 -  Song charms enemies unless they save vs. spells at +2, with a -1 penalty per 5 levels of the bard
@@ -503,3 +501,17 @@ Disadvantages:
 -  May not set traps
 -  Only gains 15 skill points per level~
 @104 = ~This component is not available for your game.~
+@105 = ~Curse
+(Conjuration/Summoning)
+
+Level: 1
+Sphere: All
+Range: Visual range of the caster
+Duration: 6 rounds
+Casting Time: 9
+Area of Effect: 15-ft. radius
+Saving Throw: None
+
+When uttering the Curse spell, the caster lowers the morale of enemy creatures and any Saving Throws and attack rolls they make by 1. At the instant the spell is completed, it affects all creatures in a 15-ft. radius centered on the point selected by the caster. Affected creatures leaving the area are still subject to the spell's effect; those entering the area after the casting is completed are not.~
+@106 = ~Cursed~
+@107 = ~DLC Merger is required before mods can be installed on this game. Check the readme for more information and a link to download DLC Merger.~

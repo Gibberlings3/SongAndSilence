@@ -1,18 +1,19 @@
 BACKUP ~song_and_silence/backup~
-SUPPORT ~http://gibberlings3.net/forums/index.php?showforum=72~
+SUPPORT ~https://www.gibberlings3.net/forums/forum/72-song-and-silence/~
 
-VERSION ~v10~
-README ~song_and_silence/readme.html~
+VERSION ~v11~
+README ~song_and_silence/readme-song_and_silence.html~
 
 ALWAYS
   
+  ACTION_IF ((FILE_EXISTS ~dlc/sod-dlc.zip~) OR (FILE_EXISTS ~sod-dlc.zip~)) THEN BEGIN FAIL @107 END // DLC Merger check
   ACTION_IF NOT VARIABLE_IS_SET ee_game THEN BEGIN
 	
     INCLUDE ~%MOD_FOLDER%/lib/fl#add_kit_ee.tpa~
     INCLUDE ~%MOD_FOLDER%/lib/functions.tpa~ // misc s&s functions
     
-    ACTION_DEFINE_ARRAY cdnoconvert BEGIN END // List of tra files that contain ONLY strings for the WeiDU installer and NOT game content
-    ACTION_DEFINE_ARRAY cdreload BEGIN ~setup~ END  // List of tra files that need to be reloaded after conversion because they were previously loaded in the LANGUAGE section
+    ACTION_DEFINE_ARRAY cdnoconvert BEGIN setup_ee END // List of tra files that contain ONLY strings for the WeiDU installer and NOT game content
+    ACTION_DEFINE_ARRAY cdreload    BEGIN setup    END // List of tra files that need to be reloaded after conversion because they were previously loaded in the LANGUAGE section
     
     // On EE games, convert game content tra files to utf-8 so that games don't crash when encountering international characters.
     LAF HANDLE_CHARSETS INT_VAR infer_charsets = 1 STR_VAR default_language = ~english~ tra_path = EVAL ~%MOD_FOLDER%/tra~ noconvert_array = cdnoconvert reload_array = cdreload END
@@ -26,11 +27,11 @@ ALWAYS
       LOAD_TRA ~song_and_silence/tra/english/setup_ee.tra~
       LOAD_TRA ~song_and_silence/tra/%LANGUAGE%/setup_ee.tra~
     
-	END ELSE BEGIN
+	  END ELSE BEGIN
     
-	  OUTER_SET ee_game = 0
+	    OUTER_SET ee_game = 0
 
-	END  
+	  END  
 
   END
 
@@ -58,7 +59,7 @@ LANGUAGE
   ~song_and_silence/tra/english/setup.tra~
   ~song_and_silence/tra/german/setup.tra~
 LANGUAGE 
-  ~Russian (translated by SubZero400 & yota13)~
+  ~Russian (translated by SubZero400 & Alisia & yota13)~
   ~Russian~
   ~song_and_silence/tra/english/setup.tra~
   ~song_and_silence/tra/russian/setup.tra~
@@ -69,6 +70,7 @@ LANGUAGE
 
 BEGIN @0
 DESIGNATED 0
+LABEL ~a!_sns_base_component~
 
 //Spell progression (NiGHTMARE)
 COPY_EXISTING mxsplbrd.2da override
@@ -262,7 +264,8 @@ END
 
 BEGIN @2
 DESIGNATED 1
-//REQUIRE_PREDICATE !GAME_IS ~iwdee~ @104
+REQUIRE_PREDICATE !GAME_IS ~iwdee~ @104
+LABEL ~a!_sns_items~
 
 LAF HANDLE_AUDIO END
 
@@ -354,6 +357,9 @@ COPY ~song_and_silence/items/a!thtd.itm~  override
   WRITE_ASCII 0x3a ~a!ithtd~
   SAY IDENTIFIED_DESC @10
   WRITE_ASCII 0x76 ~a!ithtd~
+  PATCH_IF ee_game BEGIN
+    WRITE_LONG 0x98 BIT2 // add +strength flag for EEs
+  END    
 
 COPY ~song_and_silence/items/a!ithpo.bam~ override // Phial of Poison
 COPY ~song_and_silence/items/a!thpo.itm~  override
@@ -441,6 +447,7 @@ COPY ~song_and_silence/items/a!brrf.itm~ override // Tale of True Bravery
 BEGIN @42
 DESIGNATED 2
 REQUIRE_COMPONENT ~setup-song_and_silence.tp2~ ~0~ @43
+LABEL ~a!_sns_kit_acrobat~
 
 /*
 ACTION_IF GAME_IS ~tob~ THEN BEGIN
@@ -508,6 +515,11 @@ BEGIN
   END
 END
 
+ACTION_IF MOD_IS_INSTALLED ~iwdification/setup-iwdification.tp2~ ~50~ BEGIN
+  COPY_EXISTING ~a!acro.2da~ ~override~
+    APPEND_FILE ~song_and_silence/lib/iwdification.2da~// add iwdification bard songs
+END
+
 //////////////////////////////
 //Install Chorister bard kit//
 //////////////////////////////
@@ -515,6 +527,7 @@ END
 BEGIN @47
 DESIGNATED 3
 REQUIRE_COMPONENT ~setup-song_and_silence.tp2~ ~0~ @43
+LABEL ~a!_sns_kit_chorister~
 
 /*
 ACTION_IF GAME_IS ~tob~ FILE_EXISTS ~override/LUABBR.2DA~ THEN BEGIN
@@ -600,6 +613,10 @@ COPY_EXISTING sppr612.spl ~override/a!ch61.spl~
   WRITE_SHORT 0x1c 1 // sets spell type to Wizard (1)
   SAY 0x50 @59
 
+ACTION_IF MOD_IS_INSTALLED ~iwdification/setup-iwdification.tp2~ ~50~ BEGIN 
+  COPY_EXISTING ~a!chor.2da~ ~override~
+    APPEND_FILE ~song_and_silence/lib/iwdification.2da~// add iwdification bard songs
+END
 
 ////////////////////////////////
 //Install Dirgesinger bard kit//
@@ -608,6 +625,7 @@ COPY_EXISTING sppr612.spl ~override/a!ch61.spl~
 BEGIN @63
 DESIGNATED 4
 REQUIRE_COMPONENT ~setup-song_and_silence.tp2~ ~0~ @43
+LABEL ~a!_sns_kit_dirgesinger~
 
 /*
 ACTION_IF GAME_IS ~tob~ FILE_EXISTS ~override/luabbr.2da~ THEN BEGIN
@@ -638,7 +656,7 @@ LAF fl#add_kit_ee STR_VAR kit_name = ~A!DIRGESINGER~ END // nothing special
 
 //
 COPY_EXISTING ~spcl751.spl~ ~override/a!ds1.spl~
-  WRITE_ASCII 0xae ~a!dssong~
+  LPF ALTER_EFFECT INT_VAR match_opcode = 251 STR_VAR resource = ~a!dssong~ END
 // cursey song
 COPY ~song_and_silence/dirgesinger/a!dssong.spl~ override
   WRITE_LONG NAME1 ` 0
@@ -664,30 +682,31 @@ COPY_EXISTING ~spwi501.spl~ ~override/a!ds9.spl~
   LAUNCH_PATCH_MACRO andyr_spell_to_innate
 
 
-//////////////////////////
-//Install Gypsy bard kit//
-//////////////////////////
+//////////////////////////////////
+//Install luring piper bard kit //
+//////////////////////////////////
 
 BEGIN @70
 DESIGNATED 5
 REQUIRE_COMPONENT ~Setup-song_and_silence.tp2~ ~0~ @43
+LABEL ~a!_sns_kit_luring_piper~
 
 /*
 ACTION_IF GAME_IS ~tob~ THEN BEGIN
-  COPY ~song_and_silence/gypsy/lua!g.2da~ ~override/lua!g.2da~
+  COPY ~song_and_silence/lpipe/lua!g.2da~ ~override/lua!g.2da~
 END 
 */
 
-ADD_KIT ~A!GYPSY~
-~A!GYPSY                 1           1           1           1           1           0           0           0~
-~A!GYPSY 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0~
-~A!GYPSY	0	12	0	13	0	15~
-~A!GYPSY		0	0	0	0	0	0~
-~A!GYPSY		0	0	0	0	0	0~
-~A!GYPSY		0	0	0	0	0	0~
-~A!GYPSY		1	1	1	1	1	1	1	1	1~
-~A!GYPSY		0	0	0	0	0	0~
-~song_and_silence/gypsy/a!gyp.2da~
+ADD_KIT ~A!lpipe~
+~A!lpipe                 1           1           1           1           1           0           0           0~
+~A!lpipe 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0~
+~A!lpipe	0	12	0	13	0	15~
+~A!lpipe		0	0	0	0	0	0~
+~A!lpipe		0	0	0	0	0	0~
+~A!lpipe		0	0	0	0	0	0~
+~A!lpipe		1	1	1	1	1	1	1	1	1~
+~A!lpipe		0	0	0	0	0	0~
+~song_and_silence/lpipe/a!lup.2da~
 ~K_B_H    K_B_D   K_B_G   K_B_E   K_B_HE   K_B_HL   K_B_HO~
 ~0x00000340	5~
 ~ba0~
@@ -695,53 +714,96 @@ ADD_KIT ~A!GYPSY~
 SAY @72
 SAY @73
 SAY @74
-OUTER_SPRINT match ~A!GYPSY~
+OUTER_SPRINT match ~A!lpipe~
 LAUNCH_ACTION_MACRO andyr_cinders_of_ashes_of_embers
-LAF fl#add_kit_ee STR_VAR kit_name = ~A!GYPSY~ END // nothing special
+LAF fl#add_kit_ee STR_VAR kit_name = ~A!lpipe~ END // nothing special
 
 //
-COPY_EXISTING ~spcl751.spl~ ~override/a!gyp1.spl~
-  WRITE_ASCII 0xae ~a!gyps~ #8
+COPY_EXISTING ~spcl751.spl~ ~override/a!lup1.spl~
+  LPF ALTER_EFFECT INT_VAR match_opcode = 251 STR_VAR resource = ~a!lups~ END
+  
 // Save bonus
-COPY ~song_and_silence/gypsy/a!gyp01.spl~ ~override/a!gyp01.spl~
+COPY ~song_and_silence/lpipe/a!lup01.spl~ ~override/a!lup01.spl~
 // Song
-COPY ~song_and_silence/gypsy/a!gyps.spl~ ~override/a!gyps.spl~
+COPY ~song_and_silence/lpipe/a!lups.spl~ ~override/a!lups.spl~
   WRITE_LONG NAME1 ` 0
   WRITE_LONG NAME2 ` 0
-// Curse from Cam's spell
-COPY ~song_and_silence/gypsy/cdcursea.bam~ ~override/cdcursea.bam~
-COPY ~song_and_silence/gypsy/cdcurseb.bam~ ~override/cdcurseb.bam~
-COPY ~song_and_silence/gypsy/cdcursec.bam~ ~override/cdcursec.bam~
-// Changing the name of Cam's projectile from CD to A! in case CR is installed; BAM filenames may as well stay the same
-COPY ~song_and_silence/gypsy/a!curse.pro~ ~override/a!curse.pro~
-ADD_PROJECTILE ~song_and_silence/gypsy/a!curse.pro~
-//
-COPY ~song_and_silence/gypsy/cdcurse.spl~ ~override/a!gypc.spl~
-  SAY NAME1 @71
-  SAY NAME2 @71
-  LAUNCH_PATCH_MACRO andyr_spell_to_innate
-  WRITE_SHORT 0x98 "%a!curse%" //Writes the projectile into the file
+  
+// if curse already exists (e.g. IWDification), just use it
+OUTER_SET curse = ((IDS_OF_SYMBOL (~spell~ ~CLERIC_CURSE~)) - 1000)
+ACTION_IF curse > 0 BEGIN
+
+  COPY_EXISTING ~sppr%curse%.spl~ ~override/a!lupc.spl~
+    LAUNCH_PATCH_MACRO andyr_spell_to_innate
+    LPF ALTER_EFFECT INT_VAR silent = 1 STR_VAR match_resource = EVAL ~sppr%curse%~ resource = ~a!lupc~ END
+    
+END ELSE BEGIN
+
+  LAF HANDLE_AUDIO STR_VAR audio_path = ~song_and_silence/lpipe~ oggdec_path = ~song_and_silence/audio~  sox_path = ~song_and_silence/audio~ END
+
+  // Curse from IWDification
+  COPY ~song_and_silence/lpipe/area1x.vvc~   ~override~
+       ~song_and_silence/lpipe/cdcursea.bam~ ~override~
+       ~song_and_silence/lpipe/cdcurseb.bam~ ~override~
+       ~song_and_silence/lpipe/cdcursec.bam~ ~override~
+       
+  // iwdification curse > obg2 conversion
+  COPY ~song_and_silence/lpipe/#bless.vvc~ ~override~
+       ~song_and_silence/lpipe/curseh.vvc~ ~override~
+    PATCH_IF !ee_game BEGIN
+      WRITE_SHORT 0x18 (THIS BAND `BIT9) 
+    END  
+	
+  ACTION_IF ee_game BEGIN
+  
+    COPY ~song_and_silence/lpipe/area1x.bam~ ~override~
+         ~song_and_silence/lpipe/curseh.bam~ ~override~
+         
+  END ELSE BEGIN
+  
+    COPY ~song_and_silence/lpipe/area1x_obg2.bam~ ~override/area1x.bam~
+         ~song_and_silence/lpipe/curseh_obg2.bam~ ~override/curseh.bam~
+  END
+  
+  // Changing the name of Cam's projectile from CD to A! in case CR is installed; BAM filenames may as well stay the same
+  ADD_PROJECTILE ~song_and_silence/lpipe/a!curse.pro~
+  
+  COPY ~song_and_silence/lpipe/cdcurse.spl~ ~override/a!lupc.spl~
+    SAY NAME1 @71
+    SAY NAME2 @71
+    SAY 0x50  @105
+    SAY 0x54  @105
+    SAY 0x21e @106 // 'cursed' string
+    WRITE_SHORT 0x98 ~a!curse~ //Writes the projectile into the file
+    PATCH_IF !ee_game BEGIN
+      LPF CLONE_EFFECT INT_VAR match_opcode = 54 opcode = 206 parameter1 = 0 parameter2 = 0 STR_VAR insert = last resource = ~a!lupc~ END // prevent stacking 
+      LPF CD_CONVERT_9_255 END
+      LPF CD_CONVERT_325 END
+      LPF DELETE_EFFECT INT_VAR match_opcode = 321 END
+    END  
+
+END 
 
 ACTION_IF !ee_game THEN BEGIN // block ancillary charm effects for unaffected creatures, the hard way
 
-  COPY_EXISTING ~a!gyps.spl~ ~override~
+  COPY_EXISTING ~a!lups.spl~ ~override~
     LPF CLONE_EFFECT INT_VAR match_opcode = 5 opcode = 177 parameter1 = 1 parameter2 = 3 STR_VAR resource = ~cdca7~ END
     LPF CLONE_EFFECT INT_VAR match_opcode = 177 timing = 4 STR_VAR match_resource = ~cdca7~ resource = ~cdcd7~ END
     LPF CLONE_EFFECT INT_VAR match_opcode = 177 duration = 4 STR_VAR match_resource = ~cdca7~ resource = ~cdcvis~ END
     PATCH_IF FILE_EXISTS_IN_GAME ~cdelfcm0.eff~ BEGIN // fixpack elven charm resistance
       LPF ALTER_EFFECT INT_VAR match_opcode = 324 match_parameter2 = 15 opcode = 177 power = 0 parameter1 = 2 parameter2 = 4 resist_dispel = 0 probability1 = 89 STR_VAR resource = ~cdelfcm0~ END
       LPF ALTER_EFFECT INT_VAR match_opcode = 324 match_parameter2 = 19 opcode = 177 power = 0 parameter1 = 3 parameter2 = 4 resist_dispel = 0 probability1 = 29 STR_VAR resource = ~cdelfcm0~ END
-	  FOR (index = 1 ; index < 8 ; ++index) BEGIN
+	    FOR (index = 1 ; index < 8 ; ++index) BEGIN
         LPF CLONE_EFFECT STR_VAR match_resource = cdelfcm0 resource = EVAL ~cdelfcm%index%~ END
       END
     END
-	PATCH_FOR_EACH op IN 324 50 142 215 174 BEGIN
-      LPF DELETE_EFFECT INT_VAR match_opcode = op END	
-	END  
+    PATCH_FOR_EACH op IN 324 50 142 215 174 BEGIN
+        LPF DELETE_EFFECT INT_VAR match_opcode = op END	
+    END  
 	
-  COPY ~song_and_silence/gypsy/cdca7.eff~  ~override~
-       ~song_and_silence/gypsy/cdcd7.eff~  ~override~
-       ~song_and_silence/gypsy/cdcvis.eff~ ~override~
+  COPY ~song_and_silence/lpipe/cdca7.eff~  ~override~
+       ~song_and_silence/lpipe/cdcd7.eff~  ~override~
+       ~song_and_silence/lpipe/cdcvis.eff~ ~override~
 
 END
 	   
@@ -752,6 +814,7 @@ END
 BEGIN @75
 DESIGNATED 6
 REQUIRE_COMPONENT ~setup-song_and_silence.tp2~ ~0~ @43
+LABEL ~a!_sns_kit_adventurer~
 
 ADD_KIT ~A!ADVENTURER~
 ~A!ADVENTURER                 0           0           0           0           0           0           0           0~
@@ -792,12 +855,12 @@ COPY ~song_and_silence/adventurer/a!av3.spl~ ~override/a!av3.spl~
 // This means that if Idobek's Kitpack is installed, Imoen and Nalia will get this version of the Adventurer.
 ACTION_IF ((MOD_IS_INSTALLED npckit.tp2 1400) OR (MOD_IS_INSTALLED npckit.tp2 2500)) THEN BEGIN
 
-  ACTION_FOR_EACH script IN imoen imoen2 imoe25 _imoen bgimoen bgimoen2 nalia nali25 BEGIN
+  ACTION_FOR_EACH script IN imoen imoen2 imoe25 _imoen imoen_ bdimoen bdshimoe bgimoen bgimoen2 ttimoen nalia nali25 BEGIN
   
     COPY_EXISTING ~%script%.bcs~ ~override~
-	  DECOMPILE_AND_PATCH BEGIN
-	    REPLACE_TEXTUALLY ~IK_ADVENTURER~ ~A!ADVENTURER~
-	  END
+      DECOMPILE_AND_PATCH BEGIN
+        REPLACE_TEXTUALLY ~IK_ADVENTURER~ ~A!ADVENTURER~
+      END
       BUT_ONLY IF_EXISTS
 
   END
@@ -811,6 +874,7 @@ END
 BEGIN @82
 DESIGNATED 7
 REQUIRE_COMPONENT ~setup-song_and_silence.tp2~ ~0~ @43
+LABEL ~a!_sns_kit_burglar~
 
 ADD_KIT ~A!BURGLAR~
 ~A!BURGLAR                  1           1           1           1           1           0           0           0~
@@ -843,6 +907,7 @@ COPY ~song_and_silence/burglar/a!burg1.spl~ ~override/a!burg1.spl~
 BEGIN @86
 DESIGNATED 8
 REQUIRE_COMPONENT ~setup-song_and_silence.tp2~ ~0~ @43
+LABEL ~a!_sns_kit_soulknife~
 
 ADD_KIT ~A!SOULKNIFE~
 ~A!SOULKNIFE                  1           1           1           1           1           0           0           0~
@@ -898,6 +963,7 @@ END
 BEGIN @93
 DESIGNATED 9
 REQUIRE_COMPONENT ~Setup-song_and_silence.tp2~ ~0~ @43
+LABEL ~a!_sns_kit_sharpshooter~
 
 ADD_KIT ~A!SHARPSHOOTER~
 ~A!SHARPSHOOTER                 1           1           1           1           1           0           0           0~
@@ -938,8 +1004,9 @@ COPY_EXISTING ~spcl423.spl~ ~override/a!ss01.spl~
 
 BEGIN @97
 DESIGNATED 10
-//REQUIRE_PREDICATE !GAME_IS ~bgee bg2ee iwdee eet~ @104
+REQUIRE_PREDICATE !GAME_IS ~bgee bg2ee iwdee eet~ @104
 REQUIRE_COMPONENT ~setup-song_and_silence.tp2~ ~0~ @43
+LABEL ~a!_sns_kit_shadowdancer~
 
 ADD_KIT ~A#SHADOWDANCER~
 ~A#SHADOWDANCER                  1           1           1           1           1           0           0           0~
