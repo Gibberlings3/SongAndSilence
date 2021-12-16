@@ -1,0 +1,523 @@
+@0    = ~Cambia tra bardi e ladri conformi alla classe e kit di gioco non modificati (necessario per altri componenti)~
+@1    = ~RODOMONTE: Questo ladro è in parte agile come un acrobata, in parte abile come uno spadaccino e in parte persuasivo come un oratore: l'emblema del fascino e della grazia.
+
+Vantaggi:
+- Bonus +1 alla Classe Armatura.
+- Ottiene un altro bonus di +1 alla sua classe armatura ogni 5 livelli.
+- Guadagna +1 ai tiri per colpire e al danno ogni 5 livelli.
+- Può diventare Specializzato in qualsiasi arma da mischia disponibile per i ladri.
+
+Svantaggi:
+- Nessun moltiplicatore per l'abilità Pugnalata alle Spalle~
+@2    = ~Aggiunge un nuovo negozio bardico e oggetti da ladro~
+@3    = ~Raoul~
+@4    = ~Oooooaaaagggh!~ [a!ra01]
+@5    = ~Saluti! Io essere Raoul, e te?~ [a!ra02]
+@6    = ~Ehi, amicu!~ [a!ra03]
+@7    = ~Essere te qui per merci di Raoul?~ [a!ra04]
+@8    = ~Emporio di Raoul~
+@9    = ~Pugnale da Lancio Ritornante +1~
+@10   = ~L'arma di molti guerrieri veloci e agili, i pugnali da lancio sono leggeri e facilmente nascosti.
+
+Sebbene non facciano molti danni, la velocità con cui possono essere lanciati dà loro un grande vantaggio rispetto ad armi più ingombranti.
+
+Questo è stato imbevuto di magia per essere di maggiore utilità, probabilmente per volere di una gilda di ladri. Tuttavia, non porta segni di identificazione. I miglioramenti magici hanno aumentato la potenza dei suoi attacchi e, cosa forse ancora più preziosa, può essere richiamato nella mano del proprietario con un solo pensiero, assicurando che sia sempre equipaggiato per il combattimento.
+
+STATISTICHE:
+
+THAC0: +1 bonus
+Danno:  1D4 +1
+Tipo di danno:  proiettile (perforante)
+Peso: 1
+Fattore Velocità: 1
+Tipo Competenza: Pugnali
+Tipo:  a una mano
+Richiede: Forza 3
+Non utilizzabile da:
+ Chierico~
+@11   = ~Fiala di Veleno~
+@12   = ~Quando si perde una discussione, il veleno è la risposta preferita da molti personaggi loschi. Un abile maneggiatore può applicare rapidamente ed efficacemente il veleno alla sua arma, trasformando un graffio dal più piccolo dei pugnali in una ferita purulenta più letale di un colpo d'ascia.
+
+Questa fiala contiene abbastanza veleno per ricoprire un'arma una volta.
+
+STATISTICHE:
+
+Speciale:
+  Può essere usata per ricoprire un'arma di veleno una volta, come l'abilità del kit dell'assassino. Il prossimo colpo con l'arma inietterà il veleno nel bersaglio, infliggendo 1 danno al secondo per 24 secondi (3 danni per i primi 6 secondi). Un tiro salvezza contro veleno limita i danni a 12 in totale.
+Peso: 1
+Utilizzabile da:
+ Ladri~
+@13   = ~Cappuccio del Ladro~
+@14   = ~Guardia di Alathis~
+@15   = ~Sebbene questo cappuccio non conferisca vantaggi evidenti a chi lo indossa, ha un'aura di magia latente.
+
+Utilizzabile da:
+ Ladri~
+@16   = ~Alathis Hurbleton era uno dei tanti halfling la cui professione scelta non era qualcosa di cui parlare in una conversazione educata. Ha goduto di una proficua carriera a Luskan, fino a quando una serie di sfortunati eventi gli ha fatto decidere che un trasferimento sarebbe forse stato più prudente.
+
+Stabilitosi nella metropoli urbana di Waterdeep, continuò a esercitare il suo mestiere. La preferenza ad operare da solo comportò il guadagnarsi le ire delle gilde locali come le famigerate Maschere Notturne, quindi commissionò a un mago di incantare il suo cappuccio per proteggerlo dai frequenti attentati alla sua vita.
+
+Troppo sicuro di sé e della sua invulnerabilità, tuttavia, commise un errore durante una rapina particolarmente complicata e fu preso dalle guardie. Il cappuccio, sfortunatamente, non lo ha salvato dal cappio del boia.
+
+STATISTICHE:
+
+Speciale:
+ Immunità alle Pugnalate alle Spalle e al veleno mentre è equipaggiato
+Peso: 2
+Utilizzabile da:
+ Ladri~
+@17   = ~Clava~
+@18   = ~Luci Spente~
+@19   = ~A prima vista questo sembra essere un normale randello, ma un'ispezione più ravvicinata da parte di un occhio ben allenato rivela una serie di rune discrete tracciate lungo l'impugnatura. Un ladro segnalerebbe anche il sottile equilibrio dell'arma.
+
+Il randello è stato incantato in epoche passate per volere di un maestro della gilda dei Ladri d'Ombra per uno dei suoi protetti più fedeli e prolifici. Oltre ad essere un'arma potente, sembrava attutire il suono intorno a un ladro mentre si avvicinava di soppiatto al suo bersaglio per ottenere un colpo da KO. L'ultima cosa che molti nemici avrebbero sentito prima di scivolare nell'incoscienza sarebbe stata il leggero flusso d'aria mentre il randello veniva sollevato dietro la loro testa, guadagnandosi rapidamente il soprannome di "Luci Spente".
+
+Sfortunatamente, come spesso accade con queste cose, il protetto non era così fedele come il suo capogilda aveva sperato, e una notte tranquilla quest'arma fu usata per colpire a morte il capo della gilda nel suo stesso letto. Sua moglie, pur dormendo accanto a lui, non si accorse di nulla.
+
+Come l'arma sia finita nelle tue mani è probabilmente una storia che non vuoi conoscere.
+
+STATISTICHE:
+
+THAC0: +2 bonus
+Danno:  1D6 +2
+Speciale:
+ Conferisce un bonus del 10% all'abilità Muoversi Silenziosamente mentre è equipaggiato
+Tipo di danno:  schiacciamento
+Peso: 3
+Fattore Velocità: 4
+Tipo Competenza:Clava
+Tipo:  a una mano
+Richiede: Forza 5
+Non utilizzabile da:
+ Mago~
+@20   = ~Riccioli di Jessecyl~
+@21   = ~Questa sembra essere una ciocca di capelli. Per quanto riguarda i capelli, è abbastanza carina~
+@22   = ~Le leggende narrano che Jessecyl fosse tra le più belle fanciulle Mezzelfe. Prima di una battaglia lasciò in eredità al suo amante un dono; una ciocca dei suoi capelli. Questo valoroso eroe cavalcò in battaglia contro creature malvagie e il potere dell'amore tra lui e Jessecyl protesse lui e i suoi compagni da innumerevoli minacce.
+
+Sebbene questo eroe senza nome e Jessecyl siano morti da tempo, il vero amore dura per sempre. Coloro dotati di un carattere particolarmente romantico potranno notare che, allo stesso modo, la magia persiste.
+
+L'oggetto deve essere tenuto in esposizione per usufruire dei suoi effetti; viene equipaggiato nello slot Scudo.
+
+STATISTICHE:
+
+Se tenuto da un personaggio, al gruppo viene concesso un bonus di +2 ai tiri salvezza contro morte.
+
+Peso:  0
+Utilizzabile da:
+ Bardo
+ Paladino~
+@23   = ~Buckler~
+@24   = ~Scudo Malconcio dello Skald~
+@25   = ~Questo piccolo scudo malconcio appartenne a un certo punto ad uno Skald, membri bardici delle tribù barbariche di Icewind Dale. In qualche modo è finito per trovare posto verso sud, senza dubbio come bottino di guerra in seguito ad un'invasione a lungo dimenticata.
+
+È probabile che sia anche appartenuto a un famoso bardo, poiché è stato incantato per fornire ulteriore protezione e una certa misura di resistenza al freddo pervasivo dell'inverno.
+
+STATISTICHE:
+
+Bonus Classe Armatura:  2
+Speciale:
+ Nessuna protezione contro attacchi con armi da lancio/perforanti
+ Conferisce un bonus del 10% alla resistenza al freddo quando equipaggiato
+Peso:  2
+Richiede: Forza 4
+Non utilizzabile da:
+ Personaggi Legali
+ Mago~
+@26   = ~Spada Corta~
+@27   = ~Difesa Sonica~
+@28   = ~Difesa Sonica è un'arma forgiata in epoche passate su commissione del bardo e avventuriero Grefyn, un nome ormai dimenticato da tempo dalla maggior parte degli studiosi. I potenti incantesimi sulla lama gli hanno permesso di fendere molti nemici, proteggendo la sua persona. In combinazione con il debole ronzio dell'arma quando viene estratta, questo le è valso l'epiteto di "Difesa Sonica".
+
+Tutti i grandi eroi devono morire, però, e alla fine Grefyn fu ucciso da alcuni avventurosi sacerdoti di Waukeen dopo un "disaccordo" sulle proprietà della Chiesa. L'arma rimase nell'uso della Chiesa per secoli fino a quando fu persa durante le battaglie contro gli orchi nel Periodo dei Disordini; la sua ubicazione da allora ad oggi è sconosciuta.
+
+STATISTICHE:
+
+THAC0:  +2 bonus
+Danno:  1D6 +2
+Speciale:
+L'utilizzatore ottiene un bonus di +1 alla CA e ai tiri salvezza contro morte mentre è equipaggiata
+Tipo di danno:  perforante
+Fattore Velocità: 1
+Peso:  2
+Tipo Competenza: Spada Corta
+Tipo:  a una mano
+Richiede: Forza 5
+Non utilizzabile da:
+ Druido
+ Chierico 
+ Mago~
+@29   = ~Maglia dell'Incantatore~
+@30   = ~La cotta di maglia è fatta di anelli di metallo incastrati tra loro. Viene sempre indossata sopra uno strato imbottito di tessuto o di cuoio morbido per evitare sfregamenti e attutire l'impatto dei colpi.
+
+Questa veste è particolarmente leggera e ben realizzata, consentendo di lanciare incantesimi arcani mentre è indossata. Gli abiti con proprietà simili sono notoriamente fabbricati dagli elfi, per aiutare i loro aggraziati maghi combattenti e cantori di lame in combattimento. I segreti degli elfi sono custoditi gelosamente, rendendo questo equivalente creato dall'uomo davvero una rarità. Non ti stupirebbe molto se, dopo aver appreso della sua creazione, il fabbro responsabile della lavorazione dell'abito fosse stato rintracciato e 'convinto' a non realizzarne mai più.
+
+STATISTICHE:
+
+Classe Armatura: 5
+Peso: 30
+Richiede: Forza 8
+Non utilizzabile da:
+ Druido
+ Mago
+ Ladro~
+@31   = ~Cuoio Bardico~
+@32   = ~L'armatura di cuoio borchiato ha poco in comune con la normale armatura di cuoio. Mentre quest'ultima ha un rivestimento rigido, l'armatura di cuoio borchiato è morbida e flessibile grazie a centinaia di rivetti in metallo. I rivetti sono molto vicini l'uno all'altro, in modo da formare un rivestimento flessibile di duro metallo che devia gli attacchi taglienti. Il rivestimento in morbido cuoio è molto più di un semplice sostegno su cui attaccare i rivetti.
+
+Questo completo è particolarmente leggero e ben realizzato, consentendo di lanciare incantesimi arcani mentre è indossato. Sebbene sia progettato in particolare per i bardi, può essere indossato e usato per lanciare incantesimi arcani senza penalità da chiunque sia normalmente in grado di usare un'armatura di cuoio borchiato.
+
+STATISTICHE:
+
+Classe Armatura: 7
+Peso: 15
+Richiede: Forza 6
+Non utilizzabile da:
+ Mago~
+@33   = ~Cuoio Bardico +1~
+@34   = ~L'armatura di cuoio borchiato ha poco in comune con la normale armatura di cuoio. Mentre quest'ultima ha un rivestimento rigido, l'armatura di cuoio borchiato è morbida e flessibile grazie a centinaia di rivetti in metallo. I rivetti sono molto vicini l'uno all'altro, in modo da formare un rivestimento flessibile di duro metallo che devia gli attacchi taglienti. Il rivestimento in morbido cuoio è molto più di un semplice sostegno su cui attaccare i rivetti.
+
+Questo completo è particolarmente leggero e ben realizzato, consentendo di lanciare incantesimi arcani mentre è indossato. Sebbene sia progettato in particolare per i bardi, può essere indossato e usato per lanciare incantesimi arcani senza penalità da chiunque sia normalmente in grado di usare un'armatura di cuoio borchiato.
+
+STATISTICHE:
+
+Classe Armatura: 7
+Peso: 10
+Richiede: Forza 6
+Non utilizzabile da:
+ Mago~
+@35   = ~L'armatura di cuoio borchiato ha poco in comune con la normale armatura di cuoio. Mentre quest'ultima ha un rivestimento rigido, l'armatura di cuoio borchiato è morbida e flessibile grazie a centinaia di rivetti in metallo. I rivetti sono molto vicini l'uno all'altro, in modo da formare un rivestimento flessibile di duro metallo che devia gli attacchi taglienti. Il rivestimento in morbido cuoio è molto più di un semplice sostegno su cui attaccare i rivetti.
+
+Questo completo è particolarmente leggero e ben realizzato, consentendo di lanciare incantesimi arcani mentre è indossato. Sebbene sia progettato in particolare per i bardi, può essere indossato e usato per lanciare incantesimi arcani senza penalità da chiunque sia normalmente in grado di usare un'armatura di cuoio borchiato.
+
+STATISTICHE:
+
+Classe Armatura: 6
+Peso: 10
+Richiede: Forza 6
+Non utilizzabile da:
+ Mago~
+@36   = ~Racconto di Terrificante Malvagità~
+@37   = ~This scroll contains a tale of deeds so foul and evil so black that merely reading the final sentence can cause creatures to die a horrible, painful death.
+
+Once the sentence is read, the magic fades from the scroll; although the tale that remains is still dark enough to haunt the dreams of a listener for a long while...
+
+STATISTICHE:
+
+Can be used to cast the spell Death Spell once
+
+Usable by:
+ Bard~
+@38   = ~Racconto della Morte Orripilante~
+@39   = ~Upon this scroll, penned in shaky handwriting, is a story of terrible undead beings which roam the night. The scroll is enchanted such that reading sections will shake the nerve of the most stalwart of creatures.
+
+Once read, the magic fades from the scroll; although the listener will doubtless always feel a chill down their spine when alone at night.
+
+STATISTICHE:
+
+Can be used to cast the spell Horror once
+
+Usable by:
+ Bard~
+@40   = ~Favola del Vero Coraggio~
+@41   = ~This page is filled with tales of brave heroes triumphing against the odds; fighting hordes or orcs, defeating fell demons and evil dragons in their lairs. Reading a passage will imbue the character with a sense of courage strong enough to overcome all their fears.
+
+After reading, the magic will fade from the scroll. The story itself, though, will always be welcome to hear.
+
+STATISTICHE:
+
+Can be used to cast the spell Resist Fear once
+
+Usable by:
+ Bard~
+@42   = ~Installa kit bardico Acrobata~
+@43   = ~Devi avere il primo componente installato per usare questo~
+@44   = ~acrobata~
+@45   = ~Acrobata~
+@46   = ~ACROBATA: In quanto intrattenitori, la maggior parte degli Acrobati si trovano in genere ad accompagnare carnevali o circhi, anche se una troupe di Acrobati può allestire uno spettacolo notevole da sola. Spesso si esibiscono in grandi taverne o nei club, usando le loro arti per attirare la folla e affascinarla abbastanza a lungo da permettere al proprietario di svuotare le loro borse. Gli acrobati sono appariscenti e amano mostrare le loro abilità; qualunque cosa facciano, a loro piace farlo con un senso dello stile e un talento per il drammatico. Gli Acrobati a volte diventano straordinari ladri d'appartamento e sono anche utili alleati per gli avventurieri, poiché possono infilarsi in luoghi dove gli altri non possono andare senza l'aiuto della magia. La loro abilità nell'evitare trappole e altri pericoli li rende anche eccellenti esploratori.
+
+Vantaggi:
+- Bonus +1 alla Classe Armatura
+- Bonus +1 alla Classe Armatura contro proiettili ogni 8 livelli
+- Può spendere fino a 2 punti competenza in fionde, dardi e pugnali
+
+Svantaggi:
+- Può spendere punti competenza solo nelle armi che un ladro può usare
+- Non può indossare armature più pesanti del Cuoio Borchiato
+- Ha solo la metà del valore di Conoscenza normale~
+@47   = ~Installa kit bardico Corista~
+@48   = ~Armatura della Fede (Scongiurazione)
+Livello: 1
+Raggio d'Azione: 0
+Durata: 3 round + 1 round/livello
+Tempo di lancio: 1
+Area d'effetto: Il lanciatore
+Tiro Salvezza: Nessuno
+
+Il lanciatore dell'Armatura della Fede riceve una protezione significativa contro gli attacchi in mischia e magici. Questa armatura magica è un campo di energia che assorbe una parte del danno destinato all'incantatore. Al primo livello, la protezione è del 5% e ogni cinque livelli dell'incantatore migliora di un altro 5%. Un incantatore di 20° livello avrebbe il 25% del suo danno "assorbito" se protetto da questo incantesimo.~
+@49   = ~Cura Ferite Leggere (Necromanzia)
+Livello: 1
+Sfera: Guarigione
+Raggio d'azione: Tocco
+Durata: Permanente
+Tempo di lancio: 5
+Area d'effetto: 1 creatura
+Tiro-salvezza: Nessuno
+
+Lanciando questo incantesimo e ponendo la sua mano su una creatura, il personaggio fa sì che 1d8 Punti Ferita o altre eventuali lesioni del destinatario siano curate. Questo incantesimo non può influenzare le creature incorporee, non morte o di origine extraplanare. La guarigione è permanente solo finché il destinatario non subisce un ulteriore danno. Le ferite inflitte guariranno o potranno essere curate come qualsiasi normale lesione.~
+@50   = ~Devastazione (Alterazione)
+Livello: 1
+Sfera: Charme
+Raggio d'azione: Visuale del lanciatore
+Durata: 1 turno
+Tempo di lancio: 1 round
+Area d'effetto: 1 creatura
+Tiro-salvezza: Nessuno
+
+Questo incantesimo fa sì che il bersaglio venga sopraffatto da un senso di devastazione. Per tutta la durata dell'incantesimo subirà una penalità pari a -2 a tutti i tiri effettuati, inclusi quelli relativi al THAC0 e ai tiri-salvezza. Non è possibile effettuare alcun tiro-salvezza contro questo incantesimo. Lanci multipli di questo incantesimo non sono cumulativi.~
+@51   = ~Litania
+(Evocazione/Attrazione)
+Livello: 2
+Raggio d'azione: 0
+Durata: 1 turno
+Tempo di lancio: 9
+Area d'effetto: Raggio di 4,5 metri
+Tiro-salvezza: Nessuno
+
+Mediante l'incantesimo Litania, il personaggio attira su se stesso e sul suo gruppo una benedizione particolare e provoca danno ai suoi nemici. Non appena il lancio viene completato, tutti gli alleati del personaggio all'interno dell'area d'effetto ricevono un bonus pari a +1 ai loro tiri-salvezza, tiri per colpire, tiri per determinare il danno minimo e il punteggio di guarigione. In aggiunta a ciò, i danni inflitti da mezzi diversi dal danno base di un'arma vengono ridotti di 1. Ad esempio, una palla di fuoco da 6d6 infliggerà 6d5 punti di danno e una freccia di fuoco che infligge 1d6 di danno perforante più 1d2 di danno da fuoco infliggerà invece 1d6 di danno perforante più 1 punto di danno da fuoco. I nemici del lanciatore subiscono tutti gli effetti contrari ai suddetti. Litanie multiple non sono cumulabili.~
+@52   = ~Rallenta Veleno
+(Necromanzia)
+Livello: 2
+Raggio d'azione: Tocco
+Durata: Istantanea
+Tempo di lancio: 1
+Area d'effetto: 1 creatura
+Tiro-salvezza: Nessuno 
+
+Quando questo incantesimo viene lanciato su una persona avvelenata, rallenta notevolmente i danni causati dal veleno, neutralizzandoli tutti ad eccezione di quelli più letali.~
+@53   = ~Convocare la Sacra Potenza
+(Invocazione)
+Livello: 2
+Raggio d'azione: 0
+Durata: 1 turno
+Tempo di lancio: 2
+Area d'effetto: Il lanciatore
+Tiro-salvezza: Nessuno
+
+Il personaggio chiede al suo dio di dotarlo di potere per un breve periodo. Così facendo, la sua Forza, Costituzione e Destrezza sono aumentate di 1 punto ogni tre livelli del lanciatore. Un personaggio di 3° livello vedrà le sue capacità aumentate di 1, mentre uno di 12° livello di 4.~
+@54   = ~Glifo di Guardia
+(Scongiurazione, Apparizione)
+Livello: 3
+Raggio d'azione: 18 metri
+Durata: Permanente fino all'innesco
+Tempo di lancio: 9
+Area d'effetto: Raggio di 3,5 metri
+Tiro-salvezza: Neg.
+
+Un Glifo di Guardia è una potente iscrizione magicamente tracciata per impedire alle creature ostili o non autorizzate di passare, entrare o aprire. Può essere utilizzato per sorvegliare un piccolo ponte, per proteggere un'entrata o come trappola su una cassa o un contenitore. Tutte le creature che violano l'area protetta sono soggette alla magia che esso contiene. Un tiro-salvezza contro Incantesimi effettuato con successo consente alla creatura di evitare gli effetti del glifo. Nella stessa area non possono essere lanciati più glifi; tuttavia, se un mobile avesse tre cassetti, ciascuno potrebbe essere singolarmente protetto. Quando questo incantesimo viene lanciato, il personaggio tesse un intreccio di linee luminose intorno al sigillo di guardia. Quando il glifo viene attivato, infligge alla vittima 1d4 punti di danno da elettricità per ogni livello del lanciatore.~
+@55   = ~Cura Ferite Medie
+(Necromanzia)
+Livello: 3
+Raggio d'azione: Tocco
+Durata: Permanente
+Tempo di lancio: 5
+Area d'effetto: 1 creatura
+Tiro-salvezza: Nessuno
+
+Lanciando questo incantesimo e ponendo la sua mano su una creatura, il personaggio fa sì che 14 Punti Ferita o altre eventuali lesioni del destinatario siano curate. L'incantesimo non ha effetto su creature incorporee, extraplanari o non viventi. La guarigione è permanente solo finché il destinatario non subisce un ulteriore danno. Le ferite inflitte guariranno o potranno essere curate come qualsiasi normale lesione.~
+@56   = ~Armonia Difensiva
+(Incantamento/Charme)
+Livello: 4
+Raggio d'azione: 0
+Durata: 6 round
+Tempo di lancio: 1
+Area d'effetto: Raggio di 3 metri
+Tiro-salvezza: Nessuno
+
+Armonia Difensiva concede alle creature influenzate dall'incantesimo un bonus difensivo attraverso un coordinamento magico dei loro attacchi e della loro difesa. Il suo lancio consente ad un gruppo di creature di agire come una singola unità per una battaglia o per uno scontro. L'effetto è sempre concentrato sul lanciatore, ma influenza anche gli alleati che si trovano in un raggio di 3 metri. I personaggi colpiti dall'incantesimo possono allontanarsi dall'area in cui è stato lanciato e godere dei suoi benefici. Quando Armonia Difensiva è attiva, ciascuna creatura influenzata ottiene un bonus pari a +2 alla propria Classe Armatura. L'effetto dura per 6 round o finché non viene dissolto.~
+@57   = ~Potere Sacro (Apparizione)
+Livello: 4
+Raggio d'azione: 0
+Durata: 1 round per livello
+Tempo di lancio: 6
+Area d'effetto: Il lanciatore
+Tiro-salvezza: Nessuno
+
+Attraverso questo incantesimo, il personaggio conferisce a se stesso la forza e l'abilità di un guerriero di pari livello. Il valore della sua Forza viene portato a 18/00 (anche se normalmente è più alta), il suo THAC0 diventa quello di un guerriero di pari livello e guadagna temporaneamente 1 Punto Ferita per livello. L'effetto dura fino al termine dell'incantesimo o finché questo non viene dissolto.~
+@58   = ~Cura di Massa (Necromanzia)
+Livello: 5
+Raggio d'azione: Visuale del lanciatore
+Durata: Permanente
+Tempo di lancio: 5
+Area d'effetto: Raggio di 9 metri
+Tiro-salvezza: Nessuno
+
+Quando questo incantesimo viene lanciato, il personaggio deve visualizzare chiaramente i volti dei suoi compagni e concentrarsi sull'unità del gruppo. Una volta completato l'incantesimo, tutti i membri del gruppo in un raggio di 9 metri dal lanciatore sono curati di 1d8+1 Punti Ferita per livello. Questa cura ha effetto indipendentemente dalla posizione relativa dei membri del gruppo. La cura è permanente finché la creatura non subisce danni; a quel punto, le ferite inflitte guariranno normalmente o con dispositivi magici. ~
+@59   = ~Fulmine di Gloria (Evocazione/Attrazione)
+Livello: 6
+Raggio d'azione: 18 metri
+Durata: Istantanea
+Tempo di lancio: 9
+Area d'effetto: 1 creatura
+Tiro-salvezza: Nessuno
+
+Lanciando questo incantesimo, il personaggio convoglia un fulmine di energia contro una creatura. Non è necessario alcun tiro per colpire. Il bersaglio colpito dal fulmine subisce un danno che varia a seconda del suo piano d'origine:
+
+Tipo di creatura - Danno
+
+Primo Piano Materiale - 6d6
+Elementale - 3d4
+Non morti - 8d6
+Immondi (demoni e diavoli) - 10d6~
+@60   = ~corista~
+@61   = ~Corista~
+@62   = ~CORISTA: La musica, che sia un inno, una sinfonia o una cantilena oscura, gioca un ruolo importante nei servizi della maggior parte delle divinità. Per aiutare nell'esecuzione di rituali o semplicemente guidare i fedeli nel culto, la maggior parte dei luoghi santi ha almeno un bardo, noto come Corista.
+
+Tuttavia, i Coristi non si trovano solo all'interno delle mura del tempio; molte fedi li usano come missionari, aiutando a portare nuovi fedeli all'ovile. Molti bardi avventurosi con un'inclinazione religiosa possono anche trovare diventare Coristi, trovando risposta alle loro preghiere dalla divinità che venerano.
+
+Vantaggi:
+- Conosce una piccola selezione di incantesimi divini. Questi sono accessibili e memorizzati come incantesimi del Mago:
+Livello 1: Armatura della Fede, Cura Ferite Leggere, Devastazione
+Livello 2: Litania, Convocare la Sacra Potenza, Rallenta Veleno
+Livello 3: Cura Ferite Medie, Glifo di Guardia
+Livello 4: Armonia Difensiva, Potere Sacro
+Livello 5: Cura di Massa
+Livello 6: Fulmine di Gloria
+
+Svantaggi:
+- Ha solo la metà del valore di Conoscenza normale
+- Ha solo la metà del punteggio di Svuotare Tasche~
+@63   = ~Installa il kit bardico Tristo Cantore~
+@64   = ~tristo cantore~
+@65   = ~Tristo Cantore~
+@66   = ~Tristo Cantore: I Tristi Cantori esprimono melodie non di celebrazione e gioia, ma di rimpianto e lutto. Cercano di diffondere questa visione malinconica in lungo e in largo, credendo che solo chi si arrende alla propria tristezza possa veramente capire il mondo.
+
+Questi mesti vagabondi cercano di esprimere la loro tristezza attraverso canzoni che insegnano ai cuori dei loro ascoltatori il significato del vero dolore. Alcuni di questi bardi decaduti non vogliono altro che tutti capiscano le profondità della loro perdita. Alcuni sono creature sinistre convinte che, poiché la gioia è stata estinta per loro, devono a loro volta estinguere la gioia degli altri usando i loro poteri per insegnare la follia dell'amore, la futilità della speranza e la finalità della tomba. I Tristi Cantori di quest'ultimo tipo spesso si associano a potenti non morti; servendo nelle corti dei signori dei vampiri o dei re lich.
+
+I Tristi Cantori sono limitati agli allineamenti non-buoni.
+
+Vantaggi:
+- Il canto del bardo Maledice i nemici, dando loro una penalità di -1 ai tiri salvezza e al THAC0. Al livello 10 la penalità diventa -2, al livello 20 -3 e al livello 30 -4.
+- Dal livello 5 può eseguire Canto dell'Orrore 1 volta al giorno. Ha gli stessi effetti dell'incantesimo da mago di livello 2, Orrore
+- Dal livello 7 può eseguire Canto del Dolore 1 volta al giorno. Ha gli stessi effetti dell'incantesimo da mago di livello 4, Confusione
+- Dal livello 9 può eseguire Canto del Risveglio 1 volta al giorno. Ha gli stessi effetti dell'incantesimo da mago di livello 5, Animare Morti
+
+Svantaggi:
+- Ha solo la metà del valore di Conoscenza normale~
+@67   = ~Canto dell'Orrore~
+@68   = ~Canto del Dolore~
+@69   = ~Canto del Risveglio~
+@70   = ~Installa kit bardico Pifferaio Seducente~
+@71   = ~Maledizione~
+@72   = ~pifferaio seducente~
+@73   = ~Pifferaio Seducente~
+@74   = ~PIFFERAIO SEDUCENTE: I Pifferai Seducenti sono spesso impiegati come cacciatori di topi o specialisti simili nel controllo dei parassiti dai cittadini o dagli agricoltori. Eseguendo la loro canzone ammaliante sono in grado di dirigere i loro nemici nelle trappole o lontano dalla città o dai campi coltivati. Proprio per questo, non è saggio infastidire un Pifferaio Seducente poiché la loro canzone può influenzare più di un semplice animale infestante.
+
+Vantaggi:
+- Il canto ammalia i nemici a meno che non effettuino un tiro salvezza contro Incantesimi a +2, con una penalità di -1 ogni 5 livelli del bardo
+- Ha un bonus di +1 ai tiri salvezza contro Incantesimi per 8 livelli
+- Può lanciare Maledizione una volta al giorno. Opposto dell'incantesimo Benedizione, questo dà ai nemici una penalità di -1 al THAC0 e ai tiri salvezza
+
+Svantaggi:
+- Non può imparare incantesimi da mago dalle scuole di Evocazione, Invocazione o Alterazione~
+@75   = ~Installa kit ladro Avventuriero~
+@76   = ~avventuriero~
+@77   = ~Avventuriero~
+@78   = ~AVVENTURIERO: L'Avventuriero è un tuttofare, non tanto un ladro quanto un personaggio che sfrutta le abilità di ladro generiche nelle sue avventure. Un Avventuriero è preferito da molti esploratori, perché è molto meno incline rispetto agli altri ladri a tradire o derubare i propri compagni. L'Avventuriero di successo conosce il valore della fiducia e della cooperazione, mentre molti "ladri di strada" sono cresciuti confidando nella doppiezza e nelle (a volte letterali) pugnalate alle spalle.
+
+Vantaggi:
+- +5% a Scassinare Serrature e Scoprire Trappole a livelli alterni
+- Guadagna un bonus di +1 a tutti i tiri salvezza ai livelli 1, 8 e 14
+
+Svantaggi:
+- Nessun moltiplicatore di Pugnalata alle Spalle~
+@79   = ~AVVENTURIERO: L'avventuriero è un tuttofare, non tanto un ladro quanto un personaggio che sfrutta le abilità di ladro generiche nelle sue avventure. Un Avventuriero è preferito da molti esploratori, perché è molto meno incline rispetto agli altri ladri a tradire o derubare i propri compagni. L'Avventuriero di successo conosce il valore della fiducia e della cooperazione, mentre molti "ladri di strada" sono cresciuti confidando nella doppiezza e nelle (a volte letterali) pugnalate alle spalle.
+
+Vantaggi:
+- +5% a Scassinare Serrature e Scoprire Trappole a livelli alterni
+- Guadagna un bonus di +1 a tutti i tiri salvezza ai livelli 1, 8 e 14
+
+Svantaggi:
+- Nessun moltiplicatore di Pugnalata alle Spalle~
+@80   = ~Aggiorna il kit Avventueriero del NPC Kitpack assegnato ad Imoen con quello di S&S~
+@81   = ~Aggiorna il kit Avventueriero del NPC Kitpack assegnato a Nalia con quello di S&S~
+@82   = ~Installa il kit ladro Burglar thief kit~
+@83   = ~scassinatore~
+@84   = ~Scassinatore~
+@85   = ~SCASSINATORE: Questo tipo di ladro è un consumato topo d'appartamento. È un esperto nello scassinare ed entrare negli edifici più protetti, aggirando muri, serrature, trappole e guardiani, afferrare il bottino migliore e fuggire inosservato furtivamente come è arrivato.
+
+Vantaggi:
+- +10% a Scoprire Trappole, Nascondersi tra le Ombre, Muoversi Silenziosamente e Scassinare Serrature
+- Può diventare Specializzato in Pugnali, Dardi e Fionde
+
+Svantaggi:
+- -20% a Svuotare Tasche e Piazzare Trappole
+- Guadagna l'utilizzo delle trappole alla metà della velocità di un normale ladro~
+@86   = ~Installa kit ladro Soulknife thief kit~
+@87   = ~anima affilata~
+@88   = ~Anima Affilata~
+@89   = ~ANIMA AFFILATA: Questo tipo di ladro, un essere in possesso di un potente potere psionico, considera la propria mente come la cosa più bella e mortale di tutta la creazione. Con la pratica, hanno imparato a forgiare la loro forza mentale in una lama semisolida di pura energia psichica. Quest'arma, nota come lama mentale, comporta che anche se disarmato il coltello dell'anima è lontano un semplice pensiero dallo sferrare un colpo mortale.
+
+Vantaggi:
+- Può diventare Maestro con le Spade Corte
+- Può manifestare una Lama Mentale una volta al giorno ogni 10 livelli. Questa spada corta è un'arma psionica che permane 1 round per livello e conta come di 1 incantamento superiore a quello che è quando si determina cosa può colpire, fino a un massimo di +5. Ogni colpo cura l'Anima Affilata di 1 punto ferita. Il bonus al danno e al THAC0 migliorano di 1 ogni 5 livelli, fino a un massimo di +5 al livello 25. La gittata aumenta di 10 ogni 5 livelli fino a un massimo di 50 al livello 25.
+
+Svantaggi:
+- Non può Piazzare Trappole
+- Ottiene solo 15 punti abilità per livello~
+@90   = ~ANIMA AFFILATA: Questo tipo di ladro, un essere in possesso di un potente potere psionico, considera la propria mente come la cosa più bella e mortale di tutta la creazione. Con la pratica, hanno imparato a forgiare la loro forza mentale in una lama semisolida di pura energia psichica. Quest'arma, nota come lama mentale, comporta che anche se disarmato il coltello dell'anima è lontano un semplice pensiero dallo sferrare un colpo mortale.
+
+Vantaggi:
+- Può diventare Maestro con le Spade Corte
+- Può manifestare una Lama Mentale una volta al giorno ogni 10 livelli. Questa spada corta è un'arma psionica che permane 1 round per livello e conta come di 1 incantamento superiore a quello che è quando si determina cosa può colpire, fino a un massimo di +5. Ogni colpo cura l'Anima Affilata di 1 punto ferita. Il bonus al danno e al THAC0 migliorano di 1 ogni 5 livelli, fino a un massimo di +5 al livello 25. La gittata aumenta di 10 ogni 5 livelli fino a un massimo di 50 al livello 25.
+
+Svantaggi:
+- Non può Piazzare Trappole
+- Ottiene solo 15 punti abilità per livello~
+@91   = ~Manifesta Lama Mentale~
+@92   = ~Lama Mentale~
+@93   = ~Installa il kit ladro Tiratore Scelto~
+@94   = ~tiratore scelto~
+@95   = ~Tiratore Scelto~
+@96   = ~TIRATORE SCELTO: questo tipo di ladro tende ad essere un personaggio furtivo, preferendo ingaggiare il bersaglio da lontano con dardi o frecce piuttosto che affrontarlo in pericolosi combattimenti corpo a corpo. A differenza del ranger, il tiratore scelto usa le sue abilità per aiutare in attività dubbie che coinvolgono la proprietà e la vita degli altri piuttosto che la protezione dei grandi spazi aperti.
+
+Sebbene siano esperti nell'uso di molte armi da tiro, i tiratori scelti non sono resistenti come i veri guerrieri, e la loro propensione per gli attacchi a distanza a dispetto di quelli da mischia comporta che non hanno l'opportunismo degli altri ladri quando si tratta di pugnalare alle spalle. Tendono a non vederlo come uno svantaggio, colpendo invece dall'ombra con un proiettile ben mirato o preparando una trappola mortale per coloro che volessero inseguirlo, quando necessario.
+
+Vantaggi:
+- Può diventare Gran Maestro con qualsiasi arma da tiro che un ladro può usare
+- Può ricoprire di veleno un'arma a distanza una volta al giorno ogni 4 livelli. Gli attacchi effettuati con l'arma nel round successivo inietteranno il veleno nel bersaglio, infliggendo 1 danno al secondo per 24 secondi (3 danni per i primi 6 secondi). Un tiro salvezza contro veleno limita i danni a 12 in totale.
+
+Svantaggi:
+- Nessun moltiplicatore di Pugnalate alle Spalle~
+@97   = ~Installa il kit ladro Shadowdancer thief kit~
+
+@99   = ~Evoca Ombra~
+@100  = ~Ombra~
+@101  = ~ombra danzante~
+@102  = ~Ombra Danzante~
+@103  = ~OMBRA DANZANTE: Operando al confine tra luce e oscurità, le Ombre Danzanti sono agili artisti dell'inganno. Sono misteriosi e sconosciuti, mai completamente fidati ma suscitano sempre meraviglia quando vengono incontrati. Nonostante il loro legame con le ombre e l'inganno, le Ombre Danzanti sono spesso buoni quanto malvagi. Possono usare le loro incredibili abilità come desiderano.
+
+Le Ombre Danzanti spesso lavorano in gruppi, senza mai stare troppo a lungo in un posto. Alcuni usano le loro capacità per intrattenere. Altri operano come ladri, usando le loro abilità per infiltrarsi nelle difese e ingannare gli altri. Tutte le compagnie di Ombre Danzanti mantengono un'aura di mistero tra la popolazione, che non sa mai se pensare bene o male di loro.
+
+Vantaggi:
+- Ottiene un bonus del +5% alle abilità Nascondersi tra le Ombre e Muoversi Silenziosamente per 2 livelli
+- Ha un'Infravisione permanente
+- Può lanciare Immagine Riflessa una volta al giorno
+- Dal livello 5, può evocare un'Ombra una volta al giorno. L'Ombra aumenta di potenza man mano che l'Ombra danzante guadagna livelli, inoltre possiede abilità furtive e viene evocata per 8 ore.
+- Dal livello 8, può lanciare Porta d'Ombra una volta al giorno. Ulteriori usi si ottengono ai livelli 14 e 20.
+
+Svantaggi:
+- Non può Piazzare Trappole
+- Guadagna solo 15 punti abilità per livello~
+@104 = ~Questo componente non è disponibile per il tuo gioco.~
+@105 = ~Maledizione
+(Evocazione/Attrazione)
+
+Livello: 1
+Sfera: Tutte
+Raggio d'azione: Portata visiva dell'incantatore
+Durata: 6 round
+Tempo di lancio: 9
+Area d'effetto: raggio di 4,5 metri
+Tiro-salvezza: Nessuno
+
+Quando pronuncia l'incantesimo Maledizione, l'incantatore abbassa di 1 il morale delle creature nemiche e qualsiasi Tiro Salvezza e tiro per colpire che effettuano. Nel momento in cui l'incantesimo viene completato coinvolge tutte le creature nel raggio di 4,5 metri dal punto selezionato dall'incantatore. Le creature colpite che lasciano l'area sono ancora soggette all'effetto dell'incantesimo; quelle che entrano nell'area dopo il completamento invece non lo sono.~
+@106 = ~Maledetto~
+@107 = ~È necessario DLC Merger prima che le mod possano essere installate su questo gioco. Controlla il file leggimi per ulteriori informazioni e un link per scaricare DLC Merger.~

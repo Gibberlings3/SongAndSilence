@@ -1,9 +1,9 @@
-@0  = ~Ey, was gehtn! Mein Name is' Raoul, Händler exotischer Waren und anderem Zeugs! Wie issn euer Name?~ [A!RA02]
+@0  = ~Ey, was gehtn! Mein Name is' Raoul, Händler exotischer Waren und anderem Zeugs! Wie issn euer Name?~ [a!ra02]
 @1  = ~Ich bin <CHARNAME>. Nett dich zu kennen zulernen.~
 @2  = ~Ich würde es vorziehen, meinen Namen für mich zu behalten. Man kann nie sicher genug gehen.~ 
 @3  = ~Mein Name ist <CHARNAME>. Gut dich zu sehen, Raoul.~
 @4  = ~Ich würde ihn dir nennen, aber ich habe den Verdacht, du würdest ihn eh wieder vergessen...~ 
-@5  = ~He da, Kumpel! Was kann'n dieser alte Zigeuner heut' für euch tun?~ [A!RA03]
+@5  = ~He da, Kumpel! Was kann'n dieser alte Zigeuner heut' für euch tun?~ [a!ra03]
 @6  = ~Oh, nichts. Du siehst so merkwürdig aus und ich dachte ich seh mir dich mal aus der Nähe. Also dann, machs mal gut!~
 @7  = ~Ich würde gerne deine Waren sehen.~ 
 @8  = ~Im Moment nichts. Leb wohl, Raoul!~

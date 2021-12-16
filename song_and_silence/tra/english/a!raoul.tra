@@ -1,9 +1,9 @@
-@0    = ~Greetings! I be Raoul, peddler of exotic wares. And ye?~ [A!RA02]
+@0    = ~Greetings! I be Raoul, peddler of exotic wares. And ye?~ [a!ra02]
 @1    = ~I be <CHARNAME>. Pleased to meet ye... uh, you.~
 @2    = ~I'd prefer not to tell you my name, if it's all the same.~
 @3    = ~My name is <CHARNAME>. Well met, Raoul.~
 @4    = ~I would tell you, but I get the impression you'd forget it...~
-@5    = ~Ho there, friendies! What can this old gypsy do for ye today?~ [A!RA03]
+@5    = ~Ho there, friendies! What can this old gypsy do for ye today?~ [a!ra03]
 @6    = ~Oh, nothing. I just thought you looked a little odd so thought I'd come over and say hi. Well, bye!~
 @7    = ~I would like to see your wares, please.~
 @8    = ~Nothing at the moment. Farewell, Raoul.~

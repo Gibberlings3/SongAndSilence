@@ -1,9 +1,9 @@
-@0    = ~Salutations ! Chuis Raoul, colporteur de marchandises exotiques. Et toué ?~ [A!RA02]
+@0    = ~Salutations ! Chuis Raoul, colporteur de marchandises exotiques. Et toué ?~ [a!ra02]
 @1    = ~Chuis <CHARNAME>. Content de voué... hum, vous rencontrer.~
 @2    = ~J'aimerais autant ne pas vous donner mon nom, si ça ne vous dérange pas.~
 @3    = ~Mon nom est <CHARNAME>. Bonne rencontre Raoul.~
 @4    = ~Je vous l'aurais bien dit, mais j'ai l'impression que vous allez l'oublier...~
-@5    = ~Holà, mes amis ! Qu'est-ce-que l'vieux gitan peut faire pour vous aujourd'hui ?~ [A!RA03]
+@5    = ~Holà, mes amis ! Qu'est-ce-que l'vieux gitan peut faire pour vous aujourd'hui ?~ [a!ra03]
 @6    = ~Oh rien. Je me disais juste que vous aviez l'air un peu bizarre donc je suis venu vous passer le bonjour. Bon, Au revoir !~ ~Oh rien. Je me disais juste que vous aviez l'air un peu bizarre donc je suis venue vous passer le bonjour. Bon, Au revoir !~
 @7    = ~J'aimerais voir vos marchandises, s'il vous plaît.~
 @8    = ~Rien pour le moment. A bientôt, Raoul.~

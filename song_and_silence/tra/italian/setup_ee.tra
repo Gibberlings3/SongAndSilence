@@ -1,0 +1,178 @@
+@10   = ~L'arma di molti guerrieri veloci e agili, i pugnali da lancio sono leggeri e facilmente nascosti.
+
+Sebbene non facciano molti danni, la velocità con cui possono essere lanciati dà loro un grande vantaggio rispetto ad armi più ingombranti.
+
+Questo è stato imbevuto di magia per essere di maggiore utilità, probabilmente per volere di una gilda di ladri. Tuttavia, non porta segni di identificazione. I miglioramenti magici hanno aumentato la potenza dei suoi attacchi e, cosa forse ancora più preziosa, può essere richiamato nella mano del proprietario con un solo pensiero, assicurando che sia sempre equipaggiato per il combattimento.
+
+STATISTICHE:
+
+THAC0: +1 bonus
+Danno: 1D4 +1 (perforante)
+Fattore-velocità: 1
+Tipo di Competenza: Pugnale
+Tipo: A una mano
+
+Richiede: 
+Forza 3
+
+Peso: 1~
+@12   = ~Quando si perde una discussione, il veleno è la risposta preferita da molti personaggi loschi. Un abile maneggiatore può applicare rapidamente ed efficacemente il veleno alla sua arma, trasformando un graffio dal più piccolo dei pugnali in una ferita purulenta più letale di un colpo d'ascia.
+
+Questa fiala contiene abbastanza veleno per ricoprire un'arma una volta.
+
+STATISTICHE:
+
+Speciale:
+  Può essere usata per ricoprire un'arma di veleno una volta, come l'abilità del kit dell'assassino. Il prossimo colpo con l'arma inietterà il veleno nel bersaglio, infliggendo 1 danno al secondo per 24 secondi (3 danni per i primi 6 secondi). Un tiro salvezza contro veleno limita i danni a 12 in totale.
+
+Peso: 1~
+@15   = ~Sebbene questo cappuccio non conferisca vantaggi evidenti a chi lo indossa, ha un'aura di magia latente.
+
+Peso: 2~
+@16   = ~Alathis Hurbleton era uno dei tanti halfling la cui professione scelta non era qualcosa di cui parlare in una conversazione educata. Ha goduto di una proficua carriera a Luskan, fino a quando una serie di sfortunati eventi gli ha fatto decidere che un trasferimento sarebbe forse stato più prudente.
+
+Stabilitosi nella metropoli urbana di Waterdeep, continuò a esercitare il suo mestiere. La preferenza ad operare da solo comportò il guadagnarsi le ire delle gilde locali come le famigerate Maschere Notturne, quindi commissionò a un mago di incantare il suo cappuccio per proteggerlo dai frequenti attentati alla sua vita.
+
+Troppo sicuro di sé e della sua invulnerabilità, tuttavia, commise un errore durante una rapina particolarmente complicata e fu preso dalle guardie. Il cappuccio, sfortunatamente, non lo ha salvato dal cappio del boia.
+
+STATISTICHE:
+
+Abilità equipaggiate:
+– Immunità alle pugnalate alle spalle
+– Immunità al veleno
+
+Peso: 2~
+@19   = ~A prima vista questo sembra essere un normale randello, ma un'ispezione più ravvicinata da parte di un occhio ben allenato rivela una serie di rune discrete tracciate lungo l'impugnatura. Un ladro segnalerebbe anche il sottile equilibrio dell'arma.
+
+Il randello è stato incantato in epoche passate per volere di un maestro della gilda dei Ladri d'Ombra per uno dei suoi protetti più fedeli e prolifici. Oltre ad essere un'arma potente, sembrava attutire il suono intorno a un ladro mentre si avvicinava di soppiatto al suo bersaglio per ottenere un colpo da KO. L'ultima cosa che molti nemici avrebbero sentito prima di scivolare nell'incoscienza sarebbe stata il leggero flusso d'aria mentre il randello veniva sollevato dietro la loro testa, guadagnandosi rapidamente il soprannome di "Luci Spente".
+
+Sfortunatamente, come spesso accade con queste cose, il protetto non era così fedele come il suo capogilda aveva sperato, e una notte tranquilla quest'arma fu usata per colpire a morte il capo della gilda nel suo stesso letto. Sua moglie, pur dormendo accanto a lui, non si accorse di nulla.
+
+Come l'arma sia finita nelle tue mani è probabilmente una storia che non vuoi conoscere.
+
+STATISTICHE:
+
+Abilità durante l'uso:
+– Muoversi Silenziosamente: +10%
+
+THAC0: +2
+Danno: 1d6+2 (schiacciamento)
+Fattore-velocità: 4
+Tipo di competenza: Clava
+Tipo: A una mano
+Richiede:
+ Forza 5
+
+Peso: 3~
+@21   = ~Questa sembra essere una ciocca di capelli. Per quanto riguarda i capelli, è abbastanza carina.
+
+Peso: 0~
+@22   = ~Le leggende narrano che Jessecyl fosse tra le più belle fanciulle Mezzelfe. Prima di una battaglia lasciò in eredità al suo amante un dono; una ciocca dei suoi capelli. Questo valoroso eroe cavalcò in battaglia contro creature malvagie e il potere dell'amore tra lui e Jessecyl protesse lui e i suoi compagni da innumerevoli minacce.
+
+Sebbene questo eroe senza nome e Jessecyl siano morti da tempo, il vero amore dura per sempre. Coloro dotati di un carattere particolarmente romantico potranno notare che, allo stesso modo, la magia persiste.
+
+L'oggetto deve essere tenuto in esposizione per usufruire dei suoi effetti; viene equipaggiato nello slot Scudo.
+
+STATISTICHE:
+
+Abilità durante l'uso:
+– Il gruppo riceve un bonus di +2 ai tiri salvezza contro morte
+
+Peso: 0~
+@25   = ~Questo piccolo scudo malconcio appartenne a un certo punto ad uno Skald, membri bardici delle tribù barbariche di Icewind Dale. In qualche modo è finito per trovare posto verso sud, senza dubbio come bottino di guerra in seguito ad un'invasione a lungo dimenticata.
+
+È probabile che sia anche appartenuto a un famoso bardo, poiché è stato incantato per fornire ulteriore protezione e una certa misura di resistenza al freddo pervasivo dell'inverno.
+
+STATISTICHE:
+
+Abilità durante l'uso:
+– Classe Armatura: +2
+– Nessuna protezione contro attacchi da proiettile e perforanti
+– Resistenza al Freddo: +10%
+Richiede:
+  Forza 4
+
+Peso: 2~
+@28   = ~Difesa Sonica è un'arma forgiata in epoche passate su commissione del bardo e avventuriero Grefyn, un nome ormai dimenticato da tempo dalla maggior parte degli studiosi. I potenti incantesimi sulla lama gli hanno permesso di fendere molti nemici, proteggendo la sua persona. In combinazione con il debole ronzio dell'arma quando viene estratta, questo le è valso l'epiteto di "Difesa Sonica".
+
+Tutti i grandi eroi devono morire, però, e alla fine Grefyn fu ucciso da alcuni avventurosi sacerdoti di Waukeen dopo un "disaccordo" sulle proprietà della Chiesa. L'arma rimase nell'uso della Chiesa per secoli fino a quando fu persa durante le battaglie contro gli orchi nel Periodo dei Disordini; la sua ubicazione da allora ad oggi è sconosciuta.
+
+STATISTICHE:
+
+Abilità durante l'uso:
+– Tiri salvezza contro morte: +1
+
+THAC0: +2
+Danno: 1d6+2 (perforante)
+Fattore di velocità: 1
+Tipo di competenza: Spada Corta
+Tipo: A una mano
+Richiede:
+  Forza 5
+
+Peso: 2~
+@30   = ~La cotta di maglia è fatta di anelli di metallo incastrati tra loro. Viene sempre indossata sopra uno strato imbottito di tessuto o di cuoio morbido per evitare sfregamenti e attutire l'impatto dei colpi.
+
+Questa veste è particolarmente leggera e ben realizzata, consentendo di lanciare incantesimi arcani mentre è indossata. Gli abiti con proprietà simili sono notoriamente fabbricati dagli elfi, per aiutare i loro aggraziati maghi combattenti e cantori di lame in combattimento. I segreti degli elfi sono custoditi gelosamente, rendendo questo equivalente creato dall'uomo davvero una rarità. Non ti stupirebbe molto se, dopo aver appreso della sua creazione, il fabbro responsabile della lavorazione dell'abito fosse stato rintracciato e 'convinto' a non realizzarne mai più.
+
+STATISTICHE:
+
+Classe Armatura: 5 (3 contro tagliente, 7 contro schiacciamento)
+Richiede:
+  Forza 8
+
+Peso: 30~
+@32   = ~L'armatura di cuoio borchiato ha poco in comune con la normale armatura di cuoio. Mentre quest'ultima ha un rivestimento rigido, l'armatura di cuoio borchiato è morbida e flessibile grazie a centinaia di rivetti in metallo. I rivetti sono molto vicini l'uno all'altro, in modo da formare un rivestimento flessibile di duro metallo che devia gli attacchi taglienti. Il rivestimento in morbido cuoio è molto più di un semplice sostegno su cui attaccare i rivetti.
+
+Questo completo è particolarmente leggero e ben realizzato, consentendo di lanciare incantesimi arcani mentre è indossato. Sebbene sia progettato in particolare per i bardi, può essere indossato e usato per lanciare incantesimi arcani senza penalità da chiunque sia normalmente in grado di usare un'armatura di cuoio borchiato.
+
+STATISTICHE:
+
+Classe Armatura: 7 (5 contro tagliente, 6 contro perforante e da proiettile)
+Richiede:
+  Forza 6
+
+Peso: 15~
+@34   = ~L'armatura di cuoio borchiato ha poco in comune con la normale armatura di cuoio. Mentre quest'ultima ha un rivestimento rigido, l'armatura di cuoio borchiato è morbida e flessibile grazie a centinaia di rivetti in metallo. I rivetti sono molto vicini l'uno all'altro, in modo da formare un rivestimento flessibile di duro metallo che devia gli attacchi taglienti. Il rivestimento in morbido cuoio è molto più di un semplice sostegno su cui attaccare i rivetti.
+
+Questo completo è particolarmente leggero e ben realizzato, consentendo di lanciare incantesimi arcani mentre è indossato. Sebbene sia progettato in particolare per i bardi, può essere indossato e usato per lanciare incantesimi arcani senza penalità da chiunque sia normalmente in grado di usare un'armatura di cuoio borchiato.
+
+STATISTICHE:
+
+Classe Armatura: 7 (5 contro tagliente, 6 contro perforante e da proiettile)
+Richiede:
+  Forza 6
+
+Peso: 15~
+@35   = ~L'armatura di cuoio borchiato ha poco in comune con la normale armatura di cuoio. Mentre quest'ultima ha un rivestimento rigido, l'armatura di cuoio borchiato è morbida e flessibile grazie a centinaia di rivetti in metallo. I rivetti sono molto vicini l'uno all'altro, in modo da formare un rivestimento flessibile di duro metallo che devia gli attacchi taglienti. Il rivestimento in morbido cuoio è molto più di un semplice sostegno su cui attaccare i rivetti.
+
+Questo completo è particolarmente leggero e ben realizzato, consentendo di lanciare incantesimi arcani mentre è indossato. Sebbene sia progettato in particolare per i bardi, può essere indossato e usato per lanciare incantesimi arcani senza penalità da chiunque sia normalmente in grado di usare un'armatura di cuoio borchiato.
+
+STATISTICHE:
+
+Classe Armatura: 6 (4 contro tagliente, 5 contro perforante e da proiettile)
+Richiede:
+  Forza 6
+
+Peso: 10~
+@37   = ~Questa pergamena contiene una storia di azioni così orribili e malvagie così oscura che la semplice lettura dell'ultima frase può far morire le creature di una morte tremenda e dolorosa.
+
+Una volta letta la frase, la magia svanisce dal rotolo; anche se il racconto che rimane è ancora abbastanza oscuro da perseguitare a lungo i sogni di un ascoltatore...
+
+STATISTICHE:
+
+Può essere usata per lanciare l'Incantesimo della Morte una volta~
+@39   = ~Su questo rotolo, scritto con una calligrafia traballante, c'è una storia di terribili esseri non morti che vagano nella notte. La pergamena è incantata in modo tale che la sua lettura scuoterà i nervi delle creature più coraggiose.
+
+Una volta letta, la magia svanisce dalla pergamena; anche se senza dubbio l'ascoltatore sentirà sempre un brivido lungo la schiena quando è solo di notte.
+
+STATISTICHE:
+
+Può essere usato per lanciare l'incantesimo Orrore una volta~
+@41   = ~Questa pagina è ricca di storie di eroi coraggiosi che hanno trionfato contro ogni previsione; combattendo orde o orchi, sconfiggendo demoni malvagi e draghi malvagi nelle loro tane. Leggere un passaggio infonderà al personaggio un senso di coraggio abbastanza forte da superare tutte le sue paure.
+
+Dopo la lettura, la magia svanirà dalla pergamena. La storia in sé, però, sarà sempre la benvenuta.
+
+STATISTICHE:
+
+Può essere usata per lanciare l'incantesimo Resistenza alla Paura una volta~

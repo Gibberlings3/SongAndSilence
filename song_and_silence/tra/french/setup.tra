@@ -11,10 +11,10 @@ Restrictions :
 -  Ne peut pas effectuer d'attaques sournoises.~
 @2    = ~Ajout d'une echoppe pour bardes et voleurs~
 @3    = ~Raoul~
-@4    = ~Oooooaaaagggh !~ [A!RA01]
-@5    = ~Salutations ! J'suis Raoul, et toué ?~ [A!RA02]
-@6    = ~Ho là, mes bons amis !~ [A!RA03]
-@7    = ~Z'êtes ici pour les marchandises de Raoul ?~ [A!RA04]
+@4    = ~Oooooaaaagggh !~ [a!ra01]
+@5    = ~Salutations ! J'suis Raoul, et toué ?~ [a!ra02]
+@6    = ~Ho là, mes bons amis !~ [a!ra03]
+@7    = ~Z'êtes ici pour les marchandises de Raoul ?~ [a!ra04]
 @8    = ~Le Bazar de Raoul~
 @9    = ~Dague de jet boomerang +1~
 @10   = ~Arme de nombreux guerriers rapides et agiles, la dague de jet est légère et facilement cachée.
