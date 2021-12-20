@@ -43,7 +43,7 @@ Questa fiala contiene abbastanza veleno per ricoprire un'arma una volta.
 STATISTICHE:
 
 Speciale:
-  Può essere usata per ricoprire un'arma di veleno una volta, come l'abilità del kit dell'assassino. Il prossimo colpo con l'arma inietterà il veleno nel bersaglio, infliggendo 1 danno al secondo per 24 secondi (3 danni per i primi 6 secondi). Un tiro salvezza contro veleno limita i danni a 12 in totale.
+  Può essere usata per ricoprire di veleno un'arma una volta, come l'abilità del kit dell'assassino. Il prossimo colpo con l'arma inietterà il veleno nel bersaglio, infliggendo 1 danno al secondo per 24 secondi (3 danni per i primi 6 secondi). Un tiro salvezza contro veleno limita i danni a 12 in totale.
 Peso: 1
 Utilizzabile da:
  Ladri~
@@ -195,38 +195,38 @@ Richiede: Forza 6
 Non utilizzabile da:
  Mago~
 @36   = ~Racconto di Terrificante Malvagità~
-@37   = ~This scroll contains a tale of deeds so foul and evil so black that merely reading the final sentence can cause creatures to die a horrible, painful death.
+@37   = ~Questa pergamena contiene una storia di azioni così orribili e malvagie così oscura che la semplice lettura dell'ultima frase può far morire le creature di una morte tremenda e dolorosa.
 
-Once the sentence is read, the magic fades from the scroll; although the tale that remains is still dark enough to haunt the dreams of a listener for a long while...
+Una volta letta la frase, la magia svanisce dal rotolo; anche se il racconto che rimane è ancora abbastanza oscuro da perseguitare a lungo i sogni di un ascoltatore...
 
 STATISTICHE:
 
-Can be used to cast the spell Death Spell once
+Può essere usata per lanciare l'Incantesimo della Morte una volta
 
-Usable by:
- Bard~
+Utilizzabile da:
+ Bardo~
 @38   = ~Racconto della Morte Orripilante~
-@39   = ~Upon this scroll, penned in shaky handwriting, is a story of terrible undead beings which roam the night. The scroll is enchanted such that reading sections will shake the nerve of the most stalwart of creatures.
+@39   = ~Su questo rotolo, scritto con una calligrafia traballante, c'è una storia di terribili esseri non morti che vagano nella notte. La pergamena è incantata in modo tale che la sua lettura scuoterà i nervi delle creature più coraggiose.
 
-Once read, the magic fades from the scroll; although the listener will doubtless always feel a chill down their spine when alone at night.
+Una volta letta, la magia svanisce dalla pergamena; anche se senza dubbio l'ascoltatore sentirà sempre un brivido lungo la schiena quando è solo di notte.
 
 STATISTICHE:
 
-Can be used to cast the spell Horror once
+Può essere usato per lanciare l'incantesimo Orrore una volta
 
-Usable by:
- Bard~
+Utilizzabile da:
+ Bardo~
 @40   = ~Favola del Vero Coraggio~
-@41   = ~This page is filled with tales of brave heroes triumphing against the odds; fighting hordes or orcs, defeating fell demons and evil dragons in their lairs. Reading a passage will imbue the character with a sense of courage strong enough to overcome all their fears.
+@41   = ~Questa pagina è ricca di storie di eroi coraggiosi che hanno trionfato contro ogni previsione; combattendo orde o orchi, sconfiggendo demoni malvagi e draghi malvagi nelle loro tane. Leggere un passaggio infonderà al personaggio un senso di coraggio abbastanza forte da superare tutte le sue paure.
 
-After reading, the magic will fade from the scroll. The story itself, though, will always be welcome to hear.
+Dopo la lettura, la magia svanirà dalla pergamena. La storia in sé, però, sarà sempre la benvenuta.
 
 STATISTICHE:
 
-Can be used to cast the spell Resist Fear once
+Può essere usata per lanciare l'incantesimo Resistenza alla Paura una volta
 
-Usable by:
- Bard~
+Utilizzabile da:
+ Bardo~
 @42   = ~Installa kit bardico Acrobata~
 @43   = ~Devi avere il primo componente installato per usare questo~
 @44   = ~acrobata~
