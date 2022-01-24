@@ -529,9 +529,14 @@ BEGIN
   END
 END
 
+ACTION_IF GAME_IS ~iwdee~
+  COPY_EXISTING ~a!acro.2da~ ~override~
+    APPEND_FILE ~song_and_silence/lib/iwdee.2da~ // add iwd bard songs
+END
+
 ACTION_IF MOD_IS_INSTALLED ~iwdification/setup-iwdification.tp2~ ~50~ BEGIN
   COPY_EXISTING ~a!acro.2da~ ~override~
-    APPEND_FILE ~song_and_silence/lib/iwdification.2da~// add iwdification bard songs
+    APPEND_FILE ~song_and_silence/lib/iwdification.2da~ // add iwdification bard songs
 END
 
 //////////////////////////////
@@ -627,9 +632,14 @@ COPY_EXISTING sppr612.spl ~override/a!ch61.spl~
   WRITE_SHORT 0x1c 1 // sets spell type to Wizard (1)
   SAY 0x50 @59
 
+ACTION_IF GAME_IS ~iwdee~
+  COPY_EXISTING ~a!acro.2da~ ~override~
+    APPEND_FILE ~song_and_silence/lib/iwdee.2da~ // add iwd bard songs
+END
+
 ACTION_IF MOD_IS_INSTALLED ~iwdification/setup-iwdification.tp2~ ~50~ BEGIN 
   COPY_EXISTING ~a!chor.2da~ ~override~
-    APPEND_FILE ~song_and_silence/lib/iwdification.2da~// add iwdification bard songs
+    APPEND_FILE ~song_and_silence/lib/iwdification.2da~ // add iwdification bard songs
 END
 
 ////////////////////////////////
