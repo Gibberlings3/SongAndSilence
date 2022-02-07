@@ -1,3 +1,15 @@
+// all of the kit descriptions are here because EEs use a different bullet for the advantage/disadvantage section
+
+@1    = ~SWASHBUCKLER: This rogue is part acrobat, part swordsman and part wit: the epitome of charm and grace.
+
+Advantages:
+– Bonus +1 to AC.
+– He gains another +1 bonus to his armor class every 5 levels.
+– He gains +1 to hit and damage every 5 levels.
+– He can specialize in any melee weapon that a thief can use.
+
+Disadvantages:
+– No backstab multiplier~
 @10   = ~The weapon of many a swift and nimble warrior, throwing daggers are light and easily concealed.
 
 Although the weapons do not do much damage, the speed at which they may be thrown gives them a great advantage over more cumbersome weapons.
@@ -175,3 +187,114 @@ After reading, the magic will fade from the scroll. The story itself, though, wi
 STATISTICS:
 
 Can be used to cast the spell Resist Fear once~
+@46   = ~ACROBAT: As entertainers, most Acrobats are typically found accompanying carnivals or circuses, although a troupe of Acrobats can put on a remarkable show all by themselves. The often perform in large taverns or in clubs, using their arts to draw in the crowd and captivate them long enough for the proprietor to drain their purses. Acrobats are flashy and love to show off their skills; whatever they do, they like to do with a sense of style and a flair for the dramatic. Acrobats sometimes become cat burglars extraordinaire, and they are also useful adventuring allies, as they can squeeze into places where others cannot go without the aid of magic. Their skill at avoiding traps and other dangers also makes them excellent scouts.
+
+Advantages:
+– +1 bonus to Armor Class
+– +1 bonus to Armor Class vs. missiles every 8 levels
+– May place up to 2 proficiency points in slings, darts and daggers
+– May use Bard Song ability. While active, the Bard Song has the following effects:
+  Restore morale to its average value
+  Remove Fear
+  Protection From Fear
+
+Disadvantages:
+– May only place proficiency points in weapons a thief can use
+– May not wear armor heavier than Studded Leather
+– Only has one-half normal lore value~
+@62   = ~CHORISTER: Music, whether hymn, symphony or dark chanting intonation, plays an important part in the services of most deities. For aiding in performing rituals or just leading the faithful in worship, most holy places have at least one bard, known as a Chorister.
+
+Choristers are not only to be found within temple walls, however; many faiths use them as missionaries, helping to bring new worshippers into the fold. Many an adventuring bard with a religious bent can also end up as a Chorister, finding their prayers answered by the deity they venerate.
+
+Advantages:
+– Knows a small selection of divine spells. These are accessed and memorised as Mage spells:
+Level 1: Armor of Faith, Cure Light Wounds, Doom
+Level 2: Chant, Draw Upon Holy Might, Slow Poison
+Level 3: Cure Medium Wounds, Glyph of Warding
+Level 4: Defensive Harmony, Holy Power
+Level 5: Mass Cure
+Level 6: Bolt of Glory
+– May use Bard Song ability. While active, the Bard Song has the following effects:
+  Restore morale to its average value
+  Remove Fear
+  Protection From Fear
+
+Disadvantages:
+– Only has one-half normal Lore value
+– Only has one-half Pick Pockets percentage~
+@66   = ~DIRGESINGER: Dirgesingers voice melodies not of celebration and joy, but of sorrow and grief. They seek to spread this melancholy outlook far and wide, believing that only those who give in to their sadness can truly understand the world.
+
+These sad wanderers seek to express their grief through songs that teach the hearts of their listeners the meaning of true sorrow. Some of these fallen bards want nothing more than for others to understand the depths of their loss. A few are sinister creatures who believe that, since joy has been extinguished for them, they must in turn extinguish the joy of others by using their powers to teach the folly of love, the futility of hope, and the finality of the grave. Dirgesingers of this last sort often associate themselves with powerful undead; serving in the courts of vampire lords or lich-kings.
+
+Dirgesingers are limited to non-good alignments.
+
+Advantages:
+– Song Curses enemies, giving them a -1 penalty to saves and THAC0. At level 10 the penalty becomes -2, at level 20 -3 and level 30 -4.
+– From level 5 may use a Song of Horror 1/day. This has the same effects as the level 2 Wizard spell, Horror
+– From level 7 may use a Song of Grief 1/day. This has the same effects as the level 4 Wizard spell, Confusion
+– From level 9 may use a Song of Awakening 1/day. This has the same effects as the level 5 Wizard spell, Animate Dead
+
+Disadvantages:
+– Only has one-half normal Lore value~
+@74   = ~LURING PIPER: Luring Pipers are often employed as rat-catchers or similar vermin control specialists by townsfolk or farmers. By using their enchanting song they are able to charm their foes into traps or away from the town or farmland. However it unwise to cross a luring piper as their song can affect more than just vermin.
+
+Advantages:
+– Song charms enemies unless they save vs. spells at +2, with a -1 penalty per 5 levels of the bard
+– Has a +1 bonus to saves vs. spells per 8 levels
+– Can cast Curse once per day. The opposite of a Bless spell, this gives foes a -1 penalty to THAC0 and saves
+
+Disadvantages:
+– Cannot learn mage spells from the schools of Conjuration, Invocation or Transmutation~
+@78   = ~ADVENTURER: The adventurer is a jack-of-all-trades, not so much a thief as a character who takes advantage of general thiefly skills on adventures. An Adventurer is preferred by many adventuring parties, because he is much less likely than other thieves to betray or steal from his own companions. The successful Adventurer knows the value of trust and cooperation, while many a "street thief" has been raised on duplicity and (sometimes literal) backstabbing.
+
+Advantages:
+– +5% to Open Locks and Find/Remove Traps every other level
+– Gains a +1 bonus to all saves at levels 1, 8 and 14
+
+Disadvantages:
+– No backstab multiplier~
+@79   = ~ADVENTURER: The adventurer is a jack-of-all-trades, not so much a thief as a character who takes advantage of general thiefly skills on adventures. An Adventurer is preferred by many adventuring parties, because he is much less likely than other thieves to betray or steal from his own companions. The successful Adventurer knows the value of trust and cooperation, while many a "street thief" has been raised on duplicity and (sometimes literal) backstabbing.
+
+Advantages:
+– +5% to Open Locks and Find/Remove Traps every other level
+– Gains a +1 bonus to all saves at levels 1, 8 and 14
+
+Disadvantages:
+– No backstab multiplier~
+@85   = ~BURGLAR: This sort of thief is the consummate burglar. He is an expert at breaking and entering the most difficult buildings, bypassing walls, locks, traps and guardians, grabbing the best loot, and escaping unnoticed as stealthily as he arrived.
+
+Advantages:
+– +10% to Find Traps, Hide In Shadows, Move Silently and Open Locks
+– Can Specialise in Daggers, Darts, and Slings
+
+Disadvantages:
+– -20% to Pick Pockets and Set Traps
+– Gains trap useage at half the rate of a normal thief~
+@89   = ~SOULKNIFE: This sort of thief, a being possessed of potent psionic power, recognises his or her own mind as the most beautiful and deadly thing in all creation. With practice, they have learned to forge their mental strength into a semisolid blade of pure psychic energy. This weapon, known as a mind blade, means that even when unarmed the soulknife is but a thought away from a deadly strike.
+
+Advantages:
+– Can achieve Mastery in short swords
+– Can manifest a Mind Blade once per day per 10 levels. This short sword is a psionic weapon that lasts for 1 round/level, and counts as being of enchantment 1 higher than it is when determining what it can hit, to a maximum of +5. Each hit heals the Soulknife 1 hit point. THAC0 bonus and damage improve by 1 per 5 levels, to a maximum of +5 at level 25. Range improves by 10 every 5 levels to a maximum of 50 at level 25.
+
+Disadvantages:
+– Cannot set traps
+– Only gets 15 skill points per level~
+@90   = ~SOULKNIFE: This sort of thief, a being possessed of potent psionic power, recognises his or her own mind as the most beautiful and deadly thing in all creation. With practice, they have learned to forge their mental strength into a semisolid blade of pure psychic energy. This weapon, known as a mind blade, means that even when unarmed the soulknife is but a thought away from a deadly strike.
+
+Advantages:
+– Can achieve Mastery in short swords
+– Can manifest a Mind Blade once per day per 10 levels. This short sword is a psionic weapon that lasts for 1 round/level, and counts as being of enchantment 1 higher than it is when determining what it can hit, to a maximum of +5. Each hit heals the Soulknife 1 hit point. THAC0 bonus and damage improve by 1 per 5 levels, to a maximum of +5 at level 25. Range improves by 5 every 5 levels to a maximum of 25 at level 25.
+
+Disadvantages:
+– Cannot set traps
+– Only gets 15 skill points per level~
+@96   = ~SHARPSHOOTER: This sort of thief tends to be a stealthy character, preferring to engage their target from afar with bolt or arrow rather than face them in dangerous melee combat. Unlike the ranger, the Sharpshooter uses her skills to aid in dubious activities involving the property and lives of others rather than the protection of the great outdoors.
+
+Although well-versed in the use of many missile weapons, sharpshooters are not as resilient as true warriors, and their propensity for missile attacks over melee means that they lack the opportunism of other thieves when it comes to backstabbing. They tend not to see this as a disadvantage, instead striking from the shadows with a well-aimed projectile, or setting a deadly trap for those who would follow, when necessary.
+
+Advantages:
+– Can attain Grand Mastery in any missile weapon a thief can use
+– May coat a missile weapon in poison once per day per 4 levels. Attacks made with the weapon in the next round will inject the poison into the target, dealing out 1 damage per second for 24 seconds (3 damage for the first 6 seconds).  A saving throw vs. poison limits damage to 12 total.
+
+Disadvantages:
+– No backstab multiplier~
