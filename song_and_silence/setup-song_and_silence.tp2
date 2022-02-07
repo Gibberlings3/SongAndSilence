@@ -482,7 +482,7 @@ ADD_KIT ~A!ACROBAT~
 ~K_B_H    K_B_D   K_B_G   K_B_E   K_B_HE   K_B_HL   K_B_HO~
 ~0x00010000	5~
 ~ba0~
-~CHAN09 * HELM07 BAG20 RING06 RING21 * BOOT01 AMUL20 BRAC10 BELT06 AROW11,40 BULL03,40 BOLT06,40 POTN52,5 POTN04,2 POTN14,5 HAMM07 SW1H27 STAF08~
+~LEAT14 * HELM07 BAG20 RING06 RING21 * BOOT01 AMUL20 BRAC10 BELT06 AROW11,40 BULL03,40 BOLT06,40 POTN52,5 POTN04,2 POTN14,5 HAMM07 SW1H27 STAF08~
 SAY @44
 SAY @45
 SAY @46
@@ -529,9 +529,14 @@ BEGIN
   END
 END
 
+ACTION_IF GAME_IS ~iwdee~
+  COPY_EXISTING ~a!acro.2da~ ~override~
+    APPEND_FILE ~song_and_silence/lib/iwdee.2da~ // add iwd bard songs
+END
+
 ACTION_IF MOD_IS_INSTALLED ~iwdification/setup-iwdification.tp2~ ~50~ BEGIN
   COPY_EXISTING ~a!acro.2da~ ~override~
-    APPEND_FILE ~song_and_silence/lib/iwdification.2da~// add iwdification bard songs
+    APPEND_FILE ~song_and_silence/lib/iwdification.2da~ // add iwdification bard songs
 END
 
 //////////////////////////////
@@ -571,7 +576,7 @@ LAUNCH_ACTION_MACRO andyr_cinders_of_ashes_of_embers
 LAF fl#add_kit_ee STR_VAR kit_name = ~A!CHORISTER~ END // nothing special for chorister
 
 // Spell for half lore
-COPY ~song_and_silence/acrobat/a!acro2.spl~ override
+COPY ~song_and_silence/acrobat/a!acro2.spl~ ~override/a!chl.spl~
 // Pick Pockets spells
 ACTION_IF NOT FILE_EXISTS_IN_GAME ~a!pp2.spl~ THEN BEGIN
   COPY ~song_and_silence/chorister/a!pp2.spl~  override
@@ -627,9 +632,14 @@ COPY_EXISTING sppr612.spl ~override/a!ch61.spl~
   WRITE_SHORT 0x1c 1 // sets spell type to Wizard (1)
   SAY 0x50 @59
 
+ACTION_IF GAME_IS ~iwdee~
+  COPY_EXISTING ~a!acro.2da~ ~override~
+    APPEND_FILE ~song_and_silence/lib/iwdee.2da~ // add iwd bard songs
+END
+
 ACTION_IF MOD_IS_INSTALLED ~iwdification/setup-iwdification.tp2~ ~50~ BEGIN 
   COPY_EXISTING ~a!chor.2da~ ~override~
-    APPEND_FILE ~song_and_silence/lib/iwdification.2da~// add iwdification bard songs
+    APPEND_FILE ~song_and_silence/lib/iwdification.2da~ // add iwdification bard songs
 END
 
 ////////////////////////////////
