@@ -1,4 +1,3 @@
-@0    = ~Changes to trueclass bards and thieves, and unmodded game kits (required for other components)~
 @1    = ~SWASHBUCKLER: This rogue is part acrobat, part swordsman and part wit: the epitome of charm and grace.
 
 Advantages:
@@ -9,7 +8,7 @@ Advantages:
 
 Disadvantages:
 -  No backstab multiplier~
-@2    = ~Add new bardic store and thief items~
+
 @3    = ~Raoul~
 @4    = ~Oooooaaaagggh!~ [a!ra01]
 @5    = ~Greetings! I be Raoul, and ye?~ [a!ra02]
@@ -227,8 +226,6 @@ Can be used to cast the spell Resist Fear once
 
 Usable by:
  Bard~
-@42   = ~Install Acrobat bard kit~
-@43   = ~You must have the first component installed to use this one~
 @44   = ~acrobat~
 @45   = ~Acrobat~
 @46   = ~ACROBAT: As entertainers, most Acrobats are typically found accompanying carnivals or circuses, although a troupe of Acrobats can put on a remarkable show all by themselves. The often perform in large taverns or in clubs, using their arts to draw in the crowd and captivate them long enough for the proprietor to drain their purses. Acrobats are flashy and love to show off their skills; whatever they do, they like to do with a sense of style and a flair for the dramatic. Acrobats sometimes become cat burglars extraordinaire, and they are also useful adventuring allies, as they can squeeze into places where others cannot go without the aid of magic. Their skill at avoiding traps and other dangers also makes them excellent scouts.
@@ -246,7 +243,6 @@ Disadvantages:
 -  May only place proficiency points in weapons a thief can use
 -  May not wear armor heavier than Studded Leather
 -  Only has one-half normal lore value~
-@47   = ~Install Chorister bard kit~
 @48   = ~Armor of Faith (Abjuration)
 Level: 1
 Range: 0
@@ -386,7 +382,6 @@ Level 6: Bolt of Glory
 Disadvantages:
 -  Only has one-half normal Lore value
 -  Only has one-half Pick Pockets percentage~
-@63   = ~Install Dirgesinger bard kit~
 @64   = ~dirgesinger~
 @65   = ~Dirgesinger~
 @66   = ~DIRGESINGER: Dirgesingers voice melodies not of celebration and joy, but of sorrow and grief. They seek to spread this melancholy outlook far and wide, believing that only those who give in to their sadness can truly understand the world.
@@ -406,7 +401,6 @@ Disadvantages:
 @67   = ~Song of Horror~
 @68   = ~Song of Grief~
 @69   = ~Song of Awakening~
-@70   = ~Install Luring Piper bard kit~
 @71   = ~Curse~
 @72   = ~luring piper~
 @73   = ~Luring Piper~
@@ -419,7 +413,6 @@ Advantages:
 
 Disadvantages:
 -  Cannot learn mage spells from the schools of Conjuration, Invocation or Transmutation~
-@75   = ~Install Adventurer thief kit~
 @76   = ~adventurer~
 @77   = ~Adventurer~
 @78   = ~ADVENTURER: The adventurer is a jack-of-all-trades, not so much a thief as a character who takes advantage of general thiefly skills on adventures. An Adventurer is preferred by many adventuring parties, because he is much less likely than other thieves to betray or steal from his own companions. The successful Adventurer knows the value of trust and cooperation, while many a "street thief" has been raised on duplicity and (sometimes literal) backstabbing.
@@ -440,7 +433,6 @@ Disadvantages:
 -  No backstab multiplier~
 @80   = ~Updating the NPC Kitpack's Adventurer kit assigned to Imoen to the S&S one~
 @81   = ~Updating the NPC Kitpack's Adventurer kit assigned to Nalia to the S&S one~
-@82   = ~Install Burglar thief kit~
 @83   = ~burglar~
 @84   = ~Burglar~
 @85   = ~BURGLAR: This sort of thief is the consummate burglar. He is an expert at breaking and entering the most difficult buildings, bypassing walls, locks, traps and guardians, grabbing the best loot, and escaping unnoticed as stealthily as he arrived.
@@ -452,7 +444,6 @@ Advantages:
 Disadvantages:
 -  -20% to Pick Pockets and Set Traps
 -  Gains trap useage at half the rate of a normal thief~
-@86   = ~Install Soulknife thief kit~
 @87   = ~soulknife~
 @88   = ~Soulknife~
 @89   = ~SOULKNIFE: This sort of thief, a being possessed of potent psionic power, recognises his or her own mind as the most beautiful and deadly thing in all creation. With practice, they have learned to forge their mental strength into a semisolid blade of pure psychic energy. This weapon, known as a mind blade, means that even when unarmed the soulknife is but a thought away from a deadly strike.
@@ -475,7 +466,6 @@ Disadvantages:
 -  Only gets 15 skill points per level~
 @91   = ~Manifest Mind Blade~
 @92   = ~Mind Blade~
-@93   = ~Install Sharpshooter thief kit~
 @94   = ~sharpshooter~
 @95   = ~Sharpshooter~
 @96   = ~SHARPSHOOTER: This sort of thief tends to be a stealthy character, preferring to engage their target from afar with bolt or arrow rather than face them in dangerous melee combat. Unlike the ranger, the Sharpshooter uses her skills to aid in dubious activities involving the property and lives of others rather than the protection of the great outdoors.
@@ -488,7 +478,6 @@ Advantages:
 
 Disadvantages:
 -  No backstab multiplier~
-@97   = ~Install Shadowdancer thief kit~
 
 @99   = ~Summon Shadow~
 @100  = ~Shadow~
@@ -508,7 +497,6 @@ Advantages:
 Disadvantages:
 -  May not set traps
 -  Only gains 15 skill points per level~
-@104 = ~This component is not available for your game.~
 @105 = ~Curse
 (Conjuration/Summoning)
 
@@ -522,4 +510,3 @@ Saving Throw: None
 
 When uttering the Curse spell, the caster lowers the morale of enemy creatures and any Saving Throws and attack rolls they make by 1. At the instant the spell is completed, it affects all creatures in a 15-ft. radius centered on the point selected by the caster. Affected creatures leaving the area are still subject to the spell's effect; those entering the area after the casting is completed are not.~
 @106 = ~Cursed~
-@107 = ~DLC Merger is required before mods can be installed on this game. Check the readme for more information and a link to download DLC Merger.~

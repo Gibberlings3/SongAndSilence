@@ -1,0 +1,13 @@
+@0    = ~Changements concernant les bardes et voleurs purs, ainsi que les kits originaux du jeu (necessaire pour les autres composants)~
+@2    = ~Ajout d'une echoppe pour bardes et voleurs~
+@42   = ~Installer l'Acrobate (kit de barde)~
+@43   = ~Vous devez avoir installe le premier composant pour installer celui-ci~
+@47   = ~Installer le Choriste (kit de barde)~
+@63   = ~Installer le Chanteur Funebre (kit de barde)~
+@70   = ~Installer le Gitan (kit de barde)~
+@75   = ~Installer l'Aventurier (kit de voleur)~
+@82   = ~Installer le Cambrioleur (kit de voleur)~
+@86   = ~Installer le Lamesprit (kit de voleur)~
+@93   = ~Installer le Tireur d'Elite (kit de voleur)~
+@97   = ~Installer le Danseur de l'Ombre (kit de voleur)~
+@104 = ~Ce composant n'est pas disponible pour votre jeu.~

@@ -1,0 +1,525 @@
+@1   = ~Säbelrassler: Der Säbelrassler verkörpert die Begriffe des Wagemuts und der Eleganz. Er zieht Geschicklichkeit und List der bloßen Gewalt vor und zeichnet sich sowohl in Kampfsituationen als auch im sozialen Umgang aus, was ihn zu einem vielseitigen Charakter macht.
+
+Vorteile:
+-  Bonus -1 to RK.
+-  Erhält alle 5 Stufen -1 auf die RK.
+-  Erhält alle 5 Stufen +1 auf Schaden und Trefferwürfe.
+-  Kann sich in allen Waffen spezialisieren, die ein Dieb nutzen kann.
+
+Nachteile:
+-  Kein hinterhältiger Angriff~
+@3   = ~Raoul~
+@4   = ~Oooooaaaagggh!~ [a!ra01] 
+@5   = ~Was gehtn? Bin Raoul un' ihr?~ [a!ra02]
+@6   = ~Heda Kumpel!~ [a!ra03]
+@7   = ~Seit ihr hier wegen Raouls Spezialzeug?~ [a!ra04] 
+@8   = ~Raouls Plunderkiste~
+@9   = ~Wiederkehrender Wurfdolch +1~ 
+@10  = ~Diese Waffe ist vorallendingen bei jenen beliebt, die sich auf Geschicklichkeit und Heimlichkeit verlassen, da sich die Waffe leicht verbergen lässt und
+Obwohl die Waffen nicht sehr viel Schaden verursacht, gibt die bloße Geschwindigkeit ihrer Anwendung dem Benutzer einen eintscheidenden Vorteil im Kampf.
+
+Dieser Dolch wurde auf magischem Wege verstärkt, wahrscheinlich auf Geheiß einer Diebesgilde, trägt jedoch keinerlei Hinweise auf seinen Erschaffer. Neben der magischen Verbesserung der Waffe stellt wohl der größte Vorteil dar, das der Dolch nach jedem Wurf in die Hand des Anwenders zurückkehrt, sodass er oder sie jederzeit für den Kampf gerüstet ist.
+
+EIGENSCHAFTEN:
+
+Schaden: 1W2 +1 (Stich/Geschoss)
+ETW0: -1
+(Kehrt sofort zum Werfer zurück)
+Gewicht: 1
+Initiativefaktor: 1
+Fertigkeit: Dolch
+Typ: 1-händig
+Mindeststärke: 3
+
+Kann nicht verwendet werden von:
+ Klerikern~
+@11  = ~Phiole mit Gift~
+@12  = ~Viele dubiose Gestalten nutzen Gifte wie dieses, sollten ihnen einmal im Streit die Argumente ausgehen. Indem sie ihrem Gegenüber geschickt einige Tropfen in den Wein unterrühren. Doch lässt sich dieses wirksame Gift auch wunderbar zum bestreichen einer Waffe nutzen und ein geübter Anwender kann mit einer kleinen Waffe wie zum Beispiel einem Dolch, welcher mit dem Gift bestrichen ist ebenso so großen Schaden anrichten wie ein Oger mit seiner Keule.
+
+Diese Phiole enthält genug Gift um eine Waffe damit zu bestreichen.
+
+EIGENSCHAFTEN:
+
+Kann verwendet werden, um eine Waffe mit Gift zu bestreichen, ebenso wie der Meuchelmörder. Jeder Treffer in der nächsten Runde wird dem Ziel ein Gift injizieren, welches 1 Schadenspunkt pro Sekunde für 24 Sekunden (3 Schadenspunkte für die ersten 6 Sekunden).  Ein erfolgreicher Rettungswurf gegen Gift reduziert den Schaden auf 12.
+Gewicht: 1
+
+Kann nur verwendet werden von:
+ Dieben~ 
+@13  = ~Diebeshaube~
+@14  = ~Alathis' Beschützer~ 
+@15  = ~Wenngleich diese Kapuze unscheinbar aussieht, umgibt sie seltsamerweiße doch eine seltsame, magische Aura.
+
+Kann nur verwendet werden von:
+ Diebe~
+@16  = ~Alathis Hurbleton war einer von vielen Halblingen, dessen Bestimmung es nicht war, den ganzen Tag mit einer Tasse Tee in der Hand gepflegte Unterhaltungen über das Wetter zu führen. Er startete Laufbahn in den weniger gesetzestreuen Kreisen Luskans, bis der Dieb durch unvorhergesehene Ereignisse gezwungen wurde, die Stadt ziemlich schnell zu verlassen.
+Daraufhin siedelte er sich in Tiefwasser an, wo er seine Geschäfte fortführte. Alathis war ein Einzelgänger und arbeitete stehts alleine, was die dort ansässige Diebesgilde, die berüchtigten Nachtmasken, gar nicht gerne sahen. Erzürnt über seine Dreistigkeit, in ihrem Gebiet zu wildern, beauftragten sie mehrere Assassinen, ihn zu ermorden, aber der vorrauschauende Halbling  hatte sich längst von einem Magier eine magische Kapuze anfertigen lassen, um eben solch einen Versuch zu unterbinden. Die magische Kapuze des Halblings schützte ihn gegen sämtliche Mordversuche seitens der Nachtmasken, weder Gift noch Angriffe aus dem Schatten brachten etwas;  Alathis schien einen Magen aus Blei und Augen im Hinterkopf zu haben.
+
+Doch sein Glück sollte nicht ewig währen. Unvorsichtig und Überheblich ob seiner vermeindlichen Unverwundbarkeit, wurde er doch noch erwischt, als er versuchte einem Wachmann das Gold zu stehlen. Dummerweiße rutschte er bei der Flucht aus und wurde gefangen genommen. Seine Kapuze half ihm recht wenig, als man ihn  vor der Stadt aufknüpfte. 
+
+EIGENSCHAFTEN:
+
+
+Immunität gegen Gift und hinterhältigen Angriff
+Gewicht: 2
+
+Kann nur verwendet werden von:
+ Dieben~
+@17  = ~Keule~
+@18  = ~Licht Aus~ 
+@19  = ~Auf den ersten Blick erscheint dieser Totschläger so gewöhnlich wie wie zahllose Andere seiner Art, aber der genaue Blick der geprüften Augen eines Diebes dürften nicht die feinen Runen entgehen, welche sich entlang des Griffes schlängeln.
+Die Keule wurde vor langer Zeit von einem Gildenmeister der Schattendiebe für seinen erfolgreichsten und loyalsten Gefolgsmann in Auftrag gegeben. Die mächtige Waffe erleichterte die Arbeit des Assassinen sehr, schließlich schien sie Geräusche um ihn herum regelrecht zu verschlucken und sogar er selbst war scheinbar in Schatten gehüllt, wenn er sich an sein Opfer heranschlich und das letzte was die Unglücklichen hörten, war das ungesunde Knacken ihres Schädels, als die Keule ihnen den Garaus machte, wodurch die Waffe schnell ihren Spitznamen "Licht Aus" erhielt.
+
+Bedauerlicherweiße war der Assassine nicht ganz so Loyal, wie der Gildenmeister gedacht hatte und so wurde er eines Nachts im Schlaf mit dem Knüppel zu Tode geprügelt, während seine Frau, welche neben ihm schlief, nichts von alledem hörte.
+
+Wie diese Waffe ihren Weg ihn eure Hände gefunden hat, ist und bleibt ein Rätsel.
+
+EIGENSCHAFTEN:
+
++10% auf Verstecken und leise Bewegen
+Schaden: 1W6 +2 (Wucht)
+ETW0: -2
+Gewicht: 3
+Initiativefaktor: 4
+Fertigkeit: Keule
+Typ: 1-händig
+Mindeststärke: 5
+
+Kann nicht verwendet werden von:
+Magiern~
+@20  = ~Locke des Jessecyl~ 
+@21  = ~Dies scheint eine Haarlocke zu sein. Eine recht schöne Haarlocke sogar.~ 
+@22  = ~Legenden berichten davon, das Jessecyl ein wunderschönes Halbelfen Mädchen gewesen sein soll. Ihr Geliebter, ein Krieger, bat sie am Tag vor einer Schlacht um eine Locke ihres Haares, um sie als Andenken aufzubewahren. Man sagt, das alleine durch die Kraft der Liebe dieser kühne Krieger gemeinsam mit seinen wenigen Recken die Übermacht einer mittlerweile in Vergessenheit geratenen, untoten Bedrohung zurückschlug.
+Obschon Jessecyl und der unbekannte Held schwierige Zeiten zu überstehen hatten, so hat letztenendes doch die wahre Liebe gesiegt. Jene unerschütterliche Beziehung hat bewiesen, das die Liebe zuweilen die stärkste Magie sein kann.
+
+Die Locke muss stehts in der Hand gehalten werden, damit ihre Magie wirkt.
+
+EIGENSCHAFTEN:
+
+Alle Gruppenmitglieder erhalten einen Bonus von +2 auf ihre Rettungswürfe gegen Tod.
+
+Kann nur verwendet werden von:
+ Barden
+ Paladinen~
+@23  = ~Faustschild~ 
+@24  = ~Zerbeulter Faustschild des Skalden~
+@25  = ~Dieser abgenutzte, kleine Schild gehörte einst einem Skalden, einem Barden der Barbarenstämme aus dem Eiswindtal. Irgendwie fand der Schild seinen weg in den Süden, zweifellos als Beutestück einer längst vergessenen Invasion in den kalten Norden.
+Der Skalde schien einigen Ruhm in seinem Stamm zu genießen, da die mächtige Verzauberung des Schildes ihm vor den grausamen Schneestürmen schützte, welche im Grat der Welt toben.
+
+EIGENSCHAFTEN:
+Kein Schutz vor Fernkampfangriffen
+10% Kälteresitzenz
+
+RK Bonus:  -2
+Gewicht:  2
+Mindeststärke: 4
+
+Kann nicht verwendet werden von:
+ Rechtschaffenen Charakteren
+ Magier~
+@26  = ~Kurzschwert~
+@27  = ~Schützender Ton~
+@28  = ~Schützender Ton war eine Waffe die von dem Barden und Abenteurer Grefyn in Auftrag gegeben wurde, dessen Geschichten mittlerweile jedoch längst in Vergessenheit geraten sind. Die Verzauberung auf der Klinge verliehen dem Barden die Macht, sich effektiv gegen jeden Feind zu verteidigen, welcher ihm nach dem Leben trachtete. Kombiniert mit mit dem leisen Summen der Waffe, wenn sie gezogen wurde, erhielt sie schnell den namen "Schützender Ton".
+Leider müssen alle großen Helden eines Tages das zeitliche Segnen und obwohl er von Priestern der Waukeen wiedererweckt wurde, nahmen sie das Schwert als Pfand und es wurde Kircheneigentum. Jahrhundertelang war das Schwert im Besitz der Kirche, bis es bei einer Ork Invasion in der Zeit der Sorgen verloren ging.
+
+EIGENSCHAFTEN:
+
+-1 auf RK und +1 auf Rettungswürfe, außer gegen Tod
+
+Schaden:  1W6 +2 (Stich)
+ETW0 Bonus:  -2
+Initiativfaktor: 1
+Gewicht:  2
+Fertigkeit: Kurzschwert
+Typ:  1-händig
+Mindeststärke: 5
+
+Kann nicht verwendet werden von:
+ Druide
+ Kleriker
+ Magier~
+@29  = ~Schmieds Kettenhemd~
+@30  = ~Ein Kettenhemd besteht aus miteinander verbundenen Metallringen. Es wird immer über einem wattierten Rock oder einem leichten Ledergewand getragen, um schmerzhafte Scheuerstellen zu vermeiden und die Wucht von Schlägen zu dämpfen.
+
+Diese Rüstung ist sehr leicht und doch exellent verarbeitet, sie erinnert sehr an die sagenumwobenen Elfenkettenhemden. Ähnliche Rüstungen werden oft von den Elfen hergestellt, um ihre Kampfmagier und Klingensänger im Kampf auszurüsten und sie so wenig wie möglich zu behindern. Selbstverständlich ist die Herstellung dieser Rüstungen ein gut geschütztes Geheimnis der Elfen, umso mehr verwundert es, das dieses Kettenhemd nicht von Elfenhand, sonder von einem Menschen geschaffen wurde. Wie er die Fähigkeit erlangt hatte, das Elfenhandwerk zu kopieren, ist unbekannt, doch es dürfte nicht sehr verwunderlich sein, das die Elfen den namenlosen Schmied aufgesucht haben und ihn "überredet" haben, keine weiteren Exemplare mehr herzustellen.
+
+EIGENSCHAFTEN:
+
+Rüstungsklasse: 5
+Gewicht: 30
+Mindeststärke: 8
+
+Kann nicht verwendet werden von:
+ Druiden
+ Magier
+ Diebe~
+@31  = ~Lederrüstung des Barden~
+@32  = ~Das beschlagene Lederwams hat wenig mit der normalen Lederrüstung gemeinsam. Die Lederrüstung ist ein gehärteter Panzer, während das beschlagene Lederwams weich und biegsam und mit hunderten von Metallnieten besetzt ist. Die Nieten sind so nahe beieinander, dass sie einen flexiblen Überzug aus hartem Metall bilden, durch den sich Hiebe und Stiche abwehren lassen. Das Grundmaterial aus weichem Leder dient lediglich dazu, die Nieten zusammen zu halten.
+Diese sehr leichte Rüstung wurde in sorgsamer Handarbeit gefertigt und bietet besseren Schutz.Obwohl die Rüstung scheinbar speziell für Barden gefertigt wurde, kann sie von jedem anderen getragen werden, der mitsamt seiner Rüstung zaubern will.
+
+EIGENSCHAFTEN
+
+Rüstungsklasse: 7
+Gewicht: 15
+Mindeststärke: 6
+
+Kann nicht verwendet werden von:
+ Magiern~
+@33  = ~Lederrüstung des Barden +1~
+@34  = ~Das beschlagene Lederwams hat wenig mit der normalen Lederrüstung gemeinsam. Die Lederrüstung ist ein gehärteter Panzer, während das beschlagene Lederwams weich und biegsam und mit hunderten von Metallnieten besetzt ist. Die Nieten sind so nahe beieinander, dass sie einen flexiblen Überzug aus hartem Metall bilden, durch den sich Hiebe und Stiche abwehren lassen. Das Grundmaterial aus weichem Leder dient lediglich dazu, die Nieten zusammen zu halten.
+
+Diese sehr leichte Rüstung wurde in sorgsamer Handarbeit gefertigt und bietet besseren Schutz. Obwohl die Rüstung scheinbar speziell für Barden gefertigt wurde, kann sie von jedem anderen getragen werden, der mitsamt seiner Rüstung zaubern will.
+
+EIGENSCHAFTEN
+
+Rüstungsklasse: 7
+Gewicht: 15
+Mindeststärke: 6
+
+Kann nicht verwendet werden von:
+ Magiern~
+@35  = ~Das beschlagene Lederwams hat wenig mit der normalen Lederrüstung gemeinsam. Die Lederrüstung ist ein gehärteter Panzer, während das beschlagene Lederwams weich und biegsam und mit hunderten von Metallnieten besetzt ist. Die Nieten sind so nahe beieinander, dass sie einen flexiblen Überzug aus hartem Metall bilden, durch den sich Hiebe und Stiche abwehren lassen. Das Grundmaterial aus weichem Leder dient lediglich dazu, die Nieten zusammen zu halten.
+
+Diese sehr leichte Rüstung wurde in sorgsamer Handarbeit gefertigt und bietet besseren Schutz. Obwohl die Rüstung scheinbar speziell für Barden gefertigt wurde, kann sie von jedem anderen getragen werden, der mitsamt seiner Rüstung zaubern will.
+
+EIGENSCHAFTEN
+
+Rüstungsklasse: 6
+Gewicht: 15
+Mindeststärke: 6
+
+Kann nicht verwendet werden von:
+ Magiern~
+@36  = ~Geschichte des grässlichen Übels~
+@37  = ~Auf dieser Schriftrolle befindet sich eine Geschichte, welche so furchtbar und so grausam ist, dass beim lesen des letzten Satzes alle Wesen, welche der Anwender beim vorlesen fixiert, wahrhaftig einen grauenhaften und qualvollen Tod stirbt.
+Sobald der letzte Satz vorgelesen wird, verschwindet die Magie von der Rolle und sie verschwindet. Doch bleiben die Alpträume, welche die Geschcihte bei allen Zuhörern auslösen, noch Nächte lang bestehen.
+
+EIGENSCHAFTEN:
+
+Bewirkt bei Benutzung einmal den Todeszauber
+
+Kann nur verwendet werden von:
+ Barden~
+@38  = ~Geschichte des entsetzlichen Todes~
+@39  = ~In wackeliger Handschrift wurde auf dieser Schriftrolle eine unheimliche Geschichte der wandernten Toten, welche bei Nacht ihr Unwesen treiben, verfasst. Beim vorlesen der Schriftrolle sorgt die mächtige Verzauberung dafür, das die Geschichte selbst den Mut der tapfersten Krieger bricht.
+Sobald der letzte Satz vorgelesen wird, verschwindet die Magie von der Rolle und sie verschwindet. Dennoch können die meisten Leute, welche die Geschichte gehört haben, noch tagelang aus Furcht Nachts kein Auge zumachen. 
+
+EIGENSCHAFTEN:
+
+Bewirkt bei Benutzung einmal Schrecken
+
+Kann nur verwendet werden von:
+ Barden~
+@40  = ~Geschichte des wahren Heldenmutes~
+@41  = ~Diese Seite ist gefüllt mit den Triumphen namenloser Helden; wie sie eine Übermacht von Orks in die Flucht schlagen, böse Drachen und ihre Anhänger zurückschlagen oder teuflische Dämonen und ihre finsteren Pläne vereiteln. Jeder Verbündete, der diese Geschichten der Tapferkeit hört, wird von einem ungeheuren Mut erfüllt, der ihn in die Lage versetzt, selbst einem Drachen furchtlos ins Maul zu schauen, doch leider starben viele Abenteurer eben in diesem, weil sie sich überschätzten...
+Sobald der letzte Satz vorgelesen wird, verschwindet die Magie von der Rolle und sie verschwindet. Trotzdem erinnert man sich immer wieder gerne an diese Geschichte.
+
+EIGENSCHAFTEN:
+
+Bewirkt bei Benutzung einmal Furcht bannen
+
+Kann nur verwendet werden von:
+ Barden~
+@44  = ~Akrobat~
+@45  = ~Akrobat~
+@46  = ~AKROBAT: Zwar arbeiten die meisten Akrobaten im Zirkus oder in KArnevalsvereinen, doch es kommt immer mal wieder vor, das kleinere Gruppen von ihnen durch die Lande ziehen und die Bevölkerung mit ihren Kunststücken zu faszinieren, nur um die abgelenkte Masse dann ihres Goldes zu erleichtern. Akrobaten sind sehr Eitel und lieben es, den Leuten ihre Fähigkeiten vorzuführen und alles was sie tun, hat stehts einen gewißen Hang zur Dramatik. Da sie meisterhafte Fassadenkletterer sind, sind Akrobaten zuweilen auch in Abenteurergruppen beliebt, da sie oftmals allein durch ihre Agilität an Orte vordringen können, die anderen ohne magische Hilfe verwehrt bleiben. Sie scheinen einen sechsten Sinn dafür zu haben, Fallen und anderen Gefahren austzweichen, weshalb sie gerne als Kundschafter eingesetzt werden.
+
+Vorteile:
+-  -1 zur Rüstungsklasse
+-  Alle 8 Stufen -1 zur Rüstungsklasse gegen Fernkampfangriffe
+-  Kann sich mit Schleudern, Dartpfeilen und Dolchen spezialisieren
+
+Nachteile:
+-  Darf nur Waffen benutzen, welche auch dem Dieb erlaubt sind
+-  Die Rüstung darf nicht schwerer sein als ein Beschlagenes Lederwams
+-  Hat nur die Hälfte des Überlieferungswertes~
+@48  = ~Rüstung des Glaubens
+
+Grad: 1
+Schule: Bannzauber
+Reichweite: 0
+Wirkungsdauer: 3 Runden + 1 Runde/Stufe
+Zeitaufwand: 1
+Wirkungsbereich: Anwender
+Rettungswurf: Nein
+
+Die Rüstung des Glaubens schützt den Priester sowohl vor Angriffen mit Waffen als auch vor magischem Schaden. Die Rüstung besteht aus reiner magischer Energie und absorbiert einen Teil des Schadens, den der Priester normalerweiße erleiden würde. Bei einem Priester der 1. Stufe absorbiert die Rüstung 5%, den der Priester erleiden würde. Alle 5 Stufen steigt diese Schutzwirkung um weitere 5%. So würde ein Priester der 20. Stufe, der diesen Zauber wirkt, von allen Angriffen 25% weniger Schaden nehmen.~
+@49  = ~Leichte Wunden heilen
+
+Grad: 1
+Schule: Nekromantie
+Reichweite: Berührung
+Wirkungsdauer: Augenblicklich
+Zeitaufwand: 5
+Wirkungsbereich: Berührung
+Rettungswurf: Nein
+
+Wenn der Priester den Zauber wirkt und einem Wesen seine Hände auflegt, heilt er bei dem Wesen 1-8 erlittene Schadenspunkte. Wesen ohne Körper und Wesen von anderen Ebenen können durch den Zauber nicht geheilt werden.
+
+Die Heilung ist nur insofern permanent, als das Wesen natürlich durch weitere Verletzungen erneut verwundet werden kann.~
+@50  = ~Verderben
+
+Grad: 1
+Schule: Nekromantie
+Reichweite: Sichtweite des Zaubernden
+Wirkungsdauer: 1 Phase
+Zeitaufwand: 1 Runde
+Wirkungsbereich: 1 Wesen
+Rettungswurf: Nein
+
+Das Ziel des Zaubers überkommt ein drohendes Gefühl der Verdammnis. Für die Dauer des Zaubers erhält das Ziel -2 auf alle Würfe (auch auf ETW0 und Rettungswürfe). Es gibt keinen Rettungswurf gegen die Auswirkungen dieses Zaubers.~
+@51  = ~Gesang
+
+Grad: 2
+Schule: Herbeirufung/Beschwörung
+Reichweite: 0
+Wirkungsdauer: 5 Runden
+Zeitaufwand: 1 Runde
+Wirkungsbereich: 9 m Radius
+Rettungswurf: Nein
+
+Mit Hilfe des Gesangs stärkt der Priester die eigene Gruppe und schwächt seine Feinde. Alle, die dem Priester freundlich gesonnen sind, erhalten +1 auf Angriffs-, Schadens- und Rettungswürfe. Alle, die dem Priester feindlich gesonnen sind, erleiden -1 auf die entsprechenden Würfe. mehrere Gesangszauber sind nicht kumulativ.~
+@52  = ~Gift verlangsamen
+
+Grad: 2
+Schule: Nekromantie
+Reichweite: Berührung
+Wirkungsdauer: Augenblicklich
+Zeitaufwand: 1
+Wirkungsbereich: Das berührte Wesen
+Rettungswurf: Nein
+
+Bei einem vergifteten Wesen werden die Auswirkungen des Giftes verlangsamt. Gifte, die nicht außergewöhnlich stark sind, werden augenblicklich neutralisiert.~
+@53  = ~Heilige Macht entlehnen
+
+Grad: 2
+Schule: Anrufung
+Reichweite: 0
+Wirkungsdauer: 1 Phase
+Zeitaufwand: 2
+Wirkungsbereich: Der Zaubernde
+Rettungswurf: Nein
+
+Mit hilfe des Zaubers ruft der Priester seinen Gott an, auf das ihm dieser für kurze Zeit überirdische Macht verleiht. Dadurch erhöhen sich seine Stärke, Geschicklichkeit und Konstitution für eine Phase lang um 1 Punkt für je 3 Stufen. Ein Priester der 3. stufe würde bespielsweiße +1 auf diese Attribute erhalten und ein Priester der 12. Stufe würde +4 auf die Attribute erhalten.~
+@54  = ~Glyphe der Abwehr
+
+Grad: 3
+Schule: Bannzauber/Hervorrufung
+Reichweite: Berührung
+Wirkungsdauer: Permanent bis zur Auflösung
+Zeitaufwand: Speziell
+Wirkungsbereich: Speziell
+Rettungswurf: Speziell
+
+Eine "Glyphe der Abwehr" ist ein mächtiges, magisches Schriftzeichen, das feindselige oder unautorisierte Wesen daran hindert, einen
+Raum zu betreten, eine bestimmte Stelle zu passieren oder einen bestimmten Behälter zu öffnen. Die Glyphe kann beispielsweise auf
+einem Durchgang, auf einer schmalen Brücke oder einer Kiste oder Truhe angebracht werden. Der Priester zeichnet ein glühendes
+Symbol über den geschützten Bereich in der Luft. Wird die Glyphe ausgelöst, weil ein Wesen versucht, die geschützte Stelle zu passieren
+oder den geschützten Behälter zu öffnen, erleidet es 1W4 Schadenspunkte pro Stufe des Priesters, wenn ihm ein Rettungswurf gegen
+Zauber misslingt.~
+@55  = ~Mittelschwere Wunden heilen
+
+Grad: 3
+Schule: Nekromantie
+Reichweite: Berührung
+Wirkungsdauer: Permanent
+Zeitaufwand: 5
+Wirkungsbereich: Das berührte Wesen
+Rettungswurf: Nein
+
+Wenn der Priester für diesen Zauber einem Wesen seine Hände auflegt, heilt er bei dem Wesen 14 erlittene Schadenspunkte. Wesen
+ohne Körper und Wesen von anderen Ebenen können durch diesen Zauber nicht geheilt werden.
+Die Heilung ist nur insofern permanent, als das Wesen natürlich durch weitere Verletzungen erneut verwundet werden kann.~
+@56  = ~Koordinierte Verteidigung
+
+Grad: 4
+Schule: Bezauberung/Verzauberung
+Reichweite: 0
+Wirkungsdauer: 6 Runden
+Zeitaufwand: 1
+Wirkungsbereich: 3 m Radius
+Rettungswurf: Nein
+
+Die Wesen im Wirkungsbereich dieses Zaubers können ihre Angriffe und ihre Parademanöver auf magischem Weg aufeinander
+abstimmen und erhalten so einen Bonus auf ihre Verteidigung. Die Wesen kämpfen sozusagen wie eine Einheit. Der Zauber ist immer
+auf den Priester zentriert, betrifft aber alle Wesen, die sich in 3 m Umkreis um den Priester befinden. Nachdem der Zauber gewirkt
+wurde, können sich die betroffenen Wesen auch weiter vom Priester entfernen, ohne den Schutz zu verlieren. Während der
+Wirkungsdauer des Zaubers erhält jedes betroffene Wesen -2 auf die Rüstungsklasse. Der Schutz hält an, bis die Wirkungsdauer endet
+oder der Zauber gebannt wird.~
+@57  = ~Heilige Macht
+
+Grad: 4
+Schule: Hervorrufung
+Reichweite: 0
+Wirkungsdauer: 1 Runde/Stufe
+Zeitaufwand: 6
+Wirkungsbereich: Zaubernder
+Rettungswurf: Nein
+
+Dieser Zauber erfüllt den Priester mit Heiliger Macht. Er erhält so die Fähigkeiten eines Kämpfers der gleichen Stufe. Er erhält eine
+Stärke von 18/00 (auch dann, wenn seine Stärke höher ist), den ETW0 eines Kämpfers der gleichen Stufe und 1 temporären
+Trefferpunkt je Stufe. Die temporären Trefferpunkte bleiben erhalten, bis der Zauber endet oder gebannt wird.~
+@58  = ~Massenheilung
+
+Grad: 5
+Schule: Nekromantie
+Reichweite: Sichtweite
+Wirkungsdauer: Permanent
+Zeitaufwand: 5
+Wirkungsbereich: 9 m Radius
+Rettungswurf: Nein
+
+Wenn der Priester diesen Zauber wirkt, stellt er sich die Gesichter seiner Gruppenmitglieder vor und konzentriert sich auf die Einheit
+in der Gruppe. Sobald der Zauber gewirkt wurde, erhält jedes Gruppenmitglied innerhalb von 9 m vom Priester 1W8+1 Trefferpunkte
+pro Stufe des Zaubernden zurück.
+Die Heilung ist nur insofern permanent, als das Wesen natürlich durch weitere Verletzungen erneut verwundet werden kann.~
+@59  = ~Strahl des Ruhms
+
+Grad: 5
+Schule: Anrufung/Hervorrufung
+Reichweite: 20 m
+Wirkungsdauer: Augenblicklich
+Zeitaufwand: 9
+Wirkungsbereich: 1 Wesen
+Rettungswurf: Nein
+
+Der "Strahl des Ruhms" ist ein Ausbruch Heiliger Energie, die in ein Wesen einschlägt und es verwundet. Der Schaden hängt dabei
+von der Art des betroffenen Wesens ab:
+
+Wesen Schaden
+Von der Materiellen Ebene 6W6
+Von einer Elementarebene 3W4
+Untotes Wesen 8W6
+Dämon 10W6~
+@60  = ~chorister~
+@61  = ~Chorister~
+@62  = ~CHORISTER: Die Musik, egal ehrfürchtige Hymnen, Symphonien oder aber tranceähnlicher Sprechgesang sind wichtige Dienste bei der Huldigung der Götter. Viele Tempel haben für eben solche Aufgaben einen Barden, welcher aufgrund seiner spezialisierung auch als Chorist bekannt ist.
+Nicht alle verbringen ihren Dienst in den stillen Mauern der Tempel, sondern viele von ihnen werden von ihren Kirchen auch als Missionare eingesetzt, da sie durch ihre sympathische Art sehr effektiv neue Anhänger anwerben können. Viele abenteuerlustige Barden, welche eine gewisse religöse Neigung besitzen, schlagen den weg als Choristen ein.
+
+Vorteile:
+- Kann einige Priesterzauber anwenden, die wie Magierzauber erlernt und eingeprägt werden
+Grad 1: Rüstung des Glaubens, Leichte Wunden heilen, Alp
+Grad 2: Gesang, Heilige Macht entlehnen, Gift verlangsamen
+Grad 3: Mittelschwere Wunden heilen, Glyphe der Abwehr
+Grad 4: Koordinierte Verteidugung, Heilige Macht
+Grad 5: Massenheilung
+Grad 6: Strahl des Ruhms
+
+Nachteile:
+-  Hat nur die Hälfte des Überlieferungswertes
+-  Hat nur die Hälfte der Taschendiebstahl Prozente~
+@64  = ~Klagesänger~
+@65  = ~Klagesänger~
+@66  = ~KLAGESÄNGER: Im Gegensatz zu anderen Barden handelt der Sprechgesang der Klagesänger nicht von Freude oder Glück, sondern von der Sorge und dem Leid auf der Welt. Die Philosophie der Klagesänger lautet, das nur jene, welche die Trauer und das Unglück zu akzeptieren erlernen, den wahren Sinn des Lebens erkennen.
+
+Als einsame Wanderer versuchen sie, ihren Zuhörern mithilfe ihrer traurigen Balladen die Bedeutung wahren Kummers zu verdeutlichen. Für einige dieser gefallenen Barden gibt es nicht wichtigeres, als das andere Leute durch ihre Gesänge die Tiefen der Trauer und des Verlustes verstehen.Und für ein paar dieser düsteren Geschöpfe stellen Gefühle wie Glück, die Liebe oder die Hoffnung ein Unding dar, da sie nicht in der Lage sind so zu fühlen und sie vermitteln der Bevölkerung ihre pessimistische Weltanschauung, wie etwa die Unsinnigkeit der Liebe oder die Endgültigkeit des Todes. Letztere sind oft als bereitwillige Diener von Vampiren oder mächtigen Leichnamen zu finden.
+
+Klagesänger dürfen nicht von guter Gesinnung sein.
+
+Vorteile:
+-  Das Bardenlied verflucht die Gegner, sie erhlaten - 1 auf alle Rettungswürfe und auf den ETW0. Auf Stufe 10 je -2, Stufe 20 -3 und Stufe 30 -4.
+-  Ab Stufe 5 kann einmal täglich das Lied des Schreckens angewandt werden, das den gleichen  Effekt hat wie der Zauber Schrecken
+-  Ab Stufe 7 kann einmal täglich das Lied des Trauer angewandt werden, welches den gleichen  Effekt hat wie der Zauber Verwirrung
+-  Ab Szufe 9 kann einmal täglich das Lied des Erwachens angewandt werden, welches den gleichen Effekt hat wie der Zauber Tote beleben
+
+Nachteile:
+-  Hat nur die Hälfte des Überlieferungswertes~
+@67  = ~Lied des Schreckens~
+@68  = ~Lied der Trauer~
+@69  = ~Lied des Erwachens~
+@71  = ~Verfluchen~
+@72  = ~Zigeuner~
+@73  = ~Zigeuner~
+@74  = ~ZIGEUNER:Zigeuner werden oft als "Fahrendes Volk" oder "Waldnomaden" bezeichnet, da die Zigeuner normalerweiße mit bunt bemalten Planwagen durch die Lande reisen. Bekannt für ihre fremde Musik, die exotischen Tänze und die vielen Märchen, unterhalten sie auf ihren Reisen die Bewohner der verschiedenen Dörfer und Städte, die sie besuchen und verdienen so genug Geld um zu überleben. Sie reisen solange durch die Welt, bis sie einen interessanten Ort entdecken. Dort lassen sich die Zigeuner nieder, bauen ihre provisorischen Zelte auf und bleiben solange bis sie wieder die Wanderlust packt und sie weiter durch die Welt reisen. Einige tollkühne Zigeuner schlagen den Weg des Abenteurers ein und haben ein scheinbar angeborenens Talent darin, magische Orte ausfindig zu machen und ihnen ihre Schätze zu entreisen. 
+
+Viele verstehen die Zigeuner nicht, stempeln sie als Diebe, Bettler, Gaukler oder Herumtreiber ab. Aufgrund ihrer Natur, immer von einem Ort zum anderen zu ziehen und niemals feste Bindungen in den Siedlungen, welche sie besuchen, einzugehen, haben sie mit üblen Gerüchten zu kämpfen. Verstärkt wird der schlechte Eindruck dadurch, das sie im Lauf ihrer Reisen allerhand Taschenspielertricks erlernt haben, was schon des öfteren den Unmut in der Bevölkerung verursacht hat. Es sollte noch nebenbei bemerkt sein, das nicht alle Zigeuner Barden sind; Zigeuner Barden, in ihren Clans bekannt als "Grobuns", übernehmen die Aufgaben als oberster Geschichtenerzähler, Kartenleger und als spirituelle Berater ihres Clans.
+
+Vorteile:
+-  Bardenleid Bezaubert Gegner, sofern ihnen ein Rettungswurf +2 gegen Zauber, alle 5 Stufen um -1 erschwert wird
+-  Alle 8 Stufen erhöht sich der Rettungswurf gegen Zauber um +1.
+-  Kann einmal pro Tag Verfluchen wirken. Der Gegner erhält -1 auf Rettungswürde und ETWO.
+
+Nachteile:
+-  Kann keine Zauber der Schule Beschwörung, Hervorrufung und Umwandlung lernen~
+@76  = ~Abenteurer~
+@77  = ~Abenteurer~
+@78  = ~ABENTEURER: Der Abenteurer ist ein echter Überlebenskünstler und verglichen mit seinen anderen Diebeskollegen nicht so sehr auf die engen Straßen der Städte fixiert. Als gern gesehenes Mitglied in vielen Abenteurergruppen gilt der Abenteurer auch als weitaus ehrlicher und treuer, als der gemeine "Straßendieb", besitzt jedoch nicht Ehrlosigkeit, einen Feind hinterrücks zu meucheln.
+
+Vorteile:
+-  Jedes Level +5% zum Schlösser öffnen und Fallen finden
+-  Erhält einen Bonus von +1 auf alle Rettungswürfe in den Stufens 1, 8 und 14
+
+Nachteile:
+-  Keinen hinterhältigen Angriff~
+@79  = ~ABENTEURER: Der Abenteurer ist ein echter Überlebenskünstler und verglichen mit seinen anderen Diebeskollegen nicht so sehr auf die engen Straßen der Städte fixiert. Als gern gesehenes Mitglied in vielen Abenteurergruppen gilt der Abenteurer auch als weitaus ehrlicher und treuer, als der gemeine "Straßendieb", besitzt jedoch nicht Ehrlosigkeit, einen Feind hinterrücks zu meucheln.
+
+Vorteile:
+-  Jedes Level +5% zum Schlösser öffnen und Fallen finden
+-  Erhält einen Bonus von +1 auf alle Rettungswürfe in den Stufens 1, 8 und 14
+
+Nachteile:
+-  Keinen hinterhältigen Angriff~
+@80  = ~Aktualisiere das NPC Kitpack und ändere Imoens Klasse in Abenteurer um~
+@81  = ~Aktualisiere das NPC Kitpack und ändere Nalias Klasse in Abenteurer um~
+@83  = ~Einbrecher~
+@84  = ~Einbrecher~
+@85  = ~EINBRECHER: Dieser Dieb ist der perfekte Einbrecher. Als ein Experte im Einbrechen und Infiltrieren von Gebäuden, dem überwinden von Mauern, Schlösser öffnen, Fallen und Wächter neutralisieren, dem Aufspüren versteckter Schätze und dem spurlosen Verschwinden vom Tatort ist er eine wertvolle Bereicherung für jede Diebesgilde.
+
+Vorteile:
+-  +10% auf Fallen finden, Verstecken, Leise Bewegen and Schlösser öffnen
+-  Kann sich mit Dolchen, Dartpfeilen und Schleudern spezialisieren
+
+Nachteile:
+-  -20% auf Taschendiebstahl und Fallen stellen
+-  Kann pro Levelanstieg nur halb soviele Fallen stellen~
+@87  = ~Seelenmesser~
+@88  = ~Seelenmesser~
+@89  = ~SEELENMESSER: Dieser Dieb, welcher mit seinen mächtigen, paranormalen Kräften geboren wurde, hat die Fähigkeit erlernt, Kraft seiner Gedanken eine Klinge aus reiner psychischer Energie zu schaffen. Diese Waffe, bekannte als die Gedankenklinge, bedeutet für jeden achtlosen Gegner, der die Seelenmesser dummerweiße für unbewaffnet hält, das er seinem Tod nur einen kurzen Schritt entfernt ist.
+
+Vorteile:
+-  Kann die Großmeisterschaft mit Kurzschwertern erreichen.
+-  Kann einmal pro Tag alle 10 Stufen eine Gedankenklinge manifestieren. Dieses Kurzschwert ist eine psyionische Waffe mit einer Wirkungsdauer von 1 Runde/Level, zählt als Waffe mit einer Verzauberung um 1 höher als sie eigentlich ist, wenn bestimmt werden soll, was die Waffe treffen kann, bis zu einem Maximum von +5.  Jeder Treffer heilt die Seelenklinge um 1 TP. ETWO Bonus und Schaden verbessern sich alle 5 Stufen um 1, bis zu einem Maximum on +5 auf Stufe 25. Die Reichweite verbessert sich alle 5 Stufen um 10  bis zu einem Maximum von 50 auch Stufe 25.
+
+Nachteile:
+-  Kann keine Fallen stellen
+-  Kann pro Stufenaufstieg nur 15 Punkte auf die Diebesfähigkeiten verteilen.~
+@90  = ~SEELENMESSER: Dieser Dieb, welcher mit seinen mächtigen, paranormalen Kräften geboren wurde, hat die Fähigkeit erlernt, Kraft seiner Gedanken eine Klinge aus reiner psychischer Energie zu schaffen. Diese Waffe, bekannte als die Gedankenklinge, bedeutet für jeden achtlosen Gegner, der die Seelenmesser dummerweiße für unbewaffnet hält, das er seinem Tod nur einen kurzen Schritt entfernt ist.
+
+Vorteile:
+-  Kann die Großmeisterschaft mit Kurzschwertern erreichen.
+-  Kann einmal pro Tag alle 10 Stufen eine Gedankenklinge manifestieren. Dieses Kurzschwert ist eine psyionische Waffe mit einer Wirkungsdauer von 1 Runde/Level, zählt als Waffe mit einer Verzauberung um 1 höher als sie eigentlich ist, wenn bestimmt werden soll, was die Waffe treffen kann, bis zu einem Maximum von +5.  Jeder Treffer heilt die Seelenklinge um 1 TP. ETWO Bonus und Schaden verbessern sich alle 5 Stufen um 1, bis zu einem Maximum on +5 auf Stufe 25. Die Reichweite verbessert sich alle 5 Stufen um 10  bis zu einem Maximum von 50 auch Stufe 25.
+
+Nachteile:
+-  Kann keine Fallen stellen
+-  Kann pro Stufenaufstieg nur 15 Punkte auf die Diebesfähigkeiten verteilen.~
+@91  = ~Manifestierte Gedankenklinge~
+@92  = ~Gedankenklinge~
+@94  = ~Scharfschütze~
+@95  = ~Scharfschütze~
+@96  = ~SCHARFSCHÜTZE: Diese verstohlenen Individuen ziehen es vor, ihrem Ziel aus sicherer Entfernung einen Pfeil oder Bolzen in den Kopf zu schießen, anstatt sich ihm von Angesicht von Angesicht im Nahkampf zu stellen. Anders als der Waldläufer, nutzen sie ihre Fähigkeiten für dubiose Aktivitäten und der schnelle Gewinn interessiert sie mehr als das beschützen der Natur.
+
+Obwohl der Scharfschütze sehr erfahren im Umgang verschiedenster Fernkampfwaffen ist, ist er nicht so zäh und belastbar wie ein echter Krieger und die Neigung zum Fernkampf statt zum Nahkampf ließen es unnötig werden, die Kampftechniken zu erlernen, mit denen ein Gegner schnell von hinten neidergetreckt werden kann.. Sie betrachten dies jedoch nicht als Nachteil, denn wieso sollte man aus dem Schatten zuschlagen, wenn ein gut plazierter Schuss oder eine geschickt versteckte Falle das gleiche Unheil anrichten können, sollte es nötig sein?
+
+Vorteile:
+-  Kann in allen Fernkampfwaffen die Großmeisterschaft erlangen die ein Dieb nutzen kann
+-  Kann alle 4 Stufen 1 einmal pro Tag seine Fernkampfwaffen vergiften. Jeder Treffer in der nächsten Runde wird dem Ziel ein Gift injizieren, welches 1 Schadenspunkt pro Sekunde für 24 Sekunden (3 Schadenspunkte für die ersten 6 Sekunden).  Ein erfolgreicher Rettungswurf gegen Gift reduziert den Schaden auf 12.
+
+Nachteile:
+-  Keinen hinterhältigen Angriff~
+@99  = ~Schatten beschwören~
+@100 = ~Schatten~
+@101 = ~Schattentänzer~
+@102 = ~Schattentänzer~
+@103 = ~SCHATTENTÄNZER: Schattentänzer agieren an der Grenze zwischen Licht und Schatten und sind geschickte Meister der Täuschung. Sie sind mysteriös und verkörpern das Unbekannte. Niemand vertraut ihnen wirklich aber fast jeder ist von ihnen fasziniert.
+Obwohl Schattentänzer in enger Verbindung zu den Schatten stehen und gerne List und Tücke einsetzen, gibt es eben so viele gute wie böse Schattentänzer. Es steht ihnen also völlig frei, zu welchen Zwecken sie ihre unglaublichen Fähigkeiten einsetzen wollen.
+Einige von ihnen setzen ihre ungewöhnlichen Fähigkeiten ein, um Andere zu unterhalten. Andere agieren wie Diebe und nutzen ihre Fähigkeiten, um Verteidigungsanlagen und Verteidigungsmechanismen zu überwinden oder um andere hinters Licht zu führen. Alle Schattentänzer sind von einer sorgfältig gepflegten Aura des Ungewissens umgeben, so dass die einfache Bevölkerung nie weiß, ob ihnen die Schattentänzer Böses wollen oder ihnen gut gesonnen sind.
+
+Vorteile:
+-  Erhält alle 2 Stufen einen Bonus von +5% auf Verstecken und Leise Bewegen
+-  Verfügt über Infrasion
+-  Kann einmal pro Tag den Zauber Reflektiertes Ebenbild einsetzen
+-  Kann ab Stufe 5 einmal am Tag einen Schatten beschwören. Der Schatten wird mit jeder Stufe des Schattentänzers stärker und kann mit ihm    gemeinsam durch die Schatten schleichen. Die Beschwörung hält 8 Stunden an..
+-  Kann ab Stufe 8 einmal am Tag Phantomtor wirken. Weitere Anwendungen auf den Stufen 14 und 20.
+
+Nachteile:
+-  Kann keine Fallen stellen
+-  Pro Level nur 15 Punkte auf Diebesfähigekiten verteilen~

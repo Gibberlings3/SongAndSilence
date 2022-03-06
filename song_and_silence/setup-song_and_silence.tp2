@@ -1,35 +1,39 @@
-BACKUP ~song_and_silence/backup~
+BACKUP ~weidu_external/song_and_silence/backup~
 SUPPORT ~https://www.gibberlings3.net/forums/forum/72-song-and-silence/~
 
-VERSION ~v15~
-README ~song_and_silence/readme-song_and_silence.html~
+VERSION ~v16~
+README ~song_and_silence/tra/%LANGUAGE%/readme-song_and_silence.html~ ~song_and_silence/readme-song_and_silence.html~
 
 ALWAYS
   
   ACTION_IF ((FILE_EXISTS ~dlc/sod-dlc.zip~) OR (FILE_EXISTS ~sod-dlc.zip~)) THEN BEGIN FAIL @107 END // DLC Merger check
+  
   ACTION_IF NOT VARIABLE_IS_SET ee_game THEN BEGIN
 	
-    INCLUDE ~%MOD_FOLDER%/lib/fl#add_kit_ee.tpa~
-    INCLUDE ~%MOD_FOLDER%/lib/functions.tpa~ // misc s&s functions
+    INCLUDE ~song_and_silence/lib/fl#add_kit_ee.tpa~ // additional ADD_KIT junk for EEs
+    INCLUDE ~song_and_silence/lib/functions.tpa~     // misc s&s functions
     
-    ACTION_DEFINE_ARRAY cdnoconvert BEGIN setup_ee END // List of tra files that contain ONLY strings for the WeiDU installer and NOT game content
-    ACTION_DEFINE_ARRAY cdreload    BEGIN setup    END // List of tra files that need to be reloaded after conversion because they were previously loaded in the LANGUAGE section
+    ACTION_DEFINE_ARRAY cdnoconvert BEGIN weidu game_ee END // weidu is installer strings; game_ee is EE-exclusive strings (both permanently utf8)
+    ACTION_DEFINE_ARRAY cdreload    BEGIN game END          // strings for the actual dialog.tlk
     
-    // On EE games, convert game content tra files to utf-8 so that games don't crash when encountering international characters.
-    LAF HANDLE_CHARSETS INT_VAR infer_charsets = 1 STR_VAR default_language = ~english~ tra_path = EVAL ~%MOD_FOLDER%/tra~ noconvert_array = cdnoconvert reload_array = cdreload END
+    // On non-EE games, convert game content tra files from utf-8, move converted files to different path
+    LAF HANDLE_CHARSETS INT_VAR from_utf8 = 1 infer_charsets = 1 
+                        STR_VAR default_language = ~english~ tra_path = ~song_and_silence/tra~ out_path = ~weidu_external/song_and_silence/tra~ noconvert_array = cdnoconvert reload_array = cdreload END
     
     // Load EE-specific text (usability section removed from item descriptions)
     ACTION_IF GAME_IS ~bgee bg2ee iwdee eet~ THEN BEGIN
 	
       OUTER_SET ee_game = 1
+      OUTER_SPRINT ~tra_location~ ~song_and_silence/tra~
 	  
-      // Load English first in case some entries not available in the chosen language (as in LANGUAGE for setup.tra)
-      LOAD_TRA ~song_and_silence/tra/english/setup_ee.tra~
-      LOAD_TRA ~song_and_silence/tra/%LANGUAGE%/setup_ee.tra~
+      // Load English first in case some entries not available in the chosen language (as in LANGUAGE for game.tra)
+      LOAD_TRA ~song_and_silence/tra/english/game_ee.tra~
+      LOAD_TRA ~song_and_silence/tra/%LANGUAGE%/game_ee.tra~
     
 	  END ELSE BEGIN
     
 	    OUTER_SET ee_game = 0
+      OUTER_SPRINT ~tra_location~ ~weidu_external/song_and_silence/tra~
 
 	  END  
 
@@ -38,36 +42,47 @@ ALWAYS
 END
 
 /* Language Settings */
-AUTO_TRA ~song_and_silence/tra/%s~ //~%~
+AUTO_TRA ~%tra_location%/%s~ // use original utf8 on EEs, otherwise converted ANSI arrays in weidu_external
 LANGUAGE 
   ~English~ 
   ~english~
-  ~song_and_silence/tra/english/setup.tra~
+  ~song_and_silence/tra/english/weidu.tra~
+  ~song_and_silence/tra/english/game.tra~
 LANGUAGE 
   ~Francais (translated by Zayn and Lothringen of the d'Oghmatiques)~ 
   ~french~
-  ~song_and_silence/tra/english/setup.tra~
-  ~song_and_silence/tra/french/setup.tra~
+  ~song_and_silence/tra/english/weidu.tra~
+  ~song_and_silence/tra/english/game.tra~
+  ~song_and_silence/tra/french/weidu.tra~
+  ~song_and_silence/tra/french/game.tra~
 LANGUAGE 
   ~Polish (translated by Yarpen)~ 
   ~polish~
-  ~song_and_silence/tra/english/setup.tra~
-  ~song_and_silence/tra/polish/setup.tra~
+  ~song_and_silence/tra/english/weidu.tra~
+  ~song_and_silence/tra/english/game.tra~
+  ~song_and_silence/tra/polish/weidu.tra~
+  ~song_and_silence/tra/polish/game.tra~
 LANGUAGE 
   ~German (translated by Roter Berserker)~
   ~german~
-  ~song_and_silence/tra/english/setup.tra~
-  ~song_and_silence/tra/german/setup.tra~
+  ~song_and_silence/tra/english/weidu.tra~
+  ~song_and_silence/tra/english/game.tra~
+  ~song_and_silence/tra/german/weidu.tra~
+  ~song_and_silence/tra/german/game.tra~
 LANGUAGE 
   ~Russian (translated by SubZero400 & Alisia & yota13)~
   ~Russian~
-  ~song_and_silence/tra/english/setup.tra~
-  ~song_and_silence/tra/russian/setup.tra~
+  ~song_and_silence/tra/english/weidu.tra~
+  ~song_and_silence/tra/english/game.tra~
+  ~song_and_silence/tra/russian/weidu.tra~
+  ~song_and_silence/tra/russian/game.tra~
 LANGUAGE 
   ~Italian (translated by Coland)~
   ~italian~
-  ~song_and_silence/tra/english/setup.tra~
-  ~song_and_silence/tra/italian/setup.tra~
+  ~song_and_silence/tra/english/weidu.tra~
+  ~song_and_silence/tra/english/game.tra~
+  ~song_and_silence/tra/italian/weidu.tra~
+  ~song_and_silence/tra/italian/game.tra~
 
 //////////////////////
 //Vanilla game stuff//
@@ -315,14 +330,14 @@ COPY ~song_and_silence/items/a!raoul.sto~ ~override~
 COMPILE ~song_and_silence/items/a!raoul.d~ // dialogue
 
 // spawn raoul in bridge district
-ACTION_IF GAME_IS ~bgt soa tob bg2ee~ THEN BEGIN
+ACTION_IF GAME_IS ~bgt soa tob bg2ee eet~ THEN BEGIN
 
   EXTEND_BOTTOM ar0500.bcs ~song_and_silence/items/ar0500.baf~
   
 END
 
 // spawn raoul at nashkel carnival
-ACTION_IF GAME_IS ~bgt tutu tutu_totsc bgee eet sod~ THEN BEGIN
+ACTION_IF GAME_IS ~bgt tutu tutu_totsc bgee eet~ THEN BEGIN
 
   ACTION_IF GAME_IS ~tutu tutu_totsc~ THEN BEGIN
     OUTER_SPRINT nashkel_carnival fw4900
