@@ -25,10 +25,7 @@ ALWAYS
 	
       OUTER_SET ee_game = 1
       OUTER_SPRINT ~tra_location~ ~song_and_silence/tra~
-	  
-      // Load English first in case some entries not available in the chosen language (as in LANGUAGE for game.tra)
-      LOAD_TRA ~song_and_silence/tra/english/game_ee.tra~
-      LOAD_TRA ~song_and_silence/tra/%LANGUAGE%/game_ee.tra~
+	    LOAD_TRA ~song_and_silence/tra/%LANGUAGE%/game_ee.tra~ // override game.tra with ee-specific strings
     
 	  END ELSE BEGIN
     
