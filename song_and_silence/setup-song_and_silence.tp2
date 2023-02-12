@@ -449,6 +449,10 @@ COPY ~song_and_silence/items/a!bleat2.itm~ override
   SAY NAME2 @33
   SAY UNIDENTIFIED_DESC @34
   SAY IDENTIFIED_DESC @35
+  WRITE_LONG 0x60 ~1~ // Enchantment Lv
+  
+COPY_EXISTING ~itemexcl.2da~ ~override~
+    APPEND ~itemexcl.2da~ ~a!bleat2  1~ // Appended to exclusion list
 
 COPY ~song_and_silence/items/a!brds.itm~ override // Tale of Ghastly Evil
   SAY NAME1 @36
