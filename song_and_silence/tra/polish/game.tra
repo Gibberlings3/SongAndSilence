@@ -1,12 +1,511 @@
-@0    = ~Poprawki dla oryginalnych klas i podklas lotrow (Wymagane dla pozostalych komponentow)~
-@2    = ~Nowy sklep z przedmiotami dla bardow i zlodzieji~
-@42   = ~Zainstaluj nowa podklase barda - Akrobate~
-@43   = ~Przed instalacja tego komponentu nalezy zainstalowac pierwszy, wymagany komponent~
-@47   = ~Zainstaluj nowa podklase barda - Chorzyste~
-@63   = ~Zainstaluj nowa podklase barda - Ponury bard~
-@70   = ~Zainstaluj nowa podklase barda - Cygan~
-@75   = ~Zainstaluj nowa podklase zlodzieja - Poszukiwacz przygod~
-@82   = ~Zainstaluj nowa podklase zlodzieja - Wlamywacz~
-@86   = ~Zainstaluj nowa podklase zlodzieja - Ostrze duszy~
-@93   = ~Zainstaluj nowa podklase zlodzieja - Strzelec~
-@97   = ~Zainstaluj nowa podklase zlodzieja - Tancerz cienia~
+@1    = ~ZAWADIAKA: Ten łotrzyk to akrobata, szermierz i dowcipniś: wcielenie uroku i elegancji.
+
+Zalety:
+- Premia +1 do KP.
+- Co 5 poziomów uzyskuje kolejne +1 do KP.
+- Co 5 poziomów uzyskuje +1 do trafienia i obrażeń.
+- Może specjalizować się w każdej broni do walki wręcz, z jakiej może korzystać złodziej
+
+Wady:
+- Brak zwiększonych obrażeń przy sztyletowaniu~
+@3    = ~Raul~
+@4    = ~Oooooaaaahh!~ [a!ra01]
+@5    = ~Witajcie! Jam jest Raul, a tyś kto?~ [a!ra02]
+@6    = ~Witajcie kumotrzy!~ [a!ra03]
+@7    = ~Chciałbyś rzucić okiem na cudeńka Raula?~ [a!ra04]
+@8    = ~Cudeńka Raula~
+@9    = ~Powracający sztylet do rzucania +1~
+@10   = ~Sztylety do rzucania są popularnym orężem wśród wszelakich złodziei, sprytnych wojowników i piratów. Nie zadają może znacznych obrażeń, jednak są lekką, poręczną bronią, zaś szybkość często daje przewagę nawet nad przeciwnikami uzbrojonymi w wielkie bronie typu miecza oburęcznego czy halabardy.
+
+Ten egzemplarz został umagiczniony w celu zwiększenia jego skuteczności, pewnie na zamówienie złodziejskiej gildi. Mimo to, nie ma nim żadnego symbolu pozwalającego zidentyfikować jego właściciela. Magia w nim zawarta zwiększyła jego celność i - co ważniejsze - umożliwia właścicielowi za pomocą magicznego słowa przywołać go spowrotem do dłoni właściciela.
+
+PARAMETRY:
+
+Obrażenia: 1K4 +1
+TraK0: +1
+Typ obrażeń: pocisk (kłute)
+Specjalne:
+ Powraca do ręki właściciela.
+Waga: 1
+Opóźnienie: 2
+Rodzaj biegłości: sztylet
+Typ broni: 1-ręczna
+Wymagana siła: 3
+Nie może używać:
+ Kapłan~
+@11   = ~Fiolka z trucizną~
+@12   = ~Gdy przeciwnik wytrącił już wszystkie argumenty z ręki, łotr zawsze może liczyć na truciznę. Zwinnoręki złodziej może szybko i skutecznie nasączyć swoją broń trucizną, sprawiając, że nawet najmniejsze draśnięcie przeciwnika jego sztyletem będzie skuteczniejsze niż cios potężnego topora.
+
+Fiolka ta zawiera porcję trucizny, która pozwala na jednokrotne pokrycie nią broni.
+
+PARAMETRY:
+
+Specjalne:
+ Może być użyta do pokrycia jakiejkolwiek broni trucizną. Następny atak złodzieja, wprowadza do krwiobiegu przeciwnika trucinę, która zadaje 1 punkt obrażeń na sekundę (3 punkty obrażeń przez pierwsze 6 sekund). Rzut obronny przeciwko truciznom zmniejsza całkowite obrażenia do poziomu 12.
+Waga: 1
+Może używać tylko:
+ Złodziej~
+@13   = ~Kaptur złodzieja~
+@14   = ~Ochrona Alathisa~
+@15   = ~Chociaż osoba która nakłada na siebie ten kaptur nie odczuwa z tego powodu żadnych korzyści (oprócz standardowych dla zwykłego kaptura), to wyczuwasz w nim delikatną i ukrytą magię.
+
+Może używać tylko:
+ Złodziej~
+@16   = ~Alathis Hurbleton był jednym z wielu niziołków, którzy wybrali karierę złodzieja. Zaczynał w Luskan, a że był zdolnym łotrem dość szybko dorobił się znacznych profitów, jednak seria pechowych i niezaplanowanych wydarzeń spowodowała, iż musiał salwować się ucieczką z miasta.
+
+Osiadłszy w wielkiej metropoli Waterdeep, znów zaczął rozkręcać swój złodziejski biznes. Jako że preferował samotne akcje bez żadnych współtowarzyszy, z którymi tylko musiałby dzielić łupy, nie chciał dołączyć do żadnej gildi. I jakoże gildie takie jak choćby potężne Maski Nocy, nie lubią samotników psujących im interesy, Alathis zaczął bać się o własne życie. I z tego właśnie powodu zgłosił się do znajomego czarodzieja, który wykonałby dla niego potężny przedmiot który mógłby zabezpieczyć go przed atakami zabójców z gildii. I ten stworzył właśnie Ochronę Alathisa - zwaną tak od właściciela.
+
+Pewność siebie nie jest u złodzieja zaletą. A tym właśnie zgrzeszył Alathis, który podczas pewnej akcji przestał być jak zwykle ostrożnym, właśnie przez pewność siebie został schwytany przez straż miejską. Niestety kaptur nie chronił go przed strażą. Ani własną głupotą.
+
+PARAMETRY:
+
+Specjalne:
+ Odporność na trucizny i cios w plecy
+Waga: 2
+Może używać tylko:
+ Złodziej~
+@17   = ~Maczuga~
+@18   = ~Cisza +2~
+@19   = ~Na pierwszy rzut oka, ta maczuga jest zwykłym kawałkiem drewna, jednak gdy przyjrzysz się dokładniej, zauważysz na pewno serię delikatnie zarysowanych i wręcz niewidocznych runów. Ponadto broń ta jest bardzo dobrze wyważona.
+
+Broń ta została wykonana na życzenie Mistrza Gildi Złodzieji Cienia, którą podarował on swemu zaufanemu słudze, który jak mało kto znał się na arkanach złodziejstwa. Broń ta powoduje o dziwo wyciszenie wszelkich dźwięków wokół osoby, która trzyma go w dłoni. Dzięki temu złodziej bez obawy mógł ukryty przechodzić obok swych przeciwników i jednym, cichym ciosem zamordować ich. Ostatnią rzeczą, jaką mogła usłyszeć ofiara, była fala powietrza wywołana zamachem tej oto maczugi.
+
+Niestety, jak to zwykle bywa, sługa nie był aż tak lojalny, jak sądził Mistrz Gildi, i pewnej cichej nocy broń ta została użyta do zgładzenia Mistrza. Umarł on w swym łożu obok żony, która nawet nic nie usłyszała.
+
+Lepiej nie pytaj się, jak ta broń trafiła do twoich rąk. Czasem lepiej wiedzieć za mało niż za dużo.
+
+PARAMETRY:
+
+Obrażenia: 1K6 +2
+TraK0: +2
+Specjalne
+ Właściciel otrzymuje premię +10% do cichego chodzenia
+Typ obrażeń: obuchowe
+Waga: 3
+Opóźnienie: 4
+Rodzaj biegłości: maczuga
+Typ broni: 1-ręczna
+Wymagana siła: 5
+Nie może używać:
+ Mag~
+@20   = ~Podarunek Jessecyl~
+@21   = ~Jest to kosmyk włosów. Uważniej się przyglądając, dochodzisz do wniosku, że jest to ładny przedmiot - na tyle, na ile ładne mogą być kosmyki włosów.~
+@22   = ~Legendy mówią, iż Jessecyl była najpiękniejszą półelfią dziewicą, jaka kiedykolwiek stąpała po Faerunie. Przed wielką bitwą, obdarowała swego ukochanego tymże oto podarunkiem; kosmykiem swych włosów. Potem bohater ten rzucił się w wojenną zawieruchę, jednak siła miłości zaklęta w tym kosmyku (mówi się, iż został zaklęty przez Sune) wiele razy uratowała go przed śmiercią i kłopotami.
+
+Opowieść o tyn bezimiennym bohaterze i Jessecyl świadczy o tym, że miłość jest wieczna. Oprócz tej niezwykle epickiej i romantycznej historii, jaką można poznać dzięki temu kosmykowi, sam przedmiot jest zaklęty - nie wiadomo, czy spowodowane jest to siłą miłości, czy też jakimiś potężnymi zaklęciami. 
+
+Przedmiot ten musi być trzymany, aby działać. Zajmuje on miejsce tarczy.
+
+PARAMETRY:
+
+Specjalne:
+ Trzymany w ręku, daje całej drużynie premię +2 do rzutów obronnych przeciwko śmierci.
+Waga:  0
+Może używać:
+ Bard
+ Paladyn~
+@23   = ~Puklerz~
+@24   = ~Wzmocniony puklerz skalda~
+@25   = ~Wzmocniony puklerz skalda
+Mała, wzmacniana tarcza tego typu, jest często spotykaną obroną wśród Skaldów - bardów pochodzących z mroźnych ziem Doliny Lodowego Wichru. Został on wykonany dla jakiegoś barda, zapewne przed jakąś inwazją lub plemienną wojną.
+
+W puklerzu tym zawarta została delikatna magia, która zwiększa jego walory obronne, i w ograniczonym stopniu chroni właściciela przed obrażeniami pochodzącymi od chłodu.
+
+PARAMETRY:
+
+Klasa pancerza: +2
+Specjalne:
+ Nie chroni przed brońmi kłutymi i pociskami
+ Gwarantuje premię +10% do odporności na chłód, gdy jest noszony
+Waga: 2
+Wymagana siła: 4
+Nie może używać:
+ Praworządna postać
+ Mag~
+@26   = ~Krótki miecz~
+@27   = ~Obrona dźwięku +2~
+@28   = ~Obrona dźwięku, to broń wykonana w dawnych czasach dla barda i poszukiwacza przygód Grefyna, którego imię zostało już praktycznie zapomniane nawet przez uczonych. Umagicznienie tego ostrza pomagało mu w ochronie własnego ciała zarówno przed fizycznymi obrażeniami jak i mocami atakującymi jego siły witalne. Ponadto, gdy wyjmuje się ten miecz z pochwy, wydaje on cichy jednak słyszalny dźwięk, dzięki czemu nadano mu imię 'Obrona dźwięku'.
+
+Wszyscy bohaterzy, nawet ci najwięksi, muszą kiedyś umrzeć. Grefyn zginął z rąk podróżującego kapłana Waukeen, który zemścił się na nim za "pożyczenie" kościelnych funduszy. Miecz zabrał do świątyni jako rekompensatę, i służył kapłanom do czasu, gdy zgubiono go podczas walk z orkami w Czasie Kłopotów. Nie wiadomo gdzie się znajdował do czasu, gdy go odnalazłeś.
+
+PARAMETRY:
+
+Obrażenia: 1k6 +2
+Trafienie: +2
+Specjalne:
+ Właściciel otrzymuje premię +1 do klasy pancerza i rzutów obronnych przeciwko śmierci
+Rodzaj obrażeń: kłute
+Opóźnienie: 1
+Waga: 2
+Rodzaj biegłości: krótki miecz
+Typ broni: 1-ręczna
+Wymagana siła: 5
+Nie może używać:
+ Druid
+ Kapłan 
+ Mag~
+@29   = ~Lekka kolczuga~
+@30   = ~Kolczuga jest wykonana z przeplatających się metalowych kółeczek. Zawsze nakłada się ją na kubrak z pikowanego materiału; ma to zapobiec bolesnym otarciom i złagodzić siłę ciosów.
+
+Kolczuga ta jest o wiele lżejsza i lepiej wykonana niż standardowe egzemplarze tego typu pancerzy, które spotykałeś na swej drodze. Podobne kolczugi wyrabiają jeszcze elfy, by zapewnić skuteczną jednak nie ograniczającą ruchów osłonę dla wojowników/magów i pieśniarzy klingi. Elfi sekret wyrobu tak lekkich pancerzy jest bardzo dobrze strzeżony, przez co chyba żaden człowiek, krasnolud czy gnom go nie poznał. Przynajmniej nikt, kto nie jest elfem i poznał sekret wyrobu tych pancerzy, nie przeżył dłużej niż kilku dób, gdyż został zapewne wytropiony i zamordowany - dla elfów, ich sekrety są ważniejsze niż życie śmiertelników.
+
+PARAMETRY:
+
+Klasa Pancerza: 5
+Waga: 30
+Wymagana siła: 8
+Nie może używać:
+ Druid
+ Mag
+ Złodzie~
+@31   = ~Zbroja barda~
+@32   = ~Zbroja skórzana ćwiekowana ma niewiele wspólnego ze zwykłą zbroją skórzaną. Podczas gdy zbroja skórzana jest utwardzaną skorupą, zbroja ćwiekowana jest miękka i wzmocniona setkami, nabitych w niewielkich odległościach nitów. Znajdują się one tak blisko siebie, że tworzą trudną do przebicia metalową zaporę, która świetnie powstrzymuje sieczne i kłute ataki. Miękkie skórzane podbicie służy jedynie do utrzymania nitów w miejscu.  
+
+Ten egzemplarz jest o wiele lżejszy i lepiej wykonany niż standardowe pancerze tego typu, które spotykałeś na swej drodze. Pozwala ona na swobodne poruszanie się i rzucanie zaklęć bez narażenie się na jakiekolwiek kary.
+
+PARAMETRY:
+
+Klasa Pancerza: 7
+Waga: 15
+Wymagana siła: 6
+Nie może używać:
+ Mag~
+@33   = ~Zbroja barda +1~
+@34   = ~Zbroja skórzana ćwiekowana ma niewiele wspólnego ze zwykłą zbroją skórzaną. Podczas gdy zbroja skórzana jest utwardzaną skorupą, zbroja ćwiekowana jest miękka i wzmocniona setkami, nabitych w niewielkich odległościach nitów. Znajdują się one tak blisko siebie, że tworzą trudną do przebicia metalową zaporę, która świetnie powstrzymuje sieczne i kłute ataki. Miękkie skórzane podbicie służy jedynie do utrzymania nitów w miejscu.  
+
+Ten egzemplarz jest o wiele lżejszy i lepiej wykonany niż standardowe pancerze tego typu, które spotykałeś na swej drodze. Pozwala ona na swobodne poruszanie się i rzucanie zaklęć bez narażenie się na jakiekolwiek kary.
+
+PARAMETRY:
+
+Klasa Pancerza: 7
+Waga: 15
+Wymagana siła: 6
+Nie może używać:
+ Mag~
+@35   = ~Zbroja skórzana ćwiekowana ma niewiele wspólnego ze zwykłą zbroją skórzaną. Podczas gdy zbroja skórzana jest utwardzaną skorupą, zbroja ćwiekowana jest miękka i wzmocniona setkami, nabitych w niewielkich odległościach nitów. Znajdują się one tak blisko siebie, że tworzą trudną do przebicia metalową zaporę, która świetnie powstrzymuje sieczne i kłute ataki. Miękkie skórzane podbicie służy jedynie do utrzymania nitów w miejscu.  
+
+Ten egzemplarz jest o wiele lżejszy i lepiej wykonany niż standardowe pancerze tego typu, które spotykałeś na swej drodze. Pozwala ona na swobodne poruszanie się i rzucanie zaklęć bez narażenie się na jakiekolwiek kary. Ponadto został lekko umagiczniony, dzięki czemu daje lepszą ochronę.
+
+PARAMETRY:
+
+Klasa Pancerza: 6
+Waga: 10
+Wymagana siła: 6
+Nie może używać:
+ Mag~
+@36   = ~Opowieść o Nieprzenikliwym Mroku~
+@37   = ~Na zwoju tym zapisana została opowieść o czynach tak plugawych i złych, że samo odczytanie ostatniego zdania może sprawić, że słuchacze zginą straszną, bolesną śmiercią.
+
+Chociaż magia znika ze zwoju w chwili jego odczytania, to opowieść jest tak plugawa, że jeszcze na długo zapada ci w pamięci i nawiedza w snach...
+
+PARAMETRY:
+
+Specjalne:
+ Pozwala na jednorazowe rzucenie czaru „Zaklęcie Śmierci”
+Może używać tylko:
+ Bard~
+@38   = ~Opowieść o Przerażającej Śmierci~
+@39   = ~Na zwoju tym zapisana roztrzęsionym, nerwowym pismem zapisana zostałą opowieść o przerażających nieumarłych istotach sunących po no nocnym niebie. Zwój został nasączony magią, która sprawi, że po jego przeczytaniu nawet najodważniejsi będą trząść się ze strachu.
+
+Chociaż po przeczytaniu magia powinna ulecieć ze zwoju to i tak za każdym razem gdy kładziesz się spać czujesz zimny dreszcz na karku.
+
+PARAMETRY:
+
+Specjalne:
+ Pozwala na jednorazowe rzucenie czaru „Groza”
+Może używać tylko:
+ Bard~
+@40   = ~Opowieść o Prawdziwym Męstwie~
+@41   = ~Strona ta wypełniona jest opowieściami o dzielnych herosach walczących ze złem; odpierających hordy orków, pokonując straszne demony i złe smoki czychające w swych grotach. Po przeczytaniu tej opowieści, słuchacze napełnieni zostaną odwagą pozwalającą im pokonać lęk.
+
+Po przeczytaniu zwoju, jego magia znika raz na zawsze. Mimo to ciekawa opowieść zawsze będzie z chęcią wysłuchana.
+
+PARAMETRY:
+
+Specjalne:
+ Pozwala na jednorazowe rzucenie czaru „Odporność na strach”
+Może używać tylko:
+ Bard~
+
+@44   = ~Akrobata~
+@45   = ~Akrobata~
+@46   = ~AKROBATA: Jako artystów, większość akrobatów można znaleźć w rozmaitych cyrkach, na karnawałach, festynach i paradach. Jednak zdarza się, że w pełni niezależne, akrobackie trupy występują przed publicznością i pokazują swoje unikalne umiejętności. Pojawiają się najczęściej w dużych tawernach, gdzie pokazują swe przedstawienia, wprawiając publiczność w osłupienie, a potem korzystając z skupienia uwagi na występie, sprawnie okradają ją z pieniędzy i biżuterii. Akrobata uwielbia być w centrum uwagi, pokazywać swój niesamowity talent i błyszczeć w tłumie. Cokolwiek robi, musi być to wykonane stylowo i z pewną dramaturgią. Akrobata to często wprawny włamywacz i poszukiwacz przygód, zaś jego talenty nieraz pomagają mu na szlaku.
+
+Zalety:
+- +1 do Klasy Pancerza
+- +1 do Klasy Pancerza przeciwko pociskom na każde 8 poziomów doświadczenia
+- Może uzyskać specjalizację w sztyletach, strzałkach i procach
+
+Wady:
+- Może uzyskać biegłość tylko w broniach, jakich może używać złodziej
+- Nie korzysta z średnich ani ciężkich pancerzy
+- Otrzymuje tylko połowę wiedzy przysługującej bardowi~
+
+@48   = ~Zbroja wiary (Odrzucanie)
+Poziom: 1
+Sfera: Ochrona
+Zasięg: 0
+Czas działania: 3 rundy + 1 runda/poziom
+Czas rzucania: 1
+Obszar działania: rzucający czar
+Rzut obronny: brak
+
+Osoba, która rzuci to zaklęcie, otrzymuje znaczącą ochronę przed zwykłymi i magicznymi atakami. Ta magiczna zbroja to pole energetyczne, które wchłania część obrażeń, jakie miała otrzymać osoba rzucająca czar. Na pierwszym poziomie ochrona wynosi 5% i co pięć kolejnych poziomów doświadczenia zwiększa się o kolejne 5%. Na 20 poziomie doświadczenia, 25% obrażeń zadawanych Chórzyście może być absorbowane przez to zaklęcie.~
+@49   = ~Leczenie lekkich ran (Nekromancja)
+Poziom: 1
+Sfera: Leczenie
+Zasięg: dotyk
+Czas działania: stały
+Czas rzucania: 5
+Obszar działania: 1 istota
+Rzut obronny: brak
+
+Rzucając ten czar i kładąc ręce na istocie, Chórzysta przywraca jej 8 punktów życia straconych w wyniku ran lub innych uszkodzeń cielesnych. To leczenie nie działa na stworzenia pozbawione materialnego ciała, nieżywe lub pochodzące z innych wymiarów egzystencji.
+Leczenie jest stałe, pod warunkiem jednak, że istota nie otrzyma kolejnych obrażeń. Rany spowodowane odwróconą wersją tego zaklęcia można leczyć jak zwykłe obrażenia.~
+@50   = ~Zagłada (Przemiany)
+Poziom: 1
+Sfera: uroki
+Zasięg: Pole widzenia
+Czas działania: 1 tura
+Czas rzucania: 1 runda
+Obszar działania: 1 istota
+Rzut obronny: brak
+
+Zaklęcie to sprawia, że jego ofiarę przepełnia uczucie nieuchronnej zagłady. Na czas trwania czaru, ofiara otrzymuje modyfikator -2 do wszystkich swoich rzutów, wliczając w to TraK0 i rzuty obronne. Nie ma rzutu obronnego przeciw temu zaklęciu.~
+@51   = ~Psalm (Sprowadzanie/Przywoływanie)
+Poziom: 2
+Sfera: Walka
+Zasięg: pole widzenia
+Czas działania: 1 tura
+Czas rzucania: 1 runda
+Obszar działania: w promieniu 10 metrów
+Rzut obronny: brak
+
+Czar ten sprowadza na Chórzystę i jego sprzymierzeńców szczególną łaskę, szkodząc jednocześnie jego wrogom. Po zakończeniu rzucania czaru, wszyscy przyjaciele barda znajdujący się w obszarze jego działania otrzymują premię +1 do rzutów na trafienie, zadawanych obrażeń i rzutów obronnych, a przeciwnicy odpowiednio modyfikator -1. W danym czasie może działać tylko jeden Psalm.~
+@52   = ~Spowolnienie trucizny (Nekromancja)
+Poziom: 2
+Sfera: Leczenie
+Zasięg: dotyk
+Czas działania: natychmiastowy
+Czas rzucania: 1
+Obszar działania: dotknięta istota
+Rzut obronny: brak
+
+Ten czar spowalnia efekty działania trucizny, neutralizując większość poza najbardziej zabójczymi truciznami.~
+@53   = ~Przywołanie boskiej mocy (Inwokacja)
+Poziom: 2
+Sfera: Walka
+Zasięg: rzucający czar
+Czas działania: 1 tura
+Czas rzucania: 2
+Obszar działania: rzucający czar
+Rzut obronny: brak
+
+Rzucający odwołuje się do swego patrona, by na krótki czas obdarzył go cząstką niebiańskiej mocy. Po rzuceniu tego czaru jego Siła, Kondycja i Zręczność wzrastają o 1 na każde trzy poziomy. Tak więc cechy Chórzysty z 3 poziomu zwiększą się o 1, a barda z 12 - o 4.~
+@54   = ~Glif strażniczy (Odrzucanie, Wywoływanie)
+Poziom: 3
+Sfera: Strażnicza
+Zasięg: 20 metrów
+Czas działania: specjalny
+Czas rzucania: specjalny
+Obszar działania: w promieniu 10 m
+Rzut obronny: specjalny
+
+Glif strażniczy ma postać magicznego znaku, który uniemożliwia nieupoważnionym i wrogim istotom przejście, wstęp lub otworzenie chronionego miejsca. Można go użyć do zabezpieczenia małego mostu, zablokowania przejścia czy jako pułapkę chroniącą skrzynię.
+Każda istota naruszająca dany obszar staje się ofiarą magii znaku. Udany rzut obronny na czary pozwala jednakże uniknąć działania glifu. Dane miejsce może być chronione tylko jednym znakiem, choć jeśli w biurku znajdują się trzy szuflady, to każdą z nich można opatrzyć tym zaklęciem.
+Rzucając to zaklęcie Chórzysta kreśli siateczkę lekko święcących linii tworzących strażniczy znak. Uaktywniony glif zadaje ofierze 1k4 obrażenia na poziom barda.~
+@55   = ~Leczenie średnich ran (Nekromancja)
+Poziom: 3
+Sfera: Leczenie
+Zasięg: dotyk
+Czas działania: stały
+Czas rzucania: 5
+Obszar działania: 1 istota
+Rzut obronny: brak
+
+Rzucając ten czar i kładąc ręce na istocie, Chórzysta przywraca jej 14 punktów życia straconych w wyniku ran lub innych uszkodzeń cielesnych. Leczenie to nie działa na stworzenia nieżywe, pochodzące z innych wymiarów egzystencji, lub pozbawione materialnego ciała.
+Leczenie jest stałe, pod warunkiem jednak, że istota nie otrzyma kolejnych obrażeń. Rany spowodowane odwróconą wersją tego zaklęcia można leczyć jak zwykłe obrażenia.~
+@56   = ~Jedność obronna (Zaczarowania/Zauroczenia)
+Poziom: 4
+Sfera: Prawo
+Zasięg: rzucający czar
+Czas działania: 6 rund
+Czas rzucania: 1
+Obszar działania: w promieniu 3 m
+Rzut obronny: brak
+
+Ten czar wzmacnia obronę objętych nim istot poprzez magiczną koordynację ich działań obronnych oraz ataków. Pozwala to, podczas jakiejś utarczki czy bitwy, działać grupie istot jak jednolitemu zespołowi. Centrum czaru zawsze znajduje się w miejscu, w którym jest rzucający czar, a objęci są nim wszyscy w promieniu 3 metrów. Ci, którzy znajdują się pod wpływem zaklęcia, mogą później wyjść poza tak określony krąg i w dalszym ciągu korzystać z jego mocy. Podczas działania czaru, Klasa Pancerza każdej objętej nim istoty poprawia się o +2 punkty. Trwa to przez 6 rund lub do chwili udanego rozproszenia.~
+@57   = ~Święta moc (Wywoływanie)
+Poziom: 4
+Zasięg: rzucający czar
+Czas działania: 1 runda/poziom
+Czas rzucania: 6
+Obszar działania: rzucający czar
+Rzut obronny: brak
+
+Dzięki temu zaklęciu, rzucająca je osoba zyskuje siłę i umiejętności wojownika na tym samym poziomie co ona. Siła Chórzysty przyjmuje wartość 18/00, nawet jeśli normalnie jest większa, zaś jego TraK0 staje się takie samo jak wojownika na danym poziomie. Dodatkowo zyskuje on czasowo 1 punkt życia za każdy poziom. Efekt ten trwa do chwili zakończenia działania zaklęcia, lub do momentu jego rozproszenia.~
+@58   = ~Grupowe leczenie (Nekromancja)
+Poziom: 5
+Sfera: Leczenie
+Zasięg: pole widzenia
+Czas działania: stały
+Czas rzucania: 5
+Obszar działania: w promieniu 10 metrów
+
+Podczas rzucania tego czaru kapłan musi wyobrazić sobie twarze członków swojej drużyny i skoncentrować się na jedności zespołu. Po rzuceniu czaru wszyscy w drużynie znajdujący się w odległości 10 metrów od kapłana odzyskują 1k8 + 1/poziom pkt. życia.
+Efekt działania jest stały tylko pod warunkiem, że osoba poddana jego działaniu nie otrzyma kolejnych obrażeń. Rany zagoją się - lub zostaną uleczone - tak jak każde normalne obrażenia.~
+@59   = ~Pocisk chwały (Inwokacje/Wywołania)
+Sfera: Walka, Przywołanie
+Poziom: 6
+Zasięg: 20 metrów
+Czas trwania: natychmiastowy
+Czas rzucenia: 9
+Obszar działania: 1 ofiara
+Rzut Obronny: brak
+
+Rzucając ten czar kapłan kieruje boską energię na jedną istotę. Nie jest potrzebny rzut na atak. Trafiona istota otrzymuje różne obrażenia, zależnie od jej sfery istnienia.
+
+Rodzaj Istoty                        Obrażenia
+ Pierwsza Sfera Materialna               6k6
+ Żywiołak                                3k4
+ Nieumarły                               8k6
+ Demon                                   10k6~
+@60   = ~Chórzysta~
+@61   = ~Chórzysta~
+@62   = ~CHÓRZYSTA: Muzyka, hymn, symfonia lub mroczne intonacje, grane w ważnych momentach świąt, często podkreślają klimat i wagę wydarzeń odbywających się w świątyni. Dla polepszenia wrażeń estetycznych lub przyciagnięcia większej liczby wiernych, świątynie często wynajmują barda zwanego przez ludzi chórzystą.
+
+Myli się ten, kto sądzi, że chórzystów można znaleźć tylko w świątynnych murach. Wiele kościołów używa ich jako misjonarzy, którzy mają nakłaniać ludzi do przejścia na łono nowej wiary. Czasem podróżujący bardzi kończą jako chórzyści, odnajdując odpowiedź na dręczące ich pytania dotyczące wiary w wybranego przez siebie boga.
+
+Zalety:
+- Zna kilka zaklęć kapłana, które znajdują się w liście zaklęć maga:
+1 poziom: Zbroja wiary, Leczenie lekkich ran, Zagłada
+2 poziom: Psalm, Wezwanie boskiej mocy, Spowolnienie trucizny
+3 poziom: Leczenie średnich ran, Glif strażniczy
+4 poziom: Jedność obronna, Święta moc
+5 poziom: Grupowe leczenie
+6 poziom: Pocisk chwały
+
+Wady:
+- Otrzymuje tylko połowę wiedzy przysługującej bardowi
+- Otrzymuje tylko połowę wartości Kradzieży kieszonkowej~
+@64   = ~Ponury bard~
+@65   = ~Ponury bard~
+@66   = ~PONURY BARD: Melodie tego barda nie mają na celu bawić czy cieszyć, lecz wzbudzać smutek, żal i wprowadzać w zadumę. Według Upadłego Pieśniarza tylko dzięki zrozumieniu cierpienia, żalu czy też śmierci, można zrozumieć sens istnienia. Bard ten wyraża swój żal przez muzykę, uczy słuchaczy prawidłowego rozumienia smutku i melancholi. Upadli Pieśniarze stali się zgorzkniali, zupełnie wytłumili w sobie uczucia takie jak radość czy szczęście. Zaczęli nie rozumieć tego u innych ludzi, a co z tym idzie - nienawidzieć. Przez to, przez swą muzykę która niesie ze sobą ogrom smutku, rozpaczy i żalu, starają się zasadzić ziarnko goryczy w sercach innych. Jednak zdarzają się pośród nich i chociaż troche lepsze jednostki, które starają się być ostrzeżeniem dla innych, i chcą ukazać innym głębie swego upadku.
+Upadli Pieśniarze w swych pieśniach ukazuje naiwność ludzkiej nadziei, złe strony miłości - złamane serca, upadki, i nieuchronność śmierci, która ma być jedyną pewną i sprawiedliwą rzeczą w Krainach - dosięgnie każdego, nieważne czy biednego czy bogatego. Nieważne czy dobrego czy złego.. Jest najsprawiedliwszym sędzią.
+Ten typ bardów najlepiej czuje się wśród grobów i kurhanów - na cmentarzach, gdzie ich pieśni dają spokój i ukojenie umęczonym duszom. Najpotężniejsi Pieśniarze stają się czasem nadwornymi ministrelami na dworach potężnych nieumarłych takich jak Władcy Wampirów czy Królowie Liszowie.
+
+Upadli Pieśniarze są ograniczeni do neutralnych lub złych charakterów.
+
+Zalety:
+- Pieśń działa jak klątwa na przeciwników, nakładając na nich co rundę karę -1 do trafienia i wszystkich rzutów obronnych. Od 10 poziomu kara zwiększa się do -2, od 20 do -3 zaś od 30 do -4.
+- Od 5 poziomu może raz dziennie zaintonować Pieśń o przerażeniu, która działa jak 2-poziomowe zaklęcie maga, Groza
+- Od 7 poziomu może raz dziennie zaintonować Pieśń o Żalu, która działa tak samo jak 4-poziomowe zaklęcie maga, Zamęt
+- Od 9 poziomu może raz dziennie zaintonować Pieśń o przebudzeniu, która działa tak samo jak 5-poziomowe zaklęcie maga, Animacja umarłego
+
+Wady:
+- Otrzymuje tylko połowę wartości wiedzy barda~
+@67   = ~Pieśń o przerażeniu~
+@68   = ~Pieśn o żalu~
+@69   = ~Pieśń o przebudzeniu~
+
+@71   = ~Klątwa~
+@72   = ~Cygan~
+@73   = ~Cygan~
+@74   = ~CYGAN: Cygani zwani także wędrownymi ludźmi lub leśnymi nomadami, zwykle pojawiają się w rozmaitych krainach, podróżując w swych charakterystycznych karawanach złożonych z różnokolorowych, jaskrawych wozów. Ludzie ci znani są z zachowania swych oryginalnych tradycji muzycznych, tanecznych, wytrwałości w koczowniczym trybie życia i ogromnego zamiłowania do uczucia wolności. W sercu Cygana przez całe życie płonie pragnienie poznania nowych, niewidzianych jeszcze ziem i przeżycia kolejnych doznań. To właśnie chęć oddychania pełną piersią pcha go wciąż naprzód - ku kolejnym przygodom, miejscom, ludziom czy doświadczeniom. Podróżują dopóki nie znajdą czegoś co ich zaciekawi lub zaintryguje - wtedy rozbijają obóz, jednak zew eksploratora i tak po pewnym czasie zew traktu będzie zbyt mocny, i cygan znów trafi na drogi Krain. Cyganie - poszukiwacze przygód najczęściej mają wyznaczone zadanie lub wyjątkowe miejsce do zwiedzenia, które muszą osiągnąć.
+
+Cyganie są często nierozumiani przez innych, będąc niesłusznie uznawani za złodziei, żebraków, kuglarzy czy nomadów. Są zazwyczaj bardzo otwarci dla każdego, kto chcą poznać ich styl bycia i podróżować wraz z nimi, zyskując reputację tych, którzy porywają nocami dzieci, porzucając je później w głuszy. Warto zauważyć, że nie wszyscy cyganie są bardami lub posiadają charakterystyczne dla tej profesji zdolności. Cyganie będący bardami, są przez członków cygańskich klanów nazywani „rawunami” i pełnią funkcję naczelnych gawędziarzy, strażników wiedzy, wróżbitów, czy duchowych doradców. 
+
+Zalety:
+- Pieśń zaurocza przeciwników którzy nie wykonają rzutu obronnego przeciw czarom z modyfikatorem +2 (modyfikator zmniejsza się o 1 na każde 5 poziomów Cygana)
+- Premia +1 do rzutów obronnych przeciw czarom na każde 8 poziomów doświadczenia.
+- Raz dziennie może rzucić Klątwę. Jest to zaklęcie przeciwne do Błogosławieństwa: nakłada na wrogów karę -1 do trafienia i rzutów obronnych.
+
+Wady:
+- Nie może korzystać z zaklęć ze szkół: Przemiany, Inwokacji/Wywołań i Sprowadzań/Przywoływania.~
+@76   = ~Poszukiwacz przygód~
+@77   = ~Poszukiwacz przygód~
+@78   = ~POSZUKIWACZ PRZYGÓD: To złodziej, który umiejętnie rozwija w sobie większość zdolności potrzebnych mu na trakcie. Jest on wybierany za kompana chętniej niż zwykli złodzieje, gdyż nie ma on w zwyczaju okradania śpiącej drużyny i uciekania z całym dobytkiem. Prawdziwy Poszukiwacz Przygód zna cenę zaufania i współpracy, i w przeciwieństwie do „ulicznych złodziei” nigdy nie zada on ciosu w plecy (zarówno dosłownie jak i w przenośni) swym towarzyszom.
+
+Zalety:
+- Co poziom otrzymuje premię +5% do otwierania zamków i wykrywania pułapek
+- Na poziomach 1, 8 i 14 otrzymuje premię +1 do wszystkich rzutów obronnych
+
+Wady:
+- Brak zwiększonych obrażeń przy sztyletowaniu.~
+@79   = ~POSZUKIWACZ PRZYGÓD: To złodziej, który umiejętnie rozwija w sobie większość zdolności potrzebnych mu na trakcie. Jest on wybierany za kompana chętniej niż zwykli złodzieje, gdyż nie ma on w zwyczaju okradania śpiącej drużyny i uciekania z całym dobytkiem. Prawdziwy Poszukiwacz Przygód zna cenę zaufania i współpracy, i w przeciwieństwie do „ulicznych złodziei” nigdy nie zada on ciosu w plecy (zarówno dosłownie jak i w przenośni) swym towarzyszom.
+
+Zalety:
+- Co poziom otrzymuje premię +5% do otwierania zamków i wykrywania pułapek
+- Na poziomach 1, 8 i 14 otrzymuje premię +1 do wszystkich rzutów obronnych
+
+Wady:
+- Brak zwiększonych obrażeń przy sztyletowaniu.~
+@80   = ~Aktualizacja podklasy Poszukiwacza Przygod nadanej Imoen przez NPC Kitpack ta z Piesni i Ciszy~
+@81   = ~Aktualizacja podklasy Poszukiwacza Przygod nadanej Nalii przez NPC Kitpack ta z Piesni i Ciszy~
+
+@83   = ~Włamywacz~
+@84   = ~Włamywacz~
+@85   = ~WŁAMYWACZ: Jest to specjalista od wkradania się do budynków niezauważony przez strażników, przełamywania wszelkich zabezpieczeń i pułapek, kradnięcia co cenniejszych skarbów i ucieczki równie dyskretnej co przybycie.
+
+Zalety:
+- Otrzymuje premię +10% do szukania pułapek, otwierania zamków, krycia się w cieniu i cichego chodzenia
+- Może uzyskać specjalizację w sztyletach, strzałkach i procach
+
+Wady:
+- Otrzymuje karę -20% do kradzieży kieszonkowej i zakładania pułapek
+- Otrzymuje o połowę mniej pułapek do wykorzystania dziennie niż zwykły złodziej~
+
+@87   = ~Ostrze duszy~
+@88   = ~Ostrze duszy~
+@89   = ~OSTRZE DUSZY: To łotr, który dzięki znacznej mocy psionicznej swój umysł przekształcił w piękny i zabójczy oręż. W praktyce, potrafi ukształtować moc psioniczną tak, by powstało z niej półpłynne ostrze z czystej energi psi. Miecz ten znany jest jako Ostrze umysłu i sprawia, że ostrze duszy jest jest zabójczo groźny nawet nie nosząc przy sobie broni.
+
+Zalety:
+- Może uzyskać Mistrzostwo (3 punkty biegłości) w krótkich mieczach
+- Raz dziennie na każde 10 poziomów może zmanifestować Ostrze Myśli. Ten krótki miecz to psioniczna broń utrzymująca się przez rundę na poziom doświadczenia złodzieja, i zaczyna z umagicznieniem +1. Trafienie, obrażenia i umagicznienie zwiększają się o 1 również na każde 5 poziomów doświadczenia, do maksimum premii +5 do trafienia i obrażeń oraz umagicznieniu +5 na 25. poziomie. Każdy trafiony nim cios przywraca łotrowi 1 punkt życia. Zasięg zostaje zwiększony o 5 na każde 5 poziomów doświadczenia do maksimum 25 na 25. poziomie.
+
+Wady:
+- Nie może zastawiać pułapek
+- Otrzymuje tylko 15% umiejętności złodziejskich na poziom~
+@90   = ~OSTRZE DUSZY: To łotr, który dzięki znacznej mocy psionicznej swój umysł przekształcił w piękny i zabójczy oręż. W praktyce, potrafi ukształtować moc psioniczną tak, by powstało z niej półpłynne ostrze z czystej energii psi. Miecz ten znany jest jako Ostrze umysłu i sprawia, że ostrze duszy jest jest zabójczo groźny nawet nie nosząc przy sobie broni.
+
+Zalety:
+- Może uzyskać mistrzostwo (3 punkty biegłości) w krótkich mieczach
+- Raz dziennie na każde 10 poziomów może zamanifestować Ostrze Myśli. Miecz ten to psioniczna broń utrzymująca się przez rundę na poziom doświadczenia złodzieja, i zaczyna z umagicznieniem +1. Trafienie, obrażenia i umagicznienie zwiększają się o 1 również na każde 5 poziomów doświadczenia, do maksimum premii +5 do trafienia i obrażeń oraz umagicznieniu +6 na 25 poziomie. Każdy trafiony nim cios przywraca łotrowi 1 punkt życia. Zasięg zostaje zwiększony o 10 na każde 5 poziomów doświadczenia do maksimum 25 na 25. poziomie.
+
+Wady:
+- Nie może zastawiać pułapek
+- Otrzymuje tylko 15% umiejętności złodziejskich na poziom~
+@91   = ~Manifestacja ostrza myśli~
+@92   = ~Ostrze myśli~
+
+@94   = ~Strzelec~
+@95   = ~Strzelec~
+@96   = ~STRZELEC: Jest to złodziej, który dzięki długiemu treningowi stał się bardzo wprawnym łucznikiem lub kusznikiem. Jednak w przeciwieństwie do łowców, którzy swych umiejętności strzeleckich używają do ochrony lasów i puszcz, Strzelcy - złodzieje parają się wątpliwą moralnie pracą.
+
+Strzelec jest mistrzem w korzystaniu z broni dystansowej, jednak nie rozwijał w sobie talentów do zadawania ciosów w plecy. Ale żaden z nich nie postrzega tego jako znacznej wady, gdyż nad sztych z bliska, po którym ma się nikłe szanse na ucieczkę, preferują celny strzał z dystansu i zabezpieczenie się pułapką, dzięki czemu żaden ochroniarz ani strażnik nie przeszkodzi im w zabiciu celu. 
+
+Zalety:
+- Może uzyskać wielkie mistrzostwo (5 punktów biegłości) w każdej broni dystansowej z jakiej może korzystać złodziej
+- Co 4 poziomy może pokryć swe strzały trucizną. Każdy atak w następnej rundy wprowadza zabójczą substancję do krwiobiegu ofiary, przez co otrzymuje ona 1 punkt obrażeń co sekundę przez 4 rundy (jednak 3 punkty obrażeń w pierwszej rundzie). Udany rzut obronny przeciwko truciznom może ograniczyć maksymalne obrażenia do 12.
+
+Wady:
+- Brak zwiększonych obrażeń przy sztyletowaniu~
+
+@99   = ~Przyzwanie cienia~
+@100  = ~Cień~
+@101  = ~Tancerz cienia~
+@102  = ~Tancerz cienia~
+@103  = ~TANCERZ CIENIA: Tancerz cienia działa na granicy światłocienia, nic więc dziwnego, że jest mistrzem podstępu. To tajemniczy osobnik, któremu nikt w pełni nie ufa. Mimo to zawsze wprawia w zachwyt swoimi umiejętnościami.
+
+Tancerze cieni często łączą się w grupy. Nigdy nie pozostają długo w jednym miejscu. Niektórzy wykorzystują swe zdolności, by zabawiać pospólstwo i nie tylko. Inni są złodziejami, którym niezwykłe moce ułatwiają pokonywanie zabezpieczeń i omamianie strażników. Warto pamiętać, że każdą grupkę tancerzy cieni otacza wywołująca niepokój aura tajemniczości, gdyż nikt nie wie, czy należy o nich myśleć dobrze czy źle.
+
+Zalety:
+- Infrawizja, niezależnie od rasy
+- Otrzymuje +5% do Krycia w cieniu i Cichego chodzenia co 2 poziomy
+- Raz dziennie może rzucić Odbity obraz
+- Od 5 poziomu może raz dziennie przyzwać Cień. Cień to istota ściśle związana z Tancerzem, która potrafi się kryć i staje się potężniejsza wraz z awansami swego pana. Może być przyzwana na 8 godzin.
+- Od 8 poziomu może raz dziennie rzucić Drzwi z Cienia. Liczba dziennych użyć zaklęcia zwiększa się na poziomach 14 i 20.
+
+Wady:
+- Otrzymuje tylko 15% umiejętności złodziejskich na poziom
+- Nie może zastawiać pułapek~
