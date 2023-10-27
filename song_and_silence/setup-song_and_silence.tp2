@@ -8,17 +8,15 @@ ALWAYS
   
   ACTION_IF ((FILE_EXISTS ~dlc/sod-dlc.zip~) OR (FILE_EXISTS ~sod-dlc.zip~)) THEN BEGIN FAIL @107 END // DLC Merger check
   
-  ACTION_IF NOT VARIABLE_IS_SET ee_game THEN BEGIN
+  ACTION_IF NOT VARIABLE_IS_SET sns_always THEN BEGIN
+  
+    OUTER_SET sns_always = 1 // only do this once per install
 	
     INCLUDE ~song_and_silence/lib/fl#add_kit_ee.tpa~ // additional ADD_KIT junk for EEs
     INCLUDE ~song_and_silence/lib/functions.tpa~     // misc s&s functions
     
     ACTION_DEFINE_ARRAY cdnoconvert BEGIN weidu game_ee END // weidu is installer strings; game_ee is EE-exclusive strings (both permanently utf8)
     ACTION_DEFINE_ARRAY cdreload    BEGIN game END          // strings for the actual dialog.tlk
-    
-    // On non-EE games, convert game content tra files from utf-8, move converted files to different path
-    LAF HANDLE_CHARSETS INT_VAR from_utf8 = 1 infer_charsets = 1 
-                        STR_VAR default_language = ~english~ tra_path = ~song_and_silence/tra~ out_path = ~weidu_external/song_and_silence/tra~ noconvert_array = cdnoconvert reload_array = cdreload END
     
     // Load EE-specific text (usability section removed from item descriptions)
     ACTION_IF GAME_IS ~bgee bg2ee iwdee eet~ THEN BEGIN
@@ -31,6 +29,10 @@ ALWAYS
     
 	    OUTER_SET ee_game = 0
       OUTER_SPRINT ~tra_location~ ~weidu_external/song_and_silence/tra~
+    
+      // On non-EE games, convert game content tra files from utf-8, move converted files to different path
+      LAF HANDLE_CHARSETS INT_VAR from_utf8 = 1 infer_charsets = 1 
+                          STR_VAR default_language = ~english~ tra_path = ~song_and_silence/tra~ out_path = ~weidu_external/song_and_silence/tra~ noconvert_array = cdnoconvert reload_array = cdreload END
 
 	  END  
 
@@ -1091,20 +1093,20 @@ ACTION_FOR_EACH e IN 1 2 3 4 BEGIN
     WRITE_LONG  0x014 0x00
     SAY         NAME1 @100
     SAY         NAME2 @100
-    WRITE_BYTE  0x053 e           // Number of attacks
-    WRITE_SHORT 0x024 30 + e * 10 // Current HP
-    WRITE_SHORT 0x026 30 + e * 10 // Max HP
-    WRITE_BYTE  0x046 8  - e * 3  // Natural AC
-    WRITE_BYTE  0x048 8  - e * 3  // Effective AC
-    WRITE_BYTE  0x052 18 - e * 3  // THAC0
-    WRITE_BYTE  0x054 19 - e * 3  // Save vs death
-    WRITE_BYTE  0x055 21 - e * 3  // Save vs wands
-    WRITE_BYTE  0x056 20 - e * 3  // Save vs poly
-    WRITE_BYTE  0x057 22 - e * 3  // Save vs breath
-    WRITE_BYTE  0x058 22 - e * 3  // Save vs spell
-    WRITE_BYTE  0x234 e * 5       // Level
-    WRITE_ASCII 0x248 ~a#sdshad~  // Override script
-    WRITE_ASCII 0x280 ~a#sdshad~  // Death Variable
+    WRITE_SHORT 0x024 30 + (e * 10) // Current HP
+    WRITE_SHORT 0x026 30 + (e * 10) // Max HP
+    WRITE_SHORT 0x046 8  - (e *  3) // Natural AC
+    WRITE_SHORT 0x048 8  - (e *  3) // Effective AC
+    WRITE_BYTE  0x052 18 - (e *  3) // THAC0
+    WRITE_BYTE  0x053 e             // Number of attacks
+    WRITE_BYTE  0x054 19 - (e *  3) // Save vs death
+    WRITE_BYTE  0x055 21 - (e *  3) // Save vs wands
+    WRITE_BYTE  0x056 20 - (e *  3) // Save vs poly
+    WRITE_BYTE  0x057 22 - (e *  3) // Save vs breath
+    WRITE_BYTE  0x058 22 - (e *  3) // Save vs spell
+    WRITE_BYTE  0x234 (e * 5)       // Level
+    WRITE_ASCII 0x248 ~a#sdshad~    // Override script
+    WRITE_ASCII 0x280 ~a#sdshad~    // Death Variable
   // EFF files
   COPY ~song_and_silence/shadowdancer/a#shade.eff~ ~override/a#sdsha%e%.eff~
     WRITE_ASCIIE 0x30 ~a#sdsha%e%~ // Resource
