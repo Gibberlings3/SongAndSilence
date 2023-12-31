@@ -82,6 +82,12 @@ LANGUAGE
   ~song_and_silence/tra/english/game.tra~
   ~song_and_silence/tra/italian/weidu.tra~
   ~song_and_silence/tra/italian/game.tra~
+LANGUAGE 
+  ~Simplified Chinese(Translation updates and revisions by Lewis Liu)~ 
+  ~schinese~
+  ~song_and_silence/tra/schinese/weidu.tra~
+  ~song_and_silence/tra/schinese/game.tra~
+
 
 //////////////////////
 //Vanilla game stuff//
