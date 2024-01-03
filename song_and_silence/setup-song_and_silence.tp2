@@ -1,7 +1,7 @@
 BACKUP ~weidu_external/song_and_silence/backup~
 SUPPORT ~https://www.gibberlings3.net/forums/forum/72-song-and-silence/~
 
-VERSION ~v17~
+VERSION ~v18~
 README ~song_and_silence/tra/%LANGUAGE%/readme-song_and_silence.html~ ~song_and_silence/readme-song_and_silence.html~
 
 ALWAYS
