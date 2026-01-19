@@ -5,36 +5,36 @@ VERSION ~v19~
 README ~song_and_silence/tra/%LANGUAGE%/readme-song_and_silence.html~ ~song_and_silence/readme-song_and_silence.html~
 
 ALWAYS
-  
+
   ACTION_IF ((FILE_EXISTS ~dlc/sod-dlc.zip~) OR (FILE_EXISTS ~sod-dlc.zip~)) THEN BEGIN FAIL @107 END // DLC Merger check
-  
+
   ACTION_IF NOT VARIABLE_IS_SET sns_always THEN BEGIN
-  
+
     OUTER_SET sns_always = 1 // only do this once per install
-	
+
     INCLUDE ~song_and_silence/lib/fl#add_kit_ee.tpa~ // additional ADD_KIT junk for EEs
     INCLUDE ~song_and_silence/lib/functions.tpa~     // misc s&s functions
-    
+
     ACTION_DEFINE_ARRAY cdnoconvert BEGIN weidu game_ee END // weidu is installer strings; game_ee is EE-exclusive strings (both permanently utf8)
     ACTION_DEFINE_ARRAY cdreload    BEGIN game END          // strings for the actual dialog.tlk
-    
+
     // Load EE-specific text (usability section removed from item descriptions)
     ACTION_IF GAME_IS ~bgee bg2ee iwdee eet~ THEN BEGIN
-	
+
       OUTER_SET ee_game = 1
       OUTER_SPRINT ~tra_location~ ~song_and_silence/tra~
 	    LOAD_TRA ~song_and_silence/tra/%LANGUAGE%/game_ee.tra~ // override game.tra with ee-specific strings
-    
+
 	  END ELSE BEGIN
-    
+
 	    OUTER_SET ee_game = 0
       OUTER_SPRINT ~tra_location~ ~weidu_external/song_and_silence/tra~
-    
+
       // On non-EE games, convert game content tra files from utf-8, move converted files to different path
-      LAF HANDLE_CHARSETS INT_VAR from_utf8 = 1 infer_charsets = 1 
+      LAF HANDLE_CHARSETS INT_VAR from_utf8 = 1 infer_charsets = 1
                           STR_VAR default_language = ~english~ tra_path = ~song_and_silence/tra~ out_path = ~weidu_external/song_and_silence/tra~ noconvert_array = cdnoconvert reload_array = cdreload END
 
-	  END  
+	  END
 
   END
 
@@ -42,48 +42,48 @@ END
 
 /* Language Settings */
 AUTO_TRA ~%tra_location%/%s~ // use original utf8 on EEs, otherwise converted ANSI arrays in weidu_external
-LANGUAGE 
-  ~English~ 
+LANGUAGE
+  ~English~
   ~english~
   ~song_and_silence/tra/english/weidu.tra~
   ~song_and_silence/tra/english/game.tra~
-LANGUAGE 
-  ~Francais (translated by Zayn and Lothringen of the d'Oghmatiques)~ 
+LANGUAGE
+  ~Francais (translated by Zayn and Lothringen of the d'Oghmatiques)~
   ~french~
   ~song_and_silence/tra/english/weidu.tra~
   ~song_and_silence/tra/english/game.tra~
   ~song_and_silence/tra/french/weidu.tra~
   ~song_and_silence/tra/french/game.tra~
-LANGUAGE 
-  ~Polish (translated by Yarpen)~ 
+LANGUAGE
+  ~Polish (translated by Yarpen)~
   ~polish~
   ~song_and_silence/tra/english/weidu.tra~
   ~song_and_silence/tra/english/game.tra~
   ~song_and_silence/tra/polish/weidu.tra~
   ~song_and_silence/tra/polish/game.tra~
-LANGUAGE 
+LANGUAGE
   ~German (translated by Roter Berserker)~
   ~german~
   ~song_and_silence/tra/english/weidu.tra~
   ~song_and_silence/tra/english/game.tra~
   ~song_and_silence/tra/german/weidu.tra~
   ~song_and_silence/tra/german/game.tra~
-LANGUAGE 
+LANGUAGE
   ~Russian (translated by SubZero400 & Alisia & yota13)~
   ~Russian~
   ~song_and_silence/tra/english/weidu.tra~
   ~song_and_silence/tra/english/game.tra~
   ~song_and_silence/tra/russian/weidu.tra~
   ~song_and_silence/tra/russian/game.tra~
-LANGUAGE 
+LANGUAGE
   ~Italian (translated by Coland)~
   ~italian~
   ~song_and_silence/tra/english/weidu.tra~
   ~song_and_silence/tra/english/game.tra~
   ~song_and_silence/tra/italian/weidu.tra~
   ~song_and_silence/tra/italian/game.tra~
-LANGUAGE 
-  ~Simplified Chinese (Translation updates and revisions by Lewis Liu)~ 
+LANGUAGE
+  ~Simplified Chinese (Translation updates and revisions by Lewis Liu)~
   ~schinese~
   ~song_and_silence/tra/english/weidu.tra~
   ~song_and_silence/tra/english/game.tra~
@@ -144,7 +144,7 @@ ACTION_IF (!(FILE_EXISTS_IN_GAME "RR#PPBRD.RR") AND !(MOD_IS_INSTALLED "setup-IW
       END              ~\1\2%LNL%%level%\2~
     END
     BUT_ONLY
-  
+
 END
 
 // unnecessary if Fixpack
@@ -184,7 +184,7 @@ ACTION_IF ((NOT MOD_IS_INSTALLED setup-bg2fixpack.tp2 0) AND (!ee_game)) THEN BE
   UNLESS ~AP_CDBLPP~
 
   // Fix Skald's lack of THAC0 bonus
-  COPY_EXISTING 
+  COPY_EXISTING
   spcl421.spl  override
   spcl541.spl  override
     PATCH_IF SOURCE_SIZE > 0x71 BEGIN
@@ -203,7 +203,7 @@ ACTION_IF ((NOT MOD_IS_INSTALLED setup-bg2fixpack.tp2 0) AND (!ee_game)) THEN BE
             WRITE_ASCII  eo + 0x30 * (i_1 + ei) + 0x14 ~~ #8
           END
         END
-      END 
+      END
     END
   BUT_ONLY
 
@@ -223,7 +223,7 @@ ACTION_IF !(FILE_EXISTS_IN_GAME "RR#DWF.RR") BEGIN
     SET_2DA_ENTRY_LATER weapprof 31 39 ~3~ // Assassin
     SET_2DA_ENTRY_LATER weapprof 31 40 ~3~ // Bounty Hunter
     SET_2DA_ENTRY_LATER weapprof 31 41 ~3~ // Swashbuckler
-    
+
     // fix swashbuckler profs
     SET_2DA_ENTRY_LATER weapprof 13 41 ~2~ // Swashbucklers, katanas
     SET_2DA_ENTRY_LATER weapprof 23 41 ~1~ // Swashbucklers, crossbows
@@ -243,7 +243,7 @@ ACTION_IF !(FILE_EXISTS_IN_GAME "RR#DWF.RR") BEGIN
         STRING_SET 37230 @1
       END ELSE BEGIN // everything else
         STRING_SET 25216 @1
-      END  
+      END
     END
   END
 
@@ -274,7 +274,7 @@ ACTION_IF !(FILE_EXISTS_IN_GAME "RR#DWF.RR") BEGIN
     SET_2DA_ENTRIES_NOW set 10
     PRETTY_PRINT_2DA
     BUT_ONLY
-  
+
 /*
   ACTION_IF GAME_IS ~tob~ THEN BEGIN
     COPY_EXISTING ~luabbr.2da~ ~override/luabbr.2da~
@@ -289,7 +289,7 @@ ACTION_IF !(FILE_EXISTS_IN_GAME "RR#DWF.RR") BEGIN
     COPY ~song_and_silence/vanilla/lua!2.2da~ ~override/lua!2.2da~
     // Skald HLA changes
     COPY ~song_and_silence/vanilla/lua!3.2da~ ~override/lua!3.2da~
-  END 
+  END
 */
 
 END // end rr check
@@ -340,7 +340,7 @@ COMPILE ~song_and_silence/items/a!raoul.d~ // dialogue
 ACTION_IF GAME_IS ~bgt soa tob bg2ee eet~ THEN BEGIN
 
   EXTEND_BOTTOM ar0500.bcs ~song_and_silence/items/ar0500.baf~
-  
+
 END
 
 // spawn raoul at nashkel carnival
@@ -395,7 +395,7 @@ COPY ~song_and_silence/items/a!thtd.itm~  override
   WRITE_ASCII 0x76 ~a!ithtd~
   PATCH_IF ee_game BEGIN
     WRITE_LONG 0x98 BIT2 // add +strength flag for EEs
-  END    
+  END
 
 COPY ~song_and_silence/items/a!ithpo.bam~ override // Phial of Poison
 COPY ~song_and_silence/items/a!thpo.itm~  override
@@ -460,7 +460,7 @@ COPY ~song_and_silence/items/a!bleat2.itm~ override
   SAY UNIDENTIFIED_DESC @34
   SAY IDENTIFIED_DESC @35
   WRITE_LONG 0x60 ~1~ // Enchantment Lv
-  
+
 COPY_EXISTING ~itemexcl.2da~ ~override~
     APPEND ~itemexcl.2da~ ~a!bleat2  1~ // Appended to exclusion list
 
@@ -492,7 +492,7 @@ LABEL ~a!_sns_kit_acrobat~
 /*
 ACTION_IF GAME_IS ~tob~ THEN BEGIN
   COPY ~song_and_silence/acrobat/lua!a.2da~ ~override/lua!a.2da~
-END 
+END
 */
 
 ADD_KIT ~A!ACROBAT~
@@ -577,7 +577,7 @@ LABEL ~a!_sns_kit_chorister~
 /*
 ACTION_IF GAME_IS ~tob~ FILE_EXISTS ~override/LUABBR.2DA~ THEN BEGIN
   COPY ~song_and_silence/chorister/LUA!C.2DA~ ~override/LUA!C.2DA~
-END 
+END
 */
 
 ADD_KIT ~A!CHORISTER~
@@ -663,7 +663,7 @@ ACTION_IF GAME_IS ~iwdee~ BEGIN
     APPEND_FILE ~song_and_silence/lib/iwdee.2da~ // add iwd bard songs
 END
 
-ACTION_IF MOD_IS_INSTALLED ~iwdification/setup-iwdification.tp2~ ~50~ BEGIN 
+ACTION_IF MOD_IS_INSTALLED ~iwdification/setup-iwdification.tp2~ ~50~ BEGIN
   COPY_EXISTING ~a!chor.2da~ ~override~
     APPEND_FILE ~song_and_silence/lib/iwdification.2da~ // add iwdification bard songs
 END
@@ -680,7 +680,7 @@ LABEL ~a!_sns_kit_dirgesinger~
 /*
 ACTION_IF GAME_IS ~tob~ FILE_EXISTS ~override/luabbr.2da~ THEN BEGIN
   COPY ~song_and_silence/dirgesinger/lua!d.2da~ ~override/lua!d.2da~
-END 
+END
 */
 
 ADD_KIT ~A!DIRGESINGER~
@@ -744,7 +744,7 @@ LABEL ~a!_sns_kit_luring_piper~
 /*
 ACTION_IF GAME_IS ~tob~ THEN BEGIN
   COPY ~song_and_silence/lpipe/lua!g.2da~ ~override/lua!g.2da~
-END 
+END
 */
 
 ADD_KIT ~A!lpipe~
@@ -771,14 +771,14 @@ LAF fl#add_kit_ee STR_VAR kit_name = ~A!lpipe~ END // nothing special
 //
 COPY_EXISTING ~spcl751.spl~ ~override/a!lup1.spl~
   LPF ALTER_EFFECT INT_VAR match_opcode = 251 STR_VAR resource = ~a!lups~ END
-  
+
 // Save bonus
 COPY ~song_and_silence/lpipe/a!lup01.spl~ ~override/a!lup01.spl~
 // Song
 COPY ~song_and_silence/lpipe/a!lups.spl~ ~override/a!lups.spl~
   WRITE_LONG NAME1 ` 0
   WRITE_LONG NAME2 ` 0
-  
+
 // if curse already exists (e.g. IWDification), just use it
 OUTER_SET curse = ((IDS_OF_SYMBOL (~spell~ ~CLERIC_CURSE~)) - 1000)
 ACTION_IF curse > 0 BEGIN
@@ -786,7 +786,7 @@ ACTION_IF curse > 0 BEGIN
   COPY_EXISTING ~sppr%curse%.spl~ ~override/a!lupc.spl~
     LAUNCH_PATCH_MACRO andyr_spell_to_innate
     LPF ALTER_EFFECT INT_VAR silent = 1 STR_VAR match_resource = EVAL ~sppr%curse%~ resource = ~a!lupc~ END
-    
+
 END ELSE BEGIN
 
   LAF HANDLE_AUDIO STR_VAR audio_path = ~song_and_silence/lpipe~ oggdec_path = ~song_and_silence/audio~  sox_path = ~song_and_silence/audio~ END
@@ -796,28 +796,28 @@ END ELSE BEGIN
        ~song_and_silence/lpipe/cdcursea.bam~ ~override~
        ~song_and_silence/lpipe/cdcurseb.bam~ ~override~
        ~song_and_silence/lpipe/cdcursec.bam~ ~override~
-       
+
   // iwdification curse > obg2 conversion
   COPY ~song_and_silence/lpipe/#bless.vvc~ ~override~
        ~song_and_silence/lpipe/curseh.vvc~ ~override~
     PATCH_IF !ee_game BEGIN
-      WRITE_SHORT 0x18 (THIS BAND `BIT9) 
-    END  
-	
+      WRITE_SHORT 0x18 (THIS BAND `BIT9)
+    END
+
   ACTION_IF ee_game BEGIN
-  
+
     COPY ~song_and_silence/lpipe/area1x.bam~ ~override~
          ~song_and_silence/lpipe/curseh.bam~ ~override~
-         
+
   END ELSE BEGIN
-  
+
     COPY ~song_and_silence/lpipe/area1x_obg2.bam~ ~override/area1x.bam~
          ~song_and_silence/lpipe/curseh_obg2.bam~ ~override/curseh.bam~
   END
-  
+
   // Changing the name of Cam's projectile from CD to A! in case CR is installed; BAM filenames may as well stay the same
   ADD_PROJECTILE ~song_and_silence/lpipe/a!curse.pro~
-  
+
   COPY ~song_and_silence/lpipe/cdcurse.spl~ ~override/a!lupc.spl~
     SAY NAME1 @71
     SAY NAME2 @71
@@ -826,13 +826,13 @@ END ELSE BEGIN
     SAY 0x21e @106 // 'cursed' string
     WRITE_SHORT 0x98 ~a!curse~ //Writes the projectile into the file
     PATCH_IF !ee_game BEGIN
-      LPF CLONE_EFFECT INT_VAR match_opcode = 54 opcode = 206 parameter1 = 0 parameter2 = 0 STR_VAR insert = last resource = ~a!lupc~ END // prevent stacking 
+      LPF CLONE_EFFECT INT_VAR match_opcode = 54 opcode = 206 parameter1 = 0 parameter2 = 0 STR_VAR insert = last resource = ~a!lupc~ END // prevent stacking
       LPF CD_CONVERT_9_255 END
       LPF CD_CONVERT_325 END
       LPF DELETE_EFFECT INT_VAR match_opcode = 321 END
-    END  
+    END
 
-END 
+END
 
 ACTION_IF !ee_game THEN BEGIN // block ancillary charm effects for unaffected creatures, the hard way
 
@@ -848,15 +848,15 @@ ACTION_IF !ee_game THEN BEGIN // block ancillary charm effects for unaffected cr
       END
     END
     PATCH_FOR_EACH op IN 324 50 142 215 174 BEGIN
-        LPF DELETE_EFFECT INT_VAR match_opcode = op END	
-    END  
-	
+        LPF DELETE_EFFECT INT_VAR match_opcode = op END
+    END
+
   COPY ~song_and_silence/lpipe/cdca7.eff~  ~override~
        ~song_and_silence/lpipe/cdcd7.eff~  ~override~
        ~song_and_silence/lpipe/cdcvis.eff~ ~override~
 
 END
-	   
+
 ////////////////////////////////
 //Install Adventurer thief kit//
 ////////////////////////////////
@@ -906,7 +906,7 @@ COPY ~song_and_silence/adventurer/a!av3.spl~ ~override/a!av3.spl~
 ACTION_IF ((MOD_IS_INSTALLED npckit.tp2 1400) OR (MOD_IS_INSTALLED npckit.tp2 2500)) THEN BEGIN
 
   ACTION_FOR_EACH script IN imoen imoen2 imoe25 _imoen imoen_ bdimoen bdshimoe bgimoen bgimoen2 ttimoen nalia nali25 BEGIN
-  
+
     COPY_EXISTING ~%script%.bcs~ ~override~
       DECOMPILE_AND_PATCH BEGIN
         REPLACE_TEXTUALLY ~IK_ADVENTURER~ ~A!ADVENTURER~
@@ -915,7 +915,7 @@ ACTION_IF ((MOD_IS_INSTALLED npckit.tp2 1400) OR (MOD_IS_INSTALLED npckit.tp2 25
 
   END
 
-END  
+END
 
 /////////////////////////////
 //Install Burglar thief kit//
@@ -1141,5 +1141,3 @@ THEN
 END
 >>>>>>>>
 COMPILE ~.../song_and_silence/inlined/a#sdshad.baf~
-
-
