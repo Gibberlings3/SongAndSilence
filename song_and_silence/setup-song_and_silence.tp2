@@ -659,7 +659,7 @@ COPY_EXISTING sppr612.spl ~override/a!ch61.spl~
   SAY 0x50 @59
 
 ACTION_IF GAME_IS ~iwdee~ BEGIN
-  COPY_EXISTING ~a!acro.2da~ ~override~
+  COPY_EXISTING ~a!chor.2da~ ~override~
     APPEND_FILE ~song_and_silence/lib/iwdee.2da~ // add iwd bard songs
 END
 
